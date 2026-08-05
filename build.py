@@ -14,7 +14,7 @@ OUT_PLAYERS = ROOT / "players"
 BASE_URL = "https://dugout26.github.io/lck-gear"
 VERIFIED = "2026-08"
 # 서치콘솔 인증 코드 (content 값만). 채우면 모든 페이지 head에 메타태그 렌더.
-VERIFY_GOOGLE = None  # 구글 서치콘솔 "HTML 태그" 방식의 content="..."
+VERIFY_GOOGLE = "reLU6hFD0fFzI4ciTnfyEkadi_fsno6fJLTdosq1qTA"  # 구글 서치콘솔 HTML 태그
 VERIFY_NAVER = None   # 네이버 서치어드바이저 HTML 태그 content="..."
 
 TEAMS = {
