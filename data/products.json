@@ -1,0 +1,618 @@
+{
+ "_note": "coupang_url을 채우면 build.py가 해당 제품의 모든 노출에 구매 버튼을 렌더. aliases는 data/raw에 등장하는 표기들. 이 파일은 scripts/gen_catalog.py로 재생성해도 URL 보존됨.",
+ "products": [
+  {
+   "name": "Logitech G Pro X Superlight 2",
+   "category": "mouse",
+   "count": 11,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G PRO X Superlight 2",
+    "Logitech G Pro X Superlight 2"
+   ]
+  },
+  {
+   "name": "Logitech G Pro X TKL",
+   "category": "keyboard",
+   "count": 10,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G PRO X TKL",
+    "Logitech G Pro X (TKL)",
+    "Logitech G Pro X TKL",
+    "Logitech G Pro X TKL (Black)"
+   ]
+  },
+  {
+   "name": "LG UltraGear 25GR75FG",
+   "category": "monitor",
+   "count": 10,
+   "coupang_url": null,
+   "aliases": [
+    "LG 25GR75FG",
+    "LG UltraGear 25GR75FG"
+   ]
+  },
+  {
+   "name": "Logitech G740",
+   "category": "mousepad",
+   "count": 6,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G740"
+   ]
+  },
+  {
+   "name": "Razer Gigantus V2",
+   "category": "mousepad",
+   "count": 6,
+   "coupang_url": null,
+   "aliases": [
+    "Razer Gigantus V2"
+   ]
+  },
+  {
+   "name": "Logitech G PRO X 2",
+   "category": "headset",
+   "count": 5,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G PRO X 2",
+    "Logitech G PRO X 2 Lightspeed",
+    "Logitech G Pro X 2"
+   ]
+  },
+  {
+   "name": "Logitech G840",
+   "category": "mousepad",
+   "count": 5,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G840"
+   ]
+  },
+  {
+   "name": "Logitech G733",
+   "category": "headset",
+   "count": 4,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G733",
+    "Logitech G733 (Black)"
+   ]
+  },
+  {
+   "name": "Logitech G Pro X2 Superstrike",
+   "category": "mouse",
+   "count": 4,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G Pro X2 Superstrike"
+   ]
+  },
+  {
+   "name": "Logitech G640",
+   "category": "mousepad",
+   "count": 4,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G640"
+   ]
+  },
+  {
+   "name": "Logitech G715",
+   "category": "keyboard",
+   "count": 3,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G715"
+   ]
+  },
+  {
+   "name": "Logitech G PRO X Superlight 2 White",
+   "category": "mouse",
+   "count": 3,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G PRO X Superlight 2 White",
+    "Logitech G Pro X Superlight 2 (White)"
+   ]
+  },
+  {
+   "name": "Logitech G Pro Wireless",
+   "category": "mouse",
+   "count": 3,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G Pro Wireless"
+   ]
+  },
+  {
+   "name": "HyperX Cloud Flight S",
+   "category": "headset",
+   "count": 2,
+   "coupang_url": null,
+   "aliases": [
+    "HyperX Cloud Flight S"
+   ]
+  },
+  {
+   "name": "Razer BlackShark V2 Pro",
+   "category": "headset",
+   "count": 2,
+   "coupang_url": null,
+   "aliases": [
+    "Razer BlackShark V2 Pro"
+   ]
+  },
+  {
+   "name": "Razer BlackShark V3 Pro",
+   "category": "headset",
+   "count": 2,
+   "coupang_url": null,
+   "aliases": [
+    "Razer BlackShark V3 Pro"
+   ]
+  },
+  {
+   "name": "Logitech G Pro X",
+   "category": "keyboard",
+   "count": 2,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G Pro X"
+   ]
+  },
+  {
+   "name": "Logitech G Pro X TKL Rapid",
+   "category": "keyboard",
+   "count": 2,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G PRO X TKL Rapid",
+    "Logitech G Pro X TKL Rapid"
+   ]
+  },
+  {
+   "name": "Razer Huntsman V3 Pro TKL",
+   "category": "keyboard",
+   "count": 2,
+   "coupang_url": null,
+   "aliases": [
+    "Razer Huntsman V3 Pro TKL"
+   ]
+  },
+  {
+   "name": "SteelSeries Apex Pro TKL Gen 3",
+   "category": "keyboard",
+   "count": 2,
+   "coupang_url": null,
+   "aliases": [
+    "SteelSeries Apex Pro TKL Gen 3"
+   ]
+  },
+  {
+   "name": "HP X27i",
+   "category": "monitor",
+   "count": 2,
+   "coupang_url": null,
+   "aliases": [
+    "HP X27i"
+   ]
+  },
+  {
+   "name": "Logitech G903",
+   "category": "mouse",
+   "count": 2,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G903"
+   ]
+  },
+  {
+   "name": "Razer Viper V3 Pro",
+   "category": "mouse",
+   "count": 2,
+   "coupang_url": null,
+   "aliases": [
+    "Razer Viper V3 Pro"
+   ]
+  },
+  {
+   "name": "SteelSeries QcK Performance Speed",
+   "category": "mousepad",
+   "count": 2,
+   "coupang_url": null,
+   "aliases": [
+    "SteelSeries QcK Performance Speed"
+   ]
+  },
+  {
+   "name": "Astro A50",
+   "category": "headset",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Astro A50"
+   ]
+  },
+  {
+   "name": "Corsair Void Pro",
+   "category": "headset",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Corsair Void Pro"
+   ]
+  },
+  {
+   "name": "Logitech G333 (인이어)",
+   "category": "headset",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G333 (인이어)"
+   ]
+  },
+  {
+   "name": "ROCCAT Syn Pro Air",
+   "category": "headset",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "ROCCAT Syn Pro Air"
+   ]
+  },
+  {
+   "name": "Razer BlackShark V2",
+   "category": "headset",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Razer BlackShark V2"
+   ]
+  },
+  {
+   "name": "Razer Kraken V3 Pro",
+   "category": "headset",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Razer Kraken V3 Pro"
+   ]
+  },
+  {
+   "name": "Sennheiser HMD 300 Pro",
+   "category": "headset",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Sennheiser HMD 300 Pro"
+   ]
+  },
+  {
+   "name": "SteelSeries Arctis Pro",
+   "category": "headset",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "SteelSeries Arctis Pro"
+   ]
+  },
+  {
+   "name": "Corsair K70 RGB MK.2",
+   "category": "keyboard",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Corsair K70 RGB MK.2"
+   ]
+  },
+  {
+   "name": "Corsair K70 RGB MK.2 SE",
+   "category": "keyboard",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Corsair K70 RGB MK.2 SE"
+   ]
+  },
+  {
+   "name": "Logitech G PRO X TKL White",
+   "category": "keyboard",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G PRO X TKL White"
+   ]
+  },
+  {
+   "name": "Logitech G413",
+   "category": "keyboard",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G413"
+   ]
+  },
+  {
+   "name": "Logitech G512",
+   "category": "keyboard",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G512"
+   ]
+  },
+  {
+   "name": "Logitech G915 TKL Carbon",
+   "category": "keyboard",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G915 TKL Carbon"
+   ]
+  },
+  {
+   "name": "MAXTILL TRON G500K",
+   "category": "keyboard",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "MAXTILL TRON G500K"
+   ]
+  },
+  {
+   "name": "ROCCAT Vulcan TKL Pro",
+   "category": "keyboard",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "ROCCAT Vulcan TKL Pro"
+   ]
+  },
+  {
+   "name": "Razer BlackWidow Lite",
+   "category": "keyboard",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Razer BlackWidow Lite"
+   ]
+  },
+  {
+   "name": "Razer BlackWidow V3 Pro",
+   "category": "keyboard",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Razer BlackWidow V3 Pro"
+   ]
+  },
+  {
+   "name": "Razer Huntsman Elite",
+   "category": "keyboard",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Razer Huntsman Elite"
+   ]
+  },
+  {
+   "name": "Razer Huntsman V3 Pro",
+   "category": "keyboard",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Razer Huntsman V3 Pro"
+   ]
+  },
+  {
+   "name": "Wooting 60HE+",
+   "category": "keyboard",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Wooting 60HE+"
+   ]
+  },
+  {
+   "name": "ASUS ROG Swift PG258Q",
+   "category": "monitor",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "ASUS ROG Swift PG258Q"
+   ]
+  },
+  {
+   "name": "ASUS TUF Gaming VG259QM",
+   "category": "monitor",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "ASUS TUF Gaming VG259QM"
+   ]
+  },
+  {
+   "name": "ASUS TUF Gaming VG279QM (280Hz)",
+   "category": "monitor",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "ASUS TUF Gaming VG279QM (280Hz)"
+   ]
+  },
+  {
+   "name": "ZOWIE XL2586X+",
+   "category": "monitor",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "ZOWIE XL2586X+"
+   ]
+  },
+  {
+   "name": "Logitech G Pro X Superlight",
+   "category": "mouse",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G Pro X Superlight"
+   ]
+  },
+  {
+   "name": "Logitech G Pro X Superlight 2 (Magenta)",
+   "category": "mouse",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G Pro X Superlight 2 (Magenta)"
+   ]
+  },
+  {
+   "name": "Logitech G Pro X Superlight 2 DEX (Black)",
+   "category": "mouse",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G Pro X Superlight 2 DEX (Black)"
+   ]
+  },
+  {
+   "name": "Logitech G304",
+   "category": "mouse",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G304"
+   ]
+  },
+  {
+   "name": "Logitech G305",
+   "category": "mouse",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G305"
+   ]
+  },
+  {
+   "name": "Logitech G703",
+   "category": "mouse",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G703"
+   ]
+  },
+  {
+   "name": "ROCCAT Kone Pure Ultra",
+   "category": "mouse",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "ROCCAT Kone Pure Ultra"
+   ]
+  },
+  {
+   "name": "Razer Viper 8KHz",
+   "category": "mouse",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Razer Viper 8KHz"
+   ]
+  },
+  {
+   "name": "Razer Viper V3 Pro (White)",
+   "category": "mouse",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Razer Viper V3 Pro (White)"
+   ]
+  },
+  {
+   "name": "Razer Viper V3 Pro Faker Edition",
+   "category": "mouse",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Razer Viper V3 Pro Faker Edition"
+   ]
+  },
+  {
+   "name": "BOB PAD Balance - Giant",
+   "category": "mousepad",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "BOB PAD Balance - Giant"
+   ]
+  },
+  {
+   "name": "Corsair MM300 Extended",
+   "category": "mousepad",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Corsair MM300 Extended"
+   ]
+  },
+  {
+   "name": "Logitech G PowerPlay",
+   "category": "mousepad",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G PowerPlay"
+   ]
+  },
+  {
+   "name": "Razer Goliathus Speed Cosmic",
+   "category": "mousepad",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Razer Goliathus Speed Cosmic"
+   ]
+  },
+  {
+   "name": "Razer Goliathus Speed Cosmic Large",
+   "category": "mousepad",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Razer Goliathus Speed Cosmic Large"
+   ]
+  },
+  {
+   "name": "Razer Pro Glide XXL",
+   "category": "mousepad",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Razer Pro Glide XXL"
+   ]
+  },
+  {
+   "name": "X-Raypad Aqua Control Plus V2",
+   "category": "mousepad",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "X-Raypad Aqua Control Plus V2"
+   ]
+  },
+  {
+   "name": "ZOWIE G-SR III",
+   "category": "mousepad",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "ZOWIE G-SR III"
+   ]
+  }
+ ]
+}

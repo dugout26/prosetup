@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """data/raw/*.json → 정적 사이트 생성 (index.html + players/*.html + sitemap.xml).
 
-쿠팡 링크: 데이터에 coupang_url이 있으면 버튼 렌더, 없으면 미표시 (승인 후 채움).
+쿠팡 링크: data/products.json 카탈로그(제품→coupang_url)에서 표기(alias) 매칭으로 해석.
+엔트리 자체에 coupang_url이 있으면 그게 우선. 없으면 미표시.
 """
 import html
 import json
@@ -34,6 +35,19 @@ CONF_KR = {"high": "확실", "medium": "보통", "low": "낮음"}
 
 def esc(s):
     return html.escape(str(s), quote=True)
+
+def load_catalog():
+    path = ROOT / "data" / "products.json"
+    if not path.exists():
+        return {}
+    catalog = {}
+    for prod in json.load(open(path, encoding="utf-8"))["products"]:
+        if prod.get("coupang_url"):
+            for alias in prod["aliases"]:
+                catalog[alias] = prod["coupang_url"]
+    return catalog
+
+CATALOG = load_catalog()
 
 def load_players():
     teams = {}
@@ -135,7 +149,7 @@ def page(title, desc, body, canonical, jsonld=None):
 <footer>
 비공식 팬 사이트입니다. 선수·팀·리그와 무관하며, 장비 정보는 공개 자료를 교차 확인해 정리했습니다.
 잘못된 정보 제보: dugout26.gm@gmail.com<br>
-이 페이지의 링크를 통해 구매가 발생하면 쿠팡 파트너스 활동의 일환으로 일정액의 수수료를 제공받을 수 있습니다.
+이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 </footer>
 </div>
 </body>
@@ -146,8 +160,9 @@ def item_html(cat_label, entry):
         return (f'<div class="item"><span class="cat">{cat_label}</span>'
                 f'<span class="model unknown">확인 중 — 공개 정보 수집 중</span></div>')
     conf = entry.get("confidence", "medium")
-    buy = (f'<a class="buy" href="{esc(entry["coupang_url"])}" target="_blank" rel="nofollow sponsored">최저가 보기</a>'
-           if entry.get("coupang_url") else "")
+    url = entry.get("coupang_url") or CATALOG.get(entry["value"])
+    buy = (f'<a class="buy" href="{esc(url)}" target="_blank" rel="nofollow sponsored">최저가 보기</a>'
+           if url else "")
     return (f'<div class="item"><span class="cat">{cat_label}</span>'
             f'<span class="model">{esc(entry["value"])}</span>'
             f'<span class="conf {conf}">신뢰도 {CONF_KR.get(conf, conf)}</span>{buy}</div>')
