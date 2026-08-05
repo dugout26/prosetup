@@ -1,0 +1,110 @@
+{
+  "as_of": "2026-08-05",
+  "notes": {
+    "roster": "T1 2026: 도란/오너/페이커/페이즈/케리아 (구마유시 HLE행, Peyz 영입). GEN 2026: 기인/캐니언/쵸비/룰러/두로 (전원 유지).",
+    "monitor_headset": "specs.gg의 일괄 표기(HP OMEN 25/Sennheiser HMD 300 PRO)는 대회 지급 장비라 null 처리. T1 공식 헤드셋 파트너는 SteelSeries이나 선수별 모델 미확인."
+  },
+  "T1": {
+    "team_name": "T1",
+    "players": [
+      {"nickname": "Doran", "name_kr": "도란", "role": "top",
+       "gear": {
+         "mouse": {"value": "Razer Viper V3 Pro", "source": "https://specs.gg/Doran", "confidence": "medium"},
+         "keyboard": {"value": "SteelSeries Apex Pro TKL Gen 3", "source": "https://specs.gg/Doran", "confidence": "medium"},
+         "monitor": null, "headset": null,
+         "mousepad": {"value": "SteelSeries QcK Performance Speed", "source": "https://specs.gg/Doran", "confidence": "medium"}},
+       "settings": {
+         "dpi": {"value": 800, "source": "https://specs.gg/Doran", "confidence": "medium"},
+         "in_game_sens": null,
+         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Doran", "confidence": "medium"}}},
+      {"nickname": "Oner", "name_kr": "오너", "role": "jungle",
+       "gear": {
+         "mouse": {"value": "Logitech G Pro X Superlight 2", "source": "https://specs.gg/Oner", "confidence": "medium"},
+         "keyboard": {"value": "SteelSeries Apex Pro TKL Gen 3", "source": "https://specs.gg/Oner", "confidence": "medium"},
+         "monitor": null, "headset": null,
+         "mousepad": {"value": "SteelSeries QcK Performance Speed", "source": "https://specs.gg/Oner", "confidence": "medium"}},
+       "settings": {
+         "dpi": {"value": 800, "source": "https://specs.gg/Oner", "confidence": "medium"},
+         "in_game_sens": {"value": "마우스 속도 50 / 카메라 50", "source": "https://specs.gg/Oner", "confidence": "medium"},
+         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Oner", "confidence": "medium"}}},
+      {"nickname": "Faker", "name_kr": "페이커", "role": "mid",
+       "gear": {
+         "mouse": {"value": "Razer Viper V3 Pro Faker Edition", "source": "https://www.razer.com/gaming-mice/razer-viper-v3-pro-faker-edition", "confidence": "high", "note": "본인 시그니처 에디션"},
+         "keyboard": {"value": "Razer Huntsman V3 Pro", "source": "https://prosettings.net/players/faker/", "confidence": "medium"},
+         "monitor": {"value": "ASUS TUF Gaming VG279QM (280Hz)", "source": "https://prosettings.net/players/faker/", "confidence": "medium"},
+         "headset": {"value": "Razer BlackShark V2 Pro", "source": "https://prosettings.net/players/faker/", "confidence": "low", "note": "T1 공식 파트너는 SteelSeries — 구형 정보 가능성"},
+         "mousepad": {"value": "Razer Gigantus V2", "source": "https://prosettings.net/players/faker/", "confidence": "medium"}},
+       "settings": {
+         "dpi": {"value": 1800, "source": "https://specs.gg/Faker", "confidence": "medium", "note": "prosettings.net은 1600 — 2026 최신 출처 2곳 기준 1800 채택"},
+         "in_game_sens": {"value": "마우스 속도 80 / 카메라 50", "source": "https://specs.gg/Faker", "confidence": "medium", "note": "출처 간 불일치(65 표기도 존재)"},
+         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/faker/", "confidence": "medium"}}},
+      {"nickname": "Peyz", "name_kr": "페이즈", "role": "adc",
+       "note": "2026 T1 이적 후 장비 공개 정보 없음 — 2023 젠지 시절 정보만 존재",
+       "gear": {
+         "mouse": {"value": "Logitech G Pro Wireless", "source": "https://www.fmkorea.com/5430298890", "confidence": "low", "note": "2023 젠지 시절"},
+         "keyboard": {"value": "Logitech G Pro X", "source": "https://www.fmkorea.com/5430298890", "confidence": "low"},
+         "monitor": null, "headset": null,
+         "mousepad": {"value": "Logitech G640", "source": "https://www.fmkorea.com/5430298890", "confidence": "low"}},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "Keria", "name_kr": "케리아", "role": "support",
+       "gear": {
+         "mouse": {"value": "Logitech G Pro X2 Superstrike", "source": "https://prosettings.net/players/keria/", "confidence": "medium", "note": "2026-07 업데이트 기준"},
+         "keyboard": {"value": "Corsair K70 RGB MK.2", "source": "https://prosettings.net/players/keria/", "confidence": "medium"},
+         "monitor": null, "headset": null,
+         "mousepad": {"value": "Razer Goliathus Speed Cosmic", "source": "https://prosettings.net/players/keria/", "confidence": "medium"}},
+       "settings": {
+         "dpi": {"value": 800, "source": "https://prosettings.net/players/keria/", "confidence": "medium"},
+         "in_game_sens": {"value": "마우스 속도 40 / 카메라 40", "source": "https://prosettings.net/players/keria/", "confidence": "medium"},
+         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/keria/", "confidence": "medium"}}}
+    ]
+  },
+  "GEN": {
+    "team_name": "Gen.G",
+    "players": [
+      {"nickname": "Kiin", "name_kr": "기인", "role": "top",
+       "gear": {
+         "mouse": {"value": "Logitech G Pro X Superlight 2", "source": "https://specs.gg/Kiin", "confidence": "medium"},
+         "keyboard": {"value": "Logitech G Pro X TKL", "source": "https://specs.gg/Kiin", "confidence": "medium"},
+         "monitor": null, "headset": null,
+         "mousepad": {"value": "Logitech G740", "source": "https://specs.gg/Kiin", "confidence": "medium"}},
+       "settings": {"dpi": null, "in_game_sens": null,
+         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Kiin", "confidence": "medium"}}},
+      {"nickname": "Canyon", "name_kr": "캐니언", "role": "jungle",
+       "gear": {
+         "mouse": {"value": "Logitech G Pro X Superlight 2", "source": "https://specs.gg/Canyon", "confidence": "medium"},
+         "keyboard": {"value": "Logitech G Pro X TKL", "source": "https://specs.gg/Canyon", "confidence": "medium"},
+         "monitor": null, "headset": null,
+         "mousepad": {"value": "Logitech G740", "source": "https://specs.gg/Canyon", "confidence": "medium"}},
+       "settings": {"dpi": null, "in_game_sens": null,
+         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Canyon", "confidence": "medium"}}},
+      {"nickname": "Chovy", "name_kr": "쵸비", "role": "mid",
+       "gear": {
+         "mouse": {"value": "Logitech G Pro X Superlight 2", "source": "https://specs.gg/Chovy", "confidence": "medium"},
+         "keyboard": {"value": "Logitech G715", "source": "https://specs.gg/Chovy", "confidence": "medium"},
+         "monitor": null, "headset": null,
+         "mousepad": {"value": "X-Raypad Aqua Control Plus V2", "source": "https://specs.gg/Chovy", "confidence": "medium", "note": "ohmygear.net 교차 확인"}},
+       "settings": {
+         "dpi": {"value": 1750, "source": "https://specs.gg/Chovy", "confidence": "medium"},
+         "in_game_sens": {"value": "마우스 속도 50 / 카메라 50", "source": "https://specs.gg/Chovy", "confidence": "medium"},
+         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Chovy", "confidence": "medium"}}},
+      {"nickname": "Ruler", "name_kr": "룰러", "role": "adc",
+       "gear": {
+         "mouse": {"value": "Logitech G305", "source": "https://specs.gg/ruler", "confidence": "medium", "note": "단일 출처 — 구형 출처들은 GPX Superlight 표기"},
+         "keyboard": {"value": "Logitech G Pro X TKL", "source": "https://specs.gg/ruler", "confidence": "medium"},
+         "monitor": null, "headset": null,
+         "mousepad": {"value": "Logitech G740", "source": "https://specs.gg/ruler", "confidence": "medium"}},
+       "settings": {
+         "dpi": {"value": 2100, "source": "https://specs.gg/ruler", "confidence": "medium"},
+         "in_game_sens": {"value": "마우스 속도 45 / 카메라 50", "source": "https://specs.gg/ruler", "confidence": "medium"},
+         "resolution": {"value": "1920x1080", "source": "https://specs.gg/ruler", "confidence": "medium"}}},
+      {"nickname": "Duro", "name_kr": "두로", "role": "support",
+       "gear": {
+         "mouse": {"value": "Logitech G Pro X Superlight 2", "source": "https://specs.gg/Duro", "confidence": "medium"},
+         "keyboard": {"value": "Logitech G Pro X TKL", "source": "https://specs.gg/Duro", "confidence": "medium"},
+         "monitor": null, "headset": null,
+         "mousepad": {"value": "Logitech G740", "source": "https://specs.gg/Duro", "confidence": "medium"}},
+       "settings": {"dpi": null, "in_game_sens": null,
+         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Duro", "confidence": "medium"}}}
+    ]
+  }
+}

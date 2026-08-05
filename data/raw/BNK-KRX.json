@@ -1,0 +1,83 @@
+{
+  "as_of": "2026-08-05",
+  "BNK": {
+    "team_name": "BNK FEARX",
+    "roster_note": "2026-04-30 Diable(NS행)-Taeyoon 트레이드로 주전 원딜은 Taeyoon",
+    "players": [
+      {"nickname": "Clear", "name_kr": "송현민", "role": "top",
+       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "Raptor", "name_kr": "전어진", "role": "jungle",
+       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "VicLa", "name_kr": "이대광", "role": "mid",
+       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "Taeyoon", "name_kr": "김태윤", "role": "adc",
+       "gear": {
+         "mouse": {"value": "Logitech G Pro Wireless", "source": "https://prosettings.net/lists/league-of-legends/", "confidence": "low"},
+         "keyboard": {"value": "Logitech G915 TKL Carbon", "source": "https://prosettings.net/lists/league-of-legends/", "confidence": "low"},
+         "monitor": {"value": "HP X27i", "source": "https://prosettings.net/lists/league-of-legends/", "confidence": "low"},
+         "headset": {"value": "HyperX Cloud Flight S", "source": "https://prosettings.net/lists/league-of-legends/", "confidence": "low"},
+         "mousepad": {"value": "Logitech G PowerPlay", "source": "https://prosettings.net/lists/league-of-legends/", "confidence": "low"}},
+       "settings": {"dpi": null, "in_game_sens": null,
+         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/lists/league-of-legends/", "confidence": "low"}}},
+      {"nickname": "Kellin", "name_kr": "김형규", "role": "support",
+       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}}
+    ]
+  },
+  "KRX": {
+    "team_name": "KIWOOM DRX",
+    "roster_note": "2026-07-29~30 변동: Frog 콜업(Rich 아웃), Aiming 영입(kt와 Jiwoo 트레이드)",
+    "players": [
+      {"nickname": "Frog", "name_kr": "이민회", "role": "top",
+       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "Willer", "name_kr": "김정현", "role": "jungle",
+       "gear": {
+         "mouse": {"value": "Logitech G Pro X Superlight 2", "source": "https://prosettings.net/players/willer/", "confidence": "medium"},
+         "keyboard": {"value": "Logitech G413", "source": "https://prosettings.net/players/willer/", "confidence": "medium"},
+         "monitor": {"value": "LG 25GR75FG", "source": "https://prosettings.net/players/willer/", "confidence": "medium"},
+         "headset": null,
+         "mousepad": {"value": "Razer Gigantus V2", "source": "https://prosettings.net/players/willer/", "confidence": "medium"}},
+       "settings": {
+         "dpi": {"value": 950, "source": "https://prosettings.net/players/willer/", "confidence": "medium"},
+         "in_game_sens": {"value": 40, "source": "https://prosettings.net/players/willer/", "confidence": "medium"},
+         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/willer/", "confidence": "medium"}}},
+      {"nickname": "Ucal", "name_kr": "손우현", "role": "mid",
+       "gear": {
+         "mouse": {"value": "Logitech G Pro X Superlight 2 (Magenta)", "source": "https://prosettings.net/players/ucal/", "confidence": "medium"},
+         "keyboard": {"value": "Wooting 60HE+", "source": "https://prosettings.net/players/ucal/", "confidence": "medium"},
+         "monitor": {"value": "LG 25GR75FG", "source": "https://prosettings.net/players/ucal/", "confidence": "medium"},
+         "headset": {"value": "Razer BlackShark V2 Pro", "source": "https://prosettings.net/players/ucal/", "confidence": "medium"},
+         "mousepad": null},
+       "settings": {
+         "dpi": {"value": 800, "source": "https://prosettings.net/players/ucal/", "confidence": "medium"},
+         "in_game_sens": {"value": 50, "source": "https://prosettings.net/players/ucal/", "confidence": "medium"},
+         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/ucal/", "confidence": "medium"}}},
+      {"nickname": "Aiming", "name_kr": "김하람", "role": "adc",
+       "gear": {
+         "mouse": {"value": "Logitech G903", "source": "https://prosettings.net/players/aiming/", "confidence": "medium"},
+         "keyboard": {"value": "Logitech G512", "source": "https://prosettings.net/players/aiming/", "confidence": "medium"},
+         "monitor": {"value": "LG 25GR75FG", "source": "https://prosettings.net/players/aiming/", "confidence": "medium"},
+         "headset": {"value": "Logitech G PRO X 2", "source": "https://prosettings.net/players/aiming/", "confidence": "medium"},
+         "mousepad": {"value": "Logitech G840", "source": "https://prosettings.net/players/aiming/", "confidence": "medium"}},
+       "settings": {
+         "dpi": {"value": 800, "source": "https://prosettings.net/players/aiming/", "confidence": "medium"},
+         "in_game_sens": {"value": 50, "source": "https://prosettings.net/players/aiming/", "confidence": "medium"},
+         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/aiming/", "confidence": "medium"}}},
+      {"nickname": "Andil", "name_kr": "문관빈", "role": "support",
+       "gear": {
+         "mouse": {"value": "Logitech G Pro X Superlight 2 (White)", "source": "https://prosettings.net/players/andil/", "confidence": "medium"},
+         "keyboard": {"value": "Logitech G Pro X TKL Rapid", "source": "https://prosettings.net/players/andil/", "confidence": "medium"},
+         "monitor": {"value": "LG 25GR75FG", "source": "https://prosettings.net/players/andil/", "confidence": "medium"},
+         "headset": {"value": "Logitech G PRO X 2", "source": "https://prosettings.net/players/andil/", "confidence": "medium"},
+         "mousepad": null},
+       "settings": {
+         "dpi": {"value": 800, "source": "https://prosettings.net/players/andil/", "confidence": "medium"},
+         "in_game_sens": {"value": 55, "source": "https://prosettings.net/players/andil/", "confidence": "medium"},
+         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/andil/", "confidence": "medium"}}}
+    ]
+  }
+}

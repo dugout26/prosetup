@@ -1,0 +1,97 @@
+{
+  "meta": {"as_of": "2026-08-05", "note": "NS 원딜은 2026-04-30 Diable-Taeyoon 트레이드 반영"},
+  "DK": {
+    "team_name": "Dplus KIA",
+    "roster_source": "https://www.sheepesports.com/en/articles/lol-dplus-kia-s-completed-2026-lck-roster/en",
+    "players": [
+      {"nickname": "Siwoo", "name_kr": "전시우", "role": "top",
+       "gear": {
+         "mouse": {"value": "Logitech G Pro X2 Superstrike", "source": "https://prosettings.net/players/siwoo/", "confidence": "medium"},
+         "keyboard": {"value": "Logitech G Pro X TKL (Black)", "source": "https://prosettings.net/players/siwoo/", "confidence": "medium"},
+         "monitor": {"value": "LG UltraGear 25GR75FG", "source": "https://prosettings.net/players/siwoo/", "confidence": "medium"},
+         "headset": {"value": "Logitech G Pro X 2", "source": "https://prosettings.net/players/siwoo/", "confidence": "medium"},
+         "mousepad": {"value": "Logitech G840", "source": "https://prosettings.net/players/siwoo/", "confidence": "medium"}},
+       "settings": {
+         "dpi": {"value": 1200, "source": "https://prosettings.net/players/siwoo/", "confidence": "medium"},
+         "in_game_sens": {"value": 50, "source": "https://prosettings.net/players/siwoo/", "confidence": "medium"},
+         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/siwoo/", "confidence": "medium"}}},
+      {"nickname": "Lucid", "name_kr": "최용혁", "role": "jungle",
+       "gear": {
+         "mouse": {"value": "Logitech G Pro X2 Superstrike", "source": "https://prosettings.net/players/lucid/", "confidence": "medium"},
+         "keyboard": {"value": "Logitech G715", "source": "https://prosettings.net/players/lucid/", "confidence": "medium"},
+         "monitor": {"value": "LG UltraGear 25GR75FG", "source": "https://prosettings.net/players/lucid/", "confidence": "medium"},
+         "headset": {"value": "Logitech G733 (Black)", "source": "https://prosettings.net/players/lucid/", "confidence": "medium"},
+         "mousepad": {"value": "Logitech G840", "source": "https://prosettings.net/players/lucid/", "confidence": "medium"}},
+       "settings": {
+         "dpi": {"value": 800, "source": "https://prosettings.net/players/lucid/", "confidence": "medium"},
+         "in_game_sens": {"value": 50, "source": "https://prosettings.net/players/lucid/", "confidence": "medium"},
+         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/lucid/", "confidence": "medium"}}},
+      {"nickname": "ShowMaker", "name_kr": "허수", "role": "mid",
+       "gear": {
+         "mouse": {"value": "Logitech G Pro X2 Superstrike", "source": "https://prosettings.net/players/showmaker/", "confidence": "medium"},
+         "keyboard": {"value": "Logitech G715", "source": "https://prosettings.net/players/showmaker/", "confidence": "medium"},
+         "monitor": {"value": "ASUS TUF Gaming VG259QM", "source": "https://prosettings.net/players/showmaker/", "confidence": "medium"},
+         "headset": {"value": "Logitech G733 (Black)", "source": "https://prosettings.net/players/showmaker/", "confidence": "medium"},
+         "mousepad": {"value": "Logitech G840", "source": "https://prosettings.net/players/showmaker/", "confidence": "medium"}},
+       "settings": {
+         "dpi": {"value": 2500, "source": "https://prosettings.net/players/showmaker/", "confidence": "medium"},
+         "in_game_sens": {"value": 60, "source": "https://prosettings.net/players/showmaker/", "confidence": "medium"},
+         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/showmaker/", "confidence": "medium"}}},
+      {"nickname": "Smash", "name_kr": "신금재", "role": "adc",
+       "gear": {
+         "mouse": {"value": "Logitech G Pro X Superlight 2", "source": "https://settingsinfo.com/person/smash/", "confidence": "medium"},
+         "keyboard": {"value": "Logitech G Pro X", "source": "https://settingsinfo.com/person/smash/", "confidence": "medium"},
+         "monitor": null,
+         "headset": {"value": "SteelSeries Arctis Pro", "source": "https://settingsinfo.com/person/smash/", "confidence": "medium"},
+         "mousepad": null},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "Career", "name_kr": "오형석", "role": "support",
+       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}}
+    ]
+  },
+  "NS": {
+    "team_name": "Nongshim RedForce",
+    "roster_source": "https://www.sheepesports.com/en/articles/lol-nongshim-redforce-s-completed-2026-lck-roster/en",
+    "players": [
+      {"nickname": "Kingen", "name_kr": "황성훈", "role": "top",
+       "gear": {
+         "mouse": {"value": "Logitech G703", "source": "https://settingsinfo.com/person/kingen/", "confidence": "medium"},
+         "keyboard": {"value": "Razer BlackWidow Lite", "source": "https://settingsinfo.com/person/kingen/", "confidence": "medium"},
+         "monitor": {"value": "HP X27i", "source": "https://settingsinfo.com/person/kingen/", "confidence": "medium"},
+         "headset": {"value": "HyperX Cloud Flight S", "source": "https://settingsinfo.com/person/kingen/", "confidence": "medium"},
+         "mousepad": {"value": "Razer Gigantus V2", "source": "https://settingsinfo.com/person/kingen/", "confidence": "medium"}},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "Sponge", "name_kr": "배영준", "role": "jungle",
+       "gear": {
+         "mouse": {"value": "Logitech G Pro X Superlight 2", "source": "https://settingsinfo.com/person/sponge/", "confidence": "medium"},
+         "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "Scout", "name_kr": "이예찬", "role": "mid",
+       "gear": {
+         "mouse": {"value": "Razer Viper 8KHz", "source": "https://settingsinfo.com/person/scout/", "confidence": "medium"},
+         "keyboard": {"value": "Razer Huntsman Elite", "source": "https://settingsinfo.com/person/scout/", "confidence": "medium"},
+         "monitor": null,
+         "headset": {"value": "Razer BlackShark V2", "source": "https://settingsinfo.com/person/scout/", "confidence": "medium"},
+         "mousepad": {"value": "Razer Gigantus V2", "source": "https://settingsinfo.com/person/scout/", "confidence": "medium"}},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "Diable", "name_kr": "남대근", "role": "adc",
+       "roster_source": "https://esports.gg/news/league-of-legends/diable-ns-redforce-trade/",
+       "gear": {
+         "mouse": {"value": "Logitech G Pro X Superlight", "source": "https://settingsinfo.com/person/diable/", "confidence": "medium"},
+         "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "Lehends", "name_kr": "손시우", "role": "support",
+       "gear": {
+         "mouse": {"value": "Logitech G304", "source": "https://settingsinfo.com/person/lehends/", "confidence": "medium"},
+         "keyboard": {"value": "Corsair K70 RGB MK.2 SE", "source": "https://settingsinfo.com/person/lehends/", "confidence": "low"},
+         "monitor": null,
+         "headset": {"value": "Corsair Void Pro", "source": "https://settingsinfo.com/person/lehends/", "confidence": "low"},
+         "mousepad": {"value": "Corsair MM300 Extended", "source": "https://settingsinfo.com/person/lehends/", "confidence": "low"}},
+       "settings": {
+         "dpi": {"value": 1650, "source": "https://settingsinfo.com/person/lehends/", "confidence": "medium"},
+         "in_game_sens": {"value": 50, "source": "https://settingsinfo.com/person/lehends/", "confidence": "medium"},
+         "resolution": null}}
+    ]
+  }
+}

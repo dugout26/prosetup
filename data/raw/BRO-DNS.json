@@ -1,0 +1,71 @@
+{
+  "BRO": {
+    "team_name": "HANJIN BRION",
+    "players": [
+      {"nickname": "Casting", "name_kr": "신민제", "role": "top", "roster_source": "https://lol.fandom.com/wiki/Casting",
+       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "GIDEON", "name_kr": "김민성", "role": "jungle", "roster_source": "https://egamersworld.com/lol/player/gideon-NyIsOQyn2j",
+       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "Roamer", "name_kr": "조우진", "role": "mid", "roster_source": "https://sports.news.nate.com/view/20260117n07550",
+       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "Teddy", "name_kr": "박진성", "role": "adc", "roster_source": "https://ko.wikipedia.org/wiki/테디_(프로게이머)",
+       "gear": {
+         "mouse": null,
+         "keyboard": {"value": "MAXTILL TRON G500K", "source": "https://www.gamingcfg.com/config/Teddy-lol", "confidence": "low", "note": "2024 정보"},
+         "monitor": null, "headset": null,
+         "mousepad": {"value": "Razer Goliathus Speed Cosmic Large", "source": "https://www.gamingcfg.com/config/Teddy-lol", "confidence": "low"}},
+       "settings": {"dpi": null, "in_game_sens": null,
+         "resolution": {"value": "1920x1080", "source": "https://www.gamingcfg.com/config/Teddy-lol", "confidence": "low"}}},
+      {"nickname": "Namgung", "name_kr": "남궁성훈", "role": "support", "roster_source": "https://namu.wiki/w/남궁성훈",
+       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}}
+    ]
+  },
+  "DNS": {
+    "team_name": "DN SOOPers",
+    "players": [
+      {"nickname": "DuDu", "name_kr": "이동주", "role": "top", "roster_source": "https://lol.fandom.com/wiki/DuDu_(Lee_Dong-ju)",
+       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "Sharvel", "name_kr": "김단우", "role": "jungle", "roster_source": "https://www.inven.co.kr/webzine/news/?news=317952&site=lol",
+       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "Clozer", "name_kr": "이주현", "role": "mid", "roster_source": "https://esportsinsider.com/2025/11/every-confirmed-lck-roster-2026-league-of-legends",
+       "gear": {
+         "mouse": {"value": "ROCCAT Kone Pure Ultra", "source": "https://prosettings.net/players/clozer/", "confidence": "low", "note": "단종 브랜드 — 구 스폰서 시절 정보 가능성"},
+         "keyboard": {"value": "ROCCAT Vulcan TKL Pro", "source": "https://prosettings.net/players/clozer/", "confidence": "low"},
+         "monitor": {"value": "LG UltraGear 25GR75FG", "source": "https://prosettings.net/players/clozer/", "confidence": "medium"},
+         "headset": {"value": "ROCCAT Syn Pro Air", "source": "https://prosettings.net/players/clozer/", "confidence": "low"},
+         "mousepad": {"value": "Logitech G840", "source": "https://prosettings.net/players/clozer/", "confidence": "medium"}},
+       "settings": {
+         "dpi": {"value": 800, "source": "https://prosettings.net/players/clozer/", "confidence": "medium"},
+         "in_game_sens": {"value": "Mouse Speed 65", "source": "https://prosettings.net/players/clozer/", "confidence": "medium"},
+         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/clozer/", "confidence": "medium"}}},
+      {"nickname": "deokdam", "name_kr": "서대길", "role": "adc", "roster_source": "https://esportsinsider.com/2025/11/every-confirmed-lck-roster-2026-league-of-legends",
+       "gear": {
+         "mouse": {"value": "Razer Viper V3 Pro (White)", "source": "https://prosettings.net/players/deokdam/", "confidence": "high", "note": "월즈 2025 장비 사진 정리(dcinside)와 교차 확인"},
+         "keyboard": {"value": "Logitech G Pro X TKL", "source": "https://prosettings.net/players/deokdam/", "confidence": "medium"},
+         "monitor": null,
+         "headset": {"value": "Logitech G733", "source": "https://prosettings.net/players/deokdam/", "confidence": "low"},
+         "mousepad": {"value": "Logitech G640", "source": "https://prosettings.net/players/deokdam/", "confidence": "high"}},
+       "settings": {
+         "dpi": {"value": 400, "source": "https://prosettings.net/players/deokdam/", "confidence": "medium"},
+         "in_game_sens": null,
+         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/deokdam/", "confidence": "medium"}}},
+      {"nickname": "Peter", "name_kr": "정윤수", "role": "support", "roster_source": "https://lol.fandom.com/wiki/Peter_(Jeong_Yoon-su)",
+       "gear": {
+         "mouse": {"value": "Logitech G Pro X Superlight 2 DEX (Black)", "source": "https://prosettings.net/players/peter/", "confidence": "high", "note": "월즈 2025 장비 사진 정리와 교차 확인"},
+         "keyboard": {"value": "Logitech G Pro X (TKL)", "source": "https://prosettings.net/players/peter/", "confidence": "medium"},
+         "monitor": null,
+         "headset": {"value": "Logitech G733", "source": "https://prosettings.net/players/peter/", "confidence": "medium"},
+         "mousepad": {"value": "BOB PAD Balance - Giant", "source": "https://egamersworld.com/lol/player/peter-qXm7xaSQ6au", "confidence": "high"}},
+       "settings": {
+         "dpi": {"value": 800, "source": "https://prosettings.net/players/peter/", "confidence": "medium"},
+         "in_game_sens": null,
+         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/peter/", "confidence": "medium"}}}
+    ]
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "HLE": {
+    "roster_note": "2026 로스터 확인됨: Zeus(탑)·Kanavi(정글)·Zeka(미드)·Gumayusi(원딜)·Delight(서폿).",
+    "roster_source": "https://www.sheepesports.com/en/articles/lol-hanwha-life-esports-completed-2026-lck-roster/en",
+    "players": [
+      {"nickname": "Zeus", "name_kr": "최우제", "role": "Top",
+       "gear": {
+         "mouse": {"value": "Razer Viper V3 Pro", "source": "https://specs.gg/Zeus", "confidence": "low", "note": "prosettings.net은 DeathAdder V2 Pro(T1 시절 추정)로 상충"},
+         "keyboard": {"value": "Razer Huntsman V3 Pro TKL", "source": "https://specs.gg/Zeus", "confidence": "low", "note": "prosettings.net은 Corsair K70 TKL로 상충"},
+         "monitor": {"value": "LG UltraGear 25GR75FG", "source": "https://prosettings.net/lists/league-of-legends/", "confidence": "medium"},
+         "headset": {"value": "Razer BlackShark V3 Pro", "source": "https://specs.gg/Zeus", "confidence": "medium"},
+         "mousepad": {"value": "Razer Gigantus V2", "source": "https://specs.gg/Zeus", "confidence": "medium"}},
+       "settings": {
+         "dpi": {"value": 800, "source": "https://specs.gg/Zeus", "confidence": "medium"},
+         "in_game_sens": {"value": 55, "source": "https://specs.gg/Zeus", "confidence": "medium"},
+         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Zeus", "confidence": "medium"}}},
+      {"nickname": "Kanavi", "name_kr": "서진혁", "role": "Jungle",
+       "gear": {
+         "mouse": {"value": "Logitech G PRO X Superlight 2 White", "source": "https://specs.gg/Kanavi", "confidence": "low", "note": "prosettings.net은 DeathAdder V4 Pro White로 상충"},
+         "keyboard": {"value": "Logitech G PRO X TKL White", "source": "https://specs.gg/Kanavi", "confidence": "low", "note": "prosettings.net은 Huntsman V3 Pro TKL로 상충"},
+         "monitor": {"value": "ZOWIE XL2586X+", "source": "https://specs.gg/Kanavi", "confidence": "low", "note": "prosettings.net은 LG 25GR75FG로 상충"},
+         "headset": {"value": "Sennheiser HMD 300 Pro", "source": "https://specs.gg/Kanavi", "confidence": "low", "note": "방송용 공용 헤드셋 가능성"},
+         "mousepad": {"value": "ZOWIE G-SR III", "source": "https://specs.gg/Kanavi", "confidence": "low", "note": "prosettings.net은 Artisan Ninja FX Zero로 상충"}},
+       "settings": {
+         "dpi": null, "in_game_sens": null,
+         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Kanavi", "confidence": "medium"}}},
+      {"nickname": "Zeka", "name_kr": "김건우", "role": "Mid",
+       "gear": {
+         "mouse": {"value": "Logitech G PRO X Superlight 2", "source": "https://specs.gg/Zeka", "confidence": "low", "note": "prosettings.net은 Viper V3 Pro Green으로 상충"},
+         "keyboard": {"value": "Razer BlackWidow V3 Pro", "source": "https://specs.gg/Zeka", "confidence": "medium"},
+         "monitor": {"value": "LG UltraGear 25GR75FG", "source": "https://prosettings.net/lists/league-of-legends/", "confidence": "medium"},
+         "headset": {"value": "Razer Kraken V3 Pro", "source": "https://specs.gg/Zeka", "confidence": "medium"},
+         "mousepad": {"value": "Razer Pro Glide XXL", "source": "https://specs.gg/Zeka", "confidence": "low", "note": "prosettings.net은 Gigantus V2로 상충"}},
+       "settings": {
+         "dpi": {"value": 650, "source": "https://specs.gg/Zeka", "confidence": "medium"},
+         "in_game_sens": {"value": 30, "source": "https://specs.gg/Zeka", "confidence": "medium"},
+         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Zeka", "confidence": "medium"}}},
+      {"nickname": "Gumayusi", "name_kr": "이민형", "role": "Bot",
+       "gear": {
+         "mouse": {"value": "Logitech G PRO X Superlight 2", "source": "https://specs.gg/Gumayusi", "confidence": "medium", "note": "bo3.gg 동일 확인"},
+         "keyboard": {"value": "Logitech G PRO X TKL Rapid", "source": "https://specs.gg/Gumayusi", "confidence": "medium", "note": "bo3.gg 동일 확인"},
+         "monitor": null,
+         "headset": {"value": "Logitech G333 (인이어)", "source": "https://specs.gg/Gumayusi", "confidence": "medium"},
+         "mousepad": {"value": "Logitech G640", "source": "https://specs.gg/Gumayusi", "confidence": "low", "note": "prosettings.net은 Corsair MM Pro로 상충"}},
+       "settings": {
+         "dpi": {"value": 800, "source": "https://specs.gg/Gumayusi", "confidence": "medium", "note": "bo3.gg도 800"},
+         "in_game_sens": {"value": 50, "source": "https://specs.gg/Gumayusi", "confidence": "medium"},
+         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Gumayusi", "confidence": "medium"}}},
+      {"nickname": "Delight", "name_kr": "유환중", "role": "Support",
+       "gear": {
+         "mouse": {"value": "Logitech G Pro Wireless", "source": "https://specs.gg/Delight", "confidence": "medium"},
+         "keyboard": {"value": "Razer Huntsman V3 Pro TKL", "source": "https://specs.gg/Delight", "confidence": "low", "note": "prosettings.net은 G Pro X TKL Black으로 상충"},
+         "monitor": {"value": "LG UltraGear 25GR75FG", "source": "https://prosettings.net/lists/league-of-legends/", "confidence": "medium"},
+         "headset": {"value": "Razer BlackShark V3 Pro", "source": "https://specs.gg/Delight", "confidence": "medium"},
+         "mousepad": {"value": "Razer Gigantus V2", "source": "https://specs.gg/Delight", "confidence": "low", "note": "prosettings.net은 G640으로 상충"}},
+       "settings": {
+         "dpi": {"value": 750, "source": "https://specs.gg/Delight", "confidence": "medium"},
+         "in_game_sens": {"value": 50, "source": "https://specs.gg/Delight", "confidence": "medium"},
+         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Delight", "confidence": "medium"}}}
+    ]
+  },
+  "KT": {
+    "roster_note": "원딜 Aiming은 2026-07-29 내부 갈등 사유로 제외, FenRir(박강준) 콜업 주전. 서포터 Effort.",
+    "roster_source": "https://www.invenglobal.com/articles/24251/kt-benches-aiming-calls-up-fenrir-ahead-of-t1-match-citing-internal-conflict",
+    "players": [
+      {"nickname": "PerfecT", "name_kr": "이승민", "role": "Top",
+       "gear": {
+         "mouse": {"value": "Logitech G PRO X Superlight 2", "source": "https://specs.gg/PerfecT-LoL", "confidence": "low"},
+         "keyboard": {"value": "Logitech G PRO X TKL", "source": "https://specs.gg/PerfecT-LoL", "confidence": "low"},
+         "monitor": null,
+         "headset": {"value": "Logitech G PRO X 2 Lightspeed", "source": "https://specs.gg/PerfecT-LoL", "confidence": "low"},
+         "mousepad": {"value": "Logitech G740", "source": "https://specs.gg/PerfecT-LoL", "confidence": "medium"}},
+       "settings": {
+         "dpi": {"value": 1600, "source": "https://prosettings.net/lists/league-of-legends/", "confidence": "medium"},
+         "in_game_sens": null,
+         "resolution": {"value": "1920x1080", "source": "https://specs.gg/PerfecT-LoL", "confidence": "medium"}}},
+      {"nickname": "Cuzz", "name_kr": "문우찬", "role": "Jungle",
+       "gear": {
+         "mouse": {"value": "Logitech G PRO X Superlight 2 White", "source": "https://specs.gg/Cuzz", "confidence": "low"},
+         "keyboard": {"value": "Logitech G PRO X TKL", "source": "https://specs.gg/Cuzz", "confidence": "low"},
+         "monitor": null,
+         "headset": {"value": "Logitech G PRO X 2 Lightspeed", "source": "https://specs.gg/Cuzz", "confidence": "medium"},
+         "mousepad": {"value": "Logitech G740", "source": "https://specs.gg/Cuzz", "confidence": "low", "note": "prosettings.net은 G240으로 상충"}},
+       "settings": {
+         "dpi": {"value": 800, "source": "https://prosettings.net/lists/league-of-legends/", "confidence": "medium"},
+         "in_game_sens": null,
+         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Cuzz", "confidence": "medium"}}},
+      {"nickname": "Bdd", "name_kr": "곽보성", "role": "Mid",
+       "gear": {
+         "mouse": {"value": "Logitech G903", "source": "https://specs.gg/Bdd", "confidence": "low", "note": "prosettings.net은 G Pro Wireless로 상충"},
+         "keyboard": {"value": "Logitech G PRO X TKL", "source": "https://specs.gg/Bdd", "confidence": "medium"},
+         "monitor": {"value": "ASUS ROG Swift PG258Q", "source": "https://specs.gg/Bdd", "confidence": "low", "note": "구형 정보 가능성"},
+         "headset": {"value": "Astro A50", "source": "https://specs.gg/Bdd", "confidence": "low", "note": "구형 정보 가능성"},
+         "mousepad": {"value": "Logitech G640", "source": "https://specs.gg/Bdd", "confidence": "low"}},
+       "settings": {
+         "dpi": {"value": 1800, "source": "https://specs.gg/Bdd", "confidence": "low", "note": "prosettings.net은 1650으로 상충"},
+         "in_game_sens": {"value": 85, "source": "https://specs.gg/Bdd", "confidence": "low", "note": "prosettings.net은 35로 상충"},
+         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Bdd", "confidence": "medium"}}},
+      {"nickname": "FenRir", "name_kr": "박강준", "role": "Bot",
+       "note": "2026-07-29 콜업 신인. 장비·세팅 공개 정보 없음",
+       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "Effort", "name_kr": "이상호", "role": "Support",
+       "note": "집계 사이트 프로필 없음. 공개 정보 확인 불가",
+       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}}
+    ]
+  }
+}
