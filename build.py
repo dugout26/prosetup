@@ -121,6 +121,20 @@ section h2 { font-size: 16px; font-weight: 800; margin-bottom: 12px; color: var(
 .set .v { font-size: 17px; font-weight: 900; margin-top: 3px; }
 .set .v.unknown { color: #566070; font-weight: 600; font-size: 13px; }
 .note { font-size: 12px; color: var(--mut); margin-top: 14px; line-height: 1.7; }
+.rankrow { display: flex; align-items: center; gap: 12px; background: var(--card);
+           border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin-bottom: 8px; }
+.rankrow .rk { font-size: 20px; font-weight: 900; color: var(--gold); min-width: 34px; text-align: center; }
+.rankrow .rk.top1 { font-size: 24px; }
+.rankrow .info { flex: 1; min-width: 0; }
+.rankrow .pname { font-weight: 800; font-size: 15px; }
+.rankrow .users { font-size: 11.5px; color: var(--mut); margin-top: 3px; line-height: 1.6; }
+.rankrow .users a { color: #9BA3AF; border-bottom: 1px dotted #566070; }
+.rankrow .cnt { font-size: 13px; font-weight: 800; white-space: nowrap; }
+.rankbanner { display: block; background: linear-gradient(90deg, rgba(232,195,107,.14), rgba(232,195,107,.03));
+              border: 1px solid rgba(232,195,107,.35); border-radius: 12px; padding: 13px 16px;
+              margin: 16px 0 4px; font-weight: 800; font-size: 14.5px; }
+.rankbanner small { display: block; font-weight: 500; color: var(--mut); margin-top: 2px; font-size: 12px; }
+.etc1 { font-size: 12px; color: #566070; margin: 6px 2px 0; line-height: 1.8; }
 .srcs { font-size: 11px; color: #566070; margin-top: 20px; line-height: 1.8; word-break: break-all; }
 .srcs a { color: #7A8290; }
 footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
@@ -172,10 +186,70 @@ def item_html(cat_label, entry):
             f'<span class="model">{esc(entry["value"])}</span>'
             f'<span class="conf {conf}">신뢰도 {CONF_KR.get(conf, conf)}</span>{buy}</div>')
 
+def build_rankings(teams):
+    """data/products.json 카탈로그 그룹 기준 카테고리별 사용 순위 페이지."""
+    path = ROOT / "data" / "products.json"
+    if not path.exists():
+        return None
+    products = json.load(open(path, encoding="utf-8"))["products"]
+    alias_owner = {}
+    for i, prod in enumerate(products):
+        for a in prod["aliases"]:
+            alias_owner[a] = i
+    users = {i: [] for i in range(len(products))}
+    for code, players in teams.items():
+        for p in players:
+            for key, _ in GEAR_LABELS:
+                e = p.get("gear", {}).get(key)
+                if e and e.get("value") in alias_owner:
+                    users[alias_owner[e["value"]]].append(p["nickname"])
+
+    total_players = sum(len(v) for v in teams.values())
+    sections = ""
+    for key, label in GEAR_LABELS:
+        rows = sorted((p for p in products if p["category"] == key), key=lambda p: -p["count"])
+        main = [p for p in rows if p["count"] >= 2]
+        rest = [p for p in rows if p["count"] < 2]
+        rhtml = ""
+        for rank, prod in enumerate(main, 1):
+            i = products.index(prod)
+            chips = " ".join(f'<a href="{BASE_URL}/players/{n.lower()}.html">{esc(n)}</a>' for n in sorted(set(users[i])))
+            buy = (f'<a class="buy" href="{esc(prod["coupang_url"])}" target="_blank" rel="nofollow sponsored">최저가 보기</a>'
+                   if prod.get("coupang_url") else "")
+            rhtml += (f'<div class="rankrow"><span class="rk{" top1" if rank == 1 else ""}">{rank}</span>'
+                      f'<span class="info"><span class="pname">{esc(prod["name"])}</span>'
+                      f'<span class="users">{chips}</span></span>'
+                      f'<span class="cnt">{prod["count"]}명</span>{buy}</div>')
+        if rest:
+            rhtml += ('<p class="etc1">1명 사용: ' +
+                      " · ".join(esc(p["name"]) for p in rest) + "</p>")
+        sections += f'<section><h2>가장 많이 쓰는 {label}</h2>{rhtml}</section>'
+
+    title = "LCK 프로게이머가 가장 많이 쓰는 게이밍 장비 순위 (2026)"
+    desc = (f"LCK 10팀 {total_players}명 선수 데이터 기준 — 프로게이머들이 실제 사용하는 "
+            "게이밍 마우스·키보드·모니터·헤드셋·마우스패드 순위와 구매 링크.")
+    body = f"""<div class="crumb"><a href="{BASE_URL}/">홈</a> › 장비 랭킹</div>
+<h1>프로들이 가장 많이 쓰는 장비는?</h1>
+<p class="sub">2026 LCK 10팀 {total_players}명의 확인된 장비 데이터를 집계한 실사용 순위입니다.
+같은 모델의 색상판은 별도 항목입니다.</p>
+{sections}"""
+    jsonld = {"@context": "https://schema.org", "@type": "ItemList",
+              "name": title,
+              "itemListElement": [
+                  {"@type": "ListItem", "position": r + 1, "name": p["name"]}
+                  for r, p in enumerate(sorted((p for p in products if p["category"] == "mouse"),
+                                               key=lambda p: -p["count"])[:5])]}
+    (ROOT / "rankings.html").write_text(
+        page(title, desc, body, f"{BASE_URL}/rankings.html", jsonld), encoding="utf-8")
+    return f"{BASE_URL}/rankings.html"
+
 def build():
     teams = load_players()
     OUT_PLAYERS.mkdir(exist_ok=True)
     urls = [f"{BASE_URL}/"]
+    rank_url = build_rankings(teams)
+    if rank_url:
+        urls.append(rank_url)
 
     # 선수 페이지
     for code, players in teams.items():
@@ -251,6 +325,8 @@ def build():
     body = f"""<h1>LCK 프로 선수들은 뭘 쓸까?</h1>
 <p class="sub">페이커의 마우스부터 쵸비의 DPI까지 — 2026 LCK 10팀 선수들의 장비와 인게임 세팅을
 공개 자료 교차 확인으로 정리했습니다.</p>
+<a class="rankbanner" href="{BASE_URL}/rankings.html">🏆 프로들이 가장 많이 쓰는 장비 랭킹
+<small>50명 데이터 집계 — 마우스 1위는 뭘까?</small></a>
 {blocks}"""
     jsonld = {"@context": "https://schema.org", "@type": "WebSite", "name": "LCK 기어",
               "url": BASE_URL + "/", "description": "LCK 프로 선수 장비·세팅 정리"}

@@ -67,6 +67,20 @@ section h2 { font-size: 16px; font-weight: 800; margin-bottom: 12px; color: var(
 .set .v { font-size: 17px; font-weight: 900; margin-top: 3px; }
 .set .v.unknown { color: #566070; font-weight: 600; font-size: 13px; }
 .note { font-size: 12px; color: var(--mut); margin-top: 14px; line-height: 1.7; }
+.rankrow { display: flex; align-items: center; gap: 12px; background: var(--card);
+           border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin-bottom: 8px; }
+.rankrow .rk { font-size: 20px; font-weight: 900; color: var(--gold); min-width: 34px; text-align: center; }
+.rankrow .rk.top1 { font-size: 24px; }
+.rankrow .info { flex: 1; min-width: 0; }
+.rankrow .pname { font-weight: 800; font-size: 15px; }
+.rankrow .users { font-size: 11.5px; color: var(--mut); margin-top: 3px; line-height: 1.6; }
+.rankrow .users a { color: #9BA3AF; border-bottom: 1px dotted #566070; }
+.rankrow .cnt { font-size: 13px; font-weight: 800; white-space: nowrap; }
+.rankbanner { display: block; background: linear-gradient(90deg, rgba(232,195,107,.14), rgba(232,195,107,.03));
+              border: 1px solid rgba(232,195,107,.35); border-radius: 12px; padding: 13px 16px;
+              margin: 16px 0 4px; font-weight: 800; font-size: 14.5px; }
+.rankbanner small { display: block; font-weight: 500; color: var(--mut); margin-top: 2px; font-size: 12px; }
+.etc1 { font-size: 12px; color: #566070; margin: 6px 2px 0; line-height: 1.8; }
 .srcs { font-size: 11px; color: #566070; margin-top: 20px; line-height: 1.8; word-break: break-all; }
 .srcs a { color: #7A8290; }
 footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
