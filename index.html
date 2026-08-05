@@ -3,26 +3,89 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LCK 기어 — 프로 선수 장비·세팅 정리</title>
-<meta name="description" content="LCK 프로게이머들이 실제 사용하는 마우스·키보드·모니터와 인게임 세팅(DPI·감도)을 팀별로 정리합니다.">
+<title>LCK 기어 — 프로 선수 장비·세팅 총정리 (마우스·키보드·DPI)</title>
+<meta name="description" content="2026 LCK 10팀 50명 선수들이 실제 사용하는 게이밍 장비와 인게임 세팅을 팀별로 정리했습니다.">
+<link rel="canonical" href="https://dugout26.github.io/lck-gear/">
+<meta property="og:title" content="LCK 기어 — 프로 선수 장비·세팅 총정리 (마우스·키보드·DPI)">
+<meta property="og:description" content="2026 LCK 10팀 50명 선수들이 실제 사용하는 게이밍 장비와 인게임 세팅을 팀별로 정리했습니다.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "LCK 기어", "url": "https://dugout26.github.io/lck-gear/", "description": "LCK 프로 선수 장비·세팅 정리"}</script>
 <style>
-  * { margin: 0; box-sizing: border-box; }
-  body { font-family: Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', -apple-system, sans-serif;
-         background: #0E1117; color: #EDEFF3; min-height: 100vh; display: grid; place-items: center; padding: 24px; }
-  .card { max-width: 560px; text-align: center; }
-  h1 { font-size: 26px; margin-bottom: 12px; }
-  h1 b { color: #E8C36B; }
-  p { color: #9BA3AF; font-size: 14.5px; line-height: 1.8; }
-  .soon { display: inline-block; margin-top: 18px; padding: 8px 18px; border: 1px solid rgba(232,195,107,0.4);
-          border-radius: 999px; color: #E8C36B; font-size: 13px; font-weight: 700; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --bg: #0E1117; --card: #161B24; --tx: #EDEFF3; --mut: #9BA3AF; --gold: #E8C36B;
+        --line: rgba(255,255,255,0.09); }
+body { font-family: Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', -apple-system, sans-serif;
+       background: var(--bg); color: var(--tx); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 28px 18px 60px; }
+header.site { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+header.site .logo { font-size: 22px; font-weight: 900; }
+header.site .logo b { color: var(--gold); }
+header.site .tag { font-size: 12px; color: var(--mut); }
+.updated { font-size: 12px; color: var(--mut); margin-bottom: 24px; }
+h1 { font-size: 24px; font-weight: 900; margin: 10px 0 4px; }
+.sub { color: var(--mut); font-size: 14px; margin-bottom: 22px; }
+.teamblock { margin-bottom: 26px; }
+.teamname { display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 800;
+            margin-bottom: 10px; }
+.teamname i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.pgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(126px, 1fr)); gap: 8px; }
+.pcell { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+         padding: 12px 14px; transition: border-color 0.15s; }
+.pcell:hover { border-color: rgba(232,195,107,0.5); }
+.pcell .nick { font-size: 15px; font-weight: 800; }
+.pcell .meta { font-size: 11.5px; color: var(--mut); margin-top: 2px; }
+.pcell .none { font-size: 10.5px; color: #566070; margin-top: 4px; }
+.crumb { font-size: 13px; color: var(--mut); margin-bottom: 18px; }
+.crumb a:hover { color: var(--gold); }
+.phead { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+.phead h1 { margin: 0; font-size: 30px; }
+.phead .kr { font-size: 17px; color: var(--mut); }
+.rolechip { font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 999px;
+            background: var(--card); border: 1px solid var(--line); color: var(--gold); }
+section { margin-top: 26px; }
+section h2 { font-size: 16px; font-weight: 800; margin-bottom: 12px; color: var(--gold); }
+.gear { display: flex; flex-direction: column; gap: 10px; }
+.item { background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+        padding: 14px 16px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.item .cat { width: 84px; flex: none; font-size: 12.5px; color: var(--mut); font-weight: 700; }
+.item .model { font-size: 15px; font-weight: 800; flex: 1; min-width: 160px; }
+.item .model.unknown { color: #566070; font-weight: 600; }
+.conf { font-size: 10.5px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line);
+        color: var(--mut); flex: none; }
+.conf.high { color: #51CF66; border-color: rgba(81,207,102,0.4); }
+.conf.low { color: #FFB4B4; border-color: rgba(255,107,107,0.3); }
+.buy { flex: none; font-size: 13px; font-weight: 800; padding: 8px 16px; border-radius: 9px;
+       background: var(--gold); color: #14171D; }
+.buy:hover { background: #F0D08A; }
+.settings { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.set { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+       padding: 12px; text-align: center; }
+.set .k { font-size: 11.5px; color: var(--mut); }
+.set .v { font-size: 17px; font-weight: 900; margin-top: 3px; }
+.set .v.unknown { color: #566070; font-weight: 600; font-size: 13px; }
+.note { font-size: 12px; color: var(--mut); margin-top: 14px; line-height: 1.7; }
+.srcs { font-size: 11px; color: #566070; margin-top: 20px; line-height: 1.8; word-break: break-all; }
+.srcs a { color: #7A8290; }
+footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
+         font-size: 11.5px; color: #566070; line-height: 1.8; }
+@media (max-width: 480px) { .settings { grid-template-columns: 1fr 1fr; } .item .cat { width: 100%; } }
 </style>
 </head>
 <body>
-  <div class="card">
-    <h1><b>LCK 기어</b> — 프로 선수 장비·세팅</h1>
-    <p>페이커의 마우스, 제우스의 키보드, 쵸비의 DPI —<br>
-    LCK 프로게이머들이 실제 쓰는 장비와 인게임 세팅을 팀별로 정리합니다.</p>
-    <div class="soon">2026 시즌 데이터 준비 중 · 곧 오픈</div>
-  </div>
+<div class="wrap">
+<header class="site"><a href="https://dugout26.github.io/lck-gear/" class="logo">LCK <b>기어</b></a>
+<span class="tag">프로 선수 장비·세팅</span></header>
+<div class="updated">데이터 확인 시점: 2026-08 · 매 시즌 업데이트</div>
+<h1>LCK 프로 선수들은 뭘 쓸까?</h1>
+<p class="sub">페이커의 마우스부터 쵸비의 DPI까지 — 2026 LCK 10팀 선수들의 장비와 인게임 세팅을
+공개 자료 교차 확인으로 정리했습니다.</p>
+<div class="teamblock"><div class="teamname"><i style="background:#E2012D"></i>T1</div><div class="pgrid"><a class="pcell" href="https://dugout26.github.io/lck-gear/players/doran.html"><div class="nick">Doran</div><div class="meta">도란 · 탑</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/oner.html"><div class="nick">Oner</div><div class="meta">오너 · 정글</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/faker.html"><div class="nick">Faker</div><div class="meta">페이커 · 미드</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/peyz.html"><div class="nick">Peyz</div><div class="meta">페이즈 · 원딜</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/keria.html"><div class="nick">Keria</div><div class="meta">케리아 · 서포터</div></a></div></div><div class="teamblock"><div class="teamname"><i style="background:#AA8B56"></i>젠지</div><div class="pgrid"><a class="pcell" href="https://dugout26.github.io/lck-gear/players/kiin.html"><div class="nick">Kiin</div><div class="meta">기인 · 탑</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/canyon.html"><div class="nick">Canyon</div><div class="meta">캐니언 · 정글</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/chovy.html"><div class="nick">Chovy</div><div class="meta">쵸비 · 미드</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/ruler.html"><div class="nick">Ruler</div><div class="meta">룰러 · 원딜</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/duro.html"><div class="nick">Duro</div><div class="meta">두로 · 서포터</div></a></div></div><div class="teamblock"><div class="teamname"><i style="background:#F07C28"></i>한화생명e스포츠</div><div class="pgrid"><a class="pcell" href="https://dugout26.github.io/lck-gear/players/zeus.html"><div class="nick">Zeus</div><div class="meta">최우제 · 탑</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/kanavi.html"><div class="nick">Kanavi</div><div class="meta">서진혁 · 정글</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/zeka.html"><div class="nick">Zeka</div><div class="meta">김건우 · 미드</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/gumayusi.html"><div class="nick">Gumayusi</div><div class="meta">이민형 · 원딜</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/delight.html"><div class="nick">Delight</div><div class="meta">유환중 · 서포터</div></a></div></div><div class="teamblock"><div class="teamname"><i style="background:#FF0A07"></i>kt 롤스터</div><div class="pgrid"><a class="pcell" href="https://dugout26.github.io/lck-gear/players/perfect.html"><div class="nick">PerfecT</div><div class="meta">이승민 · 탑</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/cuzz.html"><div class="nick">Cuzz</div><div class="meta">문우찬 · 정글</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/bdd.html"><div class="nick">Bdd</div><div class="meta">곽보성 · 미드</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/fenrir.html"><div class="nick">FenRir</div><div class="meta">박강준 · 원딜</div><div class="none">정보 수집 중</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/effort.html"><div class="nick">Effort</div><div class="meta">이상호 · 서포터</div><div class="none">정보 수집 중</div></a></div></div><div class="teamblock"><div class="teamname"><i style="background:#0ec7b7"></i>디플러스 기아</div><div class="pgrid"><a class="pcell" href="https://dugout26.github.io/lck-gear/players/siwoo.html"><div class="nick">Siwoo</div><div class="meta">전시우 · 탑</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/lucid.html"><div class="nick">Lucid</div><div class="meta">최용혁 · 정글</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/showmaker.html"><div class="nick">ShowMaker</div><div class="meta">허수 · 미드</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/smash.html"><div class="nick">Smash</div><div class="meta">신금재 · 원딜</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/career.html"><div class="nick">Career</div><div class="meta">오형석 · 서포터</div><div class="none">정보 수집 중</div></a></div></div><div class="teamblock"><div class="teamname"><i style="background:#DE2027"></i>농심 레드포스</div><div class="pgrid"><a class="pcell" href="https://dugout26.github.io/lck-gear/players/kingen.html"><div class="nick">Kingen</div><div class="meta">황성훈 · 탑</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/sponge.html"><div class="nick">Sponge</div><div class="meta">배영준 · 정글</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/scout.html"><div class="nick">Scout</div><div class="meta">이예찬 · 미드</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/diable.html"><div class="nick">Diable</div><div class="meta">남대근 · 원딜</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/lehends.html"><div class="nick">Lehends</div><div class="meta">손시우 · 서포터</div></a></div></div><div class="teamblock"><div class="teamname"><i style="background:#5A00D3"></i>키움 DRX</div><div class="pgrid"><a class="pcell" href="https://dugout26.github.io/lck-gear/players/frog.html"><div class="nick">Frog</div><div class="meta">이민회 · 탑</div><div class="none">정보 수집 중</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/willer.html"><div class="nick">Willer</div><div class="meta">김정현 · 정글</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/ucal.html"><div class="nick">Ucal</div><div class="meta">손우현 · 미드</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/aiming.html"><div class="nick">Aiming</div><div class="meta">김하람 · 원딜</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/andil.html"><div class="nick">Andil</div><div class="meta">문관빈 · 서포터</div></a></div></div><div class="teamblock"><div class="teamname"><i style="background:#2c7fd8"></i>DN SOOPers</div><div class="pgrid"><a class="pcell" href="https://dugout26.github.io/lck-gear/players/dudu.html"><div class="nick">DuDu</div><div class="meta">이동주 · 탑</div><div class="none">정보 수집 중</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/sharvel.html"><div class="nick">Sharvel</div><div class="meta">김단우 · 정글</div><div class="none">정보 수집 중</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/clozer.html"><div class="nick">Clozer</div><div class="meta">이주현 · 미드</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/deokdam.html"><div class="nick">deokdam</div><div class="meta">서대길 · 원딜</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/peter.html"><div class="nick">Peter</div><div class="meta">정윤수 · 서포터</div></a></div></div><div class="teamblock"><div class="teamname"><i style="background:#F4C617"></i>BNK 피어엑스</div><div class="pgrid"><a class="pcell" href="https://dugout26.github.io/lck-gear/players/clear.html"><div class="nick">Clear</div><div class="meta">송현민 · 탑</div><div class="none">정보 수집 중</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/raptor.html"><div class="nick">Raptor</div><div class="meta">전어진 · 정글</div><div class="none">정보 수집 중</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/vicla.html"><div class="nick">VicLa</div><div class="meta">이대광 · 미드</div><div class="none">정보 수집 중</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/taeyoon.html"><div class="nick">Taeyoon</div><div class="meta">김태윤 · 원딜</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/kellin.html"><div class="nick">Kellin</div><div class="meta">김형규 · 서포터</div><div class="none">정보 수집 중</div></a></div></div><div class="teamblock"><div class="teamname"><i style="background:#01492B"></i>한진 브리온</div><div class="pgrid"><a class="pcell" href="https://dugout26.github.io/lck-gear/players/casting.html"><div class="nick">Casting</div><div class="meta">신민제 · 탑</div><div class="none">정보 수집 중</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/gideon.html"><div class="nick">GIDEON</div><div class="meta">김민성 · 정글</div><div class="none">정보 수집 중</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/roamer.html"><div class="nick">Roamer</div><div class="meta">조우진 · 미드</div><div class="none">정보 수집 중</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/teddy.html"><div class="nick">Teddy</div><div class="meta">박진성 · 원딜</div></a><a class="pcell" href="https://dugout26.github.io/lck-gear/players/namgung.html"><div class="nick">Namgung</div><div class="meta">남궁성훈 · 서포터</div><div class="none">정보 수집 중</div></a></div></div>
+<footer>
+비공식 팬 사이트입니다. 선수·팀·리그와 무관하며, 장비 정보는 공개 자료를 교차 확인해 정리했습니다.
+잘못된 정보 제보: dugout26.gm@gmail.com<br>
+이 페이지의 링크를 통해 구매가 발생하면 쿠팡 파트너스 활동의 일환으로 일정액의 수수료를 제공받을 수 있습니다.
+</footer>
+</div>
 </body>
 </html>

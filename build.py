@@ -1,0 +1,252 @@
+#!/usr/bin/env python3
+"""data/raw/*.json → 정적 사이트 생성 (index.html + players/*.html + sitemap.xml).
+
+쿠팡 링크: 데이터에 coupang_url이 있으면 버튼 렌더, 없으면 미표시 (승인 후 채움).
+"""
+import html
+import json
+from datetime import date
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+OUT_PLAYERS = ROOT / "players"
+BASE_URL = "https://dugout26.github.io/lck-gear"
+VERIFIED = "2026-08"
+
+TEAMS = {
+    "T1":  {"kr": "T1", "color": "#E2012D"},
+    "GEN": {"kr": "젠지", "color": "#AA8B56"},
+    "HLE": {"kr": "한화생명e스포츠", "color": "#F07C28"},
+    "KT":  {"kr": "kt 롤스터", "color": "#FF0A07"},
+    "DK":  {"kr": "디플러스 기아", "color": "#0ec7b7"},
+    "NS":  {"kr": "농심 레드포스", "color": "#DE2027"},
+    "BRO": {"kr": "한진 브리온", "color": "#01492B"},
+    "DNS": {"kr": "DN SOOPers", "color": "#2c7fd8"},
+    "BNK": {"kr": "BNK 피어엑스", "color": "#F4C617"},
+    "KRX": {"kr": "키움 DRX", "color": "#5A00D3"},
+}
+TEAM_ORDER = ["T1", "GEN", "HLE", "KT", "DK", "NS", "KRX", "DNS", "BNK", "BRO"]
+GEAR_LABELS = [("mouse", "마우스"), ("keyboard", "키보드"), ("monitor", "모니터"),
+               ("headset", "헤드셋"), ("mousepad", "마우스패드")]
+SET_LABELS = [("dpi", "DPI"), ("in_game_sens", "인게임 감도"), ("resolution", "해상도")]
+ROLE_KR = {"top": "탑", "jungle": "정글", "mid": "미드", "adc": "원딜", "bot": "원딜", "support": "서포터"}
+CONF_KR = {"high": "확실", "medium": "보통", "low": "낮음"}
+
+def esc(s):
+    return html.escape(str(s), quote=True)
+
+def load_players():
+    teams = {}
+    for f in sorted((ROOT / "data" / "raw").glob("*.json")):
+        d = json.load(open(f))
+        for code, v in d.items():
+            if not isinstance(v, dict) or "players" not in v:
+                continue
+            teams.setdefault(code, [])
+            for p in v["players"]:
+                p["_team"] = code
+                p["role"] = (p.get("role") or "").lower()
+                teams[code].append(p)
+    return teams
+
+CSS = """
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --bg: #0E1117; --card: #161B24; --tx: #EDEFF3; --mut: #9BA3AF; --gold: #E8C36B;
+        --line: rgba(255,255,255,0.09); }
+body { font-family: Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', -apple-system, sans-serif;
+       background: var(--bg); color: var(--tx); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 28px 18px 60px; }
+header.site { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+header.site .logo { font-size: 22px; font-weight: 900; }
+header.site .logo b { color: var(--gold); }
+header.site .tag { font-size: 12px; color: var(--mut); }
+.updated { font-size: 12px; color: var(--mut); margin-bottom: 24px; }
+h1 { font-size: 24px; font-weight: 900; margin: 10px 0 4px; }
+.sub { color: var(--mut); font-size: 14px; margin-bottom: 22px; }
+.teamblock { margin-bottom: 26px; }
+.teamname { display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 800;
+            margin-bottom: 10px; }
+.teamname i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.pgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(126px, 1fr)); gap: 8px; }
+.pcell { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+         padding: 12px 14px; transition: border-color 0.15s; }
+.pcell:hover { border-color: rgba(232,195,107,0.5); }
+.pcell .nick { font-size: 15px; font-weight: 800; }
+.pcell .meta { font-size: 11.5px; color: var(--mut); margin-top: 2px; }
+.pcell .none { font-size: 10.5px; color: #566070; margin-top: 4px; }
+.crumb { font-size: 13px; color: var(--mut); margin-bottom: 18px; }
+.crumb a:hover { color: var(--gold); }
+.phead { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+.phead h1 { margin: 0; font-size: 30px; }
+.phead .kr { font-size: 17px; color: var(--mut); }
+.rolechip { font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 999px;
+            background: var(--card); border: 1px solid var(--line); color: var(--gold); }
+section { margin-top: 26px; }
+section h2 { font-size: 16px; font-weight: 800; margin-bottom: 12px; color: var(--gold); }
+.gear { display: flex; flex-direction: column; gap: 10px; }
+.item { background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+        padding: 14px 16px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.item .cat { width: 84px; flex: none; font-size: 12.5px; color: var(--mut); font-weight: 700; }
+.item .model { font-size: 15px; font-weight: 800; flex: 1; min-width: 160px; }
+.item .model.unknown { color: #566070; font-weight: 600; }
+.conf { font-size: 10.5px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line);
+        color: var(--mut); flex: none; }
+.conf.high { color: #51CF66; border-color: rgba(81,207,102,0.4); }
+.conf.low { color: #FFB4B4; border-color: rgba(255,107,107,0.3); }
+.buy { flex: none; font-size: 13px; font-weight: 800; padding: 8px 16px; border-radius: 9px;
+       background: var(--gold); color: #14171D; }
+.buy:hover { background: #F0D08A; }
+.settings { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.set { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+       padding: 12px; text-align: center; }
+.set .k { font-size: 11.5px; color: var(--mut); }
+.set .v { font-size: 17px; font-weight: 900; margin-top: 3px; }
+.set .v.unknown { color: #566070; font-weight: 600; font-size: 13px; }
+.note { font-size: 12px; color: var(--mut); margin-top: 14px; line-height: 1.7; }
+.srcs { font-size: 11px; color: #566070; margin-top: 20px; line-height: 1.8; word-break: break-all; }
+.srcs a { color: #7A8290; }
+footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
+         font-size: 11.5px; color: #566070; line-height: 1.8; }
+@media (max-width: 480px) { .settings { grid-template-columns: 1fr 1fr; } .item .cat { width: 100%; } }
+"""
+
+def page(title, desc, body, canonical, jsonld=None):
+    return f"""<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{esc(title)}</title>
+<meta name="description" content="{esc(desc)}">
+<link rel="canonical" href="{canonical}">
+<meta property="og:title" content="{esc(title)}">
+<meta property="og:description" content="{esc(desc)}">
+<meta property="og:type" content="website">
+{f'<script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>' if jsonld else ''}
+<style>{CSS}</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site"><a href="{BASE_URL}/" class="logo">LCK <b>기어</b></a>
+<span class="tag">프로 선수 장비·세팅</span></header>
+<div class="updated">데이터 확인 시점: {VERIFIED} · 매 시즌 업데이트</div>
+{body}
+<footer>
+비공식 팬 사이트입니다. 선수·팀·리그와 무관하며, 장비 정보는 공개 자료를 교차 확인해 정리했습니다.
+잘못된 정보 제보: dugout26.gm@gmail.com<br>
+이 페이지의 링크를 통해 구매가 발생하면 쿠팡 파트너스 활동의 일환으로 일정액의 수수료를 제공받을 수 있습니다.
+</footer>
+</div>
+</body>
+</html>"""
+
+def item_html(cat_label, entry):
+    if not entry or not entry.get("value"):
+        return (f'<div class="item"><span class="cat">{cat_label}</span>'
+                f'<span class="model unknown">확인 중 — 공개 정보 수집 중</span></div>')
+    conf = entry.get("confidence", "medium")
+    buy = (f'<a class="buy" href="{esc(entry["coupang_url"])}" target="_blank" rel="nofollow sponsored">최저가 보기</a>'
+           if entry.get("coupang_url") else "")
+    return (f'<div class="item"><span class="cat">{cat_label}</span>'
+            f'<span class="model">{esc(entry["value"])}</span>'
+            f'<span class="conf {conf}">신뢰도 {CONF_KR.get(conf, conf)}</span>{buy}</div>')
+
+def build():
+    teams = load_players()
+    OUT_PLAYERS.mkdir(exist_ok=True)
+    urls = [f"{BASE_URL}/"]
+
+    # 선수 페이지
+    for code, players in teams.items():
+        tinfo = TEAMS.get(code, {"kr": code, "color": "#888"})
+        for p in players:
+            nick = p["nickname"]
+            slug = nick.lower()
+            kr = p.get("name_kr", "")
+            role = ROLE_KR.get(p["role"], p["role"])
+            gear = p.get("gear", {})
+            setting = p.get("settings", {})
+            has_any = any(gear.get(k) and gear[k].get("value") for k, _ in GEAR_LABELS)
+
+            title = f"{kr}({nick}) 장비·세팅 — 마우스·키보드·DPI | LCK 기어"
+            desc = (f"{tinfo['kr']} {role} {kr}({nick})가 사용하는 게이밍 장비(마우스·키보드·모니터)와 "
+                    f"인게임 세팅(DPI·감도)을 정리했습니다.")
+            gear_html = "".join(item_html(label, gear.get(key)) for key, label in GEAR_LABELS)
+            set_html = ""
+            for key, label in SET_LABELS:
+                e = setting.get(key)
+                v = e.get("value") if isinstance(e, dict) else None
+                set_html += (f'<div class="set"><div class="k">{label}</div>'
+                             f'<div class="v{"" if v is not None else " unknown"}">'
+                             f'{esc(v) if v is not None else "확인 중"}</div></div>')
+
+            srcs = []
+            for sec in (gear, setting):
+                for e in sec.values():
+                    if isinstance(e, dict) and e.get("source"):
+                        s = e["source"].split(",")[0].strip()
+                        if s not in srcs:
+                            srcs.append(s)
+            srcs_html = ("<div class='srcs'>출처: " +
+                         " · ".join(f'<a href="{esc(s)}" rel="nofollow">{esc(s.split("//")[-1].split("/")[0])}</a>'
+                                    for s in srcs) + "</div>") if srcs else ""
+            note = p.get("note")
+            note_html = f'<p class="note">{esc(note)}</p>' if note else ""
+            empty_html = ("" if has_any else
+                          '<p class="note">아직 공개된 장비 정보가 확인되지 않았습니다. '
+                          '방송·인터뷰에서 확인되는 대로 업데이트합니다.</p>')
+
+            jsonld = {"@context": "https://schema.org", "@type": "ProfilePage",
+                      "mainEntity": {"@type": "Person", "name": kr or nick, "alternateName": nick,
+                                     "affiliation": tinfo["kr"], "jobTitle": f"프로게이머({role})"}}
+            body = f"""<div class="crumb"><a href="{BASE_URL}/">홈</a> › {tinfo['kr']}</div>
+<div class="phead"><h1>{esc(nick)}</h1><span class="kr">{esc(kr)}</span>
+<span class="rolechip">{tinfo['kr']} · {role}</span></div>
+{note_html}
+<section><h2>장비</h2><div class="gear">{gear_html}</div>{empty_html}</section>
+<section><h2>인게임 세팅</h2><div class="settings">{set_html}</div></section>
+{srcs_html}"""
+            out = OUT_PLAYERS / f"{slug}.html"
+            out.write_text(page(title, desc, body, f"{BASE_URL}/players/{slug}.html", jsonld), encoding="utf-8")
+            urls.append(f"{BASE_URL}/players/{slug}.html")
+
+    # 인덱스
+    blocks = ""
+    for code in TEAM_ORDER:
+        if code not in teams:
+            continue
+        tinfo = TEAMS[code]
+        cells = ""
+        for p in teams[code]:
+            has_any = any(p.get("gear", {}).get(k) and p["gear"][k].get("value") for k, _ in GEAR_LABELS)
+            extra = "" if has_any else '<div class="none">정보 수집 중</div>'
+            cells += (f'<a class="pcell" href="{BASE_URL}/players/{p["nickname"].lower()}.html">'
+                      f'<div class="nick">{esc(p["nickname"])}</div>'
+                      f'<div class="meta">{esc(p.get("name_kr", ""))} · {ROLE_KR.get(p["role"], p["role"])}</div>{extra}</a>')
+        blocks += (f'<div class="teamblock"><div class="teamname">'
+                   f'<i style="background:{tinfo["color"]}"></i>{tinfo["kr"]}</div>'
+                   f'<div class="pgrid">{cells}</div></div>')
+
+    body = f"""<h1>LCK 프로 선수들은 뭘 쓸까?</h1>
+<p class="sub">페이커의 마우스부터 쵸비의 DPI까지 — 2026 LCK 10팀 선수들의 장비와 인게임 세팅을
+공개 자료 교차 확인으로 정리했습니다.</p>
+{blocks}"""
+    jsonld = {"@context": "https://schema.org", "@type": "WebSite", "name": "LCK 기어",
+              "url": BASE_URL + "/", "description": "LCK 프로 선수 장비·세팅 정리"}
+    (ROOT / "index.html").write_text(
+        page("LCK 기어 — 프로 선수 장비·세팅 총정리 (마우스·키보드·DPI)",
+             "2026 LCK 10팀 50명 선수들이 실제 사용하는 게이밍 장비와 인게임 세팅을 팀별로 정리했습니다.",
+             body, BASE_URL + "/", jsonld), encoding="utf-8")
+
+    # sitemap + robots
+    (ROOT / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+        "".join(f"<url><loc>{u}</loc><lastmod>{date.today()}</lastmod></url>\n" for u in urls) +
+        "</urlset>\n", encoding="utf-8")
+    (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {BASE_URL}/sitemap.xml\n", encoding="utf-8")
+    print(f"생성: 선수 {len(urls) - 1}명 + 인덱스 + sitemap")
+
+if __name__ == "__main__":
+    build()
