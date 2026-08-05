@@ -13,6 +13,9 @@ ROOT = Path(__file__).resolve().parent
 OUT_PLAYERS = ROOT / "players"
 BASE_URL = "https://dugout26.github.io/lck-gear"
 VERIFIED = "2026-08"
+# 서치콘솔 인증 코드 (content 값만). 채우면 모든 페이지 head에 메타태그 렌더.
+VERIFY_GOOGLE = None  # 구글 서치콘솔 "HTML 태그" 방식의 content="..."
+VERIFY_NAVER = None   # 네이버 서치어드바이저 HTML 태그 content="..."
 
 TEAMS = {
     "T1":  {"kr": "T1", "color": "#E2012D"},
@@ -137,6 +140,8 @@ def page(title, desc, body, canonical, jsonld=None):
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:type" content="website">
+{f'<meta name="google-site-verification" content="{VERIFY_GOOGLE}">' if VERIFY_GOOGLE else ''}
+{f'<meta name="naver-site-verification" content="{VERIFY_NAVER}">' if VERIFY_NAVER else ''}
 {f'<script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>' if jsonld else ''}
 <style>{CSS}</style>
 </head>
