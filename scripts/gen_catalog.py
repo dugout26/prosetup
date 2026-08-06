@@ -52,19 +52,22 @@ def main():
     existing = {}
     if OUT.exists():
         for prod in json.load(open(OUT, encoding="utf-8"))["products"]:
+            keep = {k: prod.get(k) for k in ("coupang_url", "image", "coupang_name") if prod.get(k)}
             for alias in prod["aliases"]:
-                existing[norm_key(alias)] = prod.get("coupang_url")
+                existing[norm_key(alias)] = keep
 
     products = []
     for key, counter in groups.items():
         display = counter.most_common(1)[0][0]
-        products.append({
+        prod = {
             "name": display,
             "category": cats[key],
             "count": sum(counter.values()),
-            "coupang_url": existing.get(key),
+            "coupang_url": None,
             "aliases": sorted(counter),
-        })
+        }
+        prod.update(existing.get(key) or {})
+        products.append(prod)
     products.sort(key=lambda p: (-p["count"], p["category"], p["name"]))
 
     out = {
