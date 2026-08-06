@@ -141,6 +141,7 @@ section h2 { font-size: 16px; font-weight: 800; margin-bottom: 12px; color: var(
               border: 1px solid rgba(232,195,107,.35); border-radius: 12px; padding: 13px 16px;
               margin: 16px 0 4px; font-weight: 800; font-size: 14.5px; }
 .rankbanner small { display: block; font-weight: 500; color: var(--mut); margin-top: 2px; font-size: 12px; }
+.item .imain { flex: 1; min-width: 0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .item .thumb { flex: none; width: 62px; height: 62px; border-radius: 10px; background: #0B0E14;
         border: 1px solid var(--line); object-fit: contain; }
 .pnotes { flex-basis: 100%; margin-top: 4px; padding-top: 12px; border-top: 1px dashed var(--line); }
@@ -167,6 +168,8 @@ footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
 @media (max-width: 520px) {
   .settings { grid-template-columns: 1fr 1fr; }
   .item .cat { width: 100%; }
+  .item .imain { flex: 1 1 calc(100% - 76px); }
+  .item .buy { margin-left: auto; }
   .rankrow { flex-wrap: wrap; }
   .rankrow .info { flex: 1 1 calc(100% - 50px); }
   .rankrow .cnt { margin-left: 46px; }
@@ -224,9 +227,11 @@ def item_html(cat_label, entry):
         lis += "".join(f'<li class="con">{esc(x)}</li>' for x in note.get("cons", []))
         notes_html = (f'<div class="pnotes"><div class="spec">{esc(note["spec"])}</div>'
                       f'<ul>{lis}</ul></div>')
-    return (f'<div class="item">{thumb}<span class="cat">{cat_label}</span>'
+    return (f'<div class="item">{thumb}<div class="imain">'
+            f'<span class="cat">{cat_label}</span>'
             f'<span class="model">{esc(entry["value"])}</span>'
-            f'<span class="conf {conf}">신뢰도 {CONF_KR.get(conf, conf)}</span>{buy}{notes_html}</div>')
+            f'<span class="conf {conf}">신뢰도 {CONF_KR.get(conf, conf)}</span></div>'
+            f'{buy}{notes_html}</div>')
 
 def build_submit(teams, missing):
     """제보 안내 페이지 — 증거 기준과 검증 절차를 명시."""
