@@ -354,7 +354,11 @@ def build_rankings(g, teams):
         rhtml = ""
         for rank, (i, prod) in enumerate(main, 1):
             names = sorted(set(users[i]))
-            chips = " ".join(f'<a href="{gurl(g, "players", s + ".html")}">{esc(n)}</a>' for n, s in names)
+            SHOW = 8
+            chips = " ".join(f'<a href="{gurl(g, "players", s + ".html")}">{esc(n)}</a>'
+                             for n, s in names[:SHOW])
+            if len(names) > SHOW:
+                chips += f' <span>외 {len(names) - SHOW}명</span>' 
             buy = (f'<a class="buy" href="{esc(prod["coupang_url"])}" target="_blank" rel="nofollow sponsored">최저가 보기</a>'
                    if prod.get("coupang_url") else "")
             th = (f'<img class="thumb" src="{esc(prod["image"])}" alt="{esc(prod["name"])}" '
