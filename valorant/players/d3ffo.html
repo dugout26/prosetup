@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>(d3ffo) 장비·세팅 — VALORANT 마우스·키보드·DPI | 프로셋업</title>
+<meta name="description" content="BOOM Esports 선수 (d3ffo)가 사용하는 게이밍 장비(마우스·키보드·모니터)와 인게임 세팅(DPI·감도)을 정리했습니다.">
+<link rel="canonical" href="https://dugout26.github.io/prosetup/valorant/players/d3ffo.html">
+<meta property="og:title" content="(d3ffo) 장비·세팅 — VALORANT 마우스·키보드·DPI | 프로셋업">
+<meta property="og:description" content="BOOM Esports 선수 (d3ffo)가 사용하는 게이밍 장비(마우스·키보드·모니터)와 인게임 세팅(DPI·감도)을 정리했습니다.">
+<meta property="og:type" content="website">
+<meta name="google-site-verification" content="reLU6hFD0fFzI4ciTnfyEkadi_fsno6fJLTdosq1qTA">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfilePage", "mainEntity": {"@type": "Person", "name": "d3ffo", "alternateName": "d3ffo", "affiliation": "BOOM Esports", "jobTitle": "프로게이머(선수)"}}</script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --bg: #0E1117; --card: #161B24; --tx: #EDEFF3; --mut: #9BA3AF; --gold: #E8C36B;
+        --line: rgba(255,255,255,0.09); }
+body { font-family: Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', -apple-system, sans-serif;
+       background: var(--bg); color: var(--tx); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 28px 18px 60px; }
+header.site { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+header.site .logo { font-size: 22px; font-weight: 900; }
+header.site .logo b { color: var(--gold); }
+header.site .tag { font-size: 12px; color: var(--mut); }
+.updated { font-size: 12px; color: var(--mut); margin-bottom: 24px; }
+h1 { font-size: 24px; font-weight: 900; margin: 10px 0 4px; }
+.sub { color: var(--mut); font-size: 14px; margin-bottom: 22px; }
+.teamblock { margin-bottom: 26px; }
+.teamname { display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 800;
+            margin-bottom: 10px; }
+.teamname i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.pgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(126px, 1fr)); gap: 8px; }
+.pcell { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+         padding: 12px 14px; transition: border-color 0.15s; }
+.pcell:hover { border-color: rgba(232,195,107,0.5); }
+.pcell .nick { font-size: 15px; font-weight: 800; }
+.pcell .meta { font-size: 11.5px; color: var(--mut); margin-top: 2px; }
+.pcell .none { font-size: 10.5px; color: #566070; margin-top: 4px; }
+.crumb { font-size: 13px; color: var(--mut); margin-bottom: 18px; }
+.crumb a:hover { color: var(--gold); }
+.phead { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+.phead h1 { margin: 0; font-size: 30px; }
+.phead .kr { font-size: 17px; color: var(--mut); }
+.rolechip { font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 999px;
+            background: var(--card); border: 1px solid var(--line); color: var(--gold); }
+section { margin-top: 26px; }
+section h2 { font-size: 16px; font-weight: 800; margin-bottom: 12px; color: var(--gold); }
+.gear { display: flex; flex-direction: column; gap: 10px; }
+.item { background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+        padding: 14px 16px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.item .cat { width: 84px; flex: none; font-size: 12.5px; color: var(--mut); font-weight: 700; }
+.item .model { font-size: 15px; font-weight: 800; flex: 1; min-width: 160px; }
+.item .model.unknown { color: #566070; font-weight: 600; }
+.conf { font-size: 10.5px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line);
+        color: var(--mut); flex: none; }
+.conf.high { color: #51CF66; border-color: rgba(81,207,102,0.4); }
+.conf.low { color: #FFB4B4; border-color: rgba(255,107,107,0.3); }
+.buy { flex: none; font-size: 13px; font-weight: 800; padding: 8px 16px; border-radius: 9px;
+       background: var(--gold); color: #14171D; }
+.buy:hover { background: #F0D08A; }
+.settings { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.set { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+       padding: 12px; text-align: center; }
+.set .k { font-size: 11.5px; color: var(--mut); }
+.set .v { font-size: 17px; font-weight: 900; margin-top: 3px; }
+.set .v.unknown { color: #566070; font-weight: 600; font-size: 13px; }
+.note { font-size: 12px; color: var(--mut); margin-top: 14px; line-height: 1.7; }
+.rankrow { display: flex; align-items: center; gap: 12px; background: var(--card);
+           border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin-bottom: 8px; }
+.rankrow .rk { font-size: 20px; font-weight: 900; color: var(--gold); min-width: 34px; text-align: center; }
+.rankrow .rk.top1 { font-size: 24px; }
+.rankrow .info { flex: 1; min-width: 0; }
+.rankrow .pname { display: block; font-weight: 800; font-size: 15px; }
+.rankrow .users { display: block; font-size: 11.5px; color: var(--mut); margin-top: 4px; line-height: 1.6; }
+.rankrow .users a { color: #9BA3AF; border-bottom: 1px dotted #566070; }
+.rankrow .cnt { font-size: 13px; font-weight: 800; white-space: nowrap; }
+.rankbanner { display: block; background: linear-gradient(90deg, rgba(232,195,107,.14), rgba(232,195,107,.03));
+              border: 1px solid rgba(232,195,107,.35); border-radius: 12px; padding: 13px 16px;
+              margin: 16px 0 4px; font-weight: 800; font-size: 14.5px; }
+.rankbanner small { display: block; font-weight: 500; color: var(--mut); margin-top: 2px; font-size: 12px; }
+.item .imain { flex: 1; min-width: 0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.item .thumb { flex: none; width: 62px; height: 62px; border-radius: 10px; background: #0B0E14;
+        border: 1px solid var(--line); object-fit: contain; }
+.pnotes { flex-basis: 100%; margin-top: 4px; padding-top: 12px; border-top: 1px dashed var(--line); }
+.pnotes .spec { font-size: 12px; color: var(--gold); font-weight: 700; margin-bottom: 8px; }
+.pnotes ul { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.pnotes li { font-size: 12.5px; color: var(--mut); line-height: 1.6; padding-left: 18px; position: relative; }
+.pnotes li::before { position: absolute; left: 0; font-weight: 800; }
+.pnotes li.pro::before { content: "＋"; color: #51CF66; }
+.pnotes li.con::before { content: "－"; color: #FF8787; }
+.rankrow .thumb { flex: none; width: 46px; height: 46px; border-radius: 8px; background: #0B0E14;
+        border: 1px solid var(--line); object-fit: contain; }
+.tipbox { background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+        padding: 16px 18px; margin-bottom: 12px; font-size: 13.5px; line-height: 1.85; color: var(--mut); }
+.tipbox b { color: var(--tx); }
+.tipbox ol, .tipbox ul { margin: 8px 0 0 18px; }
+.tipbox li { margin-bottom: 5px; }
+.mailbtn { display: inline-block; margin-top: 14px; background: var(--gold); color: #14171D;
+        font-weight: 800; font-size: 14px; padding: 12px 22px; border-radius: 10px; }
+.etc1 { font-size: 12px; color: #566070; margin: 6px 2px 0; line-height: 1.8; }
+.srcs { font-size: 11px; color: #566070; margin-top: 20px; line-height: 1.8; word-break: break-all; }
+.srcs a { color: #7A8290; }
+footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
+         font-size: 11.5px; color: #566070; line-height: 1.8; }
+@media (max-width: 520px) {
+  .settings { grid-template-columns: 1fr 1fr; }
+  .item .cat { width: 100%; }
+  .item .imain { flex: 1 1 calc(100% - 76px); }
+  .item .buy { margin-left: auto; }
+  .rankrow { flex-wrap: wrap; }
+  .rankrow .info { flex: 1 1 calc(100% - 50px); }
+  .rankrow .cnt { margin-left: 46px; }
+  .rankrow .buy { margin-left: auto; }
+}
+
+h2.region { font-size: 13px; font-weight: 800; color: var(--gold); letter-spacing: 2px;
+            margin: 30px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+nav.gnav { display: flex; gap: 8px; margin: 4px 0 18px; flex-wrap: wrap; }
+nav.gnav a { font-size: 12.5px; font-weight: 800; padding: 7px 14px; border-radius: 999px;
+             background: var(--card); border: 1px solid var(--line); color: var(--mut); }
+nav.gnav a.on { color: #14171D; background: var(--gold); border-color: var(--gold); }
+nav.gnav a.soon { opacity: .5; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site"><a href="https://dugout26.github.io/prosetup/" class="logo">프로<b>셋업</b></a>
+<span class="tag">VCT 프로 장비·세팅</span></header>
+<nav class="gnav"><a href="https://dugout26.github.io/prosetup">LoL · LCK</a><a class="on" href="https://dugout26.github.io/prosetup/valorant">발로란트 · VCT</a><a class="soon" href="#" onclick="return false">오버워치 · 준비 중</a></nav>
+<div class="updated">데이터 확인 시점: 2026-08 · 매 시즌 업데이트</div>
+<div class="crumb"><a href="https://dugout26.github.io/prosetup/valorant">VALORANT 홈</a> › BOOM Esports</div>
+<div class="phead"><h1>d3ffo</h1><span class="kr"></span>
+<span class="rolechip">BOOM Esports · 선수</span></div>
+
+<section><h2>장비</h2><div class="gear"><div class="item"><div class="imain"><span class="cat">마우스</span><span class="model">VAXEE ZYGEN NP-01</span><span class="conf medium">신뢰도 보통</span></div></div><div class="item"><div class="imain"><span class="cat">키보드</span><span class="model">Logitech G Pro Keyboard</span><span class="conf medium">신뢰도 보통</span></div></div><div class="item"><div class="imain"><span class="cat">모니터</span><span class="model">ZOWIE XL2546</span><span class="conf medium">신뢰도 보통</span></div></div><div class="item"><div class="imain"><span class="cat">헤드셋</span><span class="model">Sennheiser GAME ZERO</span><span class="conf medium">신뢰도 보통</span></div></div><div class="item"><div class="imain"><span class="cat">마우스패드</span><span class="model">VAXEE PA ZYGEN</span><span class="conf medium">신뢰도 보통</span></div></div></div></section>
+<section><h2>인게임 세팅</h2><div class="settings"><div class="set"><div class="k">DPI</div><div class="v">800</div></div><div class="set"><div class="k">인게임 감도</div><div class="v">0.406</div></div><div class="set"><div class="k">eDPI</div><div class="v">324.80</div></div><div class="set"><div class="k">해상도</div><div class="v">1280x960</div></div></div></section>
+<div class='srcs'>출처: <a href="https://prosettings.net/lists/valorant/" rel="nofollow">prosettings.net</a></div>
+<footer>
+비공식 팬 사이트입니다. 선수·팀·리그와 무관하며, 장비 정보는 공개 자료를 교차 확인해 정리했습니다.
+잘못된 정보·추가 정보 <a href="https://dugout26.github.io/prosetup/valorant/submit.html" style="color:#7A8290;border-bottom:1px dotted #566070">제보하기</a><br>
+이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
+</footer>
+</div>
+</body>
+</html>

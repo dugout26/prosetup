@@ -142,6 +142,8 @@ footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
   .rankrow .buy { margin-left: auto; }
 }
 
+h2.region { font-size: 13px; font-weight: 800; color: var(--gold); letter-spacing: 2px;
+            margin: 30px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
 nav.gnav { display: flex; gap: 8px; margin: 4px 0 18px; flex-wrap: wrap; }
 nav.gnav a { font-size: 12.5px; font-weight: 800; padding: 7px 14px; border-radius: 999px;
              background: var(--card); border: 1px solid var(--line); color: var(--mut); }
@@ -200,18 +202,35 @@ def page(g, title, desc, body, canonical, jsonld=None):
 </html>"""
 
 def load_players(g):
-    teams = {}
+    """{code: [players]}, {code: {kr, color, region}} 반환. 파일·키 순서를 그대로 유지한다."""
+    teams, meta = {}, {}
     raw = ROOT / "data" / "raw" / g["key"]
-    for f in sorted(raw.glob("*.json")) if raw.exists() else []:
+    order = g.get("file_order")
+    files = ([raw / f"{n}.json" for n in order if (raw / f"{n}.json").exists()]
+             if order else sorted(raw.glob("*.json"))) if raw.exists() else []
+    for f in files:
         for code, v in json.load(open(f, encoding="utf-8")).items():
             if not isinstance(v, dict) or "players" not in v:
                 continue
             teams.setdefault(code, [])
+            meta.setdefault(code, {"kr": v.get("team_name", code),
+                                   "color": team_color(code), "region": v.get("region", "")})
             for p in v["players"]:
                 p["_team"] = code
                 p["role"] = (p.get("role") or "").lower()
                 teams[code].append(p)
-    return teams
+    for code, override in (g.get("teams") or {}).items():
+        if code in meta:
+            meta[code].update(override)
+    return teams, meta
+
+def team_color(code):
+    """팀별 고정 색상 (코드 해시 기반 — 팀이 수십 개라 수동 지정은 하지 않는다)."""
+    h = sum((i + 1) * ord(c) for i, c in enumerate(code)) % 360
+    return f"hsl({h}, 55%, 55%)"
+
+def player_slug(p):
+    return (p["nickname"] + ("-" + p["slug_suffix"] if p.get("slug_suffix") else "")).lower()
 
 def role_suffix(roles, p):
     r = roles.get(p["role"], p["role"])
@@ -248,9 +267,9 @@ def build_submit(g, missing):
         miss_html = ('<section><h2>특히 이런 정보가 필요합니다</h2>'
                      '<p class="note" style="margin-top:0">아래 선수들은 아직 확인된 장비 정보가 없습니다. '
                      '한 항목만 알려주셔도 큰 도움이 됩니다.</p><div class="pgrid" style="margin-top:12px">' +
-                     "".join(f'<a class="pcell" href="{gurl(g, "players", n.lower() + ".html")}">'
+                     "".join(f'<a class="pcell" href="{gurl(g, "players", s + ".html")}">'
                              f'<div class="nick">{esc(n)}</div><div class="meta">{esc(t)}</div></a>'
-                             for n, t in missing) +
+                             for n, s, t in missing) +
                      '</div></section>')
     mailto = ("mailto:dugout26.gm@gmail.com?subject=%5B%EC%A0%9C%EB%B3%B4%5D%20%EC%84%A0%EC%88%98%EB%AA%85%20-%20%ED%95%AD%EB%AA%A9"
               "&amp;body=%EA%B2%8C%EC%9E%84%3A%20" + g["short"] +
@@ -321,7 +340,7 @@ def build_rankings(g, teams):
             for key, _ in GEAR_LABELS:
                 e = p.get("gear", {}).get(key)
                 if e and e.get("value") in owner:
-                    users[owner[e["value"]]].append(p["nickname"])
+                    users[owner[e["value"]]].append((p["nickname"], player_slug(p)))
 
     total_players = sum(len(v) for v in teams.values())
     sections, top_mouse = "", []
@@ -335,7 +354,7 @@ def build_rankings(g, teams):
         rhtml = ""
         for rank, (i, prod) in enumerate(main, 1):
             names = sorted(set(users[i]))
-            chips = " ".join(f'<a href="{gurl(g, "players", n.lower() + ".html")}">{esc(n)}</a>' for n in names)
+            chips = " ".join(f'<a href="{gurl(g, "players", s + ".html")}">{esc(n)}</a>' for n, s in names)
             buy = (f'<a class="buy" href="{esc(prod["coupang_url"])}" target="_blank" rel="nofollow sponsored">최저가 보기</a>'
                    if prod.get("coupang_url") else "")
             th = (f'<img class="thumb" src="{esc(prod["image"])}" alt="{esc(prod["name"])}" '
@@ -367,20 +386,22 @@ def build_rankings(g, teams):
     return gurl(g, "rankings.html")
 
 def build_game(g):
-    teams = load_players(g)
+    teams, tmeta = load_players(g)
     if not teams:
         print(f"  [{g['key']}] 로스터 데이터 없음 — 건너뜀")
         return []
     roles, sets = g["roles"], [tuple(s) for s in g["settings"]]
-    tmeta, order = g["teams"], g["team_order"]
+    cfg_order = g.get("team_order") or []
+    order = [c for c in cfg_order if c in teams] + [c for c in teams if c not in cfg_order]
     pdir = gdir(g) / "players"
     pdir.mkdir(parents=True, exist_ok=True)
+    written = set()
     urls = [gurl(g, "")]
 
     rank_url = build_rankings(g, teams)
     if rank_url:
         urls.append(rank_url)
-    missing = [(p["nickname"], tmeta.get(code, {}).get("kr", code))
+    missing = [(p["nickname"], player_slug(p), tmeta.get(code, {}).get("kr", code))
                for code in order for p in teams.get(code, [])
                if not any(p.get("gear", {}).get(k) and p["gear"][k].get("value") for k, _ in GEAR_LABELS)]
     urls.append(build_submit(g, missing))
@@ -388,7 +409,7 @@ def build_game(g):
     for code, players in teams.items():
         tinfo = tmeta.get(code, {"kr": code, "color": "#888"})
         for p in players:
-            nick, slug = p["nickname"], p["nickname"].lower()
+            nick, slug = p["nickname"], player_slug(p)
             kr = p.get("name_kr", "")
             role = roles.get(p["role"], p["role"]) or "선수"
             gear, setting = p.get("gear", {}), p.get("settings", {})
@@ -430,16 +451,26 @@ def build_game(g):
 <section><h2>장비</h2><div class="gear">{gear_html}</div>{empty_html}</section>
 <section><h2>인게임 세팅</h2><div class="settings">{set_html}</div></section>
 {srcs_html}"""
+            written.add(f"{slug}.html")
             (pdir / f"{slug}.html").write_text(
                 page(g, title, desc, body, gurl(g, "players", f"{slug}.html"), jsonld), encoding="utf-8")
             urls.append(gurl(g, "players", f"{slug}.html"))
 
+    stale = [f for f in pdir.glob("*.html") if f.name not in written]
+    for f in stale:
+        f.unlink()
+    if stale:
+        print(f"  [{g['key']}] 이전 빌드 잔여 페이지 {len(stale)}개 삭제")
+
     # 게임 인덱스
-    blocks = ""
+    blocks, cur_region = "", None
     for code in order:
         if code not in teams:
             continue
         tinfo = tmeta[code]
+        if tinfo.get("region") and tinfo["region"] != cur_region:
+            cur_region = tinfo["region"]
+            blocks += f'<h2 class="region">{esc(cur_region)}</h2>' 
         cells = ""
         for p in teams[code]:
             has_any = any(p.get("gear", {}).get(k) and p["gear"][k].get("value") for k, _ in GEAR_LABELS)
