@@ -126,8 +126,8 @@ section h2 { font-size: 16px; font-weight: 800; margin-bottom: 12px; color: var(
 .rankrow .rk { font-size: 20px; font-weight: 900; color: var(--gold); min-width: 34px; text-align: center; }
 .rankrow .rk.top1 { font-size: 24px; }
 .rankrow .info { flex: 1; min-width: 0; }
-.rankrow .pname { font-weight: 800; font-size: 15px; }
-.rankrow .users { font-size: 11.5px; color: var(--mut); margin-top: 3px; line-height: 1.6; }
+.rankrow .pname { display: block; font-weight: 800; font-size: 15px; }
+.rankrow .users { display: block; font-size: 11.5px; color: var(--mut); margin-top: 4px; line-height: 1.6; }
 .rankrow .users a { color: #9BA3AF; border-bottom: 1px dotted #566070; }
 .rankrow .cnt { font-size: 13px; font-weight: 800; white-space: nowrap; }
 .rankbanner { display: block; background: linear-gradient(90deg, rgba(232,195,107,.14), rgba(232,195,107,.03));
@@ -139,7 +139,14 @@ section h2 { font-size: 16px; font-weight: 800; margin-bottom: 12px; color: var(
 .srcs a { color: #7A8290; }
 footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
          font-size: 11.5px; color: #566070; line-height: 1.8; }
-@media (max-width: 480px) { .settings { grid-template-columns: 1fr 1fr; } .item .cat { width: 100%; } }
+@media (max-width: 520px) {
+  .settings { grid-template-columns: 1fr 1fr; }
+  .item .cat { width: 100%; }
+  .rankrow { flex-wrap: wrap; }
+  .rankrow .info { flex: 1 1 calc(100% - 50px); }
+  .rankrow .cnt { margin-left: 46px; }
+  .rankrow .buy { margin-left: auto; }
+}
 """
 
 def page(title, desc, body, canonical, jsonld=None):
