@@ -1,0 +1,148 @@
+{
+ "as_of": "2026-08-06",
+ "notes": {
+  "roster": "VCT Pacific 2026 기준. 젠지: Ash/Karon/t3xture/Efina/Raxcal (Xiesta·ZynX 비활동). DRX: BeYN/MaKo/free1ng/HYUNMIN/Flicker (yong 서브).",
+  "sources": "vlr.gg 팀 페이지(로스터), prosettings.net·specs.gg(장비·세팅). 두 출처가 일치하면 confidence high.",
+  "roles": "발로란트 역할(에이전트 포지션)은 확인된 공개 자료가 부족해 표기하지 않음."
+ },
+ "GENV": {
+  "team_name": "Gen.G",
+  "players": [
+   {
+    "nickname": "t3xture",
+    "name_kr": "김나라",
+    "role": "",
+    "gear": {
+     "mouse": {"value": "Logitech G Pro X Superlight 2", "source": "https://prosettings.net/players/t3xture/, https://specs.gg/t3xture", "confidence": "medium"},
+     "keyboard": {"value": "SteelSeries Apex Pro TKL Gen 3", "source": "https://prosettings.net/players/t3xture/, https://specs.gg/t3xture", "confidence": "high"},
+     "monitor": {"value": "ZOWIE XL2546K", "source": "https://prosettings.net/players/t3xture/, https://specs.gg/t3xture", "confidence": "high"},
+     "headset": {"value": "Razer BlackShark V2 HyperSpeed", "source": "https://prosettings.net/players/t3xture/, https://specs.gg/t3xture", "confidence": "high"},
+     "mousepad": {"value": "SteelSeries QcK Heavy", "source": "https://prosettings.net/players/t3xture/, https://specs.gg/t3xture", "confidence": "high"}
+    },
+    "settings": {
+     "dpi": {"value": 800, "source": "https://prosettings.net/players/t3xture/", "confidence": "high"},
+     "in_game_sens": {"value": "0.45", "source": "https://prosettings.net/players/t3xture/", "confidence": "high"},
+     "edpi": {"value": 360, "source": "https://prosettings.net/players/t3xture/", "confidence": "high"},
+     "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/t3xture/", "confidence": "high"}
+    },
+    "note": "마우스 색상 표기가 출처마다 달라(마젠타/시안) 기본 모델명으로 표기했습니다."
+   },
+   {
+    "nickname": "Karon",
+    "name_kr": "김원태",
+    "role": "",
+    "gear": {
+     "mouse": {"value": "Logitech G Pro X Superlight", "source": "https://specs.gg/Karon", "confidence": "medium"},
+     "keyboard": {"value": "Wooting 60HE+", "source": "https://specs.gg/Karon", "confidence": "medium"},
+     "monitor": {"value": "ZOWIE XL2546K", "source": "https://specs.gg/Karon", "confidence": "medium"},
+     "headset": {"value": "Razer BlackShark V2 Pro", "source": "https://specs.gg/Karon", "confidence": "medium"},
+     "mousepad": {"value": "X-Raypad Aqua Control Plus", "source": "https://specs.gg/Karon", "confidence": "medium"}
+    },
+    "settings": {
+     "dpi": {"value": 800, "source": "https://specs.gg/Karon", "confidence": "medium"},
+     "in_game_sens": {"value": "0.2", "source": "https://specs.gg/Karon", "confidence": "medium"},
+     "edpi": {"value": 160, "source": "https://specs.gg/Karon", "confidence": "medium"},
+     "resolution": {"value": "1920x1080", "source": "https://specs.gg/Karon", "confidence": "medium"}
+    }
+   },
+   {"nickname": "Ash", "name_kr": "하현철", "role": "", "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null}, "settings": {"dpi": null, "in_game_sens": null, "edpi": null, "resolution": null}},
+   {"nickname": "Efina", "name_kr": "김낙연", "role": "", "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null}, "settings": {"dpi": null, "in_game_sens": null, "edpi": null, "resolution": null}},
+   {"nickname": "Raxcal", "name_kr": "김민석", "role": "", "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null}, "settings": {"dpi": null, "in_game_sens": null, "edpi": null, "resolution": null}}
+  ]
+ },
+ "DRXV": {
+  "team_name": "KIWOOM DRX",
+  "players": [
+   {
+    "nickname": "MaKo",
+    "name_kr": "김명관",
+    "role": "",
+    "gear": {
+     "mouse": {"value": "Razer DeathAdder V3 Pro Faker Edition", "source": "https://specs.gg/MaKo", "confidence": "medium"},
+     "keyboard": {"value": "Razer Huntsman V3 Pro TKL", "source": "https://specs.gg/MaKo", "confidence": "medium"},
+     "monitor": {"value": "ZOWIE XL2546S", "source": "https://specs.gg/MaKo", "confidence": "medium"},
+     "headset": {"value": "Razer BlackShark V2 Pro", "source": "https://specs.gg/MaKo", "confidence": "medium"},
+     "mousepad": {"value": "SteelSeries QcK Heavy", "source": "https://specs.gg/MaKo", "confidence": "medium"}
+    },
+    "settings": {
+     "dpi": {"value": 400, "source": "https://specs.gg/MaKo", "confidence": "medium"},
+     "in_game_sens": {"value": "0.48", "source": "https://specs.gg/MaKo", "confidence": "medium"},
+     "edpi": {"value": 192, "source": "https://specs.gg/MaKo", "confidence": "medium"},
+     "resolution": {"value": "1920x1080", "source": "https://specs.gg/MaKo", "confidence": "medium"}
+    }
+   },
+   {
+    "nickname": "BeYN",
+    "name_kr": "강하빈",
+    "role": "",
+    "gear": {
+     "mouse": {"value": "Logitech G Pro X2 Superstrike", "source": "https://prosettings.net/players/beyn/", "confidence": "medium"},
+     "keyboard": {"value": "Wooting 80HE", "source": "https://prosettings.net/players/beyn/", "confidence": "medium"},
+     "monitor": {"value": "ZOWIE XL2566K", "source": "https://prosettings.net/players/beyn/", "confidence": "medium"},
+     "headset": {"value": "Corsair HS80 RGB USB", "source": "https://prosettings.net/players/beyn/", "confidence": "medium"},
+     "mousepad": {"value": "Artisan Ninja FX Zero XSoft", "source": "https://prosettings.net/players/beyn/", "confidence": "medium"}
+    },
+    "settings": {
+     "dpi": {"value": 400, "source": "https://prosettings.net/players/beyn/", "confidence": "medium"},
+     "in_game_sens": {"value": "0.4", "source": "https://prosettings.net/players/beyn/", "confidence": "medium"},
+     "edpi": {"value": 160, "source": "https://prosettings.net/players/beyn/", "confidence": "medium"},
+     "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/beyn/", "confidence": "medium"}
+    }
+   },
+   {
+    "nickname": "free1ng",
+    "name_kr": "노하준",
+    "role": "",
+    "gear": {
+     "mouse": {"value": "Razer Viper V3 Pro", "source": "https://prosettings.net/players/free1ng/", "confidence": "medium"},
+     "keyboard": {"value": "Wooting 60HE+", "source": "https://prosettings.net/players/free1ng/", "confidence": "medium"},
+     "monitor": {"value": "ZOWIE XL2566K", "source": "https://prosettings.net/players/free1ng/", "confidence": "medium"},
+     "headset": {"value": "Corsair HS80 RGB USB", "source": "https://prosettings.net/players/free1ng/", "confidence": "medium"},
+     "mousepad": {"value": "Artisan Raiden FX XSoft", "source": "https://prosettings.net/players/free1ng/", "confidence": "medium"}
+    },
+    "settings": {
+     "dpi": {"value": 800, "source": "https://prosettings.net/players/free1ng/", "confidence": "medium"},
+     "in_game_sens": {"value": "0.2", "source": "https://prosettings.net/players/free1ng/", "confidence": "medium"},
+     "edpi": {"value": 160, "source": "https://prosettings.net/players/free1ng/", "confidence": "medium"},
+     "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/free1ng/", "confidence": "medium"}
+    }
+   },
+   {
+    "nickname": "HYUNMIN",
+    "name_kr": "송현민",
+    "role": "",
+    "gear": {
+     "mouse": {"value": "Razer Viper V4 Pro", "source": "https://prosettings.net/players/hyunmin/", "confidence": "medium"},
+     "keyboard": {"value": "Wooting 60HE+", "source": "https://prosettings.net/players/hyunmin/", "confidence": "medium"},
+     "monitor": {"value": "ZOWIE XL2566K", "source": "https://prosettings.net/players/hyunmin/", "confidence": "medium"},
+     "headset": {"value": "Corsair HS80 RGB USB", "source": "https://prosettings.net/players/hyunmin/", "confidence": "medium"},
+     "mousepad": {"value": "Artisan Ninja FX Zero XSoft", "source": "https://prosettings.net/players/hyunmin/", "confidence": "medium"}
+    },
+    "settings": {
+     "dpi": {"value": 800, "source": "https://prosettings.net/players/hyunmin/", "confidence": "medium"},
+     "in_game_sens": {"value": "0.2", "source": "https://prosettings.net/players/hyunmin/", "confidence": "medium"},
+     "edpi": {"value": 160, "source": "https://prosettings.net/players/hyunmin/", "confidence": "medium"},
+     "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/hyunmin/", "confidence": "medium"}
+    }
+   },
+   {
+    "nickname": "Flicker",
+    "name_kr": "윤태희",
+    "role": "",
+    "gear": {
+     "mouse": {"value": "Lamzu Maya X", "source": "https://prosettings.net/players/flicker/", "confidence": "medium"},
+     "keyboard": {"value": "Wooting 60HE+", "source": "https://prosettings.net/players/flicker/", "confidence": "medium"},
+     "monitor": {"value": "ZOWIE XL2546K", "source": "https://prosettings.net/players/flicker/", "confidence": "medium"},
+     "headset": {"value": "Razer BlackShark V2 Pro", "source": "https://prosettings.net/players/flicker/", "confidence": "medium"},
+     "mousepad": {"value": "Pulsar eS Saturn Pro", "source": "https://prosettings.net/players/flicker/", "confidence": "medium"}
+    },
+    "settings": {
+     "dpi": {"value": 1600, "source": "https://prosettings.net/players/flicker/", "confidence": "medium"},
+     "in_game_sens": {"value": "0.1", "source": "https://prosettings.net/players/flicker/", "confidence": "medium"},
+     "edpi": {"value": 160, "source": "https://prosettings.net/players/flicker/", "confidence": "medium"},
+     "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/flicker/", "confidence": "medium"}
+    }
+   }
+  ]
+ }
+}

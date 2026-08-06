@@ -1,0 +1,51 @@
+{
+ "_note": "게임별 설정. path가 빈 문자열이면 사이트 루트에 생성된다(LoL는 기존 URL 유지). 새 게임 추가는 여기에 항목을 넣고 data/raw/<key>/ 에 로스터 JSON을 두면 끝.",
+ "order": ["lol", "valorant"],
+ "games": {
+  "lol": {
+   "name": "리그 오브 레전드",
+   "short": "LoL",
+   "league": "LCK",
+   "nav": "LoL · LCK",
+   "path": "",
+   "tagline": "LCK 프로 장비·세팅",
+   "headline": "LCK 프로 선수들은 뭘 쓸까?",
+   "lede": "페이커의 마우스부터 쵸비의 DPI까지 — 2026 LCK 10팀 선수들의 장비와 인게임 세팅을 공개 자료 교차 확인으로 정리했습니다.",
+   "roles": {"top": "탑", "jungle": "정글", "mid": "미드", "adc": "원딜", "bot": "원딜", "support": "서포터"},
+   "settings": [["dpi", "DPI"], ["in_game_sens", "인게임 감도"], ["resolution", "해상도"]],
+   "team_order": ["T1", "GEN", "HLE", "KT", "DK", "NS", "KRX", "DNS", "BNK", "BRO"],
+   "teams": {
+    "T1": {"kr": "T1", "color": "#E2012D"},
+    "GEN": {"kr": "젠지", "color": "#AA8B56"},
+    "HLE": {"kr": "한화생명e스포츠", "color": "#F07C28"},
+    "KT": {"kr": "kt 롤스터", "color": "#FF0A07"},
+    "DK": {"kr": "디플러스 기아", "color": "#0ec7b7"},
+    "NS": {"kr": "농심 레드포스", "color": "#DE2027"},
+    "BRO": {"kr": "한진 브리온", "color": "#01492B"},
+    "DNS": {"kr": "DN SOOPers", "color": "#2c7fd8"},
+    "BNK": {"kr": "BNK 피어엑스", "color": "#F4C617"},
+    "KRX": {"kr": "키움 DRX", "color": "#5A00D3"}
+   }
+  },
+  "valorant": {
+   "name": "발로란트",
+   "short": "VALORANT",
+   "league": "VCT Pacific",
+   "nav": "발로란트 · VCT",
+   "path": "valorant",
+   "tagline": "발로란트 프로 장비·세팅",
+   "headline": "발로란트 프로는 뭘 쓸까?",
+   "lede": "VCT Pacific 한국 팀 선수들의 마우스·키보드와 DPI·감도(eDPI)를 공개 자료 교차 확인으로 정리했습니다.",
+   "roles": {"duelist": "듀얼리스트", "initiator": "이니시에이터", "controller": "컨트롤러", "sentinel": "센티널", "flex": "플렉스", "igl": "IGL"},
+   "settings": [["dpi", "DPI"], ["in_game_sens", "인게임 감도"], ["edpi", "eDPI"], ["resolution", "해상도"]],
+   "team_order": ["GENV", "DRXV", "T1V", "NSV", "BNKV"],
+   "teams": {
+    "GENV": {"kr": "젠지", "color": "#AA8B56"},
+    "DRXV": {"kr": "DRX", "color": "#0B5CD5"},
+    "T1V": {"kr": "T1", "color": "#E2012D"},
+    "NSV": {"kr": "농심 레드포스", "color": "#DE2027"},
+    "BNKV": {"kr": "BNK 피어엑스", "color": "#F4C617"}
+   }
+  }
+ }
+}

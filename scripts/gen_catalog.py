@@ -33,7 +33,7 @@ def norm_key(value: str) -> str:
 def collect():
     groups = defaultdict(Counter)  # key -> Counter(원 표기)
     cats = {}                      # key -> category
-    for f in sorted(RAW.glob("*.json")):
+    for f in sorted(RAW.rglob("*.json")):
         data = json.load(open(f, encoding="utf-8"))
         for team in data.values():
             if not isinstance(team, dict) or "players" not in team:

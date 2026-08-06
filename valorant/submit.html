@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>장비 정보 제보 — 프로셋업 VALORANT</title>
+<meta name="description" content="VCT Pacific 프로 선수 장비 정보의 오류 수정·추가 제보를 받습니다. 근거 자료 기준과 검증 절차를 안내합니다.">
+<link rel="canonical" href="https://dugout26.github.io/prosetup/valorant/submit.html">
+<meta property="og:title" content="장비 정보 제보 — 프로셋업 VALORANT">
+<meta property="og:description" content="VCT Pacific 프로 선수 장비 정보의 오류 수정·추가 제보를 받습니다. 근거 자료 기준과 검증 절차를 안내합니다.">
+<meta property="og:type" content="website">
+<meta name="google-site-verification" content="reLU6hFD0fFzI4ciTnfyEkadi_fsno6fJLTdosq1qTA">
+
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --bg: #0E1117; --card: #161B24; --tx: #EDEFF3; --mut: #9BA3AF; --gold: #E8C36B;
+        --line: rgba(255,255,255,0.09); }
+body { font-family: Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', -apple-system, sans-serif;
+       background: var(--bg); color: var(--tx); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 28px 18px 60px; }
+header.site { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+header.site .logo { font-size: 22px; font-weight: 900; }
+header.site .logo b { color: var(--gold); }
+header.site .tag { font-size: 12px; color: var(--mut); }
+.updated { font-size: 12px; color: var(--mut); margin-bottom: 24px; }
+h1 { font-size: 24px; font-weight: 900; margin: 10px 0 4px; }
+.sub { color: var(--mut); font-size: 14px; margin-bottom: 22px; }
+.teamblock { margin-bottom: 26px; }
+.teamname { display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 800;
+            margin-bottom: 10px; }
+.teamname i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.pgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(126px, 1fr)); gap: 8px; }
+.pcell { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+         padding: 12px 14px; transition: border-color 0.15s; }
+.pcell:hover { border-color: rgba(232,195,107,0.5); }
+.pcell .nick { font-size: 15px; font-weight: 800; }
+.pcell .meta { font-size: 11.5px; color: var(--mut); margin-top: 2px; }
+.pcell .none { font-size: 10.5px; color: #566070; margin-top: 4px; }
+.crumb { font-size: 13px; color: var(--mut); margin-bottom: 18px; }
+.crumb a:hover { color: var(--gold); }
+.phead { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+.phead h1 { margin: 0; font-size: 30px; }
+.phead .kr { font-size: 17px; color: var(--mut); }
+.rolechip { font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 999px;
+            background: var(--card); border: 1px solid var(--line); color: var(--gold); }
+section { margin-top: 26px; }
+section h2 { font-size: 16px; font-weight: 800; margin-bottom: 12px; color: var(--gold); }
+.gear { display: flex; flex-direction: column; gap: 10px; }
+.item { background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+        padding: 14px 16px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.item .cat { width: 84px; flex: none; font-size: 12.5px; color: var(--mut); font-weight: 700; }
+.item .model { font-size: 15px; font-weight: 800; flex: 1; min-width: 160px; }
+.item .model.unknown { color: #566070; font-weight: 600; }
+.conf { font-size: 10.5px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line);
+        color: var(--mut); flex: none; }
+.conf.high { color: #51CF66; border-color: rgba(81,207,102,0.4); }
+.conf.low { color: #FFB4B4; border-color: rgba(255,107,107,0.3); }
+.buy { flex: none; font-size: 13px; font-weight: 800; padding: 8px 16px; border-radius: 9px;
+       background: var(--gold); color: #14171D; }
+.buy:hover { background: #F0D08A; }
+.settings { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.set { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+       padding: 12px; text-align: center; }
+.set .k { font-size: 11.5px; color: var(--mut); }
+.set .v { font-size: 17px; font-weight: 900; margin-top: 3px; }
+.set .v.unknown { color: #566070; font-weight: 600; font-size: 13px; }
+.note { font-size: 12px; color: var(--mut); margin-top: 14px; line-height: 1.7; }
+.rankrow { display: flex; align-items: center; gap: 12px; background: var(--card);
+           border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin-bottom: 8px; }
+.rankrow .rk { font-size: 20px; font-weight: 900; color: var(--gold); min-width: 34px; text-align: center; }
+.rankrow .rk.top1 { font-size: 24px; }
+.rankrow .info { flex: 1; min-width: 0; }
+.rankrow .pname { display: block; font-weight: 800; font-size: 15px; }
+.rankrow .users { display: block; font-size: 11.5px; color: var(--mut); margin-top: 4px; line-height: 1.6; }
+.rankrow .users a { color: #9BA3AF; border-bottom: 1px dotted #566070; }
+.rankrow .cnt { font-size: 13px; font-weight: 800; white-space: nowrap; }
+.rankbanner { display: block; background: linear-gradient(90deg, rgba(232,195,107,.14), rgba(232,195,107,.03));
+              border: 1px solid rgba(232,195,107,.35); border-radius: 12px; padding: 13px 16px;
+              margin: 16px 0 4px; font-weight: 800; font-size: 14.5px; }
+.rankbanner small { display: block; font-weight: 500; color: var(--mut); margin-top: 2px; font-size: 12px; }
+.item .imain { flex: 1; min-width: 0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.item .thumb { flex: none; width: 62px; height: 62px; border-radius: 10px; background: #0B0E14;
+        border: 1px solid var(--line); object-fit: contain; }
+.pnotes { flex-basis: 100%; margin-top: 4px; padding-top: 12px; border-top: 1px dashed var(--line); }
+.pnotes .spec { font-size: 12px; color: var(--gold); font-weight: 700; margin-bottom: 8px; }
+.pnotes ul { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.pnotes li { font-size: 12.5px; color: var(--mut); line-height: 1.6; padding-left: 18px; position: relative; }
+.pnotes li::before { position: absolute; left: 0; font-weight: 800; }
+.pnotes li.pro::before { content: "＋"; color: #51CF66; }
+.pnotes li.con::before { content: "－"; color: #FF8787; }
+.rankrow .thumb { flex: none; width: 46px; height: 46px; border-radius: 8px; background: #0B0E14;
+        border: 1px solid var(--line); object-fit: contain; }
+.tipbox { background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+        padding: 16px 18px; margin-bottom: 12px; font-size: 13.5px; line-height: 1.85; color: var(--mut); }
+.tipbox b { color: var(--tx); }
+.tipbox ol, .tipbox ul { margin: 8px 0 0 18px; }
+.tipbox li { margin-bottom: 5px; }
+.mailbtn { display: inline-block; margin-top: 14px; background: var(--gold); color: #14171D;
+        font-weight: 800; font-size: 14px; padding: 12px 22px; border-radius: 10px; }
+.etc1 { font-size: 12px; color: #566070; margin: 6px 2px 0; line-height: 1.8; }
+.srcs { font-size: 11px; color: #566070; margin-top: 20px; line-height: 1.8; word-break: break-all; }
+.srcs a { color: #7A8290; }
+footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
+         font-size: 11.5px; color: #566070; line-height: 1.8; }
+@media (max-width: 520px) {
+  .settings { grid-template-columns: 1fr 1fr; }
+  .item .cat { width: 100%; }
+  .item .imain { flex: 1 1 calc(100% - 76px); }
+  .item .buy { margin-left: auto; }
+  .rankrow { flex-wrap: wrap; }
+  .rankrow .info { flex: 1 1 calc(100% - 50px); }
+  .rankrow .cnt { margin-left: 46px; }
+  .rankrow .buy { margin-left: auto; }
+}
+
+nav.gnav { display: flex; gap: 8px; margin: 4px 0 18px; flex-wrap: wrap; }
+nav.gnav a { font-size: 12.5px; font-weight: 800; padding: 7px 14px; border-radius: 999px;
+             background: var(--card); border: 1px solid var(--line); color: var(--mut); }
+nav.gnav a.on { color: #14171D; background: var(--gold); border-color: var(--gold); }
+nav.gnav a.soon { opacity: .5; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site"><a href="https://dugout26.github.io/prosetup/" class="logo">프로<b>셋업</b></a>
+<span class="tag">발로란트 프로 장비·세팅</span></header>
+<nav class="gnav"><a href="https://dugout26.github.io/prosetup">LoL · LCK</a><a class="on" href="https://dugout26.github.io/prosetup/valorant">발로란트 · VCT</a><a class="soon" href="#" onclick="return false">오버워치 · 준비 중</a></nav>
+<div class="updated">데이터 확인 시점: 2026-08 · 매 시즌 업데이트</div>
+<div class="crumb"><a href="https://dugout26.github.io/prosetup/valorant">VALORANT 홈</a> › 정보 제보</div>
+<h1>장비 정보 제보하기</h1>
+<p class="sub">틀린 정보를 바로잡거나, 아직 없는 선수의 장비를 알려주실 수 있습니다.
+확인된 제보만 반영하기 때문에 <b>근거 자료</b>를 함께 주셔야 합니다.</p>
+
+<section><h2>제보에 꼭 담아주세요</h2>
+<div class="tipbox">
+<b>1. 게임과 선수 이름, 항목</b> — 예: "발로란트 / 스타크 / 마우스"<br>
+<b>2. 제품명</b> — 가능한 한 정확한 모델명 (예: Logitech G840, 색상·사이즈까지)<br>
+<b>3. 근거</b> — 아래 중 <b>하나 이상</b>
+<ul>
+<li>선수 개인 방송·유튜브 영상 링크 <b>+ 해당 장면 타임스탬프</b></li>
+<li>선수·팀 공식 SNS 게시물 링크</li>
+<li>인터뷰·기사 링크 (제품명이 언급된 부분)</li>
+<li>대회·연습실 셋업 사진 (제품 식별이 가능한 화질, 출처 표기)</li>
+</ul>
+<b>4. (선택) 확인 시점</b> — 언제 기준인지 (장비는 시즌 중에도 바뀝니다)
+</div>
+</section>
+
+<section><h2>이렇게 검증합니다</h2>
+<div class="tipbox">
+<ol>
+<li>근거 자료를 직접 확인합니다. 링크가 없거나 확인이 안 되면 반영하지 않습니다.</li>
+<li>가능하면 <b>다른 출처와 교차 확인</b>합니다. 1개 출처만 있으면 신뢰도를 '보통'으로 표기합니다.</li>
+<li>선수 본인·팀 공식 자료로 확인되면 신뢰도 '확실'로 표기합니다.</li>
+<li>기존 정보와 충돌하면 <b>더 최신 자료</b>를 우선합니다.</li>
+</ol>
+<span style="font-size:12px">추측·"어디서 봤는데" 류 제보는 반영하지 않습니다. 잘못된 정보가 올라가면
+사이트 전체의 신뢰도가 떨어지기 때문입니다.</span>
+</div>
+</section>
+
+<section><h2>특히 이런 정보가 필요합니다</h2><p class="note" style="margin-top:0">아래 선수들은 아직 확인된 장비 정보가 없습니다. 한 항목만 알려주셔도 큰 도움이 됩니다.</p><div class="pgrid" style="margin-top:12px"><a class="pcell" href="https://dugout26.github.io/prosetup/valorant/players/ash.html"><div class="nick">Ash</div><div class="meta">젠지</div></a><a class="pcell" href="https://dugout26.github.io/prosetup/valorant/players/efina.html"><div class="nick">Efina</div><div class="meta">젠지</div></a><a class="pcell" href="https://dugout26.github.io/prosetup/valorant/players/raxcal.html"><div class="nick">Raxcal</div><div class="meta">젠지</div></a><a class="pcell" href="https://dugout26.github.io/prosetup/valorant/players/dh.html"><div class="nick">DH</div><div class="meta">T1</div></a><a class="pcell" href="https://dugout26.github.io/prosetup/valorant/players/woohyun.html"><div class="nick">WoohyuN</div><div class="meta">농심 레드포스</div></a></div></section>
+
+<section><h2>보내는 곳</h2>
+<div class="tipbox">
+이메일로 보내주세요. 사진은 첨부해도 되고 링크로 주셔도 됩니다.<br>
+<a class="mailbtn" href="mailto:dugout26.gm@gmail.com?subject=%5B%EC%A0%9C%EB%B3%B4%5D%20%EC%84%A0%EC%88%98%EB%AA%85%20-%20%ED%95%AD%EB%AA%A9&amp;body=%EA%B2%8C%EC%9E%84%3A%20VALORANT%0A%EC%84%A0%EC%88%98%3A%20%0A%ED%95%AD%EB%AA%A9%3A%20%0A%EC%A0%9C%ED%92%88%EB%AA%85%3A%20%0A%EA%B7%BC%EA%B1%B0(%EB%A7%81%ED%81%AC%2B%ED%83%80%EC%9E%84%EC%8A%A4%ED%83%AC%ED%94%84)%3A%20%0A%ED%99%95%EC%9D%B8%20%EC%8B%9C%EC%A0%90%3A%20">📮 제보 메일 쓰기 (양식 자동 입력)</a>
+<p style="margin-top:14px; font-size:12px">
+제보 시 개인정보(이름·연락처)는 적지 않으셔도 됩니다. 회신이 필요 없는 경우 메일 주소 외 정보는 저장하지 않습니다.
+반영은 확인이 끝나는 대로 진행하며, 개별 회신은 어려울 수 있습니다.</p>
+</div>
+</section>
+<footer>
+비공식 팬 사이트입니다. 선수·팀·리그와 무관하며, 장비 정보는 공개 자료를 교차 확인해 정리했습니다.
+잘못된 정보·추가 정보 <a href="https://dugout26.github.io/prosetup/valorant/submit.html" style="color:#7A8290;border-bottom:1px dotted #566070">제보하기</a><br>
+이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
+</footer>
+</div>
+</body>
+</html>
