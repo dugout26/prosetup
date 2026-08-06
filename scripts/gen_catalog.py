@@ -41,7 +41,7 @@ def collect():
             for p in team["players"]:
                 for cat, entry in (p.get("gear") or {}).items():
                     if entry and entry.get("value"):
-                        key = norm_key(entry["value"])
+                        key = f'{cat}|{norm_key(entry["value"])}'   # 동명 다카테고리 충돌 방지
                         groups[key][entry["value"]] += 1
                         cats[key] = cat
     return groups, cats
@@ -54,7 +54,7 @@ def main():
         for prod in json.load(open(OUT, encoding="utf-8"))["products"]:
             keep = {k: prod.get(k) for k in ("coupang_url", "image", "coupang_name") if prod.get(k)}
             for alias in prod["aliases"]:
-                existing[norm_key(alias)] = keep
+                existing[f'{prod["category"]}|{norm_key(alias)}'] = keep
 
     products = []
     for key, counter in groups.items():
