@@ -40,17 +40,24 @@ def esc(s):
     return html.escape(str(s), quote=True)
 
 def load_catalog():
+    """alias(원 표기) → 제품 dict. URL·이미지·표시명을 함께 들고 있다."""
     path = ROOT / "data" / "products.json"
     if not path.exists():
         return {}
     catalog = {}
     for prod in json.load(open(path, encoding="utf-8"))["products"]:
-        if prod.get("coupang_url"):
-            for alias in prod["aliases"]:
-                catalog[alias] = prod["coupang_url"]
+        for alias in prod["aliases"]:
+            catalog[alias] = prod
     return catalog
 
+def load_notes():
+    path = ROOT / "data" / "product_notes.json"
+    if not path.exists():
+        return {}
+    return json.load(open(path, encoding="utf-8"))["notes"]
+
 CATALOG = load_catalog()
+NOTES = load_notes()
 
 def load_players():
     teams = {}
@@ -134,6 +141,24 @@ section h2 { font-size: 16px; font-weight: 800; margin-bottom: 12px; color: var(
               border: 1px solid rgba(232,195,107,.35); border-radius: 12px; padding: 13px 16px;
               margin: 16px 0 4px; font-weight: 800; font-size: 14.5px; }
 .rankbanner small { display: block; font-weight: 500; color: var(--mut); margin-top: 2px; font-size: 12px; }
+.item .thumb { flex: none; width: 62px; height: 62px; border-radius: 10px; background: #0B0E14;
+        border: 1px solid var(--line); object-fit: contain; }
+.pnotes { flex-basis: 100%; margin-top: 4px; padding-top: 12px; border-top: 1px dashed var(--line); }
+.pnotes .spec { font-size: 12px; color: var(--gold); font-weight: 700; margin-bottom: 8px; }
+.pnotes ul { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.pnotes li { font-size: 12.5px; color: var(--mut); line-height: 1.6; padding-left: 18px; position: relative; }
+.pnotes li::before { position: absolute; left: 0; font-weight: 800; }
+.pnotes li.pro::before { content: "＋"; color: #51CF66; }
+.pnotes li.con::before { content: "－"; color: #FF8787; }
+.rankrow .thumb { flex: none; width: 46px; height: 46px; border-radius: 8px; background: #0B0E14;
+        border: 1px solid var(--line); object-fit: contain; }
+.tipbox { background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+        padding: 16px 18px; margin-bottom: 12px; font-size: 13.5px; line-height: 1.85; color: var(--mut); }
+.tipbox b { color: var(--tx); }
+.tipbox ol, .tipbox ul { margin: 8px 0 0 18px; }
+.tipbox li { margin-bottom: 5px; }
+.mailbtn { display: inline-block; margin-top: 14px; background: var(--gold); color: #14171D;
+        font-weight: 800; font-size: 14px; padding: 12px 22px; border-radius: 10px; }
 .etc1 { font-size: 12px; color: #566070; margin: 6px 2px 0; line-height: 1.8; }
 .srcs { font-size: 11px; color: #566070; margin-top: 20px; line-height: 1.8; word-break: break-all; }
 .srcs a { color: #7A8290; }
@@ -174,7 +199,7 @@ def page(title, desc, body, canonical, jsonld=None):
 {body}
 <footer>
 비공식 팬 사이트입니다. 선수·팀·리그와 무관하며, 장비 정보는 공개 자료를 교차 확인해 정리했습니다.
-잘못된 정보 제보: dugout26.gm@gmail.com<br>
+잘못된 정보·추가 정보 <a href="{BASE_URL}/submit.html" style="color:#7A8290;border-bottom:1px dotted #566070">제보하기</a><br>
 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 </footer>
 </div>
@@ -186,12 +211,83 @@ def item_html(cat_label, entry):
         return (f'<div class="item"><span class="cat">{cat_label}</span>'
                 f'<span class="model unknown">확인 중 — 공개 정보 수집 중</span></div>')
     conf = entry.get("confidence", "medium")
-    url = entry.get("coupang_url") or CATALOG.get(entry["value"])
+    prod = CATALOG.get(entry["value"], {})
+    url = entry.get("coupang_url") or prod.get("coupang_url")
     buy = (f'<a class="buy" href="{esc(url)}" target="_blank" rel="nofollow sponsored">최저가 보기</a>'
            if url else "")
-    return (f'<div class="item"><span class="cat">{cat_label}</span>'
+    thumb = (f'<img class="thumb" src="{esc(prod["image"])}" alt="{esc(entry["value"])}" '
+             f'loading="lazy" width="62" height="62">' if prod.get("image") else "")
+    note = NOTES.get(prod.get("name", ""))
+    notes_html = ""
+    if note:
+        lis = "".join(f'<li class="pro">{esc(x)}</li>' for x in note.get("pros", []))
+        lis += "".join(f'<li class="con">{esc(x)}</li>' for x in note.get("cons", []))
+        notes_html = (f'<div class="pnotes"><div class="spec">{esc(note["spec"])}</div>'
+                      f'<ul>{lis}</ul></div>')
+    return (f'<div class="item">{thumb}<span class="cat">{cat_label}</span>'
             f'<span class="model">{esc(entry["value"])}</span>'
-            f'<span class="conf {conf}">신뢰도 {CONF_KR.get(conf, conf)}</span>{buy}</div>')
+            f'<span class="conf {conf}">신뢰도 {CONF_KR.get(conf, conf)}</span>{buy}{notes_html}</div>')
+
+def build_submit(teams, missing):
+    """제보 안내 페이지 — 증거 기준과 검증 절차를 명시."""
+    miss_html = ""
+    if missing:
+        miss_html = ('<section><h2>특히 이런 정보가 필요합니다</h2>'
+                     '<p class="note" style="margin-top:0">아래 선수들은 아직 확인된 장비 정보가 없습니다. '
+                     '한 항목만 알려주셔도 큰 도움이 됩니다.</p><div class="pgrid" style="margin-top:12px">' +
+                     "".join(f'<a class="pcell" href="{BASE_URL}/players/{n.lower()}.html">'
+                             f'<div class="nick">{esc(n)}</div><div class="meta">{esc(t)}</div></a>'
+                             for n, t in missing) +
+                     '</div></section>')
+    body = f"""<div class="crumb"><a href="{BASE_URL}/">홈</a> › 정보 제보</div>
+<h1>장비 정보 제보하기</h1>
+<p class="sub">틀린 정보를 바로잡거나, 아직 없는 선수의 장비를 알려주실 수 있습니다.
+확인된 제보만 반영하기 때문에 <b>근거 자료</b>를 함께 주셔야 합니다.</p>
+
+<section><h2>제보에 꼭 담아주세요</h2>
+<div class="tipbox">
+<b>1. 선수 이름과 항목</b> — 예: "케리아 / 마우스패드"<br>
+<b>2. 제품명</b> — 가능한 한 정확한 모델명 (예: Logitech G840, 색상·사이즈까지)<br>
+<b>3. 근거</b> — 아래 중 <b>하나 이상</b>
+<ul>
+<li>선수 개인 방송·유튜브 영상 링크 <b>+ 해당 장면 타임스탬프</b></li>
+<li>선수·팀 공식 SNS 게시물 링크</li>
+<li>인터뷰·기사 링크 (제품명이 언급된 부분)</li>
+<li>대회·연습실 셋업 사진 (제품 식별이 가능한 화질, 출처 표기)</li>
+</ul>
+<b>4. (선택) 확인 시점</b> — 언제 기준인지 (장비는 시즌 중에도 바뀝니다)
+</div>
+</section>
+
+<section><h2>이렇게 검증합니다</h2>
+<div class="tipbox">
+<ol>
+<li>근거 자료를 직접 확인합니다. 링크가 없거나 확인이 안 되면 반영하지 않습니다.</li>
+<li>가능하면 <b>다른 출처와 교차 확인</b>합니다. 1개 출처만 있으면 신뢰도를 '보통'으로 표기합니다.</li>
+<li>선수 본인·팀 공식 자료로 확인되면 신뢰도 '확실'로 표기합니다.</li>
+<li>기존 정보와 충돌하면 <b>더 최신 자료</b>를 우선합니다.</li>
+</ol>
+<span style="font-size:12px">추측·"어디서 봤는데" 류 제보는 반영하지 않습니다. 잘못된 정보가 올라가면
+사이트 전체의 신뢰도가 떨어지기 때문입니다.</span>
+</div>
+</section>
+
+{miss_html}
+
+<section><h2>보내는 곳</h2>
+<div class="tipbox">
+이메일로 보내주세요. 사진은 첨부해도 되고 링크로 주셔도 됩니다.<br>
+<a class="mailbtn" href="mailto:dugout26.gm@gmail.com?subject=%5B%EC%A0%9C%EB%B3%B4%5D%20%EC%84%A0%EC%88%98%EB%AA%85%20-%20%ED%95%AD%EB%AA%A9&amp;body=%EC%84%A0%EC%88%98%3A%20%0A%ED%95%AD%EB%AA%A9(%EB%A7%88%EC%9A%B0%EC%8A%A4%2F%ED%82%A4%EB%B3%B4%EB%93%9C%2F%EB%AA%A8%EB%8B%88%ED%84%B0%2F%ED%97%A4%EB%93%9C%EC%85%8B%2F%ED%8C%A8%EB%93%9C%2FDPI)%3A%20%0A%EC%A0%9C%ED%92%88%EB%AA%85%3A%20%0A%EA%B7%BC%EA%B1%B0(%EB%A7%81%ED%81%AC%2B%ED%83%80%EC%9E%84%EC%8A%A4%ED%83%AC%ED%94%84)%3A%20%0A%ED%99%95%EC%9D%B8%20%EC%8B%9C%EC%A0%90%3A%20">📮 제보 메일 쓰기 (양식 자동 입력)</a>
+<p style="margin-top:14px; font-size:12px">
+제보 시 개인정보(이름·연락처)는 적지 않으셔도 됩니다. 회신이 필요 없는 경우 메일 주소 외 정보는 저장하지 않습니다.
+반영은 확인이 끝나는 대로 진행하며, 개별 회신은 어려울 수 있습니다.</p>
+</div>
+</section>"""
+    title = "장비 정보 제보 — 프로셋업"
+    desc = "LCK 프로 선수 장비 정보의 오류 수정·추가 제보를 받습니다. 근거 자료 기준과 검증 절차를 안내합니다."
+    (ROOT / "submit.html").write_text(
+        page(title, desc, body, f"{BASE_URL}/submit.html"), encoding="utf-8")
+    return f"{BASE_URL}/submit.html"
 
 def build_rankings(teams):
     """data/products.json 카탈로그 그룹 기준 카테고리별 사용 순위 페이지."""
@@ -223,7 +319,9 @@ def build_rankings(teams):
             chips = " ".join(f'<a href="{BASE_URL}/players/{n.lower()}.html">{esc(n)}</a>' for n in sorted(set(users[i])))
             buy = (f'<a class="buy" href="{esc(prod["coupang_url"])}" target="_blank" rel="nofollow sponsored">최저가 보기</a>'
                    if prod.get("coupang_url") else "")
-            rhtml += (f'<div class="rankrow"><span class="rk{" top1" if rank == 1 else ""}">{rank}</span>'
+            th = (f'<img class="thumb" src="{esc(prod["image"])}" alt="{esc(prod["name"])}" '
+                  f'loading="lazy" width="46" height="46">' if prod.get("image") else "")
+            rhtml += (f'<div class="rankrow"><span class="rk{" top1" if rank == 1 else ""}">{rank}</span>{th}'
                       f'<span class="info"><span class="pname">{esc(prod["name"])}</span>'
                       f'<span class="users">{chips}</span></span>'
                       f'<span class="cnt">{prod["count"]}명</span>{buy}</div>')
@@ -257,6 +355,12 @@ def build():
     rank_url = build_rankings(teams)
     if rank_url:
         urls.append(rank_url)
+    missing = []
+    for code in TEAM_ORDER:
+        for p in teams.get(code, []):
+            if not any(p.get("gear", {}).get(k) and p["gear"][k].get("value") for k, _ in GEAR_LABELS):
+                missing.append((p["nickname"], TEAMS.get(code, {}).get("kr", code)))
+    urls.append(build_submit(teams, missing))
 
     # 선수 페이지
     for code, players in teams.items():
@@ -334,6 +438,8 @@ def build():
 공개 자료 교차 확인으로 정리했습니다.</p>
 <a class="rankbanner" href="{BASE_URL}/rankings.html">🏆 프로들이 가장 많이 쓰는 장비 랭킹
 <small>50명 데이터 집계 — 마우스 1위는 뭘까?</small></a>
+<a class="rankbanner" href="{BASE_URL}/submit.html" style="background:linear-gradient(90deg,rgba(255,255,255,.07),transparent);border-color:rgba(255,255,255,.16)">📮 아는 장비 정보 제보하기
+<small>근거 자료와 함께 보내주시면 확인 후 반영합니다</small></a>
 {blocks}"""
     jsonld = {"@context": "https://schema.org", "@type": "WebSite", "name": "프로셋업",
               "url": BASE_URL + "/", "description": "LCK 프로 선수 장비·세팅 정리 (비공식 팬 사이트)"}

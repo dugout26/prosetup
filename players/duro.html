@@ -80,6 +80,24 @@ section h2 { font-size: 16px; font-weight: 800; margin-bottom: 12px; color: var(
               border: 1px solid rgba(232,195,107,.35); border-radius: 12px; padding: 13px 16px;
               margin: 16px 0 4px; font-weight: 800; font-size: 14.5px; }
 .rankbanner small { display: block; font-weight: 500; color: var(--mut); margin-top: 2px; font-size: 12px; }
+.item .thumb { flex: none; width: 62px; height: 62px; border-radius: 10px; background: #0B0E14;
+        border: 1px solid var(--line); object-fit: contain; }
+.pnotes { flex-basis: 100%; margin-top: 4px; padding-top: 12px; border-top: 1px dashed var(--line); }
+.pnotes .spec { font-size: 12px; color: var(--gold); font-weight: 700; margin-bottom: 8px; }
+.pnotes ul { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.pnotes li { font-size: 12.5px; color: var(--mut); line-height: 1.6; padding-left: 18px; position: relative; }
+.pnotes li::before { position: absolute; left: 0; font-weight: 800; }
+.pnotes li.pro::before { content: "＋"; color: #51CF66; }
+.pnotes li.con::before { content: "－"; color: #FF8787; }
+.rankrow .thumb { flex: none; width: 46px; height: 46px; border-radius: 8px; background: #0B0E14;
+        border: 1px solid var(--line); object-fit: contain; }
+.tipbox { background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+        padding: 16px 18px; margin-bottom: 12px; font-size: 13.5px; line-height: 1.85; color: var(--mut); }
+.tipbox b { color: var(--tx); }
+.tipbox ol, .tipbox ul { margin: 8px 0 0 18px; }
+.tipbox li { margin-bottom: 5px; }
+.mailbtn { display: inline-block; margin-top: 14px; background: var(--gold); color: #14171D;
+        font-weight: 800; font-size: 14px; padding: 12px 22px; border-radius: 10px; }
 .etc1 { font-size: 12px; color: #566070; margin: 6px 2px 0; line-height: 1.8; }
 .srcs { font-size: 11px; color: #566070; margin-top: 20px; line-height: 1.8; word-break: break-all; }
 .srcs a { color: #7A8290; }
@@ -104,12 +122,12 @@ footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
 <div class="phead"><h1>Duro</h1><span class="kr">두로</span>
 <span class="rolechip">젠지 · 서포터</span></div>
 
-<section><h2>장비</h2><div class="gear"><div class="item"><span class="cat">마우스</span><span class="model">Logitech G Pro X Superlight 2</span><span class="conf medium">신뢰도 보통</span><a class="buy" href="https://link.coupang.com/a/fXOne6iyA0" target="_blank" rel="nofollow sponsored">최저가 보기</a></div><div class="item"><span class="cat">키보드</span><span class="model">Logitech G Pro X TKL</span><span class="conf medium">신뢰도 보통</span><a class="buy" href="https://link.coupang.com/a/fZvbS1Wjx6" target="_blank" rel="nofollow sponsored">최저가 보기</a></div><div class="item"><span class="cat">모니터</span><span class="model unknown">확인 중 — 공개 정보 수집 중</span></div><div class="item"><span class="cat">헤드셋</span><span class="model unknown">확인 중 — 공개 정보 수집 중</span></div><div class="item"><span class="cat">마우스패드</span><span class="model">Logitech G740</span><span class="conf medium">신뢰도 보통</span><a class="buy" href="https://link.coupang.com/a/fXOnAOuWAu" target="_blank" rel="nofollow sponsored">최저가 보기</a></div></div></section>
+<section><h2>장비</h2><div class="gear"><div class="item"><span class="cat">마우스</span><span class="model">Logitech G Pro X Superlight 2</span><span class="conf medium">신뢰도 보통</span><a class="buy" href="https://link.coupang.com/a/fXOne6iyA0" target="_blank" rel="nofollow sponsored">최저가 보기</a><div class="pnotes"><div class="spec">60g · 무선(LIGHTSPEED) · HERO 2 센서 · 최대 32,000 DPI</div><ul><li class="pro">프로씬 표준 — 무게·형상 모두 검증된 무난함</li><li class="pro">가벼워서 장시간 손목 부담이 적음</li><li class="pro">중고·부품 유통이 활발</li><li class="con">측면 버튼 2개뿐 — 매크로 활용은 제한적</li><li class="con">무광 코팅이라 손에 땀이 많으면 미끄러짐 호불호</li></ul></div></div><div class="item"><span class="cat">키보드</span><span class="model">Logitech G Pro X TKL</span><span class="conf medium">신뢰도 보통</span><a class="buy" href="https://link.coupang.com/a/fZvbS1Wjx6" target="_blank" rel="nofollow sponsored">최저가 보기</a><div class="pnotes"><div class="spec">텐키리스 · 무선(LIGHTSPEED) · 기계식 · 착탈식 케이블</div><ul><li class="pro">LCK에서 가장 많이 쓰이는 키보드 — 대회 환경 검증</li><li class="pro">텐키리스라 마우스 공간 확보에 유리</li><li class="pro">무선이라 셋업이 깔끔</li><li class="con">가격대가 높음</li><li class="con">키압·스위치 교체(핫스왑) 미지원 모델이 있어 구매 전 확인 필요</li></ul></div></div><div class="item"><span class="cat">모니터</span><span class="model unknown">확인 중 — 공개 정보 수집 중</span></div><div class="item"><span class="cat">헤드셋</span><span class="model unknown">확인 중 — 공개 정보 수집 중</span></div><div class="item"><span class="cat">마우스패드</span><span class="model">Logitech G740</span><span class="conf medium">신뢰도 보통</span><a class="buy" href="https://link.coupang.com/a/fXOnAOuWAu" target="_blank" rel="nofollow sponsored">최저가 보기</a></div></div></section>
 <section><h2>인게임 세팅</h2><div class="settings"><div class="set"><div class="k">DPI</div><div class="v unknown">확인 중</div></div><div class="set"><div class="k">인게임 감도</div><div class="v unknown">확인 중</div></div><div class="set"><div class="k">해상도</div><div class="v">1920x1080</div></div></div></section>
 <div class='srcs'>출처: <a href="https://specs.gg/Duro" rel="nofollow">specs.gg</a></div>
 <footer>
 비공식 팬 사이트입니다. 선수·팀·리그와 무관하며, 장비 정보는 공개 자료를 교차 확인해 정리했습니다.
-잘못된 정보 제보: dugout26.gm@gmail.com<br>
+잘못된 정보·추가 정보 <a href="https://dugout26.github.io/prosetup/submit.html" style="color:#7A8290;border-bottom:1px dotted #566070">제보하기</a><br>
 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 </footer>
 </div>
