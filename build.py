@@ -11,7 +11,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 OUT_PLAYERS = ROOT / "players"
-BASE_URL = "https://dugout26.github.io/lck-gear"
+BASE_URL = "https://dugout26.github.io/prosetup"
 VERIFIED = "2026-08"
 # 서치콘솔 인증 코드 (content 값만). 채우면 모든 페이지 head에 메타태그 렌더.
 VERIFY_GOOGLE = "reLU6hFD0fFzI4ciTnfyEkadi_fsno6fJLTdosq1qTA"  # 구글 서치콘솔 HTML 태그
@@ -161,8 +161,8 @@ def page(title, desc, body, canonical, jsonld=None):
 </head>
 <body>
 <div class="wrap">
-<header class="site"><a href="{BASE_URL}/" class="logo">LCK <b>기어</b></a>
-<span class="tag">프로 선수 장비·세팅</span></header>
+<header class="site"><a href="{BASE_URL}/" class="logo">프로<b>셋업</b></a>
+<span class="tag">LCK 프로 장비·세팅</span></header>
 <div class="updated">데이터 확인 시점: {VERIFIED} · 매 시즌 업데이트</div>
 {body}
 <footer>
@@ -263,7 +263,7 @@ def build():
             setting = p.get("settings", {})
             has_any = any(gear.get(k) and gear[k].get("value") for k, _ in GEAR_LABELS)
 
-            title = f"{kr}({nick}) 장비·세팅 — 마우스·키보드·DPI | LCK 기어"
+            title = f"{kr}({nick}) 장비·세팅 — 마우스·키보드·DPI | 프로셋업"
             desc = (f"{tinfo['kr']} {role} {kr}({nick})가 사용하는 게이밍 장비(마우스·키보드·모니터)와 "
                     f"인게임 세팅(DPI·감도)을 정리했습니다.")
             gear_html = "".join(item_html(label, gear.get(key)) for key, label in GEAR_LABELS)
@@ -328,10 +328,10 @@ def build():
 <a class="rankbanner" href="{BASE_URL}/rankings.html">🏆 프로들이 가장 많이 쓰는 장비 랭킹
 <small>50명 데이터 집계 — 마우스 1위는 뭘까?</small></a>
 {blocks}"""
-    jsonld = {"@context": "https://schema.org", "@type": "WebSite", "name": "LCK 기어",
-              "url": BASE_URL + "/", "description": "LCK 프로 선수 장비·세팅 정리"}
+    jsonld = {"@context": "https://schema.org", "@type": "WebSite", "name": "프로셋업",
+              "url": BASE_URL + "/", "description": "LCK 프로 선수 장비·세팅 정리 (비공식 팬 사이트)"}
     (ROOT / "index.html").write_text(
-        page("LCK 기어 — 프로 선수 장비·세팅 총정리 (마우스·키보드·DPI)",
+        page("프로셋업 — LCK 프로 선수 장비·세팅 총정리 (마우스·키보드·DPI)",
              "2026 LCK 10팀 50명 선수들이 실제 사용하는 게이밍 장비와 인게임 세팅을 팀별로 정리했습니다.",
              body, BASE_URL + "/", jsonld), encoding="utf-8")
 

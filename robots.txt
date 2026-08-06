@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://dugout26.github.io/lck-gear/sitemap.xml
+Sitemap: https://dugout26.github.io/prosetup/sitemap.xml
