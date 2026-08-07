@@ -15,6 +15,8 @@ BASE_URL = "https://dugout26.github.io/prosetup"
 VERIFIED = "2026-08"
 VERIFY_GOOGLE = "reLU6hFD0fFzI4ciTnfyEkadi_fsno6fJLTdosq1qTA"
 VERIFY_NAVER = None
+# 구글 폼(사진·영상 첨부 가능, 구글 로그인 필요). 없으면 사이트 내 폼만 노출.
+GFORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeGvN8f2idXK5TKF7at_2xBPxCVfEoxOBLXEubcZGwWNqUtXw/viewform"
 
 GEAR_LABELS = [("mouse", "마우스"), ("keyboard", "키보드"), ("monitor", "모니터"),
                ("headset", "헤드셋"), ("mousepad", "마우스패드")]
@@ -333,6 +335,15 @@ def build_submit(g, missing):
 {miss_html}
 
 <section><h2>제보 보내기</h2>
+<div class="tipbox" style="border-color:rgba(232,195,107,.4)">
+<b style="font-size:15px">방법 1 — 구글 폼 (권장)</b><br>
+셋업 <b>사진·영상을 직접 첨부</b>할 수 있어 확인이 빠릅니다. 구글 로그인이 필요합니다.
+<div><a class="mailbtn" href="{GFORM_URL}" target="_blank" rel="noopener">📋 구글 폼으로 제보하기</a></div>
+</div>
+<div class="tipbox">
+<b style="font-size:15px">방법 2 — 아래 폼 (로그인 없이)</b><br>
+구글 계정이 없거나 로그인이 번거로우면 이쪽을 쓰세요. 사진은 링크로 남겨주시면 됩니다.
+</div>
 <div class="tipbox" style="padding-bottom:20px">
 <form class="rform" action="https://formsubmit.co/dugout26.gm@gmail.com" method="POST">
 <input type="hidden" name="_subject" value="[프로셋업 제보] {g['short']}">
@@ -368,7 +379,7 @@ def build_submit(g, missing):
 </div>
 </section>
 
-<section><h2>폼이 안 될 때</h2>
+<section><h2>둘 다 안 될 때</h2>
 <div class="tipbox">
 아래 주소로 메일을 보내주셔도 됩니다.
 <div class="mailrow"><code id="mailaddr">dugout26.gm@gmail.com</code>
