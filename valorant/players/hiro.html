@@ -97,6 +97,26 @@ section h2 { font-size: 16px; font-weight: 800; margin-bottom: 12px; color: var(
 .tipbox b { color: var(--tx); }
 .tipbox ol, .tipbox ul { margin: 8px 0 0 18px; }
 .tipbox li { margin-bottom: 5px; }
+.rform { display: flex; flex-direction: column; gap: 12px; margin-top: 6px; }
+.rform label { font-size: 12.5px; font-weight: 700; color: var(--mut); }
+.rform label b { color: #FF8787; }
+.rform input, .rform textarea, .rform select {
+  width: 100%; background: #0B0E14; border: 1px solid var(--line); border-radius: 10px;
+  padding: 12px 13px; color: var(--tx); font-size: 14.5px; font-family: inherit; }
+.rform input:focus, .rform textarea:focus, .rform select:focus {
+  outline: none; border-color: rgba(232,195,107,.6); }
+.rform textarea { min-height: 92px; resize: vertical; }
+.rform .row { display: flex; gap: 10px; }
+.rform .row > div { flex: 1; min-width: 0; }
+.rform .hp { position: absolute; left: -9999px; }
+.rform button { margin-top: 6px; background: var(--gold); color: #14171D; border: 0;
+  border-radius: 10px; padding: 15px; font-size: 15.5px; font-weight: 900; cursor: pointer; }
+.rform button:hover { background: #F0D08A; }
+.mailrow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+.mailrow code { background: #0B0E14; border: 1px solid var(--line); border-radius: 8px;
+  padding: 9px 12px; font-size: 13.5px; color: var(--tx); }
+.copybtn { background: var(--card); border: 1px solid var(--line); color: var(--mut);
+  border-radius: 8px; padding: 9px 14px; font-size: 13px; font-weight: 700; cursor: pointer; }
 .mailbtn { display: inline-block; margin-top: 14px; background: var(--gold); color: #14171D;
         font-weight: 800; font-size: 14px; padding: 12px 22px; border-radius: 10px; }
 .etc1 { font-size: 12px; color: #566070; margin: 6px 2px 0; line-height: 1.8; }
