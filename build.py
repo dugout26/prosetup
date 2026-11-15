@@ -300,6 +300,16 @@ details.pnotes ul { margin-top: 8px; }
 .cmp td.num i { display: block; height: 4px; background: var(--gold); border-radius: 2px; margin-top: 4px; opacity: .8; }
 .cmp td.cta { text-align: right; width: 70px; }
 .cmp .na { font-size: 11px; color: #566070; }
+nav.gnav a.hot { color: #FFB4B4; border-color: rgba(255,107,107,.4); }
+.tag { display: inline-block; font-size: 10.5px; font-weight: 800; padding: 1px 7px; border-radius: 999px; margin-right: 6px; }
+.tag.off { color: #14171D; background: #FF6B6B; }
+.tag.rumor { color: #FFE066; border: 1px solid rgba(255,224,102,.45); }
+.tag.dead { color: #868E96; border: 1px solid #495057; text-decoration: line-through; }
+tr.dead { opacity: .55; }
+.cmp td.dt { font-size: 11.5px; color: var(--mut); white-space: nowrap; width: 70px; }
+.cmp td small { display: block; }
+.legend { font-size: 11.5px; color: var(--mut); margin: 6px 0 4px; line-height: 2; }
+.h2s { font-size: 11px; color: var(--mut); font-weight: 500; margin-left: 6px; }
 .cmp td.gc { font-size: 12.5px; }
 .cmp td.gc .buy { margin-top: 4px; display: inline-block; }
 .cmp a.src { color: #7A8290; border-bottom: 1px dotted #566070; }
@@ -337,7 +347,12 @@ def gnav_html(cur_key):
         g = GAMES_CFG["games"][k]
         cls = " class=\"on\"" if k == cur_key else ""
         links += f'<a{cls} href="{gurl(g, "")}">{esc(g["nav"])}</a>'
-    links += '<a class="soon" href="#" onclick="return false">오버워치 · 준비 중</a>'
+    tr = load_json("data/transfers.json") or {}
+    for k in GAMES_CFG["order"]:
+        if k in tr and not k.startswith("_"):
+            g = GAMES_CFG["games"][k]
+            cls = ' class="hot on"' if cur_key == "stove" else ' class="hot"'
+            links += f'<a{cls} href="{gurl(dict(g, key=k), "stove-" + tr[k]["season"] + ".html")}">🔥 {esc(g["league"])} 이적시장</a>'
     return f'<nav class="gnav">{links}</nav>'
 
 def page(g, title, desc, body, canonical, jsonld=None, noindex=False, crumbs=None):
@@ -849,25 +864,62 @@ def build_transfers(g, teams, tmeta):
         return (f'<div class="cmp"><table><thead><tr><th>선수</th><th>마우스</th><th>키보드</th></tr></thead>'
                 f'<tbody>{r}</tbody></table></div>') if r else ""
 
-    moves = data.get("moves", [])
-    moves_html = (table(moves, True) if moves else
-                  f'<div class="tipbox">아직 공식 발표된 이적이 없습니다. FA 시장({data["fa_open"]}) 개시 후 '
-                  '구단 공식 발표가 나오는 대로 반영합니다. 루머·보도 단계 소식은 싣지 않습니다.</div>')
-    title = f"{season} {g['league']} 스토브리그 — FA·이적·재계약 선수 장비 총정리"
-    desc = (f"{season} {g['league']} 스토브리그 FA 대상·재계약·이적 확정 선수와 각 선수가 쓰는 마우스·키보드. "
-            f"구단 공식 발표 기준, {data['checked']} 확인.")
-    body = f"""<div class="crumb"><a href="{gurl(g, '')}">{esc(g['short'])} 홈</a> › {season} 스토브리그</div>
+    def tname(code):
+        return tmeta.get(code, {}).get("kr", code)
+
+    def who_cell(x):
+        p = by_nick.get(x["nickname"].casefold())
+        name = (f'<a href="{gurl(g, "players", player_slug(p) + ".html")}"><b>{esc(x["nickname"])}</b></a>'
+                if p else f'<b>{esc(x["nickname"])}</b>')
+        kr = x.get("name_kr") or (p or {}).get("name_kr", "")
+        mouse = ((p or {}).get("gear") or {}).get("mouse") or {}
+        gear = f'<small>마우스: {esc(mouse["value"])}</small>' if mouse.get("value") else ""
+        return f'<span>{name}<small>{esc(kr)}</small>{gear}</span>'
+
+    off = sorted(data.get("official", []), key=lambda x: x.get("date", ""), reverse=True)
+    off_rows = "".join(
+        f'<tr><td class="dt">{esc(x.get("date", ""))}</td><td class="pn">{who_cell(x)}</td>'
+        f'<td><span class="tag off">{esc(x["type"])}</span><small>'
+        f'{esc(tname(x["from"])) + " → " if x.get("from") else ""}{esc(tname(x.get("to") or x.get("team", "")))}'
+        f'{" · " + esc(x["detail"]) if x.get("detail") else ""}</small>'
+        f'<a class="src" href="{esc(x["source"])}" rel="nofollow">출처</a></td></tr>' for x in off)
+    off_html = (f'<div class="cmp"><table><tbody>{off_rows}</tbody></table></div>' if off_rows else
+                '<div class="tipbox">아직 공식 발표가 없습니다.</div>')
+    reps = sorted(data.get("reports", []), key=lambda x: x.get("date", ""), reverse=True)
+    rep_rows = ""
+    for x in reps:
+        st = x.get("status", "보도")
+        cls = {"오피셜 확정": "off", "무산": "dead"}.get(st, "rumor")
+        rep_rows += (f'<tr class="{cls}"><td class="dt">{esc(x.get("date", ""))}</td><td class="pn">{who_cell(x)}</td>'
+                     f'<td><span class="tag {cls}">{esc(st if st != "보도" else x.get("grade", "보도"))}</span>'
+                     f'<small>{esc(tname(x.get("from", "")))} → <b>{esc(tname(x.get("to", "")))}</b></small>'
+                     f'<small>{esc(x.get("note", ""))}</small>'
+                     f'<a class="src" href="{esc(x["source"])}" rel="nofollow">{esc(x.get("outlet", "출처"))}</a></td></tr>')
+    rep_html = (f'<div class="cmp"><table><tbody>{rep_rows}</tbody></table></div>' if rep_rows else
+                '<div class="tipbox">수집된 보도가 없습니다.</div>')
+    sec_off = f'<section><h2>🔴 오피셜</h2>{off_html}</section>'
+    sec_rep = (f'<section><h2>🟡 루머·보도 <small class="h2s">매체 보도 기준 · 오피셜이 뜨면 옮깁니다</small></h2>'
+               f'{rep_html}</section>')
+    # 이적·영입 오피셜이 나오기 전엔 루머가 더 궁금한 소식이라 위로
+    has_move = any(x.get("type") != "재계약" for x in off)
+    sections_top = sec_off + sec_rep if has_move else sec_rep + sec_off
+    title = f"{season} {g['league']} 이적시장 — 오피셜·루머·FA 선수 장비 총정리"
+    desc = (f"{season} {g['league']} 스토브리그 오피셜(이적·재계약)과 언론·소식통 루머, FA 대상 선수와 각 선수의 "
+            f"마우스·키보드를 한 번에. {data['checked']} 갱신.")
+    body = f"""<div class="crumb"><a href="{gurl(g, '')}">{esc(g['short'])} 홈</a> › {season} 이적시장</div>
 <h1>{esc(title)}</h1>
-<p class="sub">{data['checked']} 기준 계약 현황입니다. 선수 이름을 누르면 장비·감도 전체를 볼 수 있습니다.
-이적이 확정되면 해당 선수의 팀 정보와 장비를 함께 갱신합니다.</p>
-<section><h2>이적 확정</h2>{moves_html}</section>
+<p class="sub">{data['checked']} 갱신 · FA 시장 {data['fa_open']} 개시. 선수 이름을 누르면 장비·감도 전체를 볼 수 있습니다.</p>
+<div class="legend"><span class="tag off">오피셜</span> 구단·리그 공식 발표
+<span class="tag rumor">소식통·보도</span> 언론 보도 단계(확정 아님) <span class="tag dead">무산</span></div>
+{sections_top}
 <section><h2>FA 대상·거취 미정 ({len(data.get('pending', []))}명)</h2>{table(data.get('pending', []))}</section>
 <section><h2>{season} 계약 확인 ({len(data.get('stay', []))}명)</h2>{table(data.get('stay', []))}</section>
-<p class="note">계약 정보는 구단 공식 발표와 계약 공시 정리 자료를 기준으로 하며, 각 행의 '근거'에서 확인할 수 있습니다.</p>"""
+<p class="note">루머·보도는 매체명이 확인된 기사만 싣고, 커뮤니티 찌라시는 싣지 않습니다. 보도 내용은 해당 매체의 주장이며
+구단 공식 발표 전까지 확정이 아닙니다.</p>"""
     jsonld = {"@context": "https://schema.org", "@type": "WebPage", "name": title, "dateModified": data["checked"]}
     out = gdir(g) / slug_page
     out.write_text(page(g, title, desc, body, gurl(g, slug_page), jsonld,
-                        crumbs=[(f"{g['short']} 홈", gurl(g, "")), (f"{season} 스토브리그", gurl(g, slug_page))]),
+                        crumbs=[(f"{g['short']} 홈", gurl(g, "")), (f"{season} 이적시장", gurl(g, slug_page))]),
                    encoding="utf-8")
     return gurl(g, slug_page)
 
@@ -992,8 +1044,8 @@ def build_game(g):
                    f'<div class="pgrid">{cells}</div></div>')
 
     n_players = sum(len(v) for v in teams.values())
-    stove_banner = (f'<a class="rankbanner" href="{stove}">🔥 2027 스토브리그 — FA·이적 선수 장비'
-                    '<small>FA 대상·재계약 선수와 그들이 쓰는 마우스·키보드</small></a>') if stove else ""
+    stove_banner = (f'<a class="rankbanner" href="{stove}">🔥 이적시장 — 오피셜·루머 실시간 정리'
+                    '<small>FA 대상·이적설 선수와 그들이 쓰는 마우스·키보드</small></a>') if stove else ""
     body = f"""<h1>{esc(g['headline'])}</h1>
 <p class="sub">{esc(g['lede'])}</p>
 <a class="rankbanner" href="{gurl(g, 'rankings.html')}">🏆 프로들이 가장 많이 쓰는 장비 랭킹

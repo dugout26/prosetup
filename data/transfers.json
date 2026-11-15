@@ -1,10 +1,9 @@
 {
- "_note": "스토브리그 페이지 데이터. moves=공식 발표된 이적만(루머 금지). contracts.stay=2027 계약 확인, pending=거취 미정(FA 대상 등). 각 항목에 source 필수.",
+ "_note": "이적시장 탭 데이터. official=구단·리그 공식 발표(이적·영입·재계약), reports=언론·소식통 보도(루머 포함, 매체명·링크 필수, 커뮤니티 찌라시 금지). 보도가 오피셜로 확정되면 official로 옮기고 reports의 status를 '오피셜 확정'으로, 무산되면 '무산'으로. pending=거취 미정, stay=2027 계약 확인.",
  "lol": {
   "season": "2027",
   "checked": "2026-11-15",
   "fa_open": "2026-11-17",
-  "moves": [],
   "stay": [
    {
     "nickname": "Oner",
@@ -307,6 +306,151 @@
     "team": "BNK",
     "source": "https://www.sheepesports.com/en/articles/sources-raptor-kellin-and-taeyoon-expected-to-join-kt-rolster-for-lck-2027/en",
     "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   }
+  ],
+  "official": [
+   {
+    "date": "2026-10-24",
+    "nickname": "Casting",
+    "type": "재계약",
+    "team": "BRO",
+    "to": "BRO",
+    "detail": "2027년까지",
+    "source": "https://draftcoach.gg/news/story/lol-2027-offseason-roster-changes-deft-skewmond/"
+   },
+   {
+    "date": "2026-10-24",
+    "nickname": "GIDEON",
+    "type": "재계약",
+    "team": "BRO",
+    "to": "BRO",
+    "detail": "2027년까지",
+    "source": "https://draftcoach.gg/news/story/lol-2027-offseason-roster-changes-deft-skewmond/"
+   },
+   {
+    "date": "2026-10-24",
+    "nickname": "Roamer",
+    "type": "재계약",
+    "team": "BRO",
+    "to": "BRO",
+    "detail": "2027년까지",
+    "source": "https://draftcoach.gg/news/story/lol-2027-offseason-roster-changes-deft-skewmond/"
+   },
+   {
+    "date": "2026-10-24",
+    "nickname": "Teddy",
+    "type": "재계약",
+    "team": "BRO",
+    "to": "BRO",
+    "detail": "2027년까지",
+    "source": "https://draftcoach.gg/news/story/lol-2027-offseason-roster-changes-deft-skewmond/"
+   },
+   {
+    "date": "2026-10-24",
+    "nickname": "Namgung",
+    "type": "재계약",
+    "team": "BRO",
+    "to": "BRO",
+    "detail": "2027년까지",
+    "source": "https://draftcoach.gg/news/story/lol-2027-offseason-roster-changes-deft-skewmond/"
+   },
+   {
+    "date": "2026",
+    "nickname": "PerfecT",
+    "type": "재계약",
+    "team": "KT",
+    "to": "KT",
+    "detail": "2028년까지 연장",
+    "source": "https://www.invenglobal.com/articles/26967/kt-rolster-to-continue-alongside-bdd-and-perfect-through-2028"
+   },
+   {
+    "date": "2026",
+    "nickname": "Bdd",
+    "type": "재계약",
+    "team": "KT",
+    "to": "KT",
+    "detail": "2028년까지 연장",
+    "source": "https://www.invenglobal.com/articles/26967/kt-rolster-to-continue-alongside-bdd-and-perfect-through-2028"
+   },
+   {
+    "date": "2026-02-27",
+    "nickname": "Lucid",
+    "type": "재계약",
+    "team": "DK",
+    "to": "DK",
+    "detail": "2027년까지 연장",
+    "source": "https://www.pulse.bot/gaming/news/dplus-kia-extends-lucids-contract-days-after-lck-playoffs-victory-against-t1-7f0914bf-dcc6-4424-9bbb-fcaff83ed886/"
+   }
+  ],
+  "reports": [
+   {
+    "date": "2026-11",
+    "nickname": "Raptor",
+    "name_kr": "전어진",
+    "from": "BNK",
+    "to": "KT",
+    "outlet": "Sheep Esports",
+    "grade": "소식통",
+    "status": "보도",
+    "source": "https://www.sheepesports.com/en/articles/sources-raptor-kellin-and-taeyoon-expected-to-join-kt-rolster-for-lck-2027/en",
+    "note": "BNK 측은 \"타 팀에 접촉을 허락한 적 없다\"는 입장"
+   },
+   {
+    "date": "2026-11",
+    "nickname": "Taeyoon",
+    "name_kr": "김태윤",
+    "from": "BNK",
+    "to": "KT",
+    "outlet": "Sheep Esports",
+    "grade": "소식통",
+    "status": "보도",
+    "source": "https://www.sheepesports.com/en/articles/sources-raptor-kellin-and-taeyoon-expected-to-join-kt-rolster-for-lck-2027/en"
+   },
+   {
+    "date": "2026-11",
+    "nickname": "Kellin",
+    "name_kr": "김형규",
+    "from": "BNK",
+    "to": "KT",
+    "outlet": "Sheep Esports",
+    "grade": "소식통",
+    "status": "보도",
+    "source": "https://www.sheepesports.com/en/articles/sources-raptor-kellin-and-taeyoon-expected-to-join-kt-rolster-for-lck-2027/en"
+   },
+   {
+    "date": "2026-10-23",
+    "nickname": "Deft",
+    "name_kr": "김혁규",
+    "from": "전역(FA)",
+    "to": "NS",
+    "outlet": "Sheep Esports · 위키트리(NS 관계자 인용)",
+    "grade": "관계자 인용",
+    "status": "보도",
+    "source": "https://www.strafe.com/news/read/deft-reportedly-set-to-join-nongshim-red-force-for-2027-lck-season/",
+    "note": "구단 공식 발표 전"
+   },
+   {
+    "date": "2026-11",
+    "nickname": "Noah",
+    "name_kr": "오현택",
+    "from": "FA(前 GIANTX)",
+    "to": "BNK",
+    "outlet": "Sheep Esports",
+    "grade": "소식통",
+    "status": "보도",
+    "source": "https://www.sheepesports.com/en/articles/sources-noah-set-to-join-bnk-fearx-ahead-of-2027-lck-season/en"
+   },
+   {
+    "date": "2026-11",
+    "nickname": "Zeus",
+    "name_kr": "최우제",
+    "from": "HLE",
+    "to": "미정",
+    "outlet": "인벤",
+    "grade": "보도",
+    "status": "보도",
+    "source": "https://clip.dor.gg/en/blog/lck-free-agency-stove-league",
+    "note": "월즈 전 재계약 제안 거절 보도 · 구단은 협상 계속 중이라는 입장"
    }
   ]
  }
