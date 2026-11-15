@@ -105,3 +105,12 @@
 - LoL 모니터·헤드셋 미확인 칸: "대회 지급 장비" 배지로 표시(`games.json` `tournament_gear`) + 개인 사용 인기 제품 대안
 - sitemap lastmod = 데이터 확인일, raw 파일 as_of 보강
 - VCT 2027 파트너(지역당 8팀) 반영: 비파트너 팀은 '· 2027 비파트너' 구역으로
+
+### 리서치 반영 1차 (2026-11-15, docs/research-2026-11.md)
+- 쿠팡 대가성 문구를 모든 페이지 상단에 노출 (파트너스 정책)
+- 제목 연도는 데이터 시즌 기준(`SEASON`) — 2027 로스터 반영 후 변경
+- JSON-LD: 선수 페이지 ProfilePage → WebPage+about:Person, BreadcrumbList, WebSite·Organization은 루트만, FAQPage 제거(리치결과 종료)
+- 선수 페이지 제목·설명을 검색어형으로("페이커 마우스·키보드·감도(DPI)", 설명에 실제 제품명)
+- thanks noindex, submit sitemap 제외
+- `stove-2027.html`: 스토브리그 FA·재계약·이적 선수 장비 (`data/transfers.json`, 공식 발표만)
+- 미결정: 발로란트 prosettings 대량 수입 데이터 처리 (라이선스 문의 / 교차 확인 재구축)

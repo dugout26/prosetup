@@ -1,0 +1,313 @@
+{
+ "_note": "스토브리그 페이지 데이터. moves=공식 발표된 이적만(루머 금지). contracts.stay=2027 계약 확인, pending=거취 미정(FA 대상 등). 각 항목에 source 필수.",
+ "lol": {
+  "season": "2027",
+  "checked": "2026-11-15",
+  "fa_open": "2026-11-17",
+  "moves": [],
+  "stay": [
+   {
+    "nickname": "Oner",
+    "team": "T1",
+    "source": "https://esport.vision/lol/news/lck-free-agents-2027-kiin-canyon-doran-kanavi",
+    "status": "2028년까지 계약"
+   },
+   {
+    "nickname": "Faker",
+    "team": "T1",
+    "source": "https://esport.vision/lol/news/lck-free-agents-2027-kiin-canyon-doran-kanavi",
+    "status": "2029년까지 계약"
+   },
+   {
+    "nickname": "Peyz",
+    "team": "T1",
+    "source": "https://esport.vision/lol/news/lck-free-agents-2027-kiin-canyon-doran-kanavi",
+    "status": "2028년까지 계약"
+   },
+   {
+    "nickname": "Keria",
+    "team": "T1",
+    "source": "https://esport.vision/lol/news/lck-free-agents-2027-kiin-canyon-doran-kanavi",
+    "status": "2029년까지 계약"
+   },
+   {
+    "nickname": "Chovy",
+    "team": "GEN",
+    "source": "https://esport.vision/lol/news/lck-free-agents-2027-kiin-canyon-doran-kanavi",
+    "status": "2027년까지 계약"
+   },
+   {
+    "nickname": "Ruler",
+    "team": "GEN",
+    "source": "https://esport.vision/lol/news/lck-free-agents-2027-kiin-canyon-doran-kanavi",
+    "status": "2027년까지 계약"
+   },
+   {
+    "nickname": "Duro",
+    "team": "GEN",
+    "source": "https://esport.vision/lol/news/lck-free-agents-2027-kiin-canyon-doran-kanavi",
+    "status": "2027년까지 계약"
+   },
+   {
+    "nickname": "Zeka",
+    "team": "HLE",
+    "source": "https://esport.vision/lol/news/lck-free-agents-2027-kiin-canyon-doran-kanavi",
+    "status": "2027년까지 계약"
+   },
+   {
+    "nickname": "Gumayusi",
+    "team": "HLE",
+    "source": "https://esport.vision/lol/news/lck-free-agents-2027-kiin-canyon-doran-kanavi",
+    "status": "2027년까지 계약"
+   },
+   {
+    "nickname": "Delight",
+    "team": "HLE",
+    "source": "https://esport.vision/lol/news/lck-free-agents-2027-kiin-canyon-doran-kanavi",
+    "status": "2027년까지 계약"
+   },
+   {
+    "nickname": "PerfecT",
+    "team": "KT",
+    "source": "https://www.invenglobal.com/articles/26967/kt-rolster-to-continue-alongside-bdd-and-perfect-through-2028",
+    "status": "2028년까지 재계약"
+   },
+   {
+    "nickname": "Bdd",
+    "team": "KT",
+    "source": "https://www.invenglobal.com/articles/26967/kt-rolster-to-continue-alongside-bdd-and-perfect-through-2028",
+    "status": "2028년까지 재계약"
+   },
+   {
+    "nickname": "Lucid",
+    "team": "DK",
+    "source": "https://www.pulse.bot/gaming/news/dplus-kia-extends-lucids-contract-days-after-lck-playoffs-victory-against-t1-7f0914bf-dcc6-4424-9bbb-fcaff83ed886/",
+    "status": "2027년까지 재계약"
+   },
+   {
+    "nickname": "Casting",
+    "team": "BRO",
+    "source": "https://draftcoach.gg/news/story/lol-2027-offseason-roster-changes-deft-skewmond/",
+    "status": "2027년까지 재계약"
+   },
+   {
+    "nickname": "GIDEON",
+    "team": "BRO",
+    "source": "https://draftcoach.gg/news/story/lol-2027-offseason-roster-changes-deft-skewmond/",
+    "status": "2027년까지 재계약"
+   },
+   {
+    "nickname": "Roamer",
+    "team": "BRO",
+    "source": "https://draftcoach.gg/news/story/lol-2027-offseason-roster-changes-deft-skewmond/",
+    "status": "2027년까지 재계약"
+   },
+   {
+    "nickname": "Teddy",
+    "team": "BRO",
+    "source": "https://draftcoach.gg/news/story/lol-2027-offseason-roster-changes-deft-skewmond/",
+    "status": "2027년까지 재계약"
+   },
+   {
+    "nickname": "Namgung",
+    "team": "BRO",
+    "source": "https://draftcoach.gg/news/story/lol-2027-offseason-roster-changes-deft-skewmond/",
+    "status": "2027년까지 재계약"
+   }
+  ],
+  "pending": [
+   {
+    "nickname": "Doran",
+    "team": "T1",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "Kiin",
+    "team": "GEN",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "Canyon",
+    "team": "GEN",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "Zeus",
+    "team": "HLE",
+    "source": "https://x.com/InvenGlobal/status/2117101676922327050",
+    "status": "재계약 제안 거절 보도 · 구단은 협상 중 (계약 만료 2026-11-16)"
+   },
+   {
+    "nickname": "Kanavi",
+    "team": "HLE",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "Cuzz",
+    "team": "KT",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "만료 명단에 없음 · 2027 계약 공식 확인 전"
+   },
+   {
+    "nickname": "FenRir",
+    "team": "KT",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "만료 명단에 없음 · 2027 계약 공식 확인 전"
+   },
+   {
+    "nickname": "Effort",
+    "team": "KT",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "Siwoo",
+    "team": "DK",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "만료 명단에 없음 · 2027 계약 공식 확인 전"
+   },
+   {
+    "nickname": "ShowMaker",
+    "team": "DK",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "Smash",
+    "team": "DK",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "Career",
+    "team": "DK",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "만료 명단에 없음 · 2027 계약 공식 확인 전"
+   },
+   {
+    "nickname": "Kingen",
+    "team": "NS",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "Sponge",
+    "team": "NS",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "Scout",
+    "team": "NS",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "Diable",
+    "team": "NS",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "Lehends",
+    "team": "NS",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "Frog",
+    "team": "KRX",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "Willer",
+    "team": "KRX",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "Ucal",
+    "team": "KRX",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "Aiming",
+    "team": "KRX",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "Andil",
+    "team": "KRX",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "DuDu",
+    "team": "DNS",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "Sharvel",
+    "team": "DNS",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "Clozer",
+    "team": "DNS",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "deokdam",
+    "team": "DNS",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "만료 명단에 없음 · 2027 계약 공식 확인 전"
+   },
+   {
+    "nickname": "Peter",
+    "team": "DNS",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "Clear",
+    "team": "BNK",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "Raptor",
+    "team": "BNK",
+    "source": "https://www.sheepesports.com/en/articles/sources-raptor-kellin-and-taeyoon-expected-to-join-kt-rolster-for-lck-2027/en",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "VicLa",
+    "team": "BNK",
+    "source": "https://esportstransfer.com/lol/fa/lck",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "Taeyoon",
+    "team": "BNK",
+    "source": "https://www.sheepesports.com/en/articles/sources-raptor-kellin-and-taeyoon-expected-to-join-kt-rolster-for-lck-2027/en",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   },
+   {
+    "nickname": "Kellin",
+    "team": "BNK",
+    "source": "https://www.sheepesports.com/en/articles/sources-raptor-kellin-and-taeyoon-expected-to-join-kt-rolster-for-lck-2027/en",
+    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+   }
+  ]
+ }
+}

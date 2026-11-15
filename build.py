@@ -48,7 +48,8 @@ ALTS = load_json("data/alternatives.json") or {}
 SUCCESSOR = ALTS.get("models", {})
 BUDGET = ALTS.get("budget", {})
 
-SEASON = "2027"
+DISC = "이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."
+SEASON = "2026"   # 제목 연도 = 데이터가 반영한 시즌. 2027 로스터 확정·반영 후 바꾼다.
 # 클릭 분석: GoatCounter 사이트 코드(예: "prosetup"). 채우면 모든 쿠팡 버튼 클릭이
 # coupang/<게임>/<페이지유형>/<선수·카테고리>/<제품> 이벤트로 집계된다. None이면 스크립트 미삽입.
 GOATCOUNTER = None
@@ -144,6 +145,8 @@ header.site { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6p
 header.site .logo { font-size: 22px; font-weight: 900; }
 header.site .logo b { color: var(--gold); }
 header.site .tag { font-size: 12px; color: var(--mut); }
+.disc { font-size: 11.5px; color: var(--mut); background: var(--card); border: 1px solid var(--line);
+        border-radius: 8px; padding: 7px 11px; margin: 0 0 10px; }
 .updated { font-size: 12px; color: var(--mut); margin-bottom: 24px; }
 h1 { font-size: 24px; font-weight: 900; margin: 10px 0 4px; }
 .sub { color: var(--mut); font-size: 14px; margin-bottom: 22px; }
@@ -297,6 +300,9 @@ details.pnotes ul { margin-top: 8px; }
 .cmp td.num i { display: block; height: 4px; background: var(--gold); border-radius: 2px; margin-top: 4px; opacity: .8; }
 .cmp td.cta { text-align: right; width: 70px; }
 .cmp .na { font-size: 11px; color: #566070; }
+.cmp td.gc { font-size: 12.5px; }
+.cmp td.gc .buy { margin-top: 4px; display: inline-block; }
+.cmp a.src { color: #7A8290; border-bottom: 1px dotted #566070; }
 .gcard .who { flex-basis: 100%; font-size: 12px; color: var(--mut); }
 .gcard .who a, p.more a { color: #9BA3AF; border-bottom: 1px dotted #566070; }
 .gcard ul.pc { flex-basis: 100%; list-style: none; }
@@ -334,7 +340,13 @@ def gnav_html(cur_key):
     links += '<a class="soon" href="#" onclick="return false">오버워치 · 준비 중</a>'
     return f'<nav class="gnav">{links}</nav>'
 
-def page(g, title, desc, body, canonical, jsonld=None, noindex=False):
+def page(g, title, desc, body, canonical, jsonld=None, noindex=False, crumbs=None):
+    blocks = [] if not jsonld else (jsonld if isinstance(jsonld, list) else [jsonld])
+    if crumbs:
+        blocks.append({"@context": "https://schema.org", "@type": "BreadcrumbList",
+                       "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": u}
+                                           for i, (n, u) in enumerate(crumbs)]})
+    jsonld = blocks
     return f"""<!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -365,6 +377,7 @@ def page(g, title, desc, body, canonical, jsonld=None, noindex=False):
 <header class="site"><a href="{BASE_URL}/" class="logo">프로<b>셋업</b></a>
 <span class="tag">{esc(g["tagline"])}</span></header>
 {gnav_html(g["key"])}
+<p class="disc">{DISC}</p>
 <div class="updated">{game_status(g)}</div>
 {body}
 <footer>
@@ -630,7 +643,7 @@ def build_thanks(g):
     out = gdir(g) / "thanks.html"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(page(g, f"제보 완료 — 프로셋업 {g['short']}", "제보해주셔서 감사합니다.",
-                        body, gurl(g, "thanks.html")), encoding="utf-8")
+                        body, gurl(g, "thanks.html"), noindex=True), encoding="utf-8")
     return gurl(g, "thanks.html")
 
 def compare_table(g, usage, known, cat, label, ctx, track, top=5):
@@ -707,11 +720,14 @@ def build_rankings(g, teams, usage, known):
 {tables}
 {sections}"""
     jsonld = {"@context": "https://schema.org", "@type": "ItemList", "name": title,
-              "itemListElement": [{"@type": "ListItem", "position": r + 1, "name": n}
-                                  for r, n in enumerate(top_mouse)]}
+              "itemListElement": [{"@type": "ListItem", "position": r + 1, "name": f"{l} 순위",
+                                   "url": gurl(g, "guides", k + ".html")}
+                                  for r, (k, l) in enumerate(GUIDE_CATS) if usage.get(k)]}
     out = gdir(g) / "rankings.html"
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(page(g, title, desc, body, gurl(g, "rankings.html"), jsonld), encoding="utf-8")
+    out.write_text(page(g, title, desc, body, gurl(g, "rankings.html"), jsonld,
+                        crumbs=[(f"{g['short']} 홈", gurl(g, "")), ("장비 랭킹", gurl(g, "rankings.html"))]),
+                   encoding="utf-8")
     return gurl(g, "rankings.html")
 
 def guide_nav(g, cur=None):
@@ -786,15 +802,74 @@ def build_guides(g, teams, usage, known):
             {"@context": "https://schema.org", "@type": "ItemList", "name": title,
              "itemListElement": [{"@type": "ListItem", "position": r + 1, "name": p["name"]}
                                  for r, (p, _) in enumerate(rows[:10])]},
-            {"@context": "https://schema.org", "@type": "FAQPage",
-             "mainEntity": [{"@type": "Question", "name": q,
-                             "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]},
         ]
         out = gdir(g) / "guides" / f"{cat}.html"
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(page(g, title, desc, body, gurl(g, "guides", f"{cat}.html"), jsonld), encoding="utf-8")
+        out.write_text(page(g, title, desc, body, gurl(g, "guides", f"{cat}.html"), jsonld,
+                            crumbs=[(f"{g['short']} 홈", gurl(g, "")), ("장비 랭킹", gurl(g, "rankings.html")),
+                                    (label, gurl(g, "guides", f"{cat}.html"))]), encoding="utf-8")
         urls.append(gurl(g, "guides", f"{cat}.html"))
     return urls
+
+def build_transfers(g, teams, tmeta):
+    """스토브리그 페이지: 공식 이적·재계약·거취 미정 선수와 그 장비. 루머는 싣지 않는다."""
+    data = (load_json("data/transfers.json") or {}).get(g["key"])
+    if not data:
+        return None
+    by_nick = {p["nickname"].casefold(): p for ps in teams.values() for p in ps}
+    ctx, season = f"{g['key']}_stove", data["season"]
+    slug_page = f"stove-{season}.html"
+
+    def gear_cell(p, key):
+        e = (p.get("gear") or {}).get(key)
+        if not (e and e.get("value")):
+            return '<span class="na">확인 중</span>'
+        prod = CATALOG.get(e["value"], {})
+        btn = buy_btn(prod, ctx, f"{g['key']}/stove/{player_slug(p)}/{key}", "최저가", "buy sm") if prod else ""
+        return f'<span>{esc(e["value"])}</span>{btn}'
+
+    def rows(entries, show_from=False):
+        out = ""
+        for x in entries:
+            p = by_nick.get(x["nickname"].casefold())
+            if not p:
+                continue
+            team = tmeta.get(x.get("to") or x["team"], {}).get("kr", x.get("to") or x["team"])
+            src = f' <a class="src" href="{esc(x["source"])}" rel="nofollow">근거</a>' if x.get("source") else ""
+            status = (f'{esc(tmeta.get(x["from"], {}).get("kr", x["from"]))} → {esc(team)}' if show_from
+                      else esc(x.get("status", "")))
+            out += (f'<tr><td class="pn"><span><a href="{gurl(g, "players", player_slug(p) + ".html")}">'
+                    f'<b>{esc(p["nickname"])}</b></a><small>{esc(p.get("name_kr", ""))} · {esc(team)}</small>'
+                    f'<small>{status}{src}</small></span></td>'
+                    f'<td class="gc">{gear_cell(p, "mouse")}</td><td class="gc">{gear_cell(p, "keyboard")}</td></tr>')
+        return out
+
+    def table(entries, show_from=False):
+        r = rows(entries, show_from)
+        return (f'<div class="cmp"><table><thead><tr><th>선수</th><th>마우스</th><th>키보드</th></tr></thead>'
+                f'<tbody>{r}</tbody></table></div>') if r else ""
+
+    moves = data.get("moves", [])
+    moves_html = (table(moves, True) if moves else
+                  f'<div class="tipbox">아직 공식 발표된 이적이 없습니다. FA 시장({data["fa_open"]}) 개시 후 '
+                  '구단 공식 발표가 나오는 대로 반영합니다. 루머·보도 단계 소식은 싣지 않습니다.</div>')
+    title = f"{season} {g['league']} 스토브리그 — FA·이적·재계약 선수 장비 총정리"
+    desc = (f"{season} {g['league']} 스토브리그 FA 대상·재계약·이적 확정 선수와 각 선수가 쓰는 마우스·키보드. "
+            f"구단 공식 발표 기준, {data['checked']} 확인.")
+    body = f"""<div class="crumb"><a href="{gurl(g, '')}">{esc(g['short'])} 홈</a> › {season} 스토브리그</div>
+<h1>{esc(title)}</h1>
+<p class="sub">{data['checked']} 기준 계약 현황입니다. 선수 이름을 누르면 장비·감도 전체를 볼 수 있습니다.
+이적이 확정되면 해당 선수의 팀 정보와 장비를 함께 갱신합니다.</p>
+<section><h2>이적 확정</h2>{moves_html}</section>
+<section><h2>FA 대상·거취 미정 ({len(data.get('pending', []))}명)</h2>{table(data.get('pending', []))}</section>
+<section><h2>{season} 계약 확인 ({len(data.get('stay', []))}명)</h2>{table(data.get('stay', []))}</section>
+<p class="note">계약 정보는 구단 공식 발표와 계약 공시 정리 자료를 기준으로 하며, 각 행의 '근거'에서 확인할 수 있습니다.</p>"""
+    jsonld = {"@context": "https://schema.org", "@type": "WebPage", "name": title, "dateModified": data["checked"]}
+    out = gdir(g) / slug_page
+    out.write_text(page(g, title, desc, body, gurl(g, slug_page), jsonld,
+                        crumbs=[(f"{g['short']} 홈", gurl(g, "")), (f"{season} 스토브리그", gurl(g, slug_page))]),
+                   encoding="utf-8")
+    return gurl(g, slug_page)
 
 def build_game(g):
     teams, tmeta = load_players(g)
@@ -814,10 +889,13 @@ def build_game(g):
     if rank_url:
         urls.append(rank_url)
     urls += build_guides(g, teams, usage, known)
+    stove = build_transfers(g, teams, tmeta)
+    if stove:
+        urls.append(stove)
     missing = [(p["nickname"], player_slug(p), tmeta.get(code, {}).get("kr", code))
                for code in order for p in teams.get(code, [])
                if not any(p.get("gear", {}).get(k) and p["gear"][k].get("value") for k, _ in GEAR_LABELS)]
-    urls.append(build_submit(g, missing))
+    build_submit(g, missing)   # 검색 가치 낮음 → sitemap 제외
     build_thanks(g)
 
     for code, players in teams.items():
@@ -829,9 +907,14 @@ def build_game(g):
             gear, setting = p.get("gear", {}), p.get("settings", {})
             has_any = any(gear.get(k) and gear[k].get("value") for k, _ in GEAR_LABELS)
 
-            title = f"{kr}({nick}) 장비·세팅 — {g['short']} 마우스·키보드·DPI | 프로셋업"
-            desc = (f"{tinfo['kr']} {role} {kr}({nick})가 사용하는 게이밍 장비(마우스·키보드·모니터)와 "
-                    f"인게임 세팅(DPI·감도)을 정리했습니다.")
+            who = kr or nick
+            title = f"{who}({nick}) 마우스·키보드·감도(DPI) — {tinfo['kr']} {role} 장비 | 프로셋업"
+            named = [f"{lab} {gear[k]['value']}" for k, lab in GEAR_LABELS[:2]
+                     if gear.get(k) and gear[k].get("value")]
+            dpi = (setting.get("dpi") or {}).get("value") if isinstance(setting.get("dpi"), dict) else None
+            desc = (f"{tinfo['kr']} {role} {who}({nick})의 " +
+                    (", ".join(named) + (f", DPI {dpi}" if dpi else "") + " 등 " if named else "") +
+                    "실사용 게이밍 장비와 인게임 감도를 출처와 함께 정리했습니다.")
             gear_html = "".join(item_html(key, label, gear.get(key), f"{g['key']}_player",
                                           f"{g['key']}/player/{slug}/{key}", usage,
                                           g.get("tournament_gear"))
@@ -860,9 +943,11 @@ def build_game(g):
             empty_html = ("" if has_any else
                           '<p class="note">아직 공개된 장비 정보가 확인되지 않았습니다. '
                           f'<a href="{gurl(g, "submit.html")}" style="color:var(--gold)">알고 계시면 제보해주세요.</a></p>')
-            jsonld = {"@context": "https://schema.org", "@type": "ProfilePage",
-                      "mainEntity": {"@type": "Person", "name": kr or nick, "alternateName": nick,
-                                     "affiliation": tinfo["kr"], "jobTitle": f"프로게이머({role})"}}
+            jsonld = {"@context": "https://schema.org", "@type": "WebPage", "name": title,
+                      "dateModified": raw_meta(g, full=True),
+                      "about": {"@type": "Person", "name": who, "alternateName": nick,
+                                "affiliation": {"@type": "SportsTeam", "name": tinfo["kr"]},
+                                "jobTitle": f"프로게이머({role})"}}
             body = f"""<div class="crumb"><a href="{gurl(g, '')}">{esc(g['short'])} 홈</a> › {tinfo['kr']}</div>
 <div class="phead"><h1>{esc(nick)}</h1><span class="kr">{esc(kr)}</span>
 <span class="rolechip">{tinfo['kr']} · {role}</span></div>
@@ -874,7 +959,9 @@ def build_game(g):
             written.add(f"{slug}.html")
             (pdir / f"{slug}.html").write_text(
                 page(g, title, desc, body, gurl(g, "players", f"{slug}.html"), jsonld,
-                     noindex=not has_any), encoding="utf-8")
+                     noindex=not has_any,
+                     crumbs=[(f"{g['short']} 홈", gurl(g, "")), (who, gurl(g, "players", f"{slug}.html"))]),
+                encoding="utf-8")
             if has_any:   # 장비 0건 페이지는 얇은 콘텐츠 → noindex + sitemap 제외, 채워지면 자동 포함
                 urls.append(gurl(g, "players", f"{slug}.html"))
 
@@ -905,16 +992,26 @@ def build_game(g):
                    f'<div class="pgrid">{cells}</div></div>')
 
     n_players = sum(len(v) for v in teams.values())
+    stove_banner = (f'<a class="rankbanner" href="{stove}">🔥 2027 스토브리그 — FA·이적 선수 장비'
+                    '<small>FA 대상·재계약 선수와 그들이 쓰는 마우스·키보드</small></a>') if stove else ""
     body = f"""<h1>{esc(g['headline'])}</h1>
 <p class="sub">{esc(g['lede'])}</p>
 <a class="rankbanner" href="{gurl(g, 'rankings.html')}">🏆 프로들이 가장 많이 쓰는 장비 랭킹
 <small>{n_players}명 데이터 집계 — 키보드·마우스·헤드셋 사용률 TOP 비교표</small></a>
 {guide_nav(g)}
+{stove_banner}
 <a class="rankbanner" href="{gurl(g, 'submit.html')}" style="background:linear-gradient(90deg,rgba(255,255,255,.07),transparent);border-color:rgba(255,255,255,.16)">📮 아는 장비 정보 제보하기
 <small>근거 자료와 함께 보내주시면 확인 후 반영합니다</small></a>
 {blocks}"""
-    jsonld = {"@context": "https://schema.org", "@type": "WebSite", "name": "프로셋업",
-              "url": gurl(g, ""), "description": f"{g['league']} 프로 선수 장비·세팅 정리 (비공식 팬 사이트)"}
+    if g["path"]:
+        jsonld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": f"프로셋업 {g['short']}",
+                  "url": gurl(g, ""), "isPartOf": {"@type": "WebSite", "url": BASE_URL + "/"}}
+    else:
+        jsonld = [{"@context": "https://schema.org", "@type": "WebSite", "name": "프로셋업",
+                   "url": BASE_URL + "/", "inLanguage": "ko",
+                   "description": "LCK·VCT 프로 선수 장비·세팅 정리 (비공식 팬 사이트)"},
+                  {"@context": "https://schema.org", "@type": "Organization", "name": "프로셋업",
+                   "url": BASE_URL + "/", "logo": BASE_URL + "/og.png"}]
     idx = gdir(g) / "index.html"
     idx.parent.mkdir(parents=True, exist_ok=True)
     idx.write_text(page(g, f"프로셋업 {g['short']} — {g['league']} 프로 선수 장비·세팅 총정리",
