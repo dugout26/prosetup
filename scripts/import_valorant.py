@@ -18,15 +18,28 @@ SOURCE = "https://prosettings.net/lists/valorant/"
 REGIONS = OrderedDict([
     ("pacific", ("VCT Pacific", ["Gen.G", "DRX", "T1", "Nongshim RedForce", "Paper Rex",
                                  "Rex Regum Qeon", "Team Secret", "Global Esports", "ZETA DIVISION",
-                                 "DetonatioN FocusMe", "BOOM Esports", "FULL SENSE"])),
+                                 "DetonatioN FocusMe", "BOOM Esports", "FULL SENSE",
+                                 "Crazy Raccoon", "GAM Esports"])),
     ("americas", ("VCT Americas", ["Sentinels", "NRG", "100 Thieves", "Cloud9", "Evil Geniuses",
                                    "LOUD", "MIBR", "FURIA", "Leviatan", "KRÜ Esports", "G2 Esports"])),
     ("emea", ("VCT EMEA", ["Fnatic", "Team Heretics", "Team Liquid", "Team Vitality", "Karmine Corp",
                            "Natus Vincere", "BBL Esports", "FUT Esports", "Gentle Mates", "GIANTX"])),
     ("china", ("VCT China", ["Edward Gaming", "Bilibili Gaming", "Trace Esports", "TyLoo",
                              "NOVA Esports", "FunPlus Phoenix", "JD Gaming", "Wolves Esports",
-                             "Titan Esports Club", "All Gamers", "Dragon Ranger Gaming"])),
+                             "Titan Esports Club", "All Gamers", "Dragon Ranger Gaming",
+                             "XLG Esports", "Weibo Gaming"])),
 ])
+
+# VCT 2027 파트너 팀 (지역당 8팀, 2026-10-22 발표 — thespike.gg·dotesports·esports.gg 교차 확인).
+# 목록에 없는 팀은 '<리그> · 2027 비파트너' 구역으로 내려 표시한다.
+PARTNERS_2027 = {
+    "Gen.G", "T1", "Paper Rex", "Rex Regum Qeon", "FULL SENSE", "ZETA DIVISION", "Crazy Raccoon", "GAM Esports",
+    "Sentinels", "NRG", "100 Thieves", "LOUD", "MIBR", "Leviatan", "KRÜ Esports", "G2 Esports",
+    "Fnatic", "Team Heretics", "Team Liquid", "Team Vitality", "Karmine Corp", "BBL Esports", "FUT Esports",
+    "Gentle Mates",
+    "Edward Gaming", "Bilibili Gaming", "Trace Esports", "TyLoo", "JD Gaming", "All Gamers", "XLG Esports",
+    "Weibo Gaming",
+}
 
 COLORS = {"white", "black", "pink", "green", "silver", "magenta", "matcha", "orange", "blue",
           "red", "purple", "yellow", "cyan", "grey", "gray", "navy", "gold", "lilac", "mint"}
@@ -100,14 +113,16 @@ def main():
     for key, (region, teams) in REGIONS.items():
         doc = {"as_of": as_of,
                "notes": {"source": f"{SOURCE} 목록 테이블(공개 세팅 DB)에서 수집.",
-                         "scope": f"{region} 프랜차이즈 팀. 로스터가 아니라 '공개된 세팅 데이터가 있는 선수' 기준.",
+                         "scope": f"{region} 2026 프랜차이즈 + 2027 파트너 팀. 로스터가 아니라 '공개된 세팅 데이터가 있는 선수' 기준.",
                          "colors": "제품 색상 표기는 모델 단위로 통일했습니다."}}
-        for t in teams:
+        ordered = [t for t in teams if t in PARTNERS_2027] + [t for t in teams if t not in PARTNERS_2027]
+        for t in ordered:
             players = by_team.get(t)
             if not players:
                 continue
             code = team_code(t)
-            doc[code] = {"team_name": t, "region": region, "players": []}
+            label = region if t in PARTNERS_2027 else f"{region} · 2027 비파트너"
+            doc[code] = {"team_name": t, "region": label, "players": []}
             for p in players:
                 nick = p["nickname"]
                 doc[code]["players"].append({

@@ -88,7 +88,8 @@
 ### 성과 추적
 1. **GoatCounter 클릭 이벤트** (`build.py`의 `GOATCOUNTER`에 사이트 코드 입력 시 활성화): 모든 쿠팡 버튼에 `coupang/<게임>/<player|rank|guide>/<선수 또는 카테고리>/<제품>` 이벤트 → 어떤 선수·카테고리 페이지에서 클릭이 나는지 파악.
 2. **쿠팡 subId 채널 링크**: `scripts/make_subid_links.py`(Open API 키 필요)로 `lolplayer·lolrank·lolguide·valorantplayer…` subId 딥링크 생성 → 파트너스 리포트에서 페이지 유형별 **구매·수익** 확인. 링크가 없으면 기본 링크로 자동 대체.
-3. 선수 단위 구매 귀속은 subId를 늘리지 않고, GoatCounter 클릭 비중 × subId 채널 매출로 추정.
+3. **단축링크 subId 부착(즉시 적용)**: 채널 링크가 없으면 `link.coupang.com/a/...?subId=lol-player-mouse` 형태로 붙임(리다이렉트가 subid를 넘기는 것 확인). 파트너스 리포트에서 게임·지면·카테고리별 구매 확인 가능.
+4. 선수 단위 구매 귀속은 subId를 늘리지 않고, GoatCounter 클릭 비중 × subId 채널 매출로 추정.
 
 ### 운영 채널
 - 슬랙 `#prosetup-updates`: 장비 제보(근거 링크 필수)와 사이트 구조 제안 접수. 반영하면 스레드에 결과를 남김.
@@ -96,3 +97,11 @@
 ### 2027 시즌 상태 (2026-11-15)
 - LCK: FA 시장 2026-11-17 개시 전 → 로스터 유지, 각 raw 파일에 `roster_check_2027`로 계약 현황 기록. 확정 발표 후 갱신.
 - VCT: prosettings 최신 표로 장비·로스터 갱신(214명). 2027 파트너 팀 축소(지역당 8팀) 발표가 있어, 리그 구성 반영은 공식 확인 후 진행.
+
+### 슬랙 제보 반영 (2026-11-15)
+- canonical·내부 링크·sitemap의 게임 홈 URL 끝에 `/` (301 회피)
+- og:url·og:image(`og.png`)·twitter:card·파비콘(`icon.svg`, `favicon.ico`)
+- 개인 장비 0건 선수 페이지: `noindex,follow` + sitemap 제외 (채워지면 자동 포함)
+- LoL 모니터·헤드셋 미확인 칸: "대회 지급 장비" 배지로 표시(`games.json` `tournament_gear`) + 개인 사용 인기 제품 대안
+- sitemap lastmod = 데이터 확인일, raw 파일 as_of 보강
+- VCT 2027 파트너(지역당 8팀) 반영: 비파트너 팀은 '· 2027 비파트너' 구역으로

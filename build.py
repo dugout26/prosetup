@@ -73,10 +73,23 @@ def buy_url(prod, ctx=None):
     """subId 채널별 링크(coupang_urls[ctx])가 있으면 우선, 없으면 기본 링크."""
     return (prod.get("coupang_urls") or {}).get(ctx) or prod.get("coupang_url")
 
+CATS = {k for k, _ in GEAR_LABELS}
+
+def with_subid(url, track):
+    """쿠팡 단축링크에 subId(게임-페이지유형-카테고리) 부착 → 파트너스 리포트에서 지면별 분리.
+    (link.coupang.com 리다이렉트가 subid를 그대로 넘기는 것 확인, 2026-11-15)"""
+    if "link.coupang.com" not in url or "subId=" in url:
+        return url
+    parts = track.split("/")
+    cat = next((x for x in parts if x in CATS), "all")
+    sub = re.sub(r"[^a-z0-9-]", "", f"{parts[0][:3]}-{parts[1] if len(parts) > 1 else 'etc'}-{cat}")
+    return url + ("&" if "?" in url else "?") + "subId=" + sub
+
 def buy_btn(prod, ctx, track, label="쿠팡 최저가 확인", cls="buy"):
     url = buy_url(prod, ctx)
     if not url:
         return ""
+    url = with_subid(url, track)
     ev = f"coupang/{track}/{slugify(prod.get('name', ''))}"
     return (f'<a class="{cls}" href="{esc(url)}" target="_blank" rel="nofollow sponsored noopener" '
             f'data-goatcounter-click="{esc(ev)}" data-goatcounter-title="{esc(prod.get("name", ""))}">'
@@ -251,6 +264,7 @@ nav.gnav a.on { color: #14171D; background: var(--gold); border-color: var(--gol
 nav.gnav a.soon { opacity: .5; }
 nav.gnav.sm { margin: 10px 0 16px; }
 nav.gnav.sm a { font-size: 12px; padding: 6px 12px; }
+.badge.ev { color: #A5D8FF; border-color: rgba(116,192,252,.45); background: rgba(116,192,252,.08); }
 .badge { font-size: 10.5px; font-weight: 800; padding: 2px 8px; border-radius: 999px; flex: none;
          color: #FFD8A8; border: 1px solid rgba(255,169,77,.45); background: rgba(255,169,77,.08); }
 .specline { flex-basis: 100%; font-size: 12.5px; color: var(--gold); font-weight: 700; margin-top: -2px; }
@@ -305,7 +319,8 @@ details.faq p { font-size: 13px; color: var(--mut); margin-top: 6px; }
 def gurl(g, *parts):
     """게임 기준 URL. path가 ''이면 사이트 루트."""
     segs = [BASE_URL] + ([g["path"]] if g["path"] else []) + [p for p in parts if p]
-    return "/".join(segs)
+    url = "/".join(segs)
+    return url if any(parts) else url + "/"   # 디렉터리 URL은 슬래시로 (301 회피)
 
 def gdir(g):
     return ROOT / g["path"] if g["path"] else ROOT
@@ -319,7 +334,7 @@ def gnav_html(cur_key):
     links += '<a class="soon" href="#" onclick="return false">오버워치 · 준비 중</a>'
     return f'<nav class="gnav">{links}</nav>'
 
-def page(g, title, desc, body, canonical, jsonld=None):
+def page(g, title, desc, body, canonical, jsonld=None, noindex=False):
     return f"""<!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -331,6 +346,15 @@ def page(g, title, desc, body, canonical, jsonld=None):
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:type" content="website">
+<meta property="og:url" content="{canonical}">
+<meta property="og:site_name" content="프로셋업">
+<meta property="og:image" content="{BASE_URL}/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="{BASE_URL}/icon.svg" type="image/svg+xml">
+<link rel="icon" href="{BASE_URL}/favicon.ico" sizes="32x32">
+{'<meta name="robots" content="noindex,follow">' if noindex else ''}
 {f'<meta name="google-site-verification" content="{VERIFY_GOOGLE}">' if VERIFY_GOOGLE else ''}
 {f'<meta name="naver-site-verification" content="{VERIFY_NAVER}">' if VERIFY_NAVER else ''}
 {f'<script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>' if jsonld else ''}
@@ -353,7 +377,7 @@ def page(g, title, desc, body, canonical, jsonld=None):
 </body>
 </html>"""
 
-def raw_meta(g):
+def raw_meta(g, full=False):
     """게임 raw 파일들의 as_of(장비 확인)·roster_check(로스터 점검) 최신값."""
     as_of, checked = [], []
     for f in (ROOT / "data" / "raw" / g["key"]).glob("*.json"):
@@ -364,6 +388,9 @@ def raw_meta(g):
         for k, c in d.items():
             if k.startswith("roster_check") and isinstance(c, dict) and c.get("checked"):
                 checked.append(c["checked"])
+    if full:   # sitemap lastmod: 장비·로스터 중 최신 날짜
+        both = as_of + checked
+        return max(both)[:10] if both else None
     return (max(as_of)[:7] if as_of else None), (max(checked)[:7] if checked else None)
 
 def game_verified(g):
@@ -435,11 +462,14 @@ def budget_html(cat, ctx, track):
     for b in picks[:2]:
         ev = f"coupang/{track}/budget/{slugify(b['name'])}"
         spec = f" <small>{esc(b['spec'])}</small>" if b.get("spec") else ""
-        links.append(f'<a href="{esc(b["coupang_url"])}" target="_blank" rel="nofollow sponsored noopener" '
+        links.append(f'<a href="{esc(with_subid(b["coupang_url"], track))}" target="_blank" rel="nofollow sponsored noopener" '
                      f'data-goatcounter-click="{esc(ev)}">{esc(b["name"])}</a>{spec}')
     return f'<div class="budget">💸 부담되면 가성비 대안: {" · ".join(links)}</div>'
 
-def item_html(cat_key, cat_label, entry, ctx="", track="", usage=None):
+def item_html(cat_key, cat_label, entry, ctx="", track="", usage=None, tournament=None):
+    if (not entry or not entry.get("value")) and tournament and tournament.get(cat_key):
+        t = tournament[cat_key]
+        entry = {"value": t, "confidence": "event"}
     if not entry or not entry.get("value"):
         return (f'<div class="item"><div class="imain"><span class="cat">{cat_label}</span>'
                 f'<span class="model unknown">확인 중 — 공개 정보 수집 중</span></div>'
@@ -454,20 +484,30 @@ def item_html(cat_key, cat_label, entry, ctx="", track="", usage=None):
     note = note_for(prod, name)
     succ = SUCCESSOR.get(prod.get("name", name)) or SUCCESSOR.get(name)
     badge = (f'<span class="badge">{esc(succ.get("status_kr", "후속 모델 출시"))}</span>' if succ else "")
-    spec = f'<div class="specline">{esc(note["spec"])}</div>' if note and note.get("spec") else ""
+    if conf == "event":
+        badge = '<span class="badge ev">대회 지급 장비</span>'
+        spec = '<div class="specline">경기장 지급 장비 기준 — 선수 개인 사용 모델은 미확인</div>'
+    else:
+        spec = None
+    if spec is None:
+        spec = f'<div class="specline">{esc(note["spec"])}</div>' if note and note.get("spec") else ""
     btn = buy_btn(prod, ctx, track, "쿠팡 최저가 확인", "buy big")
     cta = (f'<div class="ctarow">{btn}<span class="ctahint">가격·로켓배송 여부는 쿠팡에서 실시간 확인</span></div>'
            if btn else "")
     reason, alts = alternatives(prod, name, cat_key, usage or {})
+    if conf == "event" and alts:
+        reason = "개인 장비가 확인되지 않아, 프로들이 개인적으로 가장 많이 쓰는 같은 종류 제품을 소개합니다."
     pc = ""
     if note and (note.get("pros") or note.get("cons")):
         lis = "".join(f'<li class="pro">{esc(x)}</li>' for x in note.get("pros", []))
         lis += "".join(f'<li class="con">{esc(x)}</li>' for x in note.get("cons", []))
         pc = f'<details class="pnotes"><summary>프로 사용 관점 장단점</summary><ul>{lis}</ul></details>'
+    conf_chip = ("" if conf == "event" else
+                 f'<span class="conf {conf}">신뢰도 {CONF_KR.get(conf, conf)}</span>')
     return (f'<div class="item">{thumb}<div class="imain">'
             f'<span class="cat">{cat_label}</span>'
             f'<span class="model">{esc(name)}</span>{badge}'
-            f'<span class="conf {conf}">신뢰도 {CONF_KR.get(conf, conf)}</span></div>'
+            f'{conf_chip}</div>'
             f'{spec}{cta}{alt_html(reason, alts, ctx, track)}{budget_html(cat_key, ctx, track)}{pc}</div>')
 
 def build_submit(g, missing):
@@ -793,7 +833,8 @@ def build_game(g):
             desc = (f"{tinfo['kr']} {role} {kr}({nick})가 사용하는 게이밍 장비(마우스·키보드·모니터)와 "
                     f"인게임 세팅(DPI·감도)을 정리했습니다.")
             gear_html = "".join(item_html(key, label, gear.get(key), f"{g['key']}_player",
-                                          f"{g['key']}/player/{slug}/{key}", usage)
+                                          f"{g['key']}/player/{slug}/{key}", usage,
+                                          g.get("tournament_gear"))
                                 for key, label in GEAR_LABELS)
             guide_links = " · ".join(f'<a href="{gurl(g, "guides", k + ".html")}">{g["league"]} {l} 순위</a>'
                                      for k, l in GUIDE_CATS[:3])
@@ -832,8 +873,10 @@ def build_game(g):
 {srcs_html}"""
             written.add(f"{slug}.html")
             (pdir / f"{slug}.html").write_text(
-                page(g, title, desc, body, gurl(g, "players", f"{slug}.html"), jsonld), encoding="utf-8")
-            urls.append(gurl(g, "players", f"{slug}.html"))
+                page(g, title, desc, body, gurl(g, "players", f"{slug}.html"), jsonld,
+                     noindex=not has_any), encoding="utf-8")
+            if has_any:   # 장비 0건 페이지는 얇은 콘텐츠 → noindex + sitemap 제외, 채워지면 자동 포함
+                urls.append(gurl(g, "players", f"{slug}.html"))
 
     stale = [f for f in pdir.glob("*.html") if f.name not in written]
     for f in stale:
@@ -881,14 +924,18 @@ def build_game(g):
     return urls
 
 def build():
-    urls = []
+    urls, lastmod = [], {}
     for key in GAMES_CFG["order"]:
         g = dict(GAMES_CFG["games"][key], key=key)
-        urls += build_game(g)
+        gu = build_game(g)
+        d = raw_meta(g, full=True)
+        lastmod.update({u: d for u in gu if d})
+        urls += gu
     (ROOT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-        "".join(f"<url><loc>{u}</loc><lastmod>{date.today()}</lastmod></url>\n" for u in urls) +
+        "".join(f"<url><loc>{u}</loc><lastmod>{lastmod.get(u, date.today().isoformat())}</lastmod></url>\n"
+                for u in urls) +
         "</urlset>\n", encoding="utf-8")
     (ROOT / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\nSitemap: {BASE_URL}/sitemap.xml\n", encoding="utf-8")
