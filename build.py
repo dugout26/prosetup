@@ -7,12 +7,12 @@ LoL은 path="" 라서 기존 URL(사이트 루트)을 그대로 유지한다.
 """
 import html
 import json
+import re
 from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 BASE_URL = "https://dugout26.github.io/prosetup"
-VERIFIED = "2026-08"
 VERIFY_GOOGLE = "reLU6hFD0fFzI4ciTnfyEkadi_fsno6fJLTdosq1qTA"
 VERIFY_NAVER = None
 # 구글 폼(사진·영상 첨부 가능, 구글 로그인 필요). 없으면 사이트 내 폼만 노출.
@@ -39,7 +39,85 @@ def load_catalog():
     return {a: prod for prod in data["products"] for a in prod["aliases"]}
 
 CATALOG = load_catalog()
+PRODUCTS = (load_json("data/products.json") or {"products": []})["products"]
+BY_NAME = {p["name"]: p for p in PRODUCTS}
 NOTES = (load_json("data/product_notes.json") or {"notes": {}})["notes"]
+NOTES_CI = {k.casefold(): v for k, v in NOTES.items()}
+# 후속 모델·단종 안내 + 가성비 대안 (data/alternatives.json)
+ALTS = load_json("data/alternatives.json") or {}
+SUCCESSOR = ALTS.get("models", {})
+BUDGET = ALTS.get("budget", {})
+
+SEASON = "2027"
+# 클릭 분석: GoatCounter 사이트 코드(예: "prosetup"). 채우면 모든 쿠팡 버튼 클릭이
+# coupang/<게임>/<페이지유형>/<선수·카테고리>/<제품> 이벤트로 집계된다. None이면 스크립트 미삽입.
+GOATCOUNTER = None
+GUIDE_CATS = [("keyboard", "키보드"), ("mouse", "마우스"), ("headset", "헤드셋"),
+              ("monitor", "모니터"), ("mousepad", "마우스패드")]
+
+def topic(word):
+    """은/는 조사 (받침 유무)."""
+    c = ord(word[-1]) - 0xAC00
+    return word + ("은" if 0 <= c < 11172 and c % 28 else "는")
+
+def slugify(s):
+    return re.sub(r"[^a-z0-9]+", "-", str(s).casefold()).strip("-")
+
+def note_for(prod, fallback_name=""):
+    for n in [prod.get("name", fallback_name)] + list(prod.get("aliases", [])):
+        if n and n.casefold() in NOTES_CI:
+            return NOTES_CI[n.casefold()]
+    return None
+
+def buy_url(prod, ctx=None):
+    """subId 채널별 링크(coupang_urls[ctx])가 있으면 우선, 없으면 기본 링크."""
+    return (prod.get("coupang_urls") or {}).get(ctx) or prod.get("coupang_url")
+
+def buy_btn(prod, ctx, track, label="쿠팡 최저가 확인", cls="buy"):
+    url = buy_url(prod, ctx)
+    if not url:
+        return ""
+    ev = f"coupang/{track}/{slugify(prod.get('name', ''))}"
+    return (f'<a class="{cls}" href="{esc(url)}" target="_blank" rel="nofollow sponsored noopener" '
+            f'data-goatcounter-click="{esc(ev)}" data-goatcounter-title="{esc(prod.get("name", ""))}">'
+            f'{label} →</a>')
+
+def compute_usage(teams):
+    """카테고리별 [(제품, [(닉, 슬러그)...])] 사용자 수 내림차순 + 카테고리별 데이터 보유 선수 수."""
+    owner = {a: i for i, prod in enumerate(PRODUCTS) for a in prod["aliases"]}
+    users = {}
+    known = {k: 0 for k, _ in GEAR_LABELS}
+    for players in teams.values():
+        for p in players:
+            for key, _ in GEAR_LABELS:
+                e = (p.get("gear") or {}).get(key)
+                if not (e and e.get("value")):
+                    continue
+                known[key] += 1
+                i = owner.get(e["value"])
+                if i is not None and PRODUCTS[i]["category"] == key:
+                    users.setdefault(i, set()).add((p["nickname"], player_slug(p)))
+    usage = {k: [] for k, _ in GEAR_LABELS}
+    for i, u in users.items():
+        usage[PRODUCTS[i]["category"]].append((PRODUCTS[i], sorted(u, key=lambda x: x[0].casefold())))
+    for k in usage:
+        usage[k].sort(key=lambda pu: (-len(pu[1]), pu[0]["name"]))
+    return usage, known
+
+def alternatives(prod, name, cat, usage, limit=2):
+    """(안내 문구, 대안 제품 목록). 후속 모델 지정 → 그대로, 쿠팡 미연결 → 같은 카테고리 인기 제품(같은 브랜드 우선)."""
+    out, reason = [], None
+    m = SUCCESSOR.get(prod.get("name", name)) or SUCCESSOR.get(name)
+    if m:
+        reason = m.get("note")
+        out = [BY_NAME[n] for n in m.get("alts", []) if n in BY_NAME and buy_url(BY_NAME[n])]
+    if not buy_url(prod) and len(out) < limit:
+        reason = reason or "쿠팡 정식 판매 리스팅이 확인되지 않아, 같은 종류에서 프로 사용률이 높은 제품을 대신 소개합니다."
+        brand = name.split()[0].casefold() if name else ""
+        cands = [p for p, _ in usage.get(cat, []) if buy_url(p) and p is not prod and p not in out]
+        cands.sort(key=lambda p: 0 if p["name"].split()[0].casefold() == brand else 1)
+        out += cands[:limit - len(out)]
+    return reason, out[:limit]
 
 CSS = """
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -171,6 +249,57 @@ nav.gnav a { font-size: 12.5px; font-weight: 800; padding: 7px 14px; border-radi
              background: var(--card); border: 1px solid var(--line); color: var(--mut); }
 nav.gnav a.on { color: #14171D; background: var(--gold); border-color: var(--gold); }
 nav.gnav a.soon { opacity: .5; }
+nav.gnav.sm { margin: 10px 0 16px; }
+nav.gnav.sm a { font-size: 12px; padding: 6px 12px; }
+.badge { font-size: 10.5px; font-weight: 800; padding: 2px 8px; border-radius: 999px; flex: none;
+         color: #FFD8A8; border: 1px solid rgba(255,169,77,.45); background: rgba(255,169,77,.08); }
+.specline { flex-basis: 100%; font-size: 12.5px; color: var(--gold); font-weight: 700; margin-top: -2px; }
+.ctarow { flex-basis: 100%; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.buy { white-space: nowrap; }
+.buy.big { font-size: 15px; padding: 12px 22px; border-radius: 10px; box-shadow: 0 4px 14px rgba(232,195,107,.25); }
+.buy.sm { font-size: 12px; padding: 6px 12px; border-radius: 8px; white-space: nowrap; }
+.ctahint { font-size: 11.5px; color: var(--mut); }
+.alts { flex-basis: 100%; background: #0F131A; border: 1px solid rgba(255,169,77,.3); border-radius: 12px; padding: 12px 14px; }
+.alts .alttit { font-size: 12.5px; font-weight: 800; color: #FFD8A8; }
+.alts p { font-size: 11.5px; color: var(--mut); margin: 2px 0 8px; }
+.altrow { display: flex; align-items: center; gap: 10px; padding: 6px 0; border-top: 1px dashed var(--line); }
+.altrow .aname { flex: 1; min-width: 0; font-size: 13.5px; font-weight: 800; }
+.altrow .aname small, .cmp td small { display: block; font-size: 11px; color: var(--mut); font-weight: 500; }
+.athumb { flex: none; width: 40px; height: 40px; border-radius: 8px; background: #0B0E14; border: 1px solid var(--line); object-fit: contain; }
+.budget { flex-basis: 100%; font-size: 12px; color: var(--mut); }
+.budget a { color: var(--tx); font-weight: 700; border-bottom: 1px dotted var(--gold); }
+details.pnotes summary { font-size: 12px; color: var(--mut); cursor: pointer; font-weight: 700; }
+details.pnotes ul { margin-top: 8px; }
+.cmp { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px; margin: 14px 0; overflow-x: auto; }
+.cmptit { font-weight: 900; font-size: 15px; margin-bottom: 8px; }
+.cmptit small { font-weight: 500; font-size: 11.5px; color: var(--mut); margin-left: 6px; }
+.cmp table { width: 100%; border-collapse: collapse; }
+.cmp th { font-size: 11px; color: var(--mut); text-align: left; padding: 4px 6px; font-weight: 700; }
+.cmp td { padding: 9px 6px; border-top: 1px solid var(--line); vertical-align: middle; font-size: 13.5px; }
+.cmp td.rk { font-weight: 900; color: var(--gold); width: 22px; }
+.cmp td.pn { display: flex; gap: 10px; align-items: center; }
+.cmp td.pn small.who a { color: #9BA3AF; }
+.cmp td.num { width: 90px; position: relative; }
+.cmp td.num i { display: block; height: 4px; background: var(--gold); border-radius: 2px; margin-top: 4px; opacity: .8; }
+.cmp td.cta { text-align: right; width: 70px; }
+.cmp .na { font-size: 11px; color: #566070; }
+.gcard .who { flex-basis: 100%; font-size: 12px; color: var(--mut); }
+.gcard .who a, p.more a { color: #9BA3AF; border-bottom: 1px dotted #566070; }
+.gcard ul.pc { flex-basis: 100%; list-style: none; }
+.gcard ul.pc li, details.pnotes li { font-size: 12.5px; color: var(--mut); line-height: 1.6; padding-left: 18px; position: relative; }
+.gcard ul.pc li::before { position: absolute; left: 0; font-weight: 800; }
+.gcard ul.pc li.pro::before { content: "＋"; color: #51CF66; }
+.gcard ul.pc li.con::before { content: "－"; color: #FF8787; }
+a.more, p.more { display: inline-block; font-size: 12.5px; color: var(--mut); margin-top: 8px; }
+a.more:hover { color: var(--gold); }
+details.faq { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin-bottom: 8px; }
+details.faq summary { font-weight: 800; font-size: 14px; cursor: pointer; }
+details.faq p { font-size: 13px; color: var(--mut); margin-top: 6px; }
+@media (max-width: 520px) {
+  .buy.big { flex: 1 1 100%; text-align: center; }
+  .ctahint { flex-basis: 100%; text-align: center; }
+  .cmp td.num { width: 64px; }
+}
 """
 
 def gurl(g, *parts):
@@ -212,7 +341,7 @@ def page(g, title, desc, body, canonical, jsonld=None):
 <header class="site"><a href="{BASE_URL}/" class="logo">프로<b>셋업</b></a>
 <span class="tag">{esc(g["tagline"])}</span></header>
 {gnav_html(g["key"])}
-<div class="updated">데이터 확인 시점: {VERIFIED} · 매 시즌 업데이트</div>
+<div class="updated">{game_status(g)}</div>
 {body}
 <footer>
 비공식 팬 사이트입니다. 선수·팀·리그와 무관하며, 장비 정보는 공개 자료를 교차 확인해 정리했습니다.
@@ -220,8 +349,34 @@ def page(g, title, desc, body, canonical, jsonld=None):
 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 </footer>
 </div>
+{f'<script data-goatcounter="https://{GOATCOUNTER}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>' if GOATCOUNTER else ''}
 </body>
 </html>"""
+
+def raw_meta(g):
+    """게임 raw 파일들의 as_of(장비 확인)·roster_check(로스터 점검) 최신값."""
+    as_of, checked = [], []
+    for f in (ROOT / "data" / "raw" / g["key"]).glob("*.json"):
+        d = json.load(open(f, encoding="utf-8"))
+        v = d.get("as_of") or (d.get("meta") or {}).get("as_of")
+        if v:
+            as_of.append(v)
+        for k, c in d.items():
+            if k.startswith("roster_check") and isinstance(c, dict) and c.get("checked"):
+                checked.append(c["checked"])
+    return (max(as_of)[:7] if as_of else None), (max(checked)[:7] if checked else None)
+
+def game_verified(g):
+    return raw_meta(g)[0] or "-"
+
+def game_status(g):
+    gear, roster = raw_meta(g)
+    txt = f"장비 데이터 확인: {gear or '-'}"
+    if roster and roster != gear:
+        txt += f" · 로스터 점검: {roster}"
+    if g.get("status_note"):
+        txt += f" · {esc(g['status_note'])}"
+    return txt
 
 def load_players(g):
     """{code: [players]}, {code: {kr, color, region}} 반환. 파일·키 순서를 그대로 유지한다."""
@@ -252,35 +407,68 @@ def team_color(code):
     return f"hsl({h}, 55%, 55%)"
 
 def player_slug(p):
-    return (p["nickname"] + ("-" + p["slug_suffix"] if p.get("slug_suffix") else "")).lower()
+    s = (p["nickname"] + ("-" + p["slug_suffix"] if p.get("slug_suffix") else "")).lower()
+    return re.sub(r"\s+", "-", s.strip())   # 공백은 URL에서 깨지므로 하이픈으로
 
 def role_suffix(roles, p):
     r = roles.get(p["role"], p["role"])
     return f' · {r}' if r else ''
 
-def item_html(cat_label, entry):
+def alt_html(reason, alts, ctx, track):
+    if not alts:
+        return ""
+    rows = ""
+    for a in alts:
+        n = note_for(a)
+        th = (f'<img class="athumb" src="{esc(a["image"])}" alt="{esc(a["name"])}" loading="lazy" '
+              f'width="40" height="40">' if a.get("image") else "")
+        spec = f"<small>{esc(n['spec'])}</small>" if n and n.get("spec") else ""
+        rows += (f'<div class="altrow">{th}<span class="aname">{esc(a["name"])}{spec}</span>'
+                 f'{buy_btn(a, ctx, track + "/alt", "최저가", "buy sm")}</div>')
+    return f'<div class="alts"><div class="alttit">추천 대안 모델</div><p>{esc(reason or "")}</p>{rows}</div>'
+
+def budget_html(cat, ctx, track):
+    picks = [b for b in BUDGET.get(cat, []) if b.get("coupang_url")]
+    if not picks:
+        return ""
+    links = []
+    for b in picks[:2]:
+        ev = f"coupang/{track}/budget/{slugify(b['name'])}"
+        spec = f" <small>{esc(b['spec'])}</small>" if b.get("spec") else ""
+        links.append(f'<a href="{esc(b["coupang_url"])}" target="_blank" rel="nofollow sponsored noopener" '
+                     f'data-goatcounter-click="{esc(ev)}">{esc(b["name"])}</a>{spec}')
+    return f'<div class="budget">💸 부담되면 가성비 대안: {" · ".join(links)}</div>'
+
+def item_html(cat_key, cat_label, entry, ctx="", track="", usage=None):
     if not entry or not entry.get("value"):
         return (f'<div class="item"><div class="imain"><span class="cat">{cat_label}</span>'
-                f'<span class="model unknown">확인 중 — 공개 정보 수집 중</span></div></div>')
+                f'<span class="model unknown">확인 중 — 공개 정보 수집 중</span></div>'
+                f'{budget_html(cat_key, ctx, track)}</div>')
     conf = entry.get("confidence", "medium")
-    prod = CATALOG.get(entry["value"], {})
-    url = entry.get("coupang_url") or prod.get("coupang_url")
-    buy = (f'<a class="buy" href="{esc(url)}" target="_blank" rel="nofollow sponsored">최저가 보기</a>'
-           if url else "")
-    thumb = (f'<img class="thumb" src="{esc(prod["image"])}" alt="{esc(entry["value"])}" '
+    name = entry["value"]
+    prod = CATALOG.get(name, {})
+    if entry.get("coupang_url"):
+        prod = dict(prod, coupang_url=entry["coupang_url"])
+    thumb = (f'<img class="thumb" src="{esc(prod["image"])}" alt="{esc(name)}" '
              f'loading="lazy" width="62" height="62">' if prod.get("image") else "")
-    note = NOTES.get(prod.get("name", ""))
-    notes_html = ""
-    if note:
+    note = note_for(prod, name)
+    succ = SUCCESSOR.get(prod.get("name", name)) or SUCCESSOR.get(name)
+    badge = (f'<span class="badge">{esc(succ.get("status_kr", "후속 모델 출시"))}</span>' if succ else "")
+    spec = f'<div class="specline">{esc(note["spec"])}</div>' if note and note.get("spec") else ""
+    btn = buy_btn(prod, ctx, track, "쿠팡 최저가 확인", "buy big")
+    cta = (f'<div class="ctarow">{btn}<span class="ctahint">가격·로켓배송 여부는 쿠팡에서 실시간 확인</span></div>'
+           if btn else "")
+    reason, alts = alternatives(prod, name, cat_key, usage or {})
+    pc = ""
+    if note and (note.get("pros") or note.get("cons")):
         lis = "".join(f'<li class="pro">{esc(x)}</li>' for x in note.get("pros", []))
         lis += "".join(f'<li class="con">{esc(x)}</li>' for x in note.get("cons", []))
-        notes_html = (f'<div class="pnotes"><div class="spec">{esc(note["spec"])}</div>'
-                      f'<ul>{lis}</ul></div>')
+        pc = f'<details class="pnotes"><summary>프로 사용 관점 장단점</summary><ul>{lis}</ul></details>'
     return (f'<div class="item">{thumb}<div class="imain">'
             f'<span class="cat">{cat_label}</span>'
-            f'<span class="model">{esc(entry["value"])}</span>'
+            f'<span class="model">{esc(name)}</span>{badge}'
             f'<span class="conf {conf}">신뢰도 {CONF_KR.get(conf, conf)}</span></div>'
-            f'{buy}{notes_html}</div>')
+            f'{spec}{cta}{alt_html(reason, alts, ctx, track)}{budget_html(cat_key, ctx, track)}{pc}</div>')
 
 def build_submit(g, missing):
     """제보 안내 페이지 — 증거 기준과 검증 절차를 명시."""
@@ -405,40 +593,56 @@ def build_thanks(g):
                         body, gurl(g, "thanks.html")), encoding="utf-8")
     return gurl(g, "thanks.html")
 
-def build_rankings(g, teams):
-    """해당 게임 선수 데이터 기준 카테고리별 사용 순위."""
-    data = load_json("data/products.json")
-    if not data:
-        return None
-    products = data["products"]
-    owner = {a: i for i, prod in enumerate(products) for a in prod["aliases"]}
-    users = {i: [] for i in range(len(products))}
-    for players in teams.values():
-        for p in players:
-            for key, _ in GEAR_LABELS:
-                e = p.get("gear", {}).get(key)
-                if e and e.get("value") in owner:
-                    users[owner[e["value"]]].append((p["nickname"], player_slug(p)))
+def compare_table(g, usage, known, cat, label, ctx, track, top=5):
+    """사용률 TOP 비교표: 순위·제품·사용 선수 수·사용률·스펙·구매."""
+    rows = usage.get(cat, [])[:top]
+    if not rows:
+        return ""
+    trs = ""
+    for r, (prod, us) in enumerate(rows, 1):
+        n = note_for(prod)
+        pct = round(100 * len(us) / known[cat]) if known.get(cat) else 0
+        th = (f'<img class="athumb" src="{esc(prod["image"])}" alt="" loading="lazy" width="40" height="40">'
+              if prod.get("image") else "")
+        who = ", ".join(f'<a href="{gurl(g, "players", sl + ".html")}">{esc(nk)}</a>' for nk, sl in us[:3])
+        if len(us) > 3:
+            who += f" 외 {len(us) - 3}"
+        btn = buy_btn(prod, ctx, f"{track}/{cat}/top{r}", "최저가", "buy sm")
+        if not btn:
+            _, alts = alternatives(prod, prod["name"], cat, usage, 1)
+            btn = (f'<small class="na">대안</small>{buy_btn(alts[0], ctx, f"{track}/{cat}/top{r}/alt", "최저가", "buy sm")}'
+                   if alts else '<span class="na">미판매</span>')
+        spec = esc(n["spec"]) if n and n.get("spec") else ""
+        trs += (f'<tr><td class="rk">{r}</td><td class="pn">{th}<span><b>{esc(prod["name"])}</b>'
+                f'<small>{spec}</small><small class="who">{who}</small></span></td>'
+                f'<td class="num"><b>{len(us)}명</b><small>{pct}%</small><i style="width:{pct}%"></i></td>'
+                f'<td class="cta">{btn}</td></tr>')
+    return (f'<div class="cmp"><div class="cmptit">사용률 TOP{len(rows)} {label} '
+            f'<small>{label} 데이터가 있는 {known[cat]}명 기준</small></div>'
+            f'<table><thead><tr><th>#</th><th>제품</th><th>사용률</th><th></th></tr></thead>'
+            f'<tbody>{trs}</tbody></table></div>')
 
+def build_rankings(g, teams, usage, known):
+    """해당 게임 선수 데이터 기준 카테고리별 사용 순위 + 상단 TOP 비교표."""
+    ctx, track = f"{g['key']}_rank", f"{g['key']}/rank"
     total_players = sum(len(v) for v in teams.values())
+    tables = "".join(compare_table(g, usage, known, k, l, ctx, track)
+                     for k, l in GUIDE_CATS[:3])
     sections, top_mouse = "", []
     for key, label in GEAR_LABELS:
-        rows = sorted(((i, p) for i, p in enumerate(products) if p["category"] == key),
-                      key=lambda ip: -len(set(users[ip[0]])))
-        main = [(i, p) for i, p in rows if len(set(users[i])) >= 2]
-        rest = [(i, p) for i, p in rows if len(set(users[i])) == 1]
+        rows = usage.get(key, [])
+        main = [(p, u) for p, u in rows if len(u) >= 2]
+        rest = [(p, u) for p, u in rows if len(u) == 1]
         if key == "mouse":
-            top_mouse = [p["name"] for _, p in main[:5]]
+            top_mouse = [p["name"] for p, _ in main[:5]]
         rhtml = ""
-        for rank, (i, prod) in enumerate(main, 1):
-            names = sorted(set(users[i]))
+        for rank, (prod, names) in enumerate(main, 1):
             SHOW = 8
             chips = " ".join(f'<a href="{gurl(g, "players", s + ".html")}">{esc(n)}</a>'
                              for n, s in names[:SHOW])
             if len(names) > SHOW:
-                chips += f' <span>외 {len(names) - SHOW}명</span>' 
-            buy = (f'<a class="buy" href="{esc(prod["coupang_url"])}" target="_blank" rel="nofollow sponsored">최저가 보기</a>'
-                   if prod.get("coupang_url") else "")
+                chips += f' <span>외 {len(names) - SHOW}명</span>'
+            buy = buy_btn(prod, ctx, f"{track}/{key}", "최저가 보기")
             th = (f'<img class="thumb" src="{esc(prod["image"])}" alt="{esc(prod["name"])}" '
                   f'loading="lazy" width="46" height="46">' if prod.get("image") else "")
             rhtml += (f'<div class="rankrow"><span class="rk{" top1" if rank == 1 else ""}">{rank}</span>{th}'
@@ -447,17 +651,20 @@ def build_rankings(g, teams):
                       f'<span class="cnt">{len(names)}명</span>{buy}</div>')
         if rest:
             rhtml += ('<p class="etc1">1명 사용: ' +
-                      " · ".join(esc(p["name"]) for _, p in rest) + "</p>")
+                      " · ".join(esc(p["name"]) for p, _ in rest) + "</p>")
         if rhtml:
-            sections += f'<section><h2>가장 많이 쓰는 {label}</h2>{rhtml}</section>'
+            guide = f'<a class="more" href="{gurl(g, "guides", key + ".html")}">{label} 추천 가이드 보기 →</a>'
+            sections += f'<section><h2>가장 많이 쓰는 {label}</h2>{rhtml}{guide}</section>'
 
-    title = f"{g['league']} 프로게이머가 가장 많이 쓰는 게이밍 장비 순위 (2026)"
+    title = f"{g['league']} 프로게이머 사용률 TOP 키보드·마우스·헤드셋 순위 ({SEASON})"
     desc = (f"{g['league']} {total_players}명 선수 데이터 기준 — {g['name']} 프로들이 실제 사용하는 "
-            "게이밍 마우스·키보드·모니터·헤드셋·마우스패드 순위와 구매 링크.")
+            "게이밍 키보드·마우스·헤드셋·모니터·마우스패드 사용률 비교표와 쿠팡 최저가 링크.")
     body = f"""<div class="crumb"><a href="{gurl(g, '')}">{esc(g['short'])} 홈</a> › 장비 랭킹</div>
 <h1>{esc(g['league'])} 프로들이 가장 많이 쓰는 장비는?</h1>
 <p class="sub">{total_players}명의 확인된 장비 데이터를 집계한 실사용 순위입니다.
-같은 모델의 색상판은 별도 항목입니다.</p>
+사용률은 해당 장비 정보가 확인된 선수 수 대비 비율이며, 같은 모델의 색상판은 별도 항목입니다.</p>
+{guide_nav(g)}
+{tables}
 {sections}"""
     jsonld = {"@context": "https://schema.org", "@type": "ItemList", "name": title,
               "itemListElement": [{"@type": "ListItem", "position": r + 1, "name": n}
@@ -466,6 +673,88 @@ def build_rankings(g, teams):
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(page(g, title, desc, body, gurl(g, "rankings.html"), jsonld), encoding="utf-8")
     return gurl(g, "rankings.html")
+
+def guide_nav(g, cur=None):
+    links = "".join(f'<a{" class=on" if k == cur else ""} href="{gurl(g, "guides", k + ".html")}">{l}</a>'
+                    for k, l in GUIDE_CATS)
+    return f'<nav class="gnav sm"><a href="{gurl(g, "rankings.html")}"{" class=on" if cur == "rank" else ""}>전체 랭킹</a>{links}</nav>'
+
+GUIDE_TITLES = {
+    "keyboard": "프로게이머 키보드 추천 — {league} 선수 사용률 순위",
+    "mouse": "{league} 선수 마우스 순위 — 프로게이머 마우스 추천",
+    "headset": "프로게이머 헤드셋 추천 — {league} 선수 사용률 순위",
+    "monitor": "프로게이머 모니터 추천 — {league} 선수 사용 모니터 순위",
+    "mousepad": "프로게이머 마우스패드 추천 — {league} 선수 사용 순위",
+}
+
+def build_guides(g, teams, usage, known):
+    """검색 유입용 카테고리 가이드 정적 페이지. 본문은 전부 데이터에서 생성(추측 문구 없음)."""
+    urls = []
+    ctx = f"{g['key']}_guide"
+    for cat, label in GUIDE_CATS:
+        rows = usage.get(cat, [])
+        if not rows:
+            continue
+        track = f"{g['key']}/guide/{cat}"
+        title = GUIDE_TITLES[cat].format(league=g["league"]) + f" ({SEASON})"
+        top = rows[0]
+        n_known = known.get(cat, 0)
+        top_pct = round(100 * len(top[1]) / n_known) if n_known else 0
+        cards = ""
+        for r, (prod, us) in enumerate(rows[:10], 1):
+            n = note_for(prod)
+            th = (f'<img class="thumb" src="{esc(prod["image"])}" alt="{esc(prod["name"])}" loading="lazy" '
+                  f'width="62" height="62">' if prod.get("image") else "")
+            who = ", ".join(f'<a href="{gurl(g, "players", sl + ".html")}">{esc(nk)}</a>' for nk, sl in us[:12])
+            if len(us) > 12:
+                who += f" 외 {len(us) - 12}명"
+            lis = ""
+            if n:
+                lis = "".join(f'<li class="pro">{esc(x)}</li>' for x in n.get("pros", []))
+                lis += "".join(f'<li class="con">{esc(x)}</li>' for x in n.get("cons", []))
+            reason, alts = alternatives(prod, prod["name"], cat, usage)
+            btn = buy_btn(prod, ctx, f"{track}/top{r}", "쿠팡 최저가 확인", "buy big")
+            spec_div = f'<div class="specline">{esc(n["spec"])}</div>' if n and n.get("spec") else ""
+            pc_ul = f'<ul class="pc">{lis}</ul>' if lis else ""
+            cta = f'<div class="ctarow">{btn}</div>' if btn else ""
+            cards += (f'<div class="item gcard" id="top{r}">{th}<div class="imain">'
+                      f'<span class="cat">{r}위 · {len(us)}명</span>'
+                      f'<span class="model">{esc(prod["name"])}</span></div>'
+                      f'{spec_div}<div class="who">사용 선수: {who}</div>{pc_ul}{cta}'
+                      f'{alt_html(reason, alts, ctx, track)}</div>')
+        faq = [
+            (f"{g['league']} 프로게이머가 가장 많이 쓰는 {topic(label)}?",
+             f"{top[0]['name']}입니다. {label} 정보가 확인된 {n_known}명 중 {len(top[1])}명({top_pct}%)이 사용합니다."),
+        ]
+        if len(rows) > 2:
+            faq.append((f"{label} 사용률 2·3위는?",
+                        f"2위 {rows[1][0]['name']}({len(rows[1][1])}명), 3위 {rows[2][0]['name']}({len(rows[2][1])}명)입니다."))
+        faq.append(("데이터는 언제 기준인가요?",
+                    f"{game_verified(g)} 확인 기준이며, 로스터·장비 변경 시 갱신합니다. 출처는 각 선수 페이지에 표기합니다."))
+        faq_html = "".join(f'<details class="faq"><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q, a in faq)
+        body = f"""<div class="crumb"><a href="{gurl(g, '')}">{esc(g['short'])} 홈</a> › <a href="{gurl(g, 'rankings.html')}">장비 랭킹</a> › {label}</div>
+<h1>{esc(title)}</h1>
+<p class="sub">{g['league']} 선수 {n_known}명의 {label} 데이터를 집계했습니다.
+1위는 <b>{esc(top[0]['name'])}</b>({len(top[1])}명, {top_pct}%). 프로 사용률 순서대로 스펙·장단점·구매 링크를 정리했습니다.</p>
+{guide_nav(g, cat)}
+{compare_table(g, usage, known, cat, label, ctx, track + "/table")}
+<section><h2>순위별 상세</h2><div class="gear">{cards}</div></section>
+<section><h2>자주 묻는 질문</h2>{faq_html}</section>"""
+        desc = (f"{g['league']} 프로게이머 {n_known}명이 실제 쓰는 {label} 순위. 1위 {top[0]['name']} "
+                f"({top_pct}%) 등 TOP10 스펙·장단점·쿠팡 최저가 링크.")
+        jsonld = [
+            {"@context": "https://schema.org", "@type": "ItemList", "name": title,
+             "itemListElement": [{"@type": "ListItem", "position": r + 1, "name": p["name"]}
+                                 for r, (p, _) in enumerate(rows[:10])]},
+            {"@context": "https://schema.org", "@type": "FAQPage",
+             "mainEntity": [{"@type": "Question", "name": q,
+                             "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]},
+        ]
+        out = gdir(g) / "guides" / f"{cat}.html"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(page(g, title, desc, body, gurl(g, "guides", f"{cat}.html"), jsonld), encoding="utf-8")
+        urls.append(gurl(g, "guides", f"{cat}.html"))
+    return urls
 
 def build_game(g):
     teams, tmeta = load_players(g)
@@ -480,9 +769,11 @@ def build_game(g):
     written = set()
     urls = [gurl(g, "")]
 
-    rank_url = build_rankings(g, teams)
+    usage, known = compute_usage(teams)
+    rank_url = build_rankings(g, teams, usage, known)
     if rank_url:
         urls.append(rank_url)
+    urls += build_guides(g, teams, usage, known)
     missing = [(p["nickname"], player_slug(p), tmeta.get(code, {}).get("kr", code))
                for code in order for p in teams.get(code, [])
                if not any(p.get("gear", {}).get(k) and p["gear"][k].get("value") for k, _ in GEAR_LABELS)]
@@ -501,7 +792,11 @@ def build_game(g):
             title = f"{kr}({nick}) 장비·세팅 — {g['short']} 마우스·키보드·DPI | 프로셋업"
             desc = (f"{tinfo['kr']} {role} {kr}({nick})가 사용하는 게이밍 장비(마우스·키보드·모니터)와 "
                     f"인게임 세팅(DPI·감도)을 정리했습니다.")
-            gear_html = "".join(item_html(label, gear.get(key)) for key, label in GEAR_LABELS)
+            gear_html = "".join(item_html(key, label, gear.get(key), f"{g['key']}_player",
+                                          f"{g['key']}/player/{slug}/{key}", usage)
+                                for key, label in GEAR_LABELS)
+            guide_links = " · ".join(f'<a href="{gurl(g, "guides", k + ".html")}">{g["league"]} {l} 순위</a>'
+                                     for k, l in GUIDE_CATS[:3])
             set_html = ""
             for key, label in sets:
                 e = setting.get(key)
@@ -533,6 +828,7 @@ def build_game(g):
 {note_html}
 <section><h2>장비</h2><div class="gear">{gear_html}</div>{empty_html}</section>
 <section><h2>인게임 세팅</h2><div class="settings">{set_html}</div></section>
+<p class="more">다른 프로들은 뭘 쓸까? {guide_links}</p>
 {srcs_html}"""
             written.add(f"{slug}.html")
             (pdir / f"{slug}.html").write_text(
@@ -558,7 +854,7 @@ def build_game(g):
         for p in teams[code]:
             has_any = any(p.get("gear", {}).get(k) and p["gear"][k].get("value") for k, _ in GEAR_LABELS)
             extra = "" if has_any else '<div class="none">정보 수집 중</div>'
-            cells += (f'<a class="pcell" href="{gurl(g, "players", p["nickname"].lower() + ".html")}">'
+            cells += (f'<a class="pcell" href="{gurl(g, "players", player_slug(p) + ".html")}">'
                       f'<div class="nick">{esc(p["nickname"])}</div>'
                       f'<div class="meta">{esc(p.get("name_kr", ""))}{role_suffix(roles, p)}</div>{extra}</a>')
         blocks += (f'<div class="teamblock"><div class="teamname">'
@@ -569,7 +865,8 @@ def build_game(g):
     body = f"""<h1>{esc(g['headline'])}</h1>
 <p class="sub">{esc(g['lede'])}</p>
 <a class="rankbanner" href="{gurl(g, 'rankings.html')}">🏆 프로들이 가장 많이 쓰는 장비 랭킹
-<small>{n_players}명 데이터 집계 — 1위 제품은 뭘까?</small></a>
+<small>{n_players}명 데이터 집계 — 키보드·마우스·헤드셋 사용률 TOP 비교표</small></a>
+{guide_nav(g)}
 <a class="rankbanner" href="{gurl(g, 'submit.html')}" style="background:linear-gradient(90deg,rgba(255,255,255,.07),transparent);border-color:rgba(255,255,255,.16)">📮 아는 장비 정보 제보하기
 <small>근거 자료와 함께 보내주시면 확인 후 반영합니다</small></a>
 {blocks}"""

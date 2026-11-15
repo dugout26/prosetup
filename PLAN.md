@@ -40,7 +40,7 @@
 - 참고: 쿠팡 파트너스는 분기 실적 기준 유지 조건 있음 — 초기엔 수익 0원 구간 존재
 
 ## 6. 기술 구조
-- 정적 생성: `data/players.json` → 빌드 스크립트(파이썬) → HTML (오버레이에서 쓰던 다크 스타일 재사용, 단 사이트는 라이트/다크 겸용 고려)
+- 정적 생성: `data/raw/<게임>/*.json`(로스터·장비) + `data/products.json`(쿠팡 카탈로그) + `data/product_notes.json`(스펙·장단점) + `data/alternatives.json`(후속 모델·가성비 대안) → `build.py` → HTML (오버레이에서 쓰던 다크 스타일 재사용, 단 사이트는 라이트/다크 겸용 고려)
 - 호스팅: GitHub Pages (공개 레포) → 트래픽 확인 후 커스텀 도메인(연 1~2만원, SEO·신뢰용)
 - 분석: 우선 Cloudflare 무료 웹 애널리틱스 또는 GoatCounter (구글 애널리틱스는 과함) — 유입·클릭 측정용 최소한
 - 쿠팡 링크: 파트너스 대시보드에서 생성한 딥링크를 데이터 파일에 기입
@@ -68,3 +68,31 @@
 - 월 PV, 쿠팡 클릭 수·전환액 (파트너스 대시보드)
 - 오버레이발 유입 비율 (UTM)
 - 손익분기: 도메인비 외 비용 0이므로 첫 전환부터 흑자
+
+## 11. v0.2 업데이트 (2026-11-15) — 수익화·유입 확장
+
+### 데이터 흐름
+| 파일 | 역할 | 갱신 방법 |
+|---|---|---|
+| `data/raw/lol/*.json` | LCK 로스터·장비 (수기, 출처·신뢰도 표기) | 직접 수정 / 슬랙 `#prosetup-updates` 제보 |
+| `data/raw/valorant/*.json` | VCT 로스터·장비 | `python3 scripts/import_valorant.py <table.json> [YYYY-MM-DD]` |
+| `data/products.json` | 제품 카탈로그·쿠팡 링크(`coupang_url`, 채널별 `coupang_urls`) | `python3 scripts/gen_catalog.py` (링크 보존) |
+| `data/alternatives.json` | 후속 모델 매핑 + 카테고리별 가성비 대안 | 직접 수정 (budget은 `coupang_url` 채워야 노출) |
+
+### 전환 장치
+- 선수 장비 카드: 스펙 요약 + "쿠팡 최저가 확인" 대형 CTA. 후속 모델이 나온 제품이나 쿠팡 미판매 제품에는 **추천 대안 모델** 박스(같은 계열 → 같은 카테고리 인기 제품, 같은 브랜드 우선)를 띄움. 장단점은 접기.
+- 쿠팡은 클릭 후 24시간 안의 다른 구매도 수수료로 잡음 → 고가 프로 장비를 보다가 **가성비 제품**(예: 앱코 HACKER 헤드셋)을 사는 경우가 있음. 그래서 카드마다 "가성비 대안" 줄을 둠.
+- `rankings.html`: 상단에 키보드·마우스·헤드셋 사용률 TOP5 비교표(사용률 %, 스펙, 대표 사용 선수, 구매 버튼). 미판매 1위권 제품은 대안 링크로 대체.
+- 가이드 페이지 `guides/<카테고리>.html` (LoL 루트, 발로란트는 `/valorant/guides/`): "프로게이머 키보드 추천", "LCK 선수 마우스 순위" 같은 검색어를 겨냥. TOP10 상세 + FAQ(FAQPage JSON-LD), 본문은 데이터로만 생성. sitemap 자동 포함.
+
+### 성과 추적
+1. **GoatCounter 클릭 이벤트** (`build.py`의 `GOATCOUNTER`에 사이트 코드 입력 시 활성화): 모든 쿠팡 버튼에 `coupang/<게임>/<player|rank|guide>/<선수 또는 카테고리>/<제품>` 이벤트 → 어떤 선수·카테고리 페이지에서 클릭이 나는지 파악.
+2. **쿠팡 subId 채널 링크**: `scripts/make_subid_links.py`(Open API 키 필요)로 `lolplayer·lolrank·lolguide·valorantplayer…` subId 딥링크 생성 → 파트너스 리포트에서 페이지 유형별 **구매·수익** 확인. 링크가 없으면 기본 링크로 자동 대체.
+3. 선수 단위 구매 귀속은 subId를 늘리지 않고, GoatCounter 클릭 비중 × subId 채널 매출로 추정.
+
+### 운영 채널
+- 슬랙 `#prosetup-updates`: 장비 제보(근거 링크 필수)와 사이트 구조 제안 접수. 반영하면 스레드에 결과를 남김.
+
+### 2027 시즌 상태 (2026-11-15)
+- LCK: FA 시장 2026-11-17 개시 전 → 로스터 유지, 각 raw 파일에 `roster_check_2027`로 계약 현황 기록. 확정 발표 후 갱신.
+- VCT: prosettings 최신 표로 장비·로스터 갱신(214명). 2027 파트너 팀 축소(지역당 8팀) 발표가 있어, 리그 구성 반영은 공식 확인 후 진행.

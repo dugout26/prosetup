@@ -19,6 +19,8 @@ MERGE = {
     "logitech g pro x 2": "logitech g pro x 2 lightspeed",
     "logitech g pro x tkl black": "logitech g pro x tkl",
     "asus tuf gaming vg279qm 280hz": "asus tuf gaming vg279qm",
+    "logitech g pro x2 superstrike lunar eclipse": "logitech g pro x2 superstrike",  # 색상 에디션
+    "logitech g pro x superlight 2 white": "logitech g pro x superlight 2",
 }
 
 
@@ -52,13 +54,20 @@ def main():
     existing = {}
     if OUT.exists():
         for prod in json.load(open(OUT, encoding="utf-8"))["products"]:
-            keep = {k: prod.get(k) for k in ("coupang_url", "image", "coupang_name") if prod.get(k)}
+            keep = {k: prod.get(k) for k in ("coupang_url", "coupang_urls", "product_url", "image", "coupang_name")
+                    if prod.get(k)}
+            if prod.get("display_name"):
+                keep["name"] = keep["display_name"] = prod["display_name"]
             for alias in prod["aliases"]:
-                existing[f'{prod["category"]}|{norm_key(alias)}'] = keep
+                slot = existing.setdefault(f'{prod["category"]}|{norm_key(alias)}', {})
+                for k, v in keep.items():
+                    slot.setdefault(k, v)   # 병합 시 링크 있는 쪽이 빈 쪽에 덮이지 않게
 
     products = []
     for key, counter in groups.items():
-        display = counter.most_common(1)[0][0]
+        base = key.split("|", 1)[1]
+        exact = [v for v in counter if norm_key(v) == base and v.casefold().replace("(", "").replace(")", "") == base]
+        display = exact[0] if exact and base in MERGE.values() else counter.most_common(1)[0][0]
         prod = {
             "name": display,
             "category": cats[key],

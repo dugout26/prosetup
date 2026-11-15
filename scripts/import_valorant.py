@@ -10,8 +10,8 @@ from collections import OrderedDict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-TABLE = Path("/private/tmp/claude-501/-Users-jeki-lol-rune-extension/"
-             "d81da40a-1d7b-4f81-b37c-4a75292f2b88/scratchpad/valorant_table.json")
+# 사용법: python3 scripts/import_valorant.py <valorant_table.json> [as_of=YYYY-MM-DD]
+TABLE = None
 OUT = ROOT / "data" / "raw" / "valorant"
 SOURCE = "https://prosettings.net/lists/valorant/"
 
@@ -61,7 +61,12 @@ def team_code(name):
     return re.sub(r"[^A-Z0-9]", "", name.upper())[:8] or "TEAM"
 
 def main():
-    data = json.load(open(TABLE, encoding="utf-8"))
+    import sys
+    if len(sys.argv) < 2:
+        sys.exit("사용법: python3 scripts/import_valorant.py <valorant_table.json> [YYYY-MM-DD]")
+    table = Path(sys.argv[1])
+    as_of = sys.argv[2] if len(sys.argv) > 2 else __import__("datetime").date.today().isoformat()
+    data = json.load(open(table, encoding="utf-8"))
     rows = data["rows"]
     # 기존 한글 이름 보존
     name_kr = {}
@@ -93,7 +98,7 @@ def main():
 
     total = 0
     for key, (region, teams) in REGIONS.items():
-        doc = {"as_of": "2026-08-06",
+        doc = {"as_of": as_of,
                "notes": {"source": f"{SOURCE} 목록 테이블(공개 세팅 DB)에서 수집.",
                          "scope": f"{region} 프랜차이즈 팀. 로스터가 아니라 '공개된 세팅 데이터가 있는 선수' 기준.",
                          "colors": "제품 색상 표기는 모델 단위로 통일했습니다."}}

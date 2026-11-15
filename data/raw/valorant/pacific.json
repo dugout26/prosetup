@@ -1,5 +1,5 @@
 {
- "as_of": "2026-08-06",
+ "as_of": "2026-11-15",
  "notes": {
   "source": "https://prosettings.net/lists/valorant/ 목록 테이블(공개 세팅 DB)에서 수집.",
   "scope": "VCT Pacific 프랜차이즈 팀. 로스터가 아니라 '공개된 세팅 데이터가 있는 선수' 기준.",
@@ -53,7 +53,62 @@
       "confidence": "medium"
      },
      "edpi": {
-      "value": "360",
+      "value": "360.00",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "resolution": {
+      "value": "1920x1080",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     }
+    }
+   },
+   {
+    "nickname": "MaKo",
+    "name_kr": "김명관",
+    "role": "",
+    "slug_suffix": "",
+    "gear": {
+     "mouse": {
+      "value": "Razer Viper V3 Pro",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "keyboard": {
+      "value": "Razer Huntsman V3 Pro TKL 8KHz",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "monitor": {
+      "value": "ZOWIE XL2566K",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "headset": {
+      "value": "Corsair HS80 RGB USB",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "mousepad": {
+      "value": "Artisan Ninja FX Zero XSoft",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     }
+    },
+    "settings": {
+     "dpi": {
+      "value": "400",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "in_game_sens": {
+      "value": "0.45",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "edpi": {
+      "value": "180.00",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -228,58 +283,44 @@
       "confidence": "medium"
      }
     }
-   }
-  ]
- },
- "DRX": {
-  "team_name": "DRX",
-  "region": "VCT Pacific",
-  "players": [
+   },
    {
-    "nickname": "MaKo",
-    "name_kr": "김명관",
+    "nickname": "Dambi",
+    "name_kr": "이혁규",
     "role": "",
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "Razer Viper V3 Pro",
+      "value": "Logitech G Pro X Superlight 2",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
-     "keyboard": {
-      "value": "Razer Huntsman V3 Pro TKL 8KHz",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "monitor": {
-      "value": "ZOWIE XL2566K",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
+     "keyboard": null,
+     "monitor": null,
      "headset": {
-      "value": "Corsair HS80 RGB USB",
+      "value": "Logitech G PRO X 2 Headset",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "mousepad": {
-      "value": "Artisan Ninja FX Zero XSoft",
+      "value": "Artisan Ninja FX Zero Soft",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      }
     },
     "settings": {
      "dpi": {
-      "value": "400",
+      "value": "1600",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "in_game_sens": {
-      "value": "0.45",
+      "value": "0.175",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "edpi": {
-      "value": "180.00",
+      "value": "280.00",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -289,7 +330,13 @@
       "confidence": "medium"
      }
     }
-   },
+   }
+  ]
+ },
+ "DRX": {
+  "team_name": "DRX",
+  "region": "VCT Pacific",
+  "players": [
    {
     "nickname": "Lothar",
     "name_kr": "",
@@ -352,7 +399,7 @@
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "Logitech G Pro X2 SUPERSTRIKE",
+      "value": "Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -401,68 +448,13 @@
     }
    },
    {
-    "nickname": "HYUNMIN",
-    "name_kr": "송현민",
-    "role": "",
-    "slug_suffix": "",
-    "gear": {
-     "mouse": {
-      "value": "Razer Viper V4 Pro",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "keyboard": {
-      "value": "Wooting 60HE+",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "monitor": {
-      "value": "ZOWIE XL2566K",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "headset": {
-      "value": "Corsair HS80 RGB USB",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "mousepad": {
-      "value": "Artisan Ninja FX Zero XSoft",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     }
-    },
-    "settings": {
-     "dpi": {
-      "value": "800",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "in_game_sens": {
-      "value": "0.2",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "edpi": {
-      "value": "160.00",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "resolution": {
-      "value": "1920x1080",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     }
-    }
-   },
-   {
     "nickname": "free1ng",
     "name_kr": "노하준",
     "role": "",
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "Razer Viper V3 Pro",
+      "value": "Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -517,7 +509,7 @@
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "Logitech G Pro X2 SUPERSTRIKE",
+      "value": "Lamzu Maya",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -545,12 +537,12 @@
       "confidence": "medium"
      },
      "in_game_sens": {
-      "value": "0.19",
+      "value": "0.393",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "edpi": {
-      "value": "152.00",
+      "value": "314.40",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -629,7 +621,7 @@
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "Pulsar TenZ Signature Edition",
+      "value": "Pulsar TenZ Signature Edition 2.0",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -639,7 +631,7 @@
       "confidence": "medium"
      },
      "monitor": {
-      "value": "SONY INZONE M10S",
+      "value": "SONY INZONE M10S II",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -649,7 +641,7 @@
       "confidence": "medium"
      },
      "mousepad": {
-      "value": "Artisan Ninja FX Zero XSoft",
+      "value": "Artisan Ninja FX Zero TenZ",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      }
@@ -661,12 +653,12 @@
       "confidence": "medium"
      },
      "in_game_sens": {
-      "value": "0.24",
+      "value": "0.14",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "edpi": {
-      "value": "384.00",
+      "value": "224.00",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -684,7 +676,7 @@
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "Logitech G Pro X2 SUPERSTRIKE",
+      "value": "Razer Viper V4 Pro",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -699,7 +691,7 @@
       "confidence": "medium"
      },
      "headset": {
-      "value": "Razer BlackShark V2 Pro",
+      "value": "Logitech G Pro X3 LIGHTSPEED Headset",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -716,12 +708,12 @@
       "confidence": "medium"
      },
      "in_game_sens": {
-      "value": "0.3",
+      "value": "0.35",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "edpi": {
-      "value": "240.00",
+      "value": "280.00",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -750,12 +742,12 @@
       "confidence": "medium"
      },
      "headset": {
-      "value": "SONY INZONE H9 II",
+      "value": "HyperX Cloud III S Wireless",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "mousepad": {
-      "value": "X-raypad Aqua Control+ Wave",
+      "value": "X-raypad Aqua Control+ PORON",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      }
@@ -845,7 +837,7 @@
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "Logitech G Pro X Superlight 2",
+      "value": "Pulsar STA-X",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -861,7 +853,7 @@
       "confidence": "medium"
      },
      "mousepad": {
-      "value": "Artisan Type-99 Soft",
+      "value": "Artisan Hayate Otsu V2 Soft Wine",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      }
@@ -978,17 +970,17 @@
     },
     "settings": {
      "dpi": {
-      "value": "800",
+      "value": "1600",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "in_game_sens": {
-      "value": "0.35",
+      "value": "0.1",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "edpi": {
-      "value": "280",
+      "value": "160.00",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -1006,7 +998,7 @@
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "Logitech G Pro X2 SUPERSTRIKE",
+      "value": "Logitech G Pro X3 SUPERSTRIKE Midnight",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -1067,7 +1059,11 @@
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
-     "keyboard": null,
+     "keyboard": {
+      "value": "Wooting 80HE+ Frost",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
      "monitor": {
       "value": "ZOWIE XL2566K",
       "source": "https://prosettings.net/lists/valorant/",
@@ -1129,7 +1125,7 @@
       "confidence": "medium"
      },
      "headset": {
-      "value": "Razer BlackShark V3 Pro",
+      "value": "Logitech G733",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -1163,53 +1159,6 @@
     }
    },
    {
-    "nickname": "Dambi",
-    "name_kr": "이혁규",
-    "role": "",
-    "slug_suffix": "",
-    "gear": {
-     "mouse": {
-      "value": "Logitech G Pro X Superlight 2",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "keyboard": null,
-     "monitor": null,
-     "headset": {
-      "value": "Razer BlackShark V3 Pro",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "mousepad": {
-      "value": "Artisan Ninja FX Zero Soft",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     }
-    },
-    "settings": {
-     "dpi": {
-      "value": "1600",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "in_game_sens": {
-      "value": "0.175",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "edpi": {
-      "value": "280.00",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "resolution": {
-      "value": "1920x1080",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     }
-    }
-   },
-   {
     "nickname": "Francis",
     "name_kr": "김무빈",
     "role": "",
@@ -1231,7 +1180,7 @@
       "confidence": "medium"
      },
      "headset": {
-      "value": "Razer BlackShark V3 Pro",
+      "value": "Logitech G PRO X 2 Headset",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -1286,7 +1235,7 @@
       "confidence": "medium"
      },
      "headset": {
-      "value": "Razer BlackShark V3 Pro",
+      "value": "Logitech G PRO X 2 Headset",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -1309,6 +1258,61 @@
      },
      "edpi": {
       "value": "160.00",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "resolution": {
+      "value": "1920x1080",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     }
+    }
+   },
+   {
+    "nickname": "UdoTan",
+    "name_kr": "",
+    "role": "",
+    "slug_suffix": "",
+    "gear": {
+     "mouse": {
+      "value": "Razer Viper V4 Pro",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "keyboard": {
+      "value": "Wooting 60HE v2",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "monitor": {
+      "value": "ZOWIE XL2566X+",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "headset": {
+      "value": "Razer BlackShark V3 Pro",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "mousepad": {
+      "value": "Pulsar eS Saturn Pro",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     }
+    },
+    "settings": {
+     "dpi": {
+      "value": "1600",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "in_game_sens": {
+      "value": "0.101",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "edpi": {
+      "value": "161.6",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -1364,12 +1368,12 @@
       "confidence": "medium"
      },
      "in_game_sens": {
-      "value": "0.712",
+      "value": "0.65",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "edpi": {
-      "value": "569.60",
+      "value": "520.00",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -1387,7 +1391,7 @@
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "Logitech G Pro X2 SUPERSTRIKE",
+      "value": "Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -1419,127 +1423,17 @@
       "confidence": "medium"
      },
      "in_game_sens": {
-      "value": "0.58",
+      "value": "0.5",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "edpi": {
-      "value": "464.00",
+      "value": "400.00",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "resolution": {
       "value": "1920x1080",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     }
-    }
-   },
-   {
-    "nickname": "Jinggg",
-    "name_kr": "",
-    "role": "",
-    "slug_suffix": "",
-    "gear": {
-     "mouse": {
-      "value": "Pulsar Jinggg-x",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "keyboard": {
-      "value": "Wooting 60HE v2",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "monitor": {
-      "value": "ZOWIE XL2566K",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "headset": {
-      "value": "HyperX Cloud III Wireless",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "mousepad": {
-      "value": "Artisan Hayate Otsu V2 XSoft",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     }
-    },
-    "settings": {
-     "dpi": {
-      "value": "1600",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "in_game_sens": {
-      "value": "0.18",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "edpi": {
-      "value": "288.00",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "resolution": {
-      "value": "1280x960",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     }
-    }
-   },
-   {
-    "nickname": "d4v41",
-    "name_kr": "",
-    "role": "",
-    "slug_suffix": "",
-    "gear": {
-     "mouse": {
-      "value": "VAXEE ZYGEN NP-01S V2 Wireless Fluorescent",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "keyboard": {
-      "value": "Arbiter Studio Polar 65",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "monitor": {
-      "value": "ZOWIE XL2566X+",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "headset": {
-      "value": "HyperX Cloud III Wireless",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "mousepad": {
-      "value": "Pulsar d4v41 Mousepad",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     }
-    },
-    "settings": {
-     "dpi": {
-      "value": "900",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "in_game_sens": {
-      "value": "0.23",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "edpi": {
-      "value": "207",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "resolution": {
-      "value": "1280x1024",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      }
@@ -1593,13 +1487,13 @@
     }
    },
    {
-    "nickname": "Invy",
+    "nickname": "PatMen",
     "name_kr": "",
     "role": "",
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "Logitech G Pro X2 SUPERSTRIKE",
+      "value": "Lamzu Maya X",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -1608,14 +1502,18 @@
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
-     "monitor": null,
+     "monitor": {
+      "value": "ZOWIE XL2566X+",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
      "headset": {
-      "value": "HyperX Cloud III",
+      "value": "Razer BlackShark V3 Pro",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "mousepad": {
-      "value": "Artisan Ninja FX Zero Soft",
+      "value": "Pulsar eS Saturn Pro",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      }
@@ -1627,12 +1525,67 @@
       "confidence": "medium"
      },
      "in_game_sens": {
-      "value": "0.135",
+      "value": "0.125",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "edpi": {
-      "value": "216.00",
+      "value": "200",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "resolution": {
+      "value": "1920x1080",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     }
+    }
+   },
+   {
+    "nickname": "Invy",
+    "name_kr": "",
+    "role": "",
+    "slug_suffix": "",
+    "gear": {
+     "mouse": {
+      "value": "Logitech G Pro X3 SUPERSTRIKE Magenta Eclipse",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "keyboard": {
+      "value": "Wooting 60HE v2",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "monitor": {
+      "value": "ZOWIE XL2586X+",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "headset": {
+      "value": "HyperX Cloud III",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "mousepad": {
+      "value": "Artisan Ninja FX Zero TenZ",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     }
+    },
+    "settings": {
+     "dpi": {
+      "value": "800",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "in_game_sens": {
+      "value": "0.23",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "edpi": {
+      "value": "184.00",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -1661,7 +1614,7 @@
       "confidence": "medium"
      },
      "keyboard": {
-      "value": "Wooting 80HE Frost",
+      "value": "Wooting 80HE+ Frost",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -1683,17 +1636,17 @@
     },
     "settings": {
      "dpi": {
-      "value": "1600",
+      "value": "800",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "in_game_sens": {
-      "value": "0.125",
+      "value": "0.4",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "edpi": {
-      "value": "200.00",
+      "value": "320.00",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -1817,7 +1770,7 @@
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "Logitech G Pro X2 SUPERSTRIKE",
+      "value": "Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -1829,7 +1782,7 @@
      "monitor": null,
      "headset": null,
      "mousepad": {
-      "value": "Pulsar eS Saturn Pro",
+      "value": "X-raypad Aqua Speed",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      }
@@ -1903,6 +1856,61 @@
      },
      "resolution": {
       "value": "1280x960",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     }
+    }
+   },
+   {
+    "nickname": "Xan",
+    "name_kr": "",
+    "role": "",
+    "slug_suffix": "",
+    "gear": {
+     "mouse": {
+      "value": "Razer Viper V3 Pro",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "keyboard": {
+      "value": "Wooting 60HE v2",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "monitor": {
+      "value": "ZOWIE XL2566X+",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "headset": {
+      "value": "HyperX Cloud III",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "mousepad": {
+      "value": "Xraypad Aqua Control II",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     }
+    },
+    "settings": {
+     "dpi": {
+      "value": "800",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "in_game_sens": {
+      "value": "0.21",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "edpi": {
+      "value": "168",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "resolution": {
+      "value": "1920x1080",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      }
@@ -2078,23 +2086,27 @@
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "Razer Viper V3 Pro",
+      "value": "Razer Viper V4 Pro",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "keyboard": {
-      "value": "Pulsar PCMK 3",
+      "value": "Wooting 60HE+",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "monitor": {
-      "value": "ZOWIE XL2546K",
+      "value": "ZOWIE XL2566X+",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
-     "headset": null,
+     "headset": {
+      "value": "Razer BlackShark V3 Pro",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
      "mousepad": {
-      "value": "Pulsar x LGG Hyperion Soft",
+      "value": "Artisan Ninja FX Zero Soft",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      }
@@ -2106,16 +2118,20 @@
       "confidence": "medium"
      },
      "in_game_sens": {
-      "value": "0.2",
+      "value": "0.28",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "edpi": {
-      "value": "320",
+      "value": "448.00",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
-     "resolution": null
+     "resolution": {
+      "value": "1920x1080",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     }
     }
    }
   ]
@@ -2151,7 +2167,7 @@
       "confidence": "medium"
      },
      "mousepad": {
-      "value": "VAXEE PE Tortoiseshell Cats",
+      "value": "VAXEE PA Winter 21",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      }
@@ -2169,61 +2185,6 @@
      },
      "edpi": {
       "value": "180.80",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "resolution": {
-      "value": "1920x1080",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     }
-    }
-   },
-   {
-    "nickname": "PatMen",
-    "name_kr": "",
-    "role": "",
-    "slug_suffix": "",
-    "gear": {
-     "mouse": {
-      "value": "VAXEE XE V2",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "keyboard": {
-      "value": "Wooting 60HE v2",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "monitor": {
-      "value": "ZOWIE XL2566X+",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "headset": {
-      "value": "Razer BlackShark V3 Pro",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "mousepad": {
-      "value": "Pulsar eS Saturn Pro",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     }
-    },
-    "settings": {
-     "dpi": {
-      "value": "1600",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "in_game_sens": {
-      "value": "0.125",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "edpi": {
-      "value": "200",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -2261,62 +2222,7 @@
       "confidence": "medium"
      },
      "mousepad": {
-      "value": "Artisan FX Hien Soft",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     }
-    },
-    "settings": {
-     "dpi": {
-      "value": "1600",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "in_game_sens": {
-      "value": "0.101",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "edpi": {
-      "value": "161.6",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "resolution": {
-      "value": "1920x1080",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     }
-    }
-   },
-   {
-    "nickname": "UdoTan",
-    "name_kr": "",
-    "role": "",
-    "slug_suffix": "",
-    "gear": {
-     "mouse": {
-      "value": "Razer Viper V4 Pro",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "keyboard": {
-      "value": "Wooting 60HE v2",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "monitor": {
-      "value": "ZOWIE XL2566X+",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "headset": {
-      "value": "Razer BlackShark V3 Pro",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "mousepad": {
-      "value": "Pulsar eS Saturn Pro",
+      "value": "Artisan FX Hien Soft Wine",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      }
@@ -2351,7 +2257,7 @@
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "VAXEE XE V2",
+      "value": "ZOWIE EC2-DW",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -2371,7 +2277,7 @@
       "confidence": "medium"
      },
      "mousepad": {
-      "value": "Pulsar eS Saturn Pro",
+      "value": "Artisan Ninja FX Zero Soft",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      }
@@ -2624,7 +2530,7 @@
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "Logitech G Pro X2 SUPERSTRIKE",
+      "value": "Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -2681,12 +2587,12 @@
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "Razer Viper V4 Pro",
+      "value": "Lamzu Thorn V2",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "keyboard": {
-      "value": "Wooting 60HE+",
+      "value": "Pulsar PCMK 3",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -2704,22 +2610,22 @@
     },
     "settings": {
      "dpi": {
-      "value": "400",
+      "value": "1600",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "in_game_sens": {
-      "value": "0.408",
+      "value": "0.08",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "edpi": {
-      "value": "163.20",
+      "value": "128.00",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "resolution": {
-      "value": "1680x1050",
+      "value": "1920x1080",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      }
@@ -2792,61 +2698,6 @@
   "team_name": "FULL SENSE",
   "region": "VCT Pacific",
   "players": [
-   {
-    "nickname": "Crws",
-    "name_kr": "",
-    "role": "",
-    "slug_suffix": "",
-    "gear": {
-     "mouse": {
-      "value": "Razer DeathAdder V3 HyperSpeed",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "keyboard": {
-      "value": "Wooting 80HE TenZ Edition",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "monitor": {
-      "value": "ZOWIE XL2566K",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "headset": {
-      "value": "Razer BlackShark V2 Pro",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "mousepad": {
-      "value": "Artisan Type-99",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     }
-    },
-    "settings": {
-     "dpi": {
-      "value": "1600",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "in_game_sens": {
-      "value": "0.1",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "edpi": {
-      "value": "160.00",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "resolution": {
-      "value": "1280x960",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     }
-    }
-   },
    {
     "nickname": "JohnOlsen",
     "name_kr": "",
@@ -2964,12 +2815,12 @@
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "Logitech G Pro X2 SUPERSTRIKE",
+      "value": "Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "keyboard": {
-      "value": "Wooting 80HE Frost",
+      "value": "Wooting 80HE+ Frost",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -3019,7 +2870,7 @@
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "Razer Viper V3 Pro Faker Edition",
+      "value": "Razer Viper V4 Pro",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -3029,7 +2880,7 @@
       "confidence": "medium"
      },
      "monitor": {
-      "value": "ZOWIE XL2566K",
+      "value": "ZOWIE XL2566X+",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -3039,7 +2890,7 @@
       "confidence": "medium"
      },
      "mousepad": {
-      "value": "Artisan Ninja FX Zero Soft",
+      "value": "Pulsar eS Saturn Pro",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      }
@@ -3051,12 +2902,12 @@
       "confidence": "medium"
      },
      "in_game_sens": {
-      "value": "0.3",
+      "value": "0.33",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "edpi": {
-      "value": "240.00",
+      "value": "264.00",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },

@@ -1,0 +1,92 @@
+{
+ "_note": "models: 단종·후속 모델이 있는 제품 → 같은 계열 대안(products.json의 name). 쿠팡 링크가 없는 제품은 build.py가 같은 카테고리 인기 제품을 자동으로 대안 노출한다. budget: 카테고리별 가성비 대안 — coupang_url을 채워야 노출된다(파트너스 대시보드에서 생성).",
+ "models": {
+  "Logitech G Pro X Superlight": {
+   "status_kr": "후속 모델 출시",
+   "note": "후속 모델이 나와 구형은 재고 소진 시 품절될 수 있어요. 같은 계열 최신 모델을 함께 확인해 보세요.",
+   "alts": [
+    "Logitech G Pro X Superlight 2",
+    "Logitech G Pro X2 Superstrike"
+   ]
+  },
+  "Logitech G Pro Wireless": {
+   "status_kr": "후속 모델 출시",
+   "note": "후속 모델이 나와 구형은 재고 소진 시 품절될 수 있어요. 같은 계열 최신 모델을 함께 확인해 보세요.",
+   "alts": [
+    "Logitech G Pro X Superlight 2",
+    "Logitech G Pro X2 Superstrike"
+   ]
+  },
+  "Razer BlackShark V2 Pro": {
+   "status_kr": "후속 모델 출시",
+   "note": "후속 모델이 나와 구형은 재고 소진 시 품절될 수 있어요. 같은 계열 최신 모델을 함께 확인해 보세요.",
+   "alts": [
+    "Razer BlackShark V3 Pro"
+   ]
+  },
+  "Razer Deathadder V3 Pro": {
+   "status_kr": "후속 모델 출시",
+   "note": "후속 모델이 나와 구형은 재고 소진 시 품절될 수 있어요. 같은 계열 최신 모델을 함께 확인해 보세요.",
+   "alts": [
+    "Razer DeathAdder V4 Pro"
+   ]
+  },
+  "Logitech G Pro X Headset": {
+   "status_kr": "후속 모델 출시",
+   "note": "후속 모델이 나와 구형은 재고 소진 시 품절될 수 있어요. 같은 계열 최신 모델을 함께 확인해 보세요.",
+   "alts": [
+    "Logitech G PRO X 2 Headset"
+   ]
+  },
+  "Logitech G Pro X Wireless Headset": {
+   "status_kr": "후속 모델 출시",
+   "note": "후속 모델이 나와 구형은 재고 소진 시 품절될 수 있어요. 같은 계열 최신 모델을 함께 확인해 보세요.",
+   "alts": [
+    "Logitech G PRO X 2 Headset"
+   ]
+  },
+  "Logitech G Pro X": {
+   "status_kr": "후속 모델 출시",
+   "note": "후속 모델이 나와 구형은 재고 소진 시 품절될 수 있어요. 같은 계열 최신 모델을 함께 확인해 보세요.",
+   "alts": [
+    "Logitech G Pro X TKL RAPID",
+    "Logitech G Pro X TKL"
+   ]
+  },
+  "Logitech G Pro X Keyboard": {
+   "status_kr": "후속 모델 출시",
+   "note": "후속 모델이 나와 구형은 재고 소진 시 품절될 수 있어요. 같은 계열 최신 모델을 함께 확인해 보세요.",
+   "alts": [
+    "Logitech G Pro X TKL RAPID",
+    "Logitech G Pro X TKL"
+   ]
+  },
+  "ZOWIE XL2546": {
+   "status_kr": "후속 모델 출시",
+   "note": "후속 모델이 나와 구형은 재고 소진 시 품절될 수 있어요. 같은 계열 최신 모델을 함께 확인해 보세요.",
+   "alts": [
+    "ZOWIE XL2546K"
+   ]
+  },
+  "Wooting 60HE+": {
+   "status_kr": "후속 모델 출시",
+   "note": "후속 모델이 나와 구형은 재고 소진 시 품절될 수 있어요. 같은 계열 최신 모델을 함께 확인해 보세요.",
+   "alts": [
+    "Wooting 60HE v2"
+   ]
+  }
+ },
+ "budget": {
+  "headset": [
+   {
+    "name": "앱코 HACKER 가상 7.1 RGB 게이밍 헤드셋",
+    "spec": "유선 USB · 가상 7.1",
+    "coupang_url": null
+   }
+  ],
+  "keyboard": [],
+  "mouse": [],
+  "monitor": [],
+  "mousepad": []
+ }
+}

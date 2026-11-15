@@ -142,6 +142,57 @@ nav.gnav a { font-size: 12.5px; font-weight: 800; padding: 7px 14px; border-radi
              background: var(--card); border: 1px solid var(--line); color: var(--mut); }
 nav.gnav a.on { color: #14171D; background: var(--gold); border-color: var(--gold); }
 nav.gnav a.soon { opacity: .5; }
+nav.gnav.sm { margin: 10px 0 16px; }
+nav.gnav.sm a { font-size: 12px; padding: 6px 12px; }
+.badge { font-size: 10.5px; font-weight: 800; padding: 2px 8px; border-radius: 999px; flex: none;
+         color: #FFD8A8; border: 1px solid rgba(255,169,77,.45); background: rgba(255,169,77,.08); }
+.specline { flex-basis: 100%; font-size: 12.5px; color: var(--gold); font-weight: 700; margin-top: -2px; }
+.ctarow { flex-basis: 100%; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.buy { white-space: nowrap; }
+.buy.big { font-size: 15px; padding: 12px 22px; border-radius: 10px; box-shadow: 0 4px 14px rgba(232,195,107,.25); }
+.buy.sm { font-size: 12px; padding: 6px 12px; border-radius: 8px; white-space: nowrap; }
+.ctahint { font-size: 11.5px; color: var(--mut); }
+.alts { flex-basis: 100%; background: #0F131A; border: 1px solid rgba(255,169,77,.3); border-radius: 12px; padding: 12px 14px; }
+.alts .alttit { font-size: 12.5px; font-weight: 800; color: #FFD8A8; }
+.alts p { font-size: 11.5px; color: var(--mut); margin: 2px 0 8px; }
+.altrow { display: flex; align-items: center; gap: 10px; padding: 6px 0; border-top: 1px dashed var(--line); }
+.altrow .aname { flex: 1; min-width: 0; font-size: 13.5px; font-weight: 800; }
+.altrow .aname small, .cmp td small { display: block; font-size: 11px; color: var(--mut); font-weight: 500; }
+.athumb { flex: none; width: 40px; height: 40px; border-radius: 8px; background: #0B0E14; border: 1px solid var(--line); object-fit: contain; }
+.budget { flex-basis: 100%; font-size: 12px; color: var(--mut); }
+.budget a { color: var(--tx); font-weight: 700; border-bottom: 1px dotted var(--gold); }
+details.pnotes summary { font-size: 12px; color: var(--mut); cursor: pointer; font-weight: 700; }
+details.pnotes ul { margin-top: 8px; }
+.cmp { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px; margin: 14px 0; overflow-x: auto; }
+.cmptit { font-weight: 900; font-size: 15px; margin-bottom: 8px; }
+.cmptit small { font-weight: 500; font-size: 11.5px; color: var(--mut); margin-left: 6px; }
+.cmp table { width: 100%; border-collapse: collapse; }
+.cmp th { font-size: 11px; color: var(--mut); text-align: left; padding: 4px 6px; font-weight: 700; }
+.cmp td { padding: 9px 6px; border-top: 1px solid var(--line); vertical-align: middle; font-size: 13.5px; }
+.cmp td.rk { font-weight: 900; color: var(--gold); width: 22px; }
+.cmp td.pn { display: flex; gap: 10px; align-items: center; }
+.cmp td.pn small.who a { color: #9BA3AF; }
+.cmp td.num { width: 90px; position: relative; }
+.cmp td.num i { display: block; height: 4px; background: var(--gold); border-radius: 2px; margin-top: 4px; opacity: .8; }
+.cmp td.cta { text-align: right; width: 70px; }
+.cmp .na { font-size: 11px; color: #566070; }
+.gcard .who { flex-basis: 100%; font-size: 12px; color: var(--mut); }
+.gcard .who a, p.more a { color: #9BA3AF; border-bottom: 1px dotted #566070; }
+.gcard ul.pc { flex-basis: 100%; list-style: none; }
+.gcard ul.pc li, details.pnotes li { font-size: 12.5px; color: var(--mut); line-height: 1.6; padding-left: 18px; position: relative; }
+.gcard ul.pc li::before { position: absolute; left: 0; font-weight: 800; }
+.gcard ul.pc li.pro::before { content: "＋"; color: #51CF66; }
+.gcard ul.pc li.con::before { content: "－"; color: #FF8787; }
+a.more, p.more { display: inline-block; font-size: 12.5px; color: var(--mut); margin-top: 8px; }
+a.more:hover { color: var(--gold); }
+details.faq { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin-bottom: 8px; }
+details.faq summary { font-weight: 800; font-size: 14px; cursor: pointer; }
+details.faq p { font-size: 13px; color: var(--mut); margin-top: 6px; }
+@media (max-width: 520px) {
+  .buy.big { flex: 1 1 100%; text-align: center; }
+  .ctahint { flex-basis: 100%; text-align: center; }
+  .cmp td.num { width: 64px; }
+}
 </style>
 </head>
 <body>
@@ -149,7 +200,7 @@ nav.gnav a.soon { opacity: .5; }
 <header class="site"><a href="https://dugout26.github.io/prosetup/" class="logo">프로<b>셋업</b></a>
 <span class="tag">VCT 프로 장비·세팅</span></header>
 <nav class="gnav"><a href="https://dugout26.github.io/prosetup">LoL · LCK</a><a class="on" href="https://dugout26.github.io/prosetup/valorant">발로란트 · VCT</a><a class="soon" href="#" onclick="return false">오버워치 · 준비 중</a></nav>
-<div class="updated">데이터 확인 시점: 2026-08 · 매 시즌 업데이트</div>
+<div class="updated">장비 데이터 확인: 2026-11</div>
 <div class="crumb"><a href="https://dugout26.github.io/prosetup/valorant">VALORANT 홈</a> › 정보 제보</div>
 <h1>장비 정보 제보하기</h1>
 <p class="sub">틀린 정보를 바로잡거나, 아직 없는 선수의 장비를 알려주실 수 있습니다.
@@ -243,5 +294,6 @@ nav.gnav a.soon { opacity: .5; }
 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 </footer>
 </div>
+
 </body>
 </html>

@@ -1,5 +1,5 @@
 {
- "as_of": "2026-08-06",
+ "as_of": "2026-11-15",
  "notes": {
   "source": "https://prosettings.net/lists/valorant/ 목록 테이블(공개 세팅 DB)에서 수집.",
   "scope": "VCT China 프랜차이즈 팀. 로스터가 아니라 '공개된 세팅 데이터가 있는 선수' 기준.",
@@ -36,24 +36,24 @@
       "confidence": "medium"
      },
      "mousepad": {
-      "value": "VAXEE PA INSANE",
+      "value": "Artisan Type-99",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      }
     },
     "settings": {
      "dpi": {
-      "value": "1600",
+      "value": "800",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "in_game_sens": {
-      "value": "0.1",
+      "value": "0.395",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "edpi": {
-      "value": "160.00",
+      "value": "316.00",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -71,7 +71,7 @@
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "Razer Viper V4 Pro",
+      "value": "Razer Prototype Mouse",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -126,7 +126,7 @@
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "Logitech G Pro X2 SUPERSTRIKE",
+      "value": "Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -181,7 +181,7 @@
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "Razer DeathAdder V3 HyperSpeed",
+      "value": "Razer Prototype Mouse",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -242,7 +242,7 @@
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "Logitech G Pro X2 SUPERSTRIKE",
+      "value": "Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -302,7 +302,7 @@
       "confidence": "medium"
      },
      "keyboard": {
-      "value": "Wooting 60HE+",
+      "value": "Razer Huntsman V3 Pro TKL 8KHz",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -352,7 +352,7 @@
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "Logitech G Pro X2 SUPERSTRIKE",
+      "value": "Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -996,53 +996,6 @@
   "region": "VCT China",
   "players": [
    {
-    "nickname": "heybay",
-    "name_kr": "",
-    "role": "",
-    "slug_suffix": "",
-    "gear": {
-     "mouse": {
-      "value": "VAXEE ZYGEN NP-01S V2 Wireless Deep",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "keyboard": null,
-     "monitor": null,
-     "headset": {
-      "value": "Razer BlackShark V2 Pro",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "mousepad": {
-      "value": "VAXEE PA",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     }
-    },
-    "settings": {
-     "dpi": {
-      "value": "1600",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "in_game_sens": {
-      "value": "0.089",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "edpi": {
-      "value": "142.40",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     },
-     "resolution": {
-      "value": "1920x1080",
-      "source": "https://prosettings.net/lists/valorant/",
-      "confidence": "medium"
-     }
-    }
-   },
-   {
     "nickname": "CB",
     "name_kr": "",
     "role": "",
@@ -1208,18 +1161,18 @@
     }
    },
    {
-    "nickname": "Obone",
+    "nickname": "Swagzor",
     "name_kr": "",
     "role": "",
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "ZOWIE EC2-DW",
+      "value": "Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "keyboard": {
-      "value": "Wooting 80HE",
+      "value": "Wooting 60HE+",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -1229,34 +1182,85 @@
       "confidence": "medium"
      },
      "headset": {
-      "value": "Razer BlackShark V3 Pro",
+      "value": "HyperX Cloud III Wireless",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "mousepad": {
-      "value": "SteelSeries QcK Heavy",
+      "value": "Artisan Ninja FX Zero Soft",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      }
     },
     "settings": {
      "dpi": {
-      "value": "400",
+      "value": "1600",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "in_game_sens": {
-      "value": "0.3",
+      "value": "0.115",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "edpi": {
-      "value": "120",
+      "value": "184",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
      "resolution": {
-      "value": "1920x1080",
+      "value": "1440x1080",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     }
+    }
+   },
+   {
+    "nickname": "qiutiaN",
+    "name_kr": "",
+    "role": "",
+    "slug_suffix": "",
+    "gear": {
+     "mouse": {
+      "value": "VAXEE ZYGEN NP-01S V2 Wireless",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "keyboard": {
+      "value": "Wooting 60HE+",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "monitor": {
+      "value": "ZOWIE XL2566X+",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "headset": null,
+     "mousepad": {
+      "value": "Pulsar eS PD170",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     }
+    },
+    "settings": {
+     "dpi": {
+      "value": "1600",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "in_game_sens": {
+      "value": "0.11",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "edpi": {
+      "value": "176",
+      "source": "https://prosettings.net/lists/valorant/",
+      "confidence": "medium"
+     },
+     "resolution": {
+      "value": "1280x960",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      }
@@ -1438,7 +1442,7 @@
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "ZOWIE S2-DW",
+      "value": "Razer Viper V4 Pro",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -1513,7 +1517,7 @@
       "confidence": "medium"
      },
      "mousepad": {
-      "value": "VAXEE PA Trigger",
+      "value": "VAXEE PA Summer Vibes",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      }
@@ -1841,7 +1845,7 @@
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "Logitech G Pro X2 SUPERSTRIKE",
+      "value": "Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },
@@ -1902,7 +1906,7 @@
     "slug_suffix": "",
     "gear": {
      "mouse": {
-      "value": "Logitech G Pro X2 SUPERSTRIKE",
+      "value": "Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse",
       "source": "https://prosettings.net/lists/valorant/",
       "confidence": "medium"
      },

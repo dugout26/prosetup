@@ -1,4 +1,5 @@
 {
+  "roster_check_2027": {"checked": "2026-11-15", "note": "LCK FA 시장(2026-11-17) 개시 전이라 이적 확정 없음 → 2026 로스터 유지. DK 2027 계약 확인: Lucid / 미정: Siwoo, ShowMaker, Smash, Career · NS 2027 계약 확인: 없음 / 미정: Kingen, Sponge, Scout, Diable, Lehends. 루머 미반영. 장비 변경 근거 없음."},
   "meta": {"as_of": "2026-08-05", "note": "NS 원딜은 2026-04-30 Diable-Taeyoon 트레이드 반영"},
   "DK": {
     "team_name": "Dplus KIA",
