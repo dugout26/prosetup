@@ -310,6 +310,23 @@ tr.dead { opacity: .55; }
 .cmp td small { display: block; }
 .legend { font-size: 11.5px; color: var(--mut); margin: 6px 0 4px; line-height: 2; }
 .h2s { font-size: 11px; color: var(--mut); font-weight: 500; margin-left: 6px; }
+.slots { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
+.slot { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
+.slot.ok { border-color: rgba(81,207,102,.45); }
+.slot.tbd { border-color: rgba(255,224,102,.35); }
+.slot.empty { border-style: dashed; }
+.slot .sh { display: flex; justify-content: space-between; font-weight: 900; font-size: 13px; margin-bottom: 6px; }
+.st { font-size: 10.5px; padding: 1px 8px; border-radius: 999px; }
+.st.ok { background: #51CF66; color: #0E1117; }
+.st.tbd { color: #FFE066; border: 1px solid rgba(255,224,102,.5); }
+.st.empty { color: #868E96; border: 1px dashed #495057; }
+.sp { padding: 5px 0; border-top: 1px dashed var(--line); font-size: 13.5px; }
+.sp:first-of-type { border-top: 0; }
+.sp small { display: block; font-size: 11px; color: var(--mut); }
+.sp.rum b::before { content: "🟡 "; } .sp.out b::before { content: "↗ "; } .sp.pend b { color: var(--mut); }
+.sp.none { color: #566070; font-size: 12px; }
+.tlink { margin-left: auto; font-size: 11.5px; color: var(--mut); font-weight: 700; }
+.tlink:hover { color: var(--gold); }
 .cmp td.gc { font-size: 12.5px; }
 .cmp td.gc .buy { margin-top: 4px; display: inline-block; }
 .cmp a.src { color: #7A8290; border-bottom: 1px dotted #566070; }
@@ -826,6 +843,120 @@ def build_guides(g, teams, usage, known):
         urls.append(gurl(g, "guides", f"{cat}.html"))
     return urls
 
+POS = [("top", "탑"), ("jungle", "정글"), ("mid", "미드"), ("adc", "원딜"), ("support", "서포터")]
+
+def build_teams(g, teams, tmeta, usage):
+    """팀 페이지: 다음 시즌 포지션별 칸(확정·거취 미정·루머·공석) + 현 로스터 장비."""
+    data = (load_json("data/transfers.json") or {}).get(g["key"])
+    if not data:
+        return []
+    season = data["season"]
+    by_nick = {p["nickname"].casefold(): p for ps in teams.values() for p in ps}
+    ctx = f"{g['key']}_team"
+
+    def norm_role(r):
+        return "adc" if r in ("bot", "adc") else r
+
+    def role_of(x):
+        if x.get("role"):
+            return norm_role(x["role"])
+        p = by_nick.get(x["nickname"].casefold())
+        return norm_role((p or {}).get("role", ""))
+
+    def pl_link(nick):
+        p = by_nick.get(nick.casefold())
+        return (f'<a href="{gurl(g, "players", player_slug(p) + ".html")}">{esc(nick)}</a>' if p else esc(nick))
+
+    def tk(code):
+        return tmeta.get(code, {}).get("kr", code)
+
+    off = data.get("official", [])
+    leaving = {x["nickname"].casefold() for x in off
+               if x.get("from") and x.get("to") != x.get("from") and x.get("type") in ("이적", "방출", "은퇴")}
+    urls = []
+    order = [c for c in (g.get("team_order") or []) if c in teams]
+    for code in order:
+        tinfo = tmeta.get(code, {"kr": code, "color": "#888"})
+        slots = {r: {"ok": [], "pending": [], "rumor": [], "out": []} for r, _ in POS}
+        for x in data.get("stay", []):
+            if x["team"] == code and x["nickname"].casefold() not in leaving and role_of(x) in slots:
+                slots[role_of(x)]["ok"].append((x["nickname"], x.get("status", "계약 확인"), x.get("source")))
+        for x in off:
+            if x.get("to") == code and x.get("type") in ("이적", "영입", "재계약") and role_of(x) in slots:
+                lab = "재계약" if x["type"] == "재계약" else f'{x["type"]} 오피셜'
+                if not any(n.casefold() == x["nickname"].casefold() for n, _, _ in slots[role_of(x)]["ok"]):
+                    slots[role_of(x)]["ok"].append((x["nickname"], lab, x.get("source")))
+        for x in data.get("pending", []):
+            if x["team"] == code and x["nickname"].casefold() not in leaving and role_of(x) in slots:
+                slots[role_of(x)]["pending"].append((x["nickname"], x.get("status", "거취 미정"), x.get("source")))
+        for x in data.get("reports", []):
+            if x.get("status") != "보도" or role_of(x) not in slots:
+                continue
+            if x.get("to") == code:
+                slots[role_of(x)]["rumor"].append((x["nickname"], f'{tk(x.get("from", ""))}에서 · {x.get("outlet", "")}', x.get("source")))
+            elif x.get("from") == code:
+                slots[role_of(x)]["out"].append((x["nickname"], f'{tk(x.get("to", ""))}행 보도 · {x.get("outlet", "")}', x.get("source")))
+
+        def chip(n, sub, src, cls):
+            s_ = f' <a class="src" href="{esc(src)}" rel="nofollow">근거</a>' if src else ""
+            return f'<div class="sp {cls}"><b>{pl_link(n)}</b><small>{esc(sub)}{s_}</small></div>'
+
+        cards, n_ok = "", 0
+        for r, rk in POS:
+            sl = slots[r]
+            if sl["ok"]:
+                n_ok += 1
+                state, scls = "확정", "ok"
+            elif sl["pending"] or sl["rumor"]:
+                state, scls = "미정", "tbd"
+            else:
+                state, scls = "공석", "empty"
+            inner = "".join(chip(n, sub, src, "ok") for n, sub, src in sl["ok"])
+            inner += "".join(chip(n, sub, src, "pend") for n, sub, src in sl["pending"])
+            inner += "".join(chip(n, "이적설 — " + sub, src, "out") for n, sub, src in sl["out"])
+            inner += "".join(chip(n, "루머 — " + sub, src, "rum") for n, sub, src in sl["rumor"])
+            if not inner:
+                inner = '<div class="sp none">발표된 선수 없음</div>'
+            cards += (f'<div class="slot {scls}"><div class="sh"><span>{rk}</span>'
+                      f'<span class="st {scls}">{state}</span></div>{inner}</div>')
+
+        rows = ""
+        for p in teams[code]:
+            gcells = ""
+            for key, label in GEAR_LABELS[:4]:
+                e = (p.get("gear") or {}).get(key)
+                if e and e.get("value"):
+                    prod = CATALOG.get(e["value"], {})
+                    btn = buy_btn(prod, ctx, f"{g['key']}/team/{code.lower()}/{key}", "최저가", "buy sm") if prod else ""
+                    gcells += f'<td class="gc"><span>{esc(e["value"])}</span>{btn}</td>'
+                else:
+                    gcells += '<td class="gc"><span class="na">확인 중</span></td>'
+            rk = dict(POS).get(norm_role(p["role"]), p["role"])
+            rows += (f'<tr><td class="pn"><span><a href="{gurl(g, "players", player_slug(p) + ".html")}"><b>{esc(p["nickname"])}</b></a>'
+                     f'<small>{esc(p.get("name_kr", ""))} · {esc(rk)}</small></span></td>{gcells}</tr>')
+        gear_tbl = (f'<div class="cmp"><table><thead><tr><th>선수</th><th>마우스</th><th>키보드</th><th>모니터</th>'
+                    f'<th>헤드셋</th></tr></thead><tbody>{rows}</tbody></table></div>')
+        name = tinfo["kr"]
+        title = f"{name} {season} 로스터·선수 장비 — 확정·루머·공석 포지션별 정리"
+        desc = (f"{name} {season} 시즌 로스터 현황(확정 {n_ok}/5)과 이적 루머, 선수별 마우스·키보드·모니터·헤드셋을 "
+                f"포지션별로 정리했습니다. {data['checked']} 갱신.")
+        body = f"""<div class="crumb"><a href="{gurl(g, '')}">{esc(g['short'])} 홈</a> › <a href="{gurl(g, 'stove-' + season + '.html')}">이적시장</a> › {esc(name)}</div>
+<div class="phead"><h1>{esc(name)}</h1><span class="rolechip" style="color:{tinfo['color']}">{season} 로스터 확정 {n_ok}/5</span></div>
+<p class="sub">{data['checked']} 기준. <b>확정</b>=계약 확인·오피셜, <b>미정</b>=기존 선수 거취 미정 또는 루머만 있음, <b>공석</b>=발표된 선수 없음.</p>
+<section><h2>{season} 포지션별 로스터</h2><div class="slots">{cards}</div></section>
+<section><h2>현 로스터 장비</h2>{gear_tbl}</section>
+<p class="note">루머는 매체 보도 기준이며 구단 공식 발표 전까지 확정이 아닙니다.
+다른 팀: {" · ".join(f'<a href="{gurl(g, "teams", c.lower() + ".html")}">{esc(tmeta.get(c, {}).get("kr", c))}</a>' for c in order if c != code)}</p>"""
+        jsonld = {"@context": "https://schema.org", "@type": "WebPage", "name": title, "dateModified": data["checked"],
+                  "about": {"@type": "SportsTeam", "name": name}}
+        out = gdir(g) / "teams" / f"{code.lower()}.html"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(page(g, title, desc, body, gurl(g, "teams", f"{code.lower()}.html"), jsonld,
+                            crumbs=[(f"{g['short']} 홈", gurl(g, "")), ("이적시장", gurl(g, f"stove-{season}.html")),
+                                    (name, gurl(g, "teams", f"{code.lower()}.html"))]), encoding="utf-8")
+        urls.append(gurl(g, "teams", f"{code.lower()}.html"))
+    return urls
+
 def build_transfers(g, teams, tmeta):
     """스토브리그 페이지: 공식 이적·재계약·거취 미정 선수와 그 장비. 루머는 싣지 않는다."""
     data = (load_json("data/transfers.json") or {}).get(g["key"])
@@ -912,6 +1043,7 @@ def build_transfers(g, teams, tmeta):
 <div class="legend"><span class="tag off">오피셜</span> 구단·리그 공식 발표
 <span class="tag rumor">소식통·보도</span> 언론 보도 단계(확정 아님) <span class="tag dead">무산</span></div>
 {sections_top}
+<section><h2>팀별 로스터 현황</h2><nav class="gnav sm">{"".join(f'<a href="{gurl(g, "teams", c.lower() + ".html")}">{esc(tmeta.get(c, {}).get("kr", c))}</a>' for c in (g.get("team_order") or []) if c in teams)}</nav></section>
 <section><h2>FA 대상·거취 미정 ({len(data.get('pending', []))}명)</h2>{table(data.get('pending', []))}</section>
 <section><h2>{season} 계약 확인 ({len(data.get('stay', []))}명)</h2>{table(data.get('stay', []))}</section>
 <p class="note">루머·보도는 매체명이 확인된 기사만 싣고, 커뮤니티 찌라시는 싣지 않습니다. 보도 내용은 해당 매체의 주장이며
@@ -944,6 +1076,8 @@ def build_game(g):
     stove = build_transfers(g, teams, tmeta)
     if stove:
         urls.append(stove)
+    team_urls = build_teams(g, teams, tmeta, usage)
+    urls += team_urls
     missing = [(p["nickname"], player_slug(p), tmeta.get(code, {}).get("kr", code))
                for code in order for p in teams.get(code, [])
                if not any(p.get("gear", {}).get(k) and p["gear"][k].get("value") for k, _ in GEAR_LABELS)]
@@ -1000,7 +1134,9 @@ def build_game(g):
                       "about": {"@type": "Person", "name": who, "alternateName": nick,
                                 "affiliation": {"@type": "SportsTeam", "name": tinfo["kr"]},
                                 "jobTitle": f"프로게이머({role})"}}
-            body = f"""<div class="crumb"><a href="{gurl(g, '')}">{esc(g['short'])} 홈</a> › {tinfo['kr']}</div>
+            tcrumb = (f'<a href="{gurl(g, "teams", code.lower() + ".html")}">{tinfo["kr"]}</a>'
+                      if (load_json("data/transfers.json") or {}).get(g["key"]) else tinfo["kr"])
+            body = f"""<div class="crumb"><a href="{gurl(g, '')}">{esc(g['short'])} 홈</a> › {tcrumb}</div>
 <div class="phead"><h1>{esc(nick)}</h1><span class="kr">{esc(kr)}</span>
 <span class="rolechip">{tinfo['kr']} · {role}</span></div>
 {note_html}
@@ -1039,8 +1175,10 @@ def build_game(g):
             cells += (f'<a class="pcell" href="{gurl(g, "players", player_slug(p) + ".html")}">'
                       f'<div class="nick">{esc(p["nickname"])}</div>'
                       f'<div class="meta">{esc(p.get("name_kr", ""))}{role_suffix(roles, p)}</div>{extra}</a>')
+        tlink = (f' <a class="tlink" href="{gurl(g, "teams", code.lower() + ".html")}">로스터·루머 →</a>'
+                 if team_urls else "")
         blocks += (f'<div class="teamblock"><div class="teamname">'
-                   f'<i style="background:{tinfo["color"]}"></i>{tinfo["kr"]}</div>'
+                   f'<i style="background:{tinfo["color"]}"></i>{tinfo["kr"]}{tlink}</div>'
                    f'<div class="pgrid">{cells}</div></div>')
 
     n_players = sum(len(v) for v in teams.values())

@@ -198,6 +198,23 @@ tr.dead { opacity: .55; }
 .cmp td small { display: block; }
 .legend { font-size: 11.5px; color: var(--mut); margin: 6px 0 4px; line-height: 2; }
 .h2s { font-size: 11px; color: var(--mut); font-weight: 500; margin-left: 6px; }
+.slots { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
+.slot { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
+.slot.ok { border-color: rgba(81,207,102,.45); }
+.slot.tbd { border-color: rgba(255,224,102,.35); }
+.slot.empty { border-style: dashed; }
+.slot .sh { display: flex; justify-content: space-between; font-weight: 900; font-size: 13px; margin-bottom: 6px; }
+.st { font-size: 10.5px; padding: 1px 8px; border-radius: 999px; }
+.st.ok { background: #51CF66; color: #0E1117; }
+.st.tbd { color: #FFE066; border: 1px solid rgba(255,224,102,.5); }
+.st.empty { color: #868E96; border: 1px dashed #495057; }
+.sp { padding: 5px 0; border-top: 1px dashed var(--line); font-size: 13.5px; }
+.sp:first-of-type { border-top: 0; }
+.sp small { display: block; font-size: 11px; color: var(--mut); }
+.sp.rum b::before { content: "🟡 "; } .sp.out b::before { content: "↗ "; } .sp.pend b { color: var(--mut); }
+.sp.none { color: #566070; font-size: 12px; }
+.tlink { margin-left: auto; font-size: 11.5px; color: var(--mut); font-weight: 700; }
+.tlink:hover { color: var(--gold); }
 .cmp td.gc { font-size: 12.5px; }
 .cmp td.gc .buy { margin-top: 4px; display: inline-block; }
 .cmp a.src { color: #7A8290; border-bottom: 1px dotted #566070; }
@@ -227,7 +244,7 @@ details.faq p { font-size: 13px; color: var(--mut); margin-top: 6px; }
 <nav class="gnav"><a class="on" href="https://dugout26.github.io/prosetup/">LoL · LCK</a><a href="https://dugout26.github.io/prosetup/valorant/">발로란트 · VCT</a><a class="hot" href="https://dugout26.github.io/prosetup/stove-2027.html">🔥 LCK 이적시장</a></nav>
 <p class="disc">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
 <div class="updated">장비 데이터 확인: 2026-08 · 로스터 점검: 2026-11 · 2027 스토브리그 진행 중 — 로스터 확정 시 갱신</div>
-<div class="crumb"><a href="https://dugout26.github.io/prosetup/">LoL 홈</a> › 키움 DRX</div>
+<div class="crumb"><a href="https://dugout26.github.io/prosetup/">LoL 홈</a> › <a href="https://dugout26.github.io/prosetup/teams/krx.html">키움 DRX</a></div>
 <div class="phead"><h1>Aiming</h1><span class="kr">김하람</span>
 <span class="rolechip">키움 DRX · 원딜</span></div>
 

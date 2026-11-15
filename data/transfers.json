@@ -1,5 +1,5 @@
 {
- "_note": "이적시장 탭 데이터. official=구단·리그 공식 발표(이적·영입·재계약), reports=언론·소식통 보도(루머 포함, 매체명·링크 필수, 커뮤니티 찌라시 금지). 보도가 오피셜로 확정되면 official로 옮기고 reports의 status를 '오피셜 확정'으로, 무산되면 '무산'으로. pending=거취 미정, stay=2027 계약 확인.",
+ "_note": "이적시장 탭 데이터. official=구단·리그 공식 발표(이적·영입·재계약), reports=언론·소식통 보도(루머 포함, 매체명·링크 필수, 커뮤니티 찌라시 금지). 보도가 오피셜로 확정되면 official로 옮기고 reports의 status를 '오피셜 확정'으로, 무산되면 '무산'으로. pending=거취 미정, stay=2027 계약 확인. reports·official의 role(top/jungle/mid/adc/support)은 팀 페이지 포지션 칸 배치에 쓰인다.",
  "lol": {
   "season": "2027",
   "checked": "2026-11-15",
@@ -393,7 +393,8 @@
     "grade": "소식통",
     "status": "보도",
     "source": "https://www.sheepesports.com/en/articles/sources-raptor-kellin-and-taeyoon-expected-to-join-kt-rolster-for-lck-2027/en",
-    "note": "BNK 측은 \"타 팀에 접촉을 허락한 적 없다\"는 입장"
+    "note": "BNK 측은 \"타 팀에 접촉을 허락한 적 없다\"는 입장",
+    "role": "jungle"
    },
    {
     "date": "2026-11",
@@ -404,7 +405,8 @@
     "outlet": "Sheep Esports",
     "grade": "소식통",
     "status": "보도",
-    "source": "https://www.sheepesports.com/en/articles/sources-raptor-kellin-and-taeyoon-expected-to-join-kt-rolster-for-lck-2027/en"
+    "source": "https://www.sheepesports.com/en/articles/sources-raptor-kellin-and-taeyoon-expected-to-join-kt-rolster-for-lck-2027/en",
+    "role": "adc"
    },
    {
     "date": "2026-11",
@@ -415,7 +417,8 @@
     "outlet": "Sheep Esports",
     "grade": "소식통",
     "status": "보도",
-    "source": "https://www.sheepesports.com/en/articles/sources-raptor-kellin-and-taeyoon-expected-to-join-kt-rolster-for-lck-2027/en"
+    "source": "https://www.sheepesports.com/en/articles/sources-raptor-kellin-and-taeyoon-expected-to-join-kt-rolster-for-lck-2027/en",
+    "role": "support"
    },
    {
     "date": "2026-10-23",
@@ -427,7 +430,8 @@
     "grade": "관계자 인용",
     "status": "보도",
     "source": "https://www.strafe.com/news/read/deft-reportedly-set-to-join-nongshim-red-force-for-2027-lck-season/",
-    "note": "구단 공식 발표 전"
+    "note": "구단 공식 발표 전",
+    "role": "adc"
    },
    {
     "date": "2026-11",
@@ -438,7 +442,8 @@
     "outlet": "Sheep Esports",
     "grade": "소식통",
     "status": "보도",
-    "source": "https://www.sheepesports.com/en/articles/sources-noah-set-to-join-bnk-fearx-ahead-of-2027-lck-season/en"
+    "source": "https://www.sheepesports.com/en/articles/sources-noah-set-to-join-bnk-fearx-ahead-of-2027-lck-season/en",
+    "role": "adc"
    },
    {
     "date": "2026-11",
@@ -450,7 +455,8 @@
     "grade": "보도",
     "status": "보도",
     "source": "https://clip.dor.gg/en/blog/lck-free-agency-stove-league",
-    "note": "월즈 전 재계약 제안 거절 보도 · 구단은 협상 계속 중이라는 입장"
+    "note": "월즈 전 재계약 제안 거절 보도 · 구단은 협상 계속 중이라는 입장",
+    "role": "top"
    }
   ]
  }
