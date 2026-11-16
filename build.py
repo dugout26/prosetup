@@ -109,6 +109,7 @@ CATS = {k for k, _ in GEAR_LABELS}
 def with_subid(url, track):
     """쿠팡 단축링크에 subId(게임-페이지유형-카테고리) 부착 → 파트너스 리포트에서 지면별 분리.
     (link.coupang.com 리다이렉트가 subid를 그대로 넘기는 것 확인, 2026-11-15)"""
+    return url  # 2026-11-16: subId is baked into coupang_urls deeplinks; appending ?subId= is not recorded
     if "link.coupang.com" not in url or "subId=" in url:
         return url
     parts = track.split("/")
