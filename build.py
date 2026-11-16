@@ -1505,6 +1505,8 @@ def player_summary(g, p, teams):
             faq.append((f"{who} 감도(eDPI)는?", f"DPI {dpi:g} · 인게임 감도 {sval(p, 'in_game_sens'):g} · eDPI {ed:g}입니다."
                         if dpi and sval(p, "in_game_sens") else f"eDPI {ed:g}입니다."))
     elif dpi:
+        core = set(g.get("team_order") or teams)   # 해외 팀(INTL.json)은 리그 평균에서 제외
+        teams = {c: ps for c, ps in teams.items() if c in core}
         same_role = [sval(x, "dpi") for ps in teams.values() for x in ps if ({"bot": "adc"}.get(x["role"], x["role"]) == {"bot": "adc"}.get(p["role"], p["role"])) and sval(x, "dpi")]
         allr = [sval(x, "dpi") for ps in teams.values() for x in ps if sval(x, "dpi")]
         base = same_role if len(same_role) >= 3 else allr
@@ -1619,7 +1621,8 @@ def build_extra_guides():
     if not lol:
         return []
     teams, tmeta = load_players(lol)
-    players = [p for ps in teams.values() for p in ps]
+    core = set(lol.get("team_order") or teams)   # 가이드는 LCK 팀만 (해외 팀 제외)
+    players = [p for c, ps in teams.items() if c in core for p in ps]
     g = dict(lol, status_text=game_status(lol))
     urls = []
     gdir_ = ROOT / "guides"
