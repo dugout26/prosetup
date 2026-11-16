@@ -9,7 +9,8 @@ import hashlib
 import html
 import json
 import re
-from datetime import date
+from datetime import date, datetime, timedelta, timezone
+from email.utils import format_datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -452,6 +453,7 @@ def page(g, title, desc, body, canonical, jsonld=None, noindex=False, crumbs=Non
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{canonical}">
+<link rel="alternate" type="application/rss+xml" title="프로셋업 RSS" href="{BASE_URL}/rss.xml">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:type" content="website">
@@ -484,7 +486,8 @@ def page(g, title, desc, body, canonical, jsonld=None, noindex=False, crumbs=Non
 비공식 팬 사이트입니다. 선수·팀·리그와 무관하며, 장비 정보는 공개 자료를 교차 확인해 정리했습니다.
 잘못된 정보·추가 정보 <a href="{gurl(g, 'submit.html')}" style="color:#7A8290;border-bottom:1px dotted #566070">제보하기</a>
 · <a href="{BASE_URL}/about.html" style="color:#7A8290;border-bottom:1px dotted #566070">사이트 소개·운영 원칙</a>
-· <a href="{BASE_URL}/data.html" style="color:#7A8290;border-bottom:1px dotted #566070">데이터셋</a><br>
+· <a href="{BASE_URL}/data.html" style="color:#7A8290;border-bottom:1px dotted #566070">데이터셋</a>
+· <a href="{BASE_URL}/rss.xml" style="color:#7A8290;border-bottom:1px dotted #566070">RSS</a><br>
 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 </footer>
 </div>
@@ -2190,6 +2193,52 @@ def stamp_lastmod():
     path.write_text(json.dumps(new, ensure_ascii=False, indent=0, sort_keys=True) + "\n", encoding="utf-8")
     return new
 
+def build_rss(urls, lastmod, limit=100):
+    """rss.xml (RSS 2.0) — 내용이 최근 바뀐 주요 페이지 순 (2026-11-16 슬랙: 네이버 서치어드바이저 RSS 제출용).
+    날짜는 data/lastmod.json(페이지 내용 변경일), 같은 날이면 홈·스토브·감도 변환기·가이드·제품·선수 순."""
+    def kind(u):
+        path = u[len(BASE_URL):]
+        if path in ("/", ""): return 0
+        if "stove" in path: return 1
+        if path.startswith("/tools/"): return 2
+        if "/guides/" in path: return 3
+        if path.startswith("/gear/"): return 4
+        if "/players/" in path: return 5
+        return 6
+    kst = timezone(timedelta(hours=9))
+    items = []
+    for i, u in enumerate(dict.fromkeys(urls)):
+        rel = u[len(BASE_URL):].lstrip("/")
+        f = ROOT / (rel + "index.html" if rel == "" or rel.endswith("/") else rel)
+        if not f.exists():
+            continue
+        txt = f.read_text(encoding="utf-8")
+        if 'content="noindex' in txt:
+            continue
+        t = re.search(r"<title>(.*?)</title>", txt, re.S)
+        dsc = re.search(r'<meta name="description" content="([^"]*)"', txt)
+        d = (lastmod.get(u) or {}).get("date") or date.today().isoformat()
+        items.append((d, kind(u), i, u, html.unescape(t.group(1)) if t else u, html.unescape(dsc.group(1)) if dsc else ""))
+    items.sort(key=lambda x: (-int(x[0].replace("-", "")), x[1], x[2]))
+    items = items[:limit]
+    def pub(d):
+        y, m, dd = map(int, d[:10].split("-"))
+        return format_datetime(datetime(y, m, dd, 9, 0, tzinfo=kst))
+    body = "".join(
+        f"<item><title>{esc(t)}</title><link>{u}</link><guid isPermaLink=\"true\">{u}</guid>"
+        f"<pubDate>{pub(d)}</pubDate><description>{esc(ds)}</description></item>\n"
+        for d, _, _, u, t, ds in items)
+    last = pub(items[0][0]) if items else pub(date.today().isoformat())
+    (ROOT / "rss.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n'
+        f"<title>프로셋업 (Prosetup)</title>\n<link>{BASE_URL}/</link>\n"
+        "<description>LCK·발로란트 프로게이머 장비(마우스·키보드·모니터·헤드셋·마우스패드)와 감도 세팅을 공개 자료로 교차 확인해 정리하는 비공식 팬 사이트</description>\n"
+        f"<language>ko</language>\n<lastBuildDate>{last}</lastBuildDate>\n"
+        f'<atom:link href="{BASE_URL}/rss.xml" rel="self" type="application/rss+xml"/>\n'
+        + body + "</channel>\n</rss>\n", encoding="utf-8")
+    print(f"  [rss] rss.xml {len(items)}건")
+
 def build():
     urls = []
     collect_gear()
@@ -2201,6 +2250,7 @@ def build():
     build_404()
     lastmod = stamp_lastmod()
     build_llms()
+    build_rss(urls, lastmod)
     (ROOT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
@@ -2209,6 +2259,7 @@ def build():
         "</urlset>\n", encoding="utf-8")
     (ROOT / "robots.txt").write_text(
         f"# AI용 요약: {BASE_URL}/llms.txt · 전체: {BASE_URL}/llms-full.txt\n"
+        f"# RSS: {BASE_URL}/rss.xml\n"
         f"User-agent: *\nAllow: /\nSitemap: {BASE_URL}/sitemap.xml\n", encoding="utf-8")
     print(f"총 URL {len(urls)}개 · sitemap 갱신")
 
