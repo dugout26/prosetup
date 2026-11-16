@@ -2220,7 +2220,17 @@ def build_rss(urls, lastmod, limit=100):
         d = (lastmod.get(u) or {}).get("date") or date.today().isoformat()
         items.append((d, kind(u), i, u, html.unescape(t.group(1)) if t else u, html.unescape(dsc.group(1)) if dsc else ""))
     items.sort(key=lambda x: (-int(x[0].replace("-", "")), x[1], x[2]))
-    items = items[:limit]
+    # 같은 날 대량 갱신 시 제품 페이지가 100건을 다 채우지 않게 종류별 상한(제품 40·선수 40)
+    cap, seen, picked = {4: 40, 5: 40}, {}, []
+    for it in items:
+        k = it[1]
+        if seen.get(k, 0) >= cap.get(k, limit):
+            continue
+        seen[k] = seen.get(k, 0) + 1
+        picked.append(it)
+    if len(picked) < limit:
+        picked += [it for it in items if it not in picked][:limit - len(picked)]
+    items = sorted(picked, key=lambda x: (-int(x[0].replace("-", "")), x[1], x[2]))[:limit]
     def pub(d):
         y, m, dd = map(int, d[:10].split("-"))
         return format_datetime(datetime(y, m, dd, 9, 0, tzinfo=kst))
