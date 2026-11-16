@@ -57,7 +57,6 @@ SEASON = "2026"   # 제목 연도 = 데이터가 반영한 시즌. 2027 로스�
 # 클릭 분석: GoatCounter 사이트 코드(예: "prosetup"). 채우면 모든 쿠팡 버튼 클릭이
 # coupang/<게임>/<페이지유형>/<선수·카테고리>/<제품> 이벤트로 집계된다. None이면 스크립트 미삽입.
 GOATCOUNTER = None
-# 조회수: 쿠키 없는 비콘 → blog.mound.run/api/hit (날짜·경로·유입 호스트·횟수만, IP·쿠키 저장 안 함). 2026-11-16 사이트 주인 요청.
 GUIDE_CATS = [("keyboard", "키보드"), ("mouse", "마우스"), ("headset", "헤드셋"),
               ("monitor", "모니터"), ("mousepad", "마우스패드")]
 
@@ -347,6 +346,31 @@ a.more:hover { color: var(--gold); }
 details.faq { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin-bottom: 8px; }
 details.faq summary { font-weight: 800; font-size: 14px; cursor: pointer; }
 details.faq p { font-size: 13px; color: var(--mut); margin-top: 6px; }
+.glink { color: inherit; border-bottom: 1px dotted var(--gold); }
+.psum { background: var(--card); border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: 12px; padding: 10px 14px; margin: 10px 0 14px; }
+.psum ul { list-style: none; } .psum li { font-size: 13.5px; line-height: 1.7; }
+.psum a { color: var(--tx); border-bottom: 1px dotted var(--gold); }
+.fullset { background: linear-gradient(90deg, rgba(232,195,107,.12), rgba(232,195,107,.02)); border: 1px solid rgba(232,195,107,.35); border-radius: 14px; padding: 12px 14px; margin-bottom: 16px; }
+.fstit { font-weight: 900; margin-bottom: 6px; } .fstit small { color: var(--mut); font-weight: 500; margin-left: 6px; font-size: 11.5px; }
+.fsrow { display: flex; align-items: center; gap: 8px; padding: 5px 0; border-top: 1px dashed var(--line); font-size: 13px; }
+.fsrow .cat { min-width: 64px; } .fsrow .fsn { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+h3.lg { font-size: 13px; color: var(--mut); margin: 10px 0 6px; }
+.pchips { display: flex; flex-wrap: wrap; gap: 6px; }
+.pchip { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 5px 10px; font-size: 13px; }
+.pchip small { display: block; font-size: 10.5px; color: var(--mut); }
+.pchip:hover { border-color: var(--gold); }
+.tool { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px; margin: 12px 0 18px; }
+.trow { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; }
+.trow label { flex: 1 1 140px; font-size: 12px; color: var(--mut); display: flex; flex-direction: column; gap: 4px; }
+.trow input, .trow select { background: var(--bg); color: var(--tx); border: 1px solid var(--line); border-radius: 8px; padding: 9px 10px; font-size: 15px; }
+.tout { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; }
+.tout div { background: var(--bg); border-radius: 10px; padding: 10px; } .tout small { display: block; font-size: 11px; color: var(--mut); }
+.tout b { font-size: 22px; color: var(--gold); }
+.tipbox code { background: var(--bg); padding: 1px 6px; border-radius: 5px; }
+.tag.comm { color: #FFA94D; border: 1px solid rgba(255,169,77,.5); }
+tr.comm td { background: rgba(255,169,77,.04); }
+.sp.comm b::before { content: "🟠 "; }
+.seen { font-size: 10.5px; color: #7A8290; }
 @media (max-width: 520px) {
   .buy.big { flex: 1 1 100%; text-align: center; }
   .ctahint { flex-basis: 100%; text-align: center; }
@@ -424,7 +448,6 @@ def page(g, title, desc, body, canonical, jsonld=None, noindex=False, crumbs=Non
 </footer>
 </div>
 {f'<script data-goatcounter="https://{GOATCOUNTER}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>' if GOATCOUNTER else ''}
-<script>try{{navigator.sendBeacon("https://blog.mound.run/api/hit",new Blob([JSON.stringify({{p:location.pathname,r:document.referrer}})],{{type:"text/plain"}}))}}catch(e){{}}</script>
 </body>
 </html>"""
 
@@ -448,6 +471,8 @@ def game_verified(g):
     return raw_meta(g)[0] or "-"
 
 def game_status(g):
+    if g.get("status_text"):
+        return g["status_text"]
     gear, roster = raw_meta(g)
     txt = f"장비 데이터 확인: {gear or '-'}"
     if roster and roster != gear:
@@ -557,7 +582,7 @@ def item_html(cat_key, cat_label, entry, ctx="", track="", usage=None, tournamen
                  f'<span class="conf {conf}">신뢰도 {CONF_KR.get(conf, conf)}</span>')
     return (f'<div class="item">{thumb}<div class="imain">'
             f'<span class="cat">{cat_label}</span>'
-            f'<span class="model">{esc(name)}</span>{badge}'
+            f'<span class="model">{esc(name) if conf == "event" else gear_link(cat_key, name)}</span>{badge}'
             f'{conf_chip}</div>'
             f'{spec}{cta}{alt_html(reason, alts, ctx, track)}{budget_html(cat_key, ctx, track)}{pc}</div>')
 
@@ -881,7 +906,7 @@ def build_teams(g, teams, tmeta, usage):
     order = [c for c in (g.get("team_order") or []) if c in teams]
     for code in order:
         tinfo = tmeta.get(code, {"kr": code, "color": "#888"})
-        slots = {r: {"ok": [], "pending": [], "rumor": [], "out": []} for r, _ in POS}
+        slots = {r: {"ok": [], "pending": [], "rumor": [], "comm": [], "out": []} for r, _ in POS}
         for x in data.get("stay", []):
             if x["team"] == code and x["nickname"].casefold() not in leaving and role_of(x) in slots:
                 slots[role_of(x)]["ok"].append((x["nickname"], x.get("status", "계약 확인"), x.get("source")))
@@ -896,10 +921,14 @@ def build_teams(g, teams, tmeta, usage):
         for x in data.get("reports", []):
             if x.get("status") != "보도" or role_of(x) not in slots:
                 continue
+            cm = x.get("tier") == "community"
+            if cm and not (x.get("source") and x.get("outlet")):
+                continue
             if x.get("to") == code:
-                slots[role_of(x)]["rumor"].append((x["nickname"], f'{tk(x.get("from", ""))}에서 · {x.get("outlet", "")}', x.get("source")))
+                slots[role_of(x)]["comm" if cm else "rumor"].append(
+                    (x["nickname"], f'{tk(x.get("from", ""))}에서 · {x.get("outlet", "")}', x.get("source")))
             elif x.get("from") == code:
-                slots[role_of(x)]["out"].append((x["nickname"], f'{tk(x.get("to", ""))}행 보도 · {x.get("outlet", "")}', x.get("source")))
+                slots[role_of(x)]["out"].append((x["nickname"], f'{tk(x.get("to", ""))}행 {"썰" if cm else "보도"} · {x.get("outlet", "")}', x.get("source")))
 
         def chip(n, sub, src, cls):
             s_ = f' <a class="src" href="{esc(src)}" rel="nofollow">근거</a>' if src else ""
@@ -911,14 +940,15 @@ def build_teams(g, teams, tmeta, usage):
             if sl["ok"]:
                 n_ok += 1
                 state, scls = "확정", "ok"
-            elif sl["pending"] or sl["rumor"]:
+            elif sl["pending"] or sl["rumor"] or sl["comm"]:
                 state, scls = "미정", "tbd"
             else:
                 state, scls = "공석", "empty"
             inner = "".join(chip(n, sub, src, "ok") for n, sub, src in sl["ok"])
             inner += "".join(chip(n, sub, src, "pend") for n, sub, src in sl["pending"])
             inner += "".join(chip(n, "이적설 — " + sub, src, "out") for n, sub, src in sl["out"])
-            inner += "".join(chip(n, "루머 — " + sub, src, "rum") for n, sub, src in sl["rumor"])
+            inner += "".join(chip(n, "보도 — " + sub, src, "rum") for n, sub, src in sl["rumor"])
+            inner += "".join(chip(n, "썰(미확인) — " + sub, src, "comm") for n, sub, src in sl["comm"])
             if not inner:
                 inner = '<div class="sp none">발표된 선수 없음</div>'
             cards += (f'<div class="slot {scls}"><div class="sh"><span>{rk}</span>'
@@ -946,10 +976,10 @@ def build_teams(g, teams, tmeta, usage):
                 f"포지션별로 정리했습니다. {data['checked']} 갱신.")
         body = f"""<div class="crumb"><a href="{gurl(g, '')}">{esc(g['short'])} 홈</a> › <a href="{gurl(g, 'stove-' + season + '.html')}">이적시장</a> › {esc(name)}</div>
 <div class="phead"><h1>{esc(name)}</h1><span class="rolechip" style="color:{tinfo['color']}">{season} 로스터 확정 {n_ok}/5</span></div>
-<p class="sub">{data['checked']} 기준. <b>확정</b>=계약 확인·오피셜, <b>미정</b>=기존 선수 거취 미정 또는 루머만 있음, <b>공석</b>=발표된 선수 없음.</p>
+<p class="sub">{data['checked']} 기준. <b>확정</b>=계약 확인·오피셜, <b>미정</b>=기존 선수 거취 미정 또는 보도·썰만 있음, <b>공석</b>=발표된 선수 없음.</p>
 <section><h2>{season} 포지션별 로스터</h2><div class="slots">{cards}</div></section>
 <section><h2>현 로스터 장비</h2>{gear_tbl}</section>
-<p class="note">루머는 매체 보도 기준이며 구단 공식 발표 전까지 확정이 아닙니다.
+<p class="note">🟡 보도는 매체 기사, 🟠 썰은 커뮤니티·방송 발언(미확인)이며 구단 공식 발표 전까지 확정이 아닙니다.
 다른 팀: {" · ".join(f'<a href="{gurl(g, "teams", c.lower() + ".html")}">{esc(tmeta.get(c, {}).get("kr", c))}</a>' for c in order if c != code)}</p>"""
         jsonld = {"@context": "https://schema.org", "@type": "WebPage", "name": title, "dateModified": data["checked"],
                   "about": {"@type": "SportsTeam", "name": name}}
@@ -1020,21 +1050,35 @@ def build_transfers(g, teams, tmeta):
         f'<a class="src" href="{esc(x["source"])}" rel="nofollow">출처</a></td></tr>' for x in off)
     off_html = (f'<div class="cmp"><table><tbody>{off_rows}</tbody></table></div>' if off_rows else
                 '<div class="tipbox">아직 공식 발표가 없습니다.</div>')
-    reps = sorted(data.get("reports", []), key=lambda x: x.get("date", ""), reverse=True)
-    rep_rows = ""
-    for x in reps:
-        st = x.get("status", "보도")
-        cls = {"오피셜 확정": "off", "무산": "dead"}.get(st, "rumor")
-        rep_rows += (f'<tr class="{cls}"><td class="dt">{esc(x.get("date", ""))}</td><td class="pn">{who_cell(x)}</td>'
-                     f'<td><span class="tag {cls}">{esc(st if st != "보도" else x.get("grade", "보도"))}</span>'
-                     f'<small>{esc(tname(x.get("from", "")))} → <b>{esc(tname(x.get("to", "")))}</b></small>'
-                     f'<small>{esc(x.get("note", ""))}</small>'
-                     f'<a class="src" href="{esc(x["source"])}" rel="nofollow">{esc(x.get("outlet", "출처"))}</a></td></tr>')
-    rep_html = (f'<div class="cmp"><table><tbody>{rep_rows}</tbody></table></div>' if rep_rows else
+    reps = sorted(data.get("reports", []), key=lambda x: x.get("seen_at") or x.get("date", ""), reverse=True)
+
+    def rep_rows(lst):
+        out = ""
+        for x in lst:
+            st = x.get("status", "보도")
+            comm = x.get("tier") == "community"
+            cls = {"오피셜 확정": "off", "무산": "dead"}.get(st, "comm" if comm else "rumor")
+            lab = st if st != "보도" else ("썰·미확인" if comm else x.get("grade", "보도"))
+            seen = x.get("seen_at") or x.get("date", "")
+            out += (f'<tr class="{cls}"><td class="dt">{esc(x.get("date", ""))}</td><td class="pn">{who_cell(x)}</td>'
+                    f'<td><span class="tag {cls}">{esc(lab)}</span>'
+                    f'<small>{esc(tname(x.get("from", "")))} → <b>{esc(tname(x.get("to", "")))}</b></small>'
+                    f'<small>{esc(x.get("note", ""))}</small>'
+                    f'<a class="src" href="{esc(x["source"])}" rel="nofollow">{esc(x.get("outlet", "출처"))}</a>'
+                    f' <span class="seen">확인 {esc(seen)}</span></td></tr>')
+        return out
+    media = [x for x in reps if x.get("tier") != "community"]
+    comm = [x for x in reps if x.get("tier") == "community" and x.get("source") and x.get("outlet")]
+    rep_rows_m, rep_rows_c = rep_rows(media), rep_rows(comm)
+    rep_html = (f'<div class="cmp"><table><tbody>{rep_rows_m}</tbody></table></div>' if rep_rows_m else
                 '<div class="tipbox">수집된 보도가 없습니다.</div>')
+    comm_html = (f'<div class="cmp"><table><tbody>{rep_rows_c}</tbody></table></div>' if rep_rows_c else
+                 '<div class="tipbox">수집된 썰이 아직 없습니다. FA 개장(11/17) 이후 유력 썰쟁이·커뮤니티 글을 출처와 함께 모읍니다.</div>')
     sec_off = f'<section><h2>🔴 오피셜</h2>{off_html}</section>'
-    sec_rep = (f'<section><h2>🟡 루머·보도 <small class="h2s">매체 보도 기준 · 오피셜이 뜨면 옮깁니다</small></h2>'
-               f'{rep_html}</section>')
+    sec_rep = (f'<section><h2>🟡 매체 보도 <small class="h2s">기자·매체 기사 · 오피셜이 뜨면 옮깁니다</small></h2>'
+               f'{rep_html}</section>'
+               f'<section><h2>🟠 커뮤니티·썰 <small class="h2s">미확인 · 작성자·원문 링크·확인 시각 표기</small></h2>'
+               f'{comm_html}</section>')
     # 이적·영입 오피셜이 나오기 전엔 루머가 더 궁금한 소식이라 위로
     has_move = any(x.get("type") != "재계약" for x in off)
     sections_top = sec_off + sec_rep if has_move else sec_rep + sec_off
@@ -1060,15 +1104,16 @@ def build_transfers(g, teams, tmeta):
 <h1>{esc(title)}</h1>
 <p class="sub">최근 갱신 {updated} · FA 시장 {fa_at} 개시. 선수 이름을 누르면 장비·감도 전체를 볼 수 있습니다.</p>
 <div class="legend"><span class="tag off">오피셜</span> 구단·리그 공식 발표
-<span class="tag rumor">소식통·보도</span> 언론 보도 단계(확정 아님) <span class="tag dead">무산</span></div>
+<span class="tag rumor">소식통·보도</span> 언론 보도 단계(확정 아님)
+<span class="tag comm">썰·미확인</span> 썰쟁이·커뮤니티 글(사실 확인 안 됨) <span class="tag dead">무산</span></div>
 {log_html}
 {sections_top}
 <section><h2>팀별 로스터 현황</h2><nav class="gnav sm">{"".join(f'<a href="{gurl(g, "teams", c.lower() + ".html")}">{esc(tmeta.get(c, {}).get("kr", c))}</a>' for c in (g.get("team_order") or []) if c in teams)}</nav></section>
 <section><h2>FA 대상·거취 미정 ({len(data.get('pending', []))}명)</h2>{table(data.get('pending', []))}</section>
 <section><h2>{season} 계약 확인 ({len(data.get('stay', []))}명)</h2>{table(data.get('stay', []))}</section>
 {sec_coach}
-<p class="note">루머·보도는 매체명이 확인된 기사만 싣고, 커뮤니티 찌라시는 싣지 않습니다. 보도 내용은 해당 매체의 주장이며
-구단 공식 발표 전까지 확정이 아닙니다.</p>"""
+<p class="note">🟡 보도는 매체명이 확인된 기사, 🟠 썰은 작성자·원문 링크가 있는 커뮤니티·방송 발언만 싣습니다.
+둘 다 해당 출처의 주장이며 구단 공식 발표 전까지 확정이 아닙니다. 사생활·비방성 글은 싣지 않습니다. 삭제 요청은 제보하기로 보내주세요.</p>"""
     jsonld = {"@context": "https://schema.org", "@type": "WebPage", "name": title, "dateModified": data["checked"]}  # ISO 날짜 유지
     out = gdir(g) / slug_page
     out.write_text(page(g, title, desc, body, gurl(g, slug_page), jsonld,
@@ -1127,7 +1172,7 @@ def build_game(g):
                                           g.get("tournament_gear"))
                                 for key, label in GEAR_LABELS)
             guide_links = " · ".join(f'<a href="{gurl(g, "guides", k + ".html")}">{g["league"]} {l} 순위</a>'
-                                     for k, l in GUIDE_CATS[:3])
+                                     for k, l in GUIDE_CATS[:3]) + f' · <a href="{BASE_URL}/tools/sens.html">감도 변환기</a>'
             set_html = ""
             for key, label in sets:
                 e = setting.get(key)
@@ -1145,6 +1190,7 @@ def build_game(g):
             srcs_html = ("<div class='srcs'>출처: " +
                          " · ".join(f'<a href="{esc(s)}" rel="nofollow">{esc(s.split("//")[-1].split("/")[0])}</a>'
                                     for s in srcs) + "</div>") if srcs else ""
+            summary_html, faq_html = player_summary(g, p, teams)
             note = p.get("note")
             note_html = f'<p class="note">{esc(note)}</p>' if note else ""
             empty_html = ("" if has_any else
@@ -1161,8 +1207,11 @@ def build_game(g):
 <div class="phead"><h1>{esc(nick)}</h1><span class="kr">{esc(kr)}</span>
 <span class="rolechip">{tinfo['kr']} · {role}</span></div>
 {note_html}
+{summary_html}
+{fullset_html(g, p, slug)}
 <section><h2>장비</h2><div class="gear">{gear_html}</div>{empty_html}</section>
 <section><h2>인게임 세팅</h2><div class="settings">{set_html}</div></section>
+{faq_html}
 <p class="more">다른 프로들은 뭘 쓸까? {guide_links}</p>
 {srcs_html}"""
             written.add(f"{slug}.html")
@@ -1210,6 +1259,7 @@ def build_game(g):
 <a class="rankbanner" href="{gurl(g, 'rankings.html')}">🏆 프로들이 가장 많이 쓰는 장비 랭킹
 <small>{n_players}명 데이터 집계 — 키보드·마우스·헤드셋 사용률 TOP 비교표</small></a>
 {guide_nav(g)}
+{tools_nav()}
 {stove_banner}
 <a class="rankbanner" href="{gurl(g, 'submit.html')}" style="background:linear-gradient(90deg,rgba(255,255,255,.07),transparent);border-color:rgba(255,255,255,.16)">📮 아는 장비 정보 제보하기
 <small>근거 자료와 함께 보내주시면 확인 후 반영합니다</small></a>
@@ -1231,14 +1281,483 @@ def build_game(g):
     print(f"  [{g['key']}] 선수 {n_players}명 + 인덱스·랭킹·제보")
     return urls
 
+
+# ───────────── 제품 페이지 · 도구 · 가이드 (2026-11-16 슬랙 2번 확장) ─────────────
+COLOR_RE = re.compile(r"\s*[\(\[][^\)\]]*[\)\]]\s*$")
+GEAR_MIN = 3            # 게임 합산 이 인원 이상 쓰는 제품만 페이지 생성 (얇은 페이지 방지)
+GEAR = {}               # (cat, base) -> {"base", "cat", "variants": {name: count}, "users": [...]}
+GEAR_URL = {}           # (cat, base) -> url
+
+def model_base(name):
+    """색상·에디션 괄호 제거 → 같은 모델로 합산 (예: Superlight 2 (Magenta) → Superlight 2)."""
+    return COLOR_RE.sub("", name or "").strip()
+
+def prod_name(value):
+    pr = CATALOG.get(value)
+    return pr["name"] if pr else value
+
+def gear_key(cat, value):
+    return (cat, model_base(prod_name(value)))
+
+def gear_link(cat, value, text=None, cls="glink"):
+    u = GEAR_URL.get(gear_key(cat, value))
+    t = esc(text if text is not None else value)
+    return f'<a class="{cls}" href="{u}">{t}</a>' if u else t
+
+def site_g(key, status):
+    """게임에 속하지 않는 사이트 공용 페이지용 g (루트 경로, LoL 탭 설정 재사용)."""
+    base = GAMES_CFG["games"][GAMES_CFG["order"][0]]
+    return dict(base, key=key, path="", status_text=status)
+
+def all_games():
+    return [dict(GAMES_CFG["games"][k], key=k) for k in GAMES_CFG["order"]]
+
+def collect_gear():
+    """모든 게임 선수의 장비를 모델 단위로 집계 (제품 페이지·선수 요약·도구가 공유)."""
+    GEAR.clear(); GEAR_URL.clear()
+    for g in all_games():
+        teams, tmeta = load_players(g)
+        for code, ps in teams.items():
+            for p in ps:
+                for cat, _ in GEAR_LABELS:
+                    e = (p.get("gear") or {}).get(cat)
+                    if not (e and e.get("value")):
+                        continue
+                    k = gear_key(cat, e["value"])
+                    d = GEAR.setdefault(k, {"base": k[1], "cat": cat, "variants": {}, "users": []})
+                    n = prod_name(e["value"])
+                    d["variants"][n] = d["variants"].get(n, 0) + 1
+                    d["users"].append({"game": g["key"], "league": g["league"], "nick": p["nickname"],
+                                       "slug": player_slug(p), "team": tmeta.get(code, {}).get("kr", code),
+                                       "role": g["roles"].get(p["role"], p["role"]),
+                                       "url": gurl(g, "players", player_slug(p) + ".html")})
+    seen = set()
+    for k, d in GEAR.items():
+        if len(d["users"]) >= GEAR_MIN:
+            s = slugify(d["base"])
+            if s in seen:
+                s = f"{s}-{k[0]}"
+            seen.add(s)
+            d["slug"] = s
+            GEAR_URL[k] = f"{BASE_URL}/gear/{s}.html"
+
+def gear_main_prod(d):
+    """대표 제품: 쿠팡 링크 있는 변형 중 사용자 많은 것 → 없으면 최다 사용 변형."""
+    vs = sorted(d["variants"].items(), key=lambda kv: -kv[1])
+    for n, _ in vs:
+        if buy_url(BY_NAME.get(n, {})):
+            return BY_NAME[n]
+    return BY_NAME.get(vs[0][0], {"name": vs[0][0], "category": d["cat"]})
+
+def cat_label(cat):
+    return dict(GEAR_LABELS).get(cat, cat)
+
+def build_gear_pages():
+    out_dir = ROOT / "gear"
+    out_dir.mkdir(exist_ok=True)
+    g = site_g("gear", f"LCK·VCT 선수 장비 합산 · 장비 데이터 확인: {max(game_verified(x) for x in all_games())}")
+    ctx = "gear_page"
+    urls, written = [], set()
+    pages = sorted([d for k, d in GEAR.items() if k in GEAR_URL], key=lambda d: -len(d["users"]))
+    by_cat = {}
+    for d in pages:
+        by_cat.setdefault(d["cat"], []).append(d)
+    usage_like = {c: [(gear_main_prod(d), d["users"]) for d in lst] for c, lst in by_cat.items()}
+    for d in pages:
+        cat, lab, n = d["cat"], cat_label(d["cat"]), len(d["users"])
+        rank = by_cat[cat].index(d) + 1
+        prod = gear_main_prod(d)
+        note = note_for(prod, d["base"]) or note_for({"name": d["base"]})
+        track = f"gear/page/{d['slug']}/{cat}"
+        leagues = {}
+        for u in d["users"]:
+            leagues.setdefault(u["league"], []).append(u)
+        lg_txt = " · ".join(f"{lg} {len(us)}명" for lg, us in leagues.items())
+        th = (f'<img class="thumb" src="{esc(prod["image"])}" alt="{esc(d["base"])}" loading="lazy" width="62" height="62">'
+              if prod.get("image") else "")
+        spec = f'<div class="specline">{esc(note["spec"])}</div>' if note and note.get("spec") else ""
+        btn = buy_btn(prod, ctx, track, "쿠팡 최저가 확인", "buy big")
+        cta = (f'<div class="ctarow">{btn}<span class="ctahint">가격·로켓배송 여부는 쿠팡에서 실시간 확인</span></div>'
+               if btn else "")
+        reason, alts = alternatives(prod, d["base"], cat, usage_like)
+        pc = ""
+        if note and (note.get("pros") or note.get("cons")):
+            lis = "".join(f'<li class="pro">{esc(x)}</li>' for x in note.get("pros", []))
+            lis += "".join(f'<li class="con">{esc(x)}</li>' for x in note.get("cons", []))
+            pc = f'<ul class="pc">{lis}</ul>'
+        card = (f'<div class="item gcard">{th}<div class="imain"><span class="cat">{lab} 사용률 {rank}위</span>'
+                f'<span class="model">{esc(d["base"])}</span></div>{spec}{pc}{cta}'
+                f'{alt_html(reason, alts, ctx, track)}</div>')
+        var_html = ""
+        if len(d["variants"]) > 1:
+            rows = ""
+            for vn, c in sorted(d["variants"].items(), key=lambda kv: -kv[1]):
+                vp = BY_NAME.get(vn, {})
+                rows += (f'<tr><td>{esc(vn)}</td><td class="num">{c}명</td>'
+                         f'<td>{buy_btn(vp, ctx, track + "/variant", "최저가", "buy sm") if vp else ""}</td></tr>')
+            var_html = (f'<section><h2>색상·에디션별</h2><div class="cmp"><table><tbody>{rows}</tbody></table></div>'
+                        f'<p class="note">색상·에디션만 다른 제품은 같은 모델로 합산했습니다.</p></section>')
+        who = ""
+        for lg, us in leagues.items():
+            chips = "".join(f'<a class="pchip" href="{u["url"]}"><b>{esc(u["nick"])}</b><small>{esc(u["team"])}'
+                            f'{" · " + esc(u["role"]) if u["role"] else ""}</small></a>'
+                            for u in sorted(us, key=lambda u: u["nick"].casefold()))
+            who += f'<h3 class="lg">{esc(lg)} {len(us)}명</h3><div class="pchips">{chips}</div>'
+        others = [x for x in by_cat[cat] if x is not d][:6]
+        oth = " · ".join(f'<a href="{GEAR_URL[(x["cat"], x["base"])]}">{esc(x["base"])}</a> ({len(x["users"])}명)'
+                         for x in others)
+        title = f"{d['base']} 쓰는 프로게이머 {n}명 — {' · '.join(leagues)} 선수 목록 ({SEASON})"
+        desc = (f"{d['base']}를 실제로 쓰는 프로 선수 {n}명({lg_txt}). {lab} 사용률 {rank}위. "
+                f"{note['spec'] + '. ' if note and note.get('spec') else ''}선수별 페이지와 쿠팡 최저가 링크.")
+        body = f"""<div class="crumb"><a href="{BASE_URL}/">홈</a> › <a href="{BASE_URL}/gear/">프로 사용 장비</a> › {esc(lab)}</div>
+<h1>{esc(d['base'])} 쓰는 프로게이머</h1>
+<p class="sub">데이터가 있는 프로 선수 중 <b>{n}명</b>이 사용합니다({esc(lg_txt)}). 프로 {lab} 사용률 {rank}위.</p>
+<section><div class="gear">{card}</div></section>
+<section><h2>사용 선수 {n}명</h2>{who}</section>
+{var_html}
+<section><h2>다른 인기 {esc(lab)}</h2><p class="more">{oth}</p></section>
+<p class="note">선수별 출처와 확인 시점은 각 선수 페이지에 있습니다. 대회 지급 장비는 집계에서 뺐습니다.</p>"""
+        jsonld = {"@context": "https://schema.org", "@type": "WebPage", "name": title,
+                  "about": {"@type": "Thing", "name": d["base"]}}
+        fn = f"{d['slug']}.html"
+        written.add(fn)
+        (out_dir / fn).write_text(page(g, title, desc, body, GEAR_URL[(cat, d["base"])], jsonld,
+                                       crumbs=[("홈", BASE_URL + "/"), ("프로 사용 장비", BASE_URL + "/gear/"),
+                                               (d["base"], GEAR_URL[(cat, d["base"])])]), encoding="utf-8")
+        urls.append(GEAR_URL[(cat, d["base"])])
+    for f in out_dir.glob("*.html"):
+        if f.name not in written and f.name != "index.html":
+            f.unlink()
+    # 인덱스
+    secs = ""
+    for cat, lab in GEAR_LABELS:
+        lst = by_cat.get(cat, [])
+        if not lst:
+            continue
+        rows = "".join(f'<tr><td class="rk">{i}</td><td><a href="{GEAR_URL[(cat, x["base"])]}"><b>{esc(x["base"])}</b></a></td>'
+                       f'<td class="num">{len(x["users"])}명</td></tr>' for i, x in enumerate(lst, 1))
+        secs += (f'<section><h2>{lab} ({len(lst)}종)</h2><div class="cmp"><table><tbody>{rows}</tbody></table></div></section>')
+    title = f"프로게이머가 쓰는 장비 {len(pages)}종 — 제품별 사용 선수 목록 ({SEASON})"
+    desc = f"LCK·VCT 프로 선수 {GEAR_MIN}명 이상이 쓰는 마우스·키보드·모니터·헤드셋·마우스패드 {len(pages)}종과 각 제품을 쓰는 선수 목록."
+    body = f"""<div class="crumb"><a href="{BASE_URL}/">홈</a> › 프로 사용 장비</div>
+<h1>{esc(title)}</h1>
+<p class="sub">제품 이름을 누르면 그 제품을 쓰는 선수 전체와 최저가 링크가 나옵니다. 색상만 다른 제품은 합산했습니다.</p>
+{tools_nav()}
+{secs}"""
+    (out_dir / "index.html").write_text(page(g, title, desc, body, BASE_URL + "/gear/",
+                                             crumbs=[("홈", BASE_URL + "/"), ("프로 사용 장비", BASE_URL + "/gear/")]),
+                                        encoding="utf-8")
+    print(f"  [gear] 제품 페이지 {len(pages)}개")
+    return [BASE_URL + "/gear/"] + urls
+
+def tools_nav(cur=None):
+    items = [("gear", BASE_URL + "/gear/", "제품별 사용 선수"), ("sens", BASE_URL + "/tools/sens.html", "감도 변환기"),
+             ("accel", BASE_URL + "/guides/mouse-acceleration.html", "마우스 가속 끄기"),
+             ("monitor", BASE_URL + "/guides/lol-monitor.html", "LoL 모니터 가이드"),
+             ("adc", BASE_URL + "/guides/adc-mouse.html", "원딜 마우스")]
+    return '<nav class="gnav sm">' + "".join(
+        f'<a{" class=on" if k == cur else ""} href="{u}">{l}</a>' for k, u, l in items) + '</nav>'
+
+def num(v):
+    try:
+        return float(str(v).replace(",", ""))
+    except (TypeError, ValueError):
+        return None
+
+def sval(p, key):
+    e = (p.get("settings") or {}).get(key)
+    return num(e.get("value")) if isinstance(e, dict) else None
+
+def player_summary(g, p, teams):
+    """선수 페이지 상단 요약 3줄 + 같은 장비 선수 + 보이는 FAQ (데이터에서만 생성)."""
+    gear = p.get("gear") or {}
+    who = p.get("name_kr") or p["nickname"]
+    lines, faq = [], []
+    m = (gear.get("mouse") or {}).get("value")
+    if m:
+        d = GEAR.get(gear_key("mouse", m))
+        same = [u for u in (d or {}).get("users", []) if u["slug"] != player_slug(p) or u["game"] != g["key"]]
+        lg = [u for u in same if u["game"] == g["key"]]
+        ml = gear_link("mouse", m, model_base(prod_name(m)))
+        if lg:
+            lines.append(f'마우스는 {ml} — {g["league"]}에서 {len(lg)}명, 전체 프로 {len(same)}명이 같은 모델을 씁니다.')
+        elif same:
+            lines.append(f'마우스는 {ml} — {g["league"]}에선 혼자 쓰고, 다른 리그 프로 {len(same)}명이 같은 모델을 씁니다.')
+        else:
+            lines.append(f'마우스는 {ml} — 데이터가 있는 프로 중 이 모델을 쓰는 건 이 선수뿐입니다.')
+        if lg:
+            ch = " · ".join(f'<a href="{u["url"]}">{esc(u["nick"])}</a>' for u in lg[:6])
+            lines.append(f"같은 마우스: {ch}{' 외 ' + str(len(lg) - 6) + '명' if len(lg) > 6 else ''}")
+        faq.append((f"{who} 마우스 뭐 써요?", f"{prod_name(m)}입니다. 출처는 아래 장비 카드와 페이지 하단에 있습니다."))
+    dpi = sval(p, "dpi")
+    if g["key"] == "valorant":
+        ed = sval(p, "edpi") or (dpi * sval(p, "in_game_sens") if dpi and sval(p, "in_game_sens") else None)
+        pool = [x for ps in teams.values() for x in ps]
+        eds = [v for v in ((sval(x, "edpi") or ((sval(x, "dpi") or 0) * (sval(x, "in_game_sens") or 0)) or None)
+                           for x in pool) if v]
+        if ed and eds:
+            avg = sum(eds) / len(eds)
+            diff = round(100 * (ed - avg) / avg)
+            cm = 2.54 * 360 / (ed * 0.07)
+            lines.append(f"eDPI {ed:g} (360° 회전 {cm:.1f}cm) — VCT 평균 {avg:.0f}보다 "
+                         f"{'높은' if diff > 0 else '낮은'} 감도({diff:+d}%). "
+                         f'<a href="{BASE_URL}/tools/sens.html">내 감도와 비교 →</a>')
+            faq.append((f"{who} 감도(eDPI)는?", f"DPI {dpi:g} · 인게임 감도 {sval(p, 'in_game_sens'):g} · eDPI {ed:g}입니다."
+                        if dpi and sval(p, "in_game_sens") else f"eDPI {ed:g}입니다."))
+    elif dpi:
+        same_role = [sval(x, "dpi") for ps in teams.values() for x in ps if ({"bot": "adc"}.get(x["role"], x["role"]) == {"bot": "adc"}.get(p["role"], p["role"])) and sval(x, "dpi")]
+        allr = [sval(x, "dpi") for ps in teams.values() for x in ps if sval(x, "dpi")]
+        base = same_role if len(same_role) >= 3 else allr
+        role = g["roles"].get(p["role"], "선수") if len(same_role) >= 3 else "전체"
+        if base:
+            avg = sum(base) / len(base)
+            lines.append(f"DPI {dpi:g} — {g['league']} {role} 평균 {avg:.0f}({len(base)}명 기준)"
+                         f"{'보다 높음' if dpi > avg * 1.05 else '보다 낮음' if dpi < avg * 0.95 else '과 비슷'}.")
+        faq.append((f"{who} DPI는?", f"{dpi:g}입니다." + (f" 인게임 마우스 속도는 {sval(p, 'in_game_sens'):g}." if sval(p, "in_game_sens") is not None else "")))
+    k = (gear.get("keyboard") or {}).get("value")
+    if k:
+        faq.append((f"{who} 키보드는?", f"{prod_name(k)}입니다."))
+    faq_html = "".join(f'<details class="faq"><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q, a in faq)
+    return ((f'<div class="psum"><ul>{"".join(f"<li>{l}</li>" for l in lines[:3])}</ul></div>' if lines else ""),
+            (f'<section><h2>자주 찾는 질문</h2>{faq_html}</section>' if faq_html else ""))
+
+def fullset_html(g, p, slug):
+    """선수 풀세트 묶음 CTA — 링크 있는 장비만 한 상자에."""
+    items = []
+    for cat, lab in GEAR_LABELS:
+        e = (p.get("gear") or {}).get(cat)
+        if not (e and e.get("value")):
+            continue
+        prod = CATALOG.get(e["value"], {})
+        if e.get("coupang_url"):
+            prod = dict(prod, coupang_url=e["coupang_url"])
+        b = buy_btn(prod, f"{g['key']}_player", f"{g['key']}/fullset/{slug}/{cat}", "최저가", "buy sm") if prod else ""
+        if b:
+            items.append(f'<div class="fsrow"><span class="cat">{lab}</span><span class="fsn">{esc(e["value"])}</span>{b}</div>')
+    if len(items) < 2:
+        return ""
+    return (f'<div class="fullset"><div class="fstit">🛒 {esc(p["nickname"])} 풀세트 따라 하기 '
+            f'<small>{len(items)}개 제품 · 쿠팡 최저가</small></div>{"".join(items)}</div>')
+
+SENS_GAMES = [("valorant", "발로란트", 0.07), ("cs2", "CS2", 0.022), ("ow2", "오버워치 2", 0.0066),
+              ("apex", "에이펙스 레전드", 0.022)]
+
+def build_sens_tool():
+    g = site_g("tools", "감도 계산은 브라우저에서만 처리 · 프로 데이터: VCT 선수 eDPI")
+    vg = next((x for x in all_games() if x["key"] == "valorant"), None)
+    pros = []
+    if vg:
+        teams, tmeta = load_players(vg)
+        for code, ps in teams.items():
+            for p in ps:
+                dpi, s = sval(p, "dpi"), sval(p, "in_game_sens")
+                ed = sval(p, "edpi") or (dpi * s if dpi and s else None)
+                if not ed:
+                    continue
+                m = ((p.get("gear") or {}).get("mouse") or {}).get("value")
+                mp = CATALOG.get(m, {}) if m else {}
+                url = buy_url(mp)
+                pros.append({"n": p["nickname"], "t": tmeta.get(code, {}).get("kr", code), "e": round(ed, 1),
+                             "d": dpi, "s": s, "m": m or "", "u": gurl(vg, "players", player_slug(p) + ".html"),
+                             "b": with_subid(url, "valorant/tool/mouse") if url else "",
+                             "g": GEAR_URL.get(gear_key("mouse", m), "") if m else ""})
+    opts = "".join(f'<option value="{y}">{esc(n)}</option>' for _, n, y in SENS_GAMES)
+    yaws = json.dumps({k: y for k, _, y in SENS_GAMES})
+    body = f"""<div class="crumb"><a href="{BASE_URL}/">홈</a> › 감도 변환기</div>
+<h1>감도 변환기 · eDPI 계산기 — 발로란트·CS2·오버워치 2·에이펙스</h1>
+<p class="sub">게임을 바꿔도 손에 익은 감도를 그대로. 같은 cm/360(마우스를 움직인 거리당 회전량)이 되도록 변환하고,
+eDPI가 비슷한 VCT 프로 5명과 그들의 마우스를 보여줍니다. 계산은 브라우저 안에서만 합니다.</p>
+{tools_nav("sens")}
+<div class="tool">
+<div class="trow"><label>지금 게임<select id="fg">{opts}</select></label>
+<label>인게임 감도<input id="fs" type="number" step="0.001" value="0.4" inputmode="decimal"></label>
+<label>DPI<input id="fd" type="number" step="50" value="800" inputmode="numeric"></label></div>
+<div class="trow"><label>바꿀 게임<select id="tg">{opts}</select></label>
+<label>새 DPI<input id="td" type="number" step="50" value="800" inputmode="numeric"></label></div>
+<div class="tout" id="out"></div>
+</div>
+<section><h2>나와 eDPI가 비슷한 VCT 프로</h2><div class="cmp"><table><thead><tr><th>선수</th><th>eDPI</th><th>마우스</th></tr></thead>
+<tbody id="near"></tbody></table></div><p class="note">발로란트 기준 eDPI(DPI × 인게임 감도)로 비교합니다. 다른 게임 감도는 발로란트 값으로 환산해 비교합니다.</p></section>
+<section><h2>계산 방법</h2><div class="tipbox">
+<ul><li>cm/360 = 2.54 × 360 ÷ (DPI × 감도 × 게임 계수)</li>
+<li>게임 계수(1감도당 회전 각도): {" · ".join(f"{esc(n)} {y}" for _, n, y in SENS_GAMES)}</li>
+<li>새 감도 = (지금 DPI × 지금 감도 × 지금 계수) ÷ (새 DPI × 새 계수)</li>
+<li>LoL은 3D 시점 감도가 없어 변환 대상이 아닙니다. 배틀그라운드는 시야각·배율별 감도가 따로라 아직 넣지 않았습니다.</li></ul></div></section>
+<script>
+const P={json.dumps(pros, ensure_ascii=False)};
+const $=id=>document.getElementById(id);
+$("tg").selectedIndex=1;
+function esc(s){{return String(s).replace(/[&<>"]/g,c=>({{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}})[c])}}
+function run(){{
+ const fy=+$("fg").value, ty=+$("tg").value, fs=+$("fs").value, fd=+$("fd").value, td=+$("td").value||fd;
+ if(!(fy&&ty&&fs>0&&fd>0)){{$("out").innerHTML="감도와 DPI를 입력하세요.";return}}
+ const deg=fd*fs*fy, cm=2.54*360/deg, ns=deg/(td*ty), ev=deg/0.07;
+ $("out").innerHTML=`<div><small>바꿀 게임 감도</small><b>${{ns.toFixed(3)}}</b></div><div><small>cm/360</small><b>${{cm.toFixed(1)}}cm</b></div>`+
+  `<div><small>eDPI (지금 게임)</small><b>${{(fd*fs).toFixed(0)}}</b></div><div><small>발로란트 환산 eDPI</small><b>${{ev.toFixed(0)}}</b></div>`;
+ const near=P.slice().sort((a,b)=>Math.abs(a.e-ev)-Math.abs(b.e-ev)).slice(0,5);
+ $("near").innerHTML=near.map(p=>`<tr><td class="pn"><span><a href="${{p.u}}"><b>${{esc(p.n)}}</b></a><small>${{esc(p.t)}}</small></span></td>`+
+  `<td class="num">${{p.e}}</td><td class="gc"><span>${{p.g?`<a href="${{p.g}}">${{esc(p.m)}}</a>`:esc(p.m||"확인 중")}}</span>`+
+  (p.b?`<a class="buy sm" href="${{p.b}}" target="_blank" rel="nofollow sponsored noopener" data-goatcounter-click="coupang/valorant/tool/mouse">최저가 →</a>`:"")+`</td></tr>`).join("");
+}}
+["fg","tg","fs","fd","td"].forEach(i=>$(i).addEventListener("input",run));run();
+</script>"""
+    title = "감도 변환기 · eDPI 계산기 — 발로란트 ↔ CS2 ↔ 오버워치 2 감도 변환"
+    desc = "발로란트·CS2·오버워치 2·에이펙스 감도를 cm/360 기준으로 변환하고 eDPI를 계산합니다. eDPI가 비슷한 VCT 프로 5명의 마우스도 함께."
+    out = ROOT / "tools" / "sens.html"
+    out.parent.mkdir(exist_ok=True)
+    out.write_text(page(g, title, desc, body, BASE_URL + "/tools/sens.html",
+                        {"@context": "https://schema.org", "@type": "WebApplication", "name": "감도 변환기",
+                         "applicationCategory": "UtilitiesApplication", "operatingSystem": "Web",
+                         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "KRW"}},
+                        crumbs=[("홈", BASE_URL + "/"), ("감도 변환기", BASE_URL + "/tools/sens.html")]),
+                   encoding="utf-8")
+    return [BASE_URL + "/tools/sens.html"]
+
+def build_extra_guides():
+    """마우스 가속 끄기 · LoL 모니터 · 원딜 마우스. 수치는 전부 데이터에서."""
+    lol = next((x for x in all_games() if x["key"] == "lol"), None)
+    if not lol:
+        return []
+    teams, tmeta = load_players(lol)
+    players = [p for ps in teams.values() for p in ps]
+    g = dict(lol, status_text=game_status(lol))
+    urls = []
+    gdir_ = ROOT / "guides"
+    gdir_.mkdir(exist_ok=True)
+
+    def write(fn, title, desc, body, label):
+        u = f"{BASE_URL}/guides/{fn}"
+        (gdir_ / fn).write_text(page(g, title, desc, body, u, {"@context": "https://schema.org", "@type": "Article",
+                                                                "headline": title, "dateModified": raw_meta(lol, full=True)},
+                                     crumbs=[("홈", BASE_URL + "/"), (label, u)]), encoding="utf-8")
+        urls.append(u)
+
+    # 1) 마우스 가속
+    dpis = sorted(sval(p, "dpi") for p in players if sval(p, "dpi"))
+    med = dpis[len(dpis) // 2] if dpis else None
+    dist = {}
+    for v in dpis:
+        dist[int(v)] = dist.get(int(v), 0) + 1
+    top_d = sorted(dist.items(), key=lambda kv: -kv[1])[:4]
+    dline = (f"LCK 선수 중 DPI가 확인된 {len(dpis)}명의 중앙값은 <b>{med:g}</b>이고, 많이 쓰는 값은 "
+             + ", ".join(f"{d}({c}명)" for d, c in top_d) + "입니다.") if dpis else ""
+    body = f"""<div class="crumb"><a href="{BASE_URL}/">홈</a> › 마우스 가속 끄기</div>
+<h1>윈도우 마우스 가속 끄는 법 — '포인터 정확도 향상' 해제 (프로 세팅 기준)</h1>
+<p class="sub">마우스 가속은 손을 빨리 움직일수록 커서가 더 멀리 가게 만드는 기능입니다. 같은 거리를 움직여도 속도에 따라
+결과가 달라져 에임·클릭 위치가 일정하지 않게 됩니다. 프로 세팅 가이드는 대부분 이 기능을 끄는 것에서 시작합니다.</p>
+{tools_nav("accel")}
+<section><h2>윈도우 11</h2><div class="tipbox"><ol>
+<li>시작 → <b>설정</b> → <b>Bluetooth 및 장치</b> → <b>마우스</b></li>
+<li>아래쪽 <b>추가 마우스 설정</b> 클릭 → '마우스 속성' 창이 열림</li>
+<li><b>포인터 옵션</b> 탭 → <b>포인터 정확도 향상</b> 체크 해제 → 확인</li></ol></div></section>
+<section><h2>윈도우 10</h2><div class="tipbox"><ol>
+<li>시작 → <b>설정</b> → <b>장치</b> → <b>마우스</b> → <b>추가 마우스 옵션</b></li>
+<li><b>포인터 옵션</b> 탭 → <b>포인터 정확도 향상</b> 체크 해제 → 확인</li></ol>
+<p>빠르게 여는 법: <b>Win + R</b> → <code>main.cpl</code> 입력 → 엔터.</p></div></section>
+<section><h2>같이 확인할 것</h2><div class="tipbox"><ul>
+<li><b>포인터 속도</b>는 기본값(가운데, 11칸 중 6번째)이 1:1입니다. 감도는 마우스 DPI와 게임 안에서 조절하는 편이 계산하기 쉽습니다.</li>
+<li><b>LoL</b>은 윈도우 커서를 그대로 쓰는 게임이라 윈도우 가속·포인터 속도가 체감에 바로 영향을 줍니다. {dline}</li>
+<li>마우스 제조사 소프트웨어(G HUB, Synapse 등)에 가속·각도 보정 옵션이 따로 있으면 그것도 끕니다.</li>
+<li>설정을 바꾼 뒤에는 <a href="{BASE_URL}/tools/sens.html">감도 변환기</a>로 cm/360을 확인해 두면 장비를 바꿔도 같은 감도를 맞출 수 있습니다.</li></ul></div></section>"""
+    write("mouse-acceleration.html", "윈도우 마우스 가속 끄는 법 — 포인터 정확도 향상 해제 (윈도우 11·10)",
+          "윈도우 11·10에서 마우스 가속(포인터 정확도 향상)을 끄는 방법과 LCK 프로 DPI 분포. 게임 감도를 일정하게 맞추는 첫 단계.",
+          body, "마우스 가속 끄기")
+
+    # 2) LoL 모니터
+    mons = {}
+    for p in players:
+        v = ((p.get("gear") or {}).get("monitor") or {}).get("value")
+        if v:
+            k = model_base(prod_name(v))
+            mons.setdefault(k, []).append(p)
+    rows, inch, hz = "", {}, {}
+    for k, ps in sorted(mons.items(), key=lambda kv: -len(kv[1])):
+        full = prod_name(ps[0]["gear"]["monitor"]["value"])
+        n = note_for({"name": k}) or note_for(BY_NAME.get(full, {}), full)
+        spec = (n or {}).get("spec", "")
+        mi = re.search(r"([\d.]+)인치", spec); mh = re.search(r"(\d+)Hz", spec) or re.search(r"(\d+)Hz", k)
+        if mi:
+            inch[mi.group(1)] = inch.get(mi.group(1), 0) + len(ps)
+        if mh:
+            hz[mh.group(1)] = hz.get(mh.group(1), 0) + len(ps)
+        prod = BY_NAME.get(k) or BY_NAME.get(full) or CATALOG.get(k, {})
+        btn = buy_btn(prod, "lol_guide", "lol/guide/monitor-lol", "최저가", "buy sm") if prod else ""
+        who = ", ".join(f'<a href="{gurl(lol, "players", player_slug(p) + ".html")}">{esc(p["nickname"])}</a>' for p in ps)
+        rows += (f'<tr><td class="pn"><span><b>{gear_link("monitor", k)}</b><small>{esc(spec) or "스펙 미표기"}</small>'
+                 f'<small>{who}</small></span></td><td class="num">{len(ps)}명</td><td>{btn}</td></tr>')
+    n_mon = sum(len(v) for v in mons.values())
+    tg = (lol.get("tournament_gear") or {}).get("monitor")
+    def dist_txt(d, unit):
+        return " · ".join(f"{k}{unit} {v}명" for k, v in sorted(d.items(), key=lambda kv: -kv[1])) or "-"
+    body = f"""<div class="crumb"><a href="{BASE_URL}/">홈</a> › LoL 모니터 가이드</div>
+<h1>LoL 프로게이머 모니터 — 인치·주사율(Hz)·거리 가이드</h1>
+<p class="sub">LCK 선수 중 개인 모니터가 확인된 <b>{n_mon}명</b>의 모델을 집계했습니다.
+크기: {esc(dist_txt(inch, "인치"))}. 주사율: {esc(dist_txt(hz, "Hz"))} (스펙이 표기된 모델만).</p>
+{tools_nav("monitor")}
+<section><h2>LCK 선수 개인 모니터</h2><div class="cmp"><table><thead><tr><th>모델 · 사용 선수</th><th>인원</th><th></th></tr></thead>
+<tbody>{rows}</tbody></table></div>
+{f'<p class="note">LCK 경기장에서는 {esc(tg)}가 지급됩니다. 위 표는 선수 개인(연습·방송) 모니터 기준입니다.</p>' if tg else ''}</section>
+<section><h2>고를 때 기준</h2><div class="tipbox"><ul>
+<li><b>크기</b>: 프로들은 24~25인치급이 대부분입니다. 미니맵·스킬 아이콘까지 시선 이동 없이 한눈에 들어오는 크기라서입니다.</li>
+<li><b>주사율</b>: LoL은 FPS만큼 빠른 화면 전환이 적지만, 높은 주사율이 커서·스킬샷 움직임을 부드럽게 보여줍니다. 그래픽카드가 그 프레임을 낼 수 있어야 의미가 있습니다.</li>
+<li><b>거리</b>: 일반적으로 화면 전체가 눈을 크게 돌리지 않고 보이는 거리(24~25인치 기준 대략 팔 길이, 50~70cm)를 권장합니다. 화면 위쪽 끝이 눈높이와 같거나 조금 아래가 되게 맞추면 목 부담이 적습니다.</li></ul></div></section>
+<p class="more">더 보기: <a href="{gurl(lol, 'guides', 'monitor.html')}">LCK 모니터 사용률 순위</a> · <a href="{BASE_URL}/gear/">제품별 사용 선수</a></p>"""
+    write("lol-monitor.html", "LoL 프로게이머 모니터 — LCK 선수 인치·주사율(Hz) 정리 + 거리 가이드",
+          f"LCK 선수 {n_mon}명의 개인 모니터 모델·크기·주사율 집계와 LoL 모니터 고르는 기준(크기·Hz·거리).", body, "LoL 모니터 가이드")
+
+    # 3) 원딜 마우스
+    adcs = [p for p in players if p["role"] in ("adc", "bot")]
+    rows, cnt = "", {}
+    for p in adcs:
+        tm = tmeta.get(p["_team"], {}).get("kr", p["_team"])
+        e = (p.get("gear") or {}).get("mouse") or {}
+        v = e.get("value")
+        if v:
+            k = model_base(prod_name(v)); cnt[k] = cnt.get(k, 0) + 1
+        prod = CATALOG.get(v, {}) if v else {}
+        n = note_for(prod, v or "") if v else None
+        btn = buy_btn(prod, "lol_guide", f"lol/guide/adc-mouse/{player_slug(p)}/mouse", "최저가", "buy sm") if prod else ""
+        rows += (f'<tr><td class="pn"><span><a href="{gurl(lol, "players", player_slug(p) + ".html")}"><b>{esc(p["nickname"])}</b></a>'
+                 f'<small>{esc(p.get("name_kr", ""))} · {esc(tm)}</small></span></td>'
+                 f'<td class="gc"><span>{gear_link("mouse", v) if v else "<span class=na>확인 중</span>"}</span>'
+                 f'{"<small>" + esc(n["spec"]) + "</small>" if n and n.get("spec") else ""}{btn}</td>'
+                 f'<td class="num">{sval(p, "dpi") and format(sval(p, "dpi"), "g") or "-"}</td></tr>')
+    known_n = sum(cnt.values())
+    top = sorted(cnt.items(), key=lambda kv: -kv[1])
+    brand = {}
+    for k, c in cnt.items():
+        brand[k.split()[0]] = brand.get(k.split()[0], 0) + c
+    btxt = ", ".join(f"{b} {c}명" for b, c in sorted(brand.items(), key=lambda kv: -kv[1]))
+    body = f"""<div class="crumb"><a href="{BASE_URL}/">홈</a> › 원딜 마우스</div>
+<h1>원딜 마우스 추천 — LCK 원딜 프로 {len(adcs)}명이 쓰는 마우스</h1>
+<p class="sub">LCK 원딜 {len(adcs)}명 중 마우스가 확인된 {known_n}명 기준. 브랜드: {esc(btxt) or "-"}.
+{"가장 많이 쓰는 모델은 <b>" + gear_link("mouse", top[0][0]) + f"</b>({top[0][1]}명)." if top else ""}</p>
+{tools_nav("adc")}
+<section><h2>LCK 원딜 마우스 · DPI</h2><div class="cmp"><table><thead><tr><th>선수</th><th>마우스</th><th>DPI</th></tr></thead>
+<tbody>{rows}</tbody></table></div></section>
+<section><h2>원딜이 마우스를 고르는 기준</h2><div class="tipbox"><ul>
+<li>원딜은 무빙과 평타를 번갈아 찍는 클릭이 많은 포지션이라, 오래 써도 손이 덜 피곤한 <b>가벼운 무선 마우스</b>가 많습니다.</li>
+<li>위 표처럼 오래 써서 손에 익은 구형 모델을 계속 쓰는 선수도 많습니다. 스펙보다 손 크기·그립에 맞는지가 먼저입니다.</li>
+<li>DPI는 선수마다 400~2,000 이상으로 넓게 갈립니다. 윈도우 가속은 끄고 쓰는 게 기본입니다 → <a href="{BASE_URL}/guides/mouse-acceleration.html">마우스 가속 끄는 법</a></li></ul></div></section>
+<p class="more">전체 포지션: <a href="{gurl(lol, 'guides', 'mouse.html')}">LCK 마우스 순위</a></p>"""
+    write("adc-mouse.html", "원딜 마우스 추천 — LCK 원딜 프로게이머가 쓰는 마우스·DPI 정리",
+          f"LCK 원딜 {len(adcs)}명이 실제로 쓰는 마우스와 DPI. 가장 많이 쓰는 모델과 쿠팡 최저가 링크.", body, "원딜 마우스")
+    return urls
+
 def build():
     urls, lastmod = [], {}
+    collect_gear()
     for key in GAMES_CFG["order"]:
         g = dict(GAMES_CFG["games"][key], key=key)
         gu = build_game(g)
         d = raw_meta(g, full=True)
         lastmod.update({u: d for u in gu if d})
         urls += gu
+    site_d = max(filter(None, (raw_meta(x, full=True) for x in all_games())), default=None)
+    for u in build_gear_pages() + build_sens_tool() + build_extra_guides():
+        urls.append(u)
+        if site_d:
+            lastmod[u] = site_d
     (ROOT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +

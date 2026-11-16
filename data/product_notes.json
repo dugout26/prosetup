@@ -282,6 +282,24 @@
    "cons": [
     "구형 모델 — 최신 자석축 대비 반응 세팅 기능은 없음"
    ]
+  },
+  "ZOWIE XL2566K": {
+   "spec": "24.5인치 · FHD · 360Hz · TN · DyAc+"
+  },
+  "ZOWIE XL2566X+": {
+   "spec": "24.5인치 · FHD · 400Hz · TN · DyAc 2"
+  },
+  "ZOWIE XL2546K": {
+   "spec": "24.5인치 · FHD · 240Hz · TN · DyAc+"
+  },
+  "ZOWIE XL2586X+": {
+   "spec": "24.1인치 · FHD · 600Hz · TN · DyAc 2"
+  },
+  "ASUS TUF Gaming VG259QM": {
+   "spec": "24.5인치 · FHD · 280Hz · Fast IPS"
+  },
+  "ASUS ROG Swift PG258Q": {
+   "spec": "24.5인치 · FHD · 240Hz · TN · G-SYNC"
   }
  }
 }

@@ -230,6 +230,31 @@ a.more:hover { color: var(--gold); }
 details.faq { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin-bottom: 8px; }
 details.faq summary { font-weight: 800; font-size: 14px; cursor: pointer; }
 details.faq p { font-size: 13px; color: var(--mut); margin-top: 6px; }
+.glink { color: inherit; border-bottom: 1px dotted var(--gold); }
+.psum { background: var(--card); border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: 12px; padding: 10px 14px; margin: 10px 0 14px; }
+.psum ul { list-style: none; } .psum li { font-size: 13.5px; line-height: 1.7; }
+.psum a { color: var(--tx); border-bottom: 1px dotted var(--gold); }
+.fullset { background: linear-gradient(90deg, rgba(232,195,107,.12), rgba(232,195,107,.02)); border: 1px solid rgba(232,195,107,.35); border-radius: 14px; padding: 12px 14px; margin-bottom: 16px; }
+.fstit { font-weight: 900; margin-bottom: 6px; } .fstit small { color: var(--mut); font-weight: 500; margin-left: 6px; font-size: 11.5px; }
+.fsrow { display: flex; align-items: center; gap: 8px; padding: 5px 0; border-top: 1px dashed var(--line); font-size: 13px; }
+.fsrow .cat { min-width: 64px; } .fsrow .fsn { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+h3.lg { font-size: 13px; color: var(--mut); margin: 10px 0 6px; }
+.pchips { display: flex; flex-wrap: wrap; gap: 6px; }
+.pchip { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 5px 10px; font-size: 13px; }
+.pchip small { display: block; font-size: 10.5px; color: var(--mut); }
+.pchip:hover { border-color: var(--gold); }
+.tool { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px; margin: 12px 0 18px; }
+.trow { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; }
+.trow label { flex: 1 1 140px; font-size: 12px; color: var(--mut); display: flex; flex-direction: column; gap: 4px; }
+.trow input, .trow select { background: var(--bg); color: var(--tx); border: 1px solid var(--line); border-radius: 8px; padding: 9px 10px; font-size: 15px; }
+.tout { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; }
+.tout div { background: var(--bg); border-radius: 10px; padding: 10px; } .tout small { display: block; font-size: 11px; color: var(--mut); }
+.tout b { font-size: 22px; color: var(--gold); }
+.tipbox code { background: var(--bg); padding: 1px 6px; border-radius: 5px; }
+.tag.comm { color: #FFA94D; border: 1px solid rgba(255,169,77,.5); }
+tr.comm td { background: rgba(255,169,77,.04); }
+.sp.comm b::before { content: "🟠 "; }
+.seen { font-size: 10.5px; color: #7A8290; }
 @media (max-width: 520px) {
   .buy.big { flex: 1 1 100%; text-align: center; }
   .ctahint { flex-basis: 100%; text-align: center; }
@@ -249,6 +274,7 @@ details.faq p { font-size: 13px; color: var(--mut); margin-top: 6px; }
 <a class="rankbanner" href="https://dugout26.github.io/prosetup/rankings.html">🏆 프로들이 가장 많이 쓰는 장비 랭킹
 <small>50명 데이터 집계 — 키보드·마우스·헤드셋 사용률 TOP 비교표</small></a>
 <nav class="gnav sm"><a href="https://dugout26.github.io/prosetup/rankings.html">전체 랭킹</a><a href="https://dugout26.github.io/prosetup/guides/keyboard.html">키보드</a><a href="https://dugout26.github.io/prosetup/guides/mouse.html">마우스</a><a href="https://dugout26.github.io/prosetup/guides/headset.html">헤드셋</a><a href="https://dugout26.github.io/prosetup/guides/monitor.html">모니터</a><a href="https://dugout26.github.io/prosetup/guides/mousepad.html">마우스패드</a></nav>
+<nav class="gnav sm"><a href="https://dugout26.github.io/prosetup/gear/">제품별 사용 선수</a><a href="https://dugout26.github.io/prosetup/tools/sens.html">감도 변환기</a><a href="https://dugout26.github.io/prosetup/guides/mouse-acceleration.html">마우스 가속 끄기</a><a href="https://dugout26.github.io/prosetup/guides/lol-monitor.html">LoL 모니터 가이드</a><a href="https://dugout26.github.io/prosetup/guides/adc-mouse.html">원딜 마우스</a></nav>
 <a class="rankbanner" href="https://dugout26.github.io/prosetup/stove-2027.html">🔥 이적시장 — 오피셜·루머 실시간 정리<small>FA 대상·이적설 선수와 그들이 쓰는 마우스·키보드</small></a>
 <a class="rankbanner" href="https://dugout26.github.io/prosetup/submit.html" style="background:linear-gradient(90deg,rgba(255,255,255,.07),transparent);border-color:rgba(255,255,255,.16)">📮 아는 장비 정보 제보하기
 <small>근거 자료와 함께 보내주시면 확인 후 반영합니다</small></a>
@@ -260,6 +286,5 @@ details.faq p { font-size: 13px; color: var(--mut); margin-top: 6px; }
 </footer>
 </div>
 
-<script>try{navigator.sendBeacon("https://blog.mound.run/api/hit",new Blob([JSON.stringify({p:location.pathname,r:document.referrer})],{type:"text/plain"}))}catch(e){}</script>
 </body>
 </html>
