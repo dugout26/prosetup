@@ -1202,7 +1202,8 @@ def build_game(g):
                                 "affiliation": {"@type": "SportsTeam", "name": tinfo["kr"]},
                                 "jobTitle": f"프로게이머({role})"}}
             tcrumb = (f'<a href="{gurl(g, "teams", code.lower() + ".html")}">{tinfo["kr"]}</a>'
-                      if (load_json("data/transfers.json") or {}).get(g["key"]) else tinfo["kr"])
+                      if (load_json("data/transfers.json") or {}).get(g["key"])
+                      and code in (g.get("team_order") or []) else tinfo["kr"])   # 해외 팀은 팀 페이지 없음
             body = f"""<div class="crumb"><a href="{gurl(g, '')}">{esc(g['short'])} 홈</a> › {tcrumb}</div>
 <div class="phead"><h1>{esc(nick)}</h1><span class="kr">{esc(kr)}</span>
 <span class="rolechip">{tinfo['kr']} · {role}</span></div>
@@ -1246,7 +1247,7 @@ def build_game(g):
                       f'<div class="nick">{esc(p["nickname"])}</div>'
                       f'<div class="meta">{esc(p.get("name_kr", ""))}{role_suffix(roles, p)}</div>{extra}</a>')
         tlink = (f' <a class="tlink" href="{gurl(g, "teams", code.lower() + ".html")}">로스터·루머 →</a>'
-                 if team_urls else "")
+                 if team_urls and code in (g.get("team_order") or []) else "")   # 해외 팀은 팀 페이지 없음
         blocks += (f'<div class="teamblock"><div class="teamname">'
                    f'<i style="background:{tinfo["color"]}"></i>{tinfo["kr"]}{tlink}</div>'
                    f'<div class="pgrid">{cells}</div></div>')

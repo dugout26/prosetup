@@ -4,7 +4,7 @@
   {
    "name": "ZOWIE XL2566X+",
    "category": "monitor",
-   "count": 68,
+   "count": 70,
    "coupang_url": "https://link.coupang.com/a/fZzM5o07Xw",
    "aliases": [
     "ZOWIE XL2566X+"
@@ -26,7 +26,7 @@
   {
    "name": "Razer BlackShark V3 Pro",
    "category": "headset",
-   "count": 56,
+   "count": 58,
    "coupang_url": "https://link.coupang.com/a/fXOoTFJGKq",
    "aliases": [
     "Razer BlackShark V3 Pro"
@@ -59,7 +59,7 @@
   {
    "name": "Logitech G Pro X Superlight 2",
    "category": "mouse",
-   "count": 42,
+   "count": 44,
    "coupang_url": "https://link.coupang.com/a/fXOne6iyA0",
    "aliases": [
     "Logitech G PRO X Superlight 2",
@@ -71,6 +71,17 @@
    "coupang_name": "로지텍 PRO X SUPERLIGHT 2 무선 마우스 910-006, MR0097, 블랙"
   },
   {
+   "name": "Artisan Ninja FX Zero Soft",
+   "category": "mousepad",
+   "count": 39,
+   "coupang_url": "https://link.coupang.com/a/f0ASXnK58e",
+   "aliases": [
+    "Artisan Ninja FX Zero Soft"
+   ],
+   "image": "https://thumbnail12.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/e3ee/09e9c38b4753c57d6c945af046a1d0bf51319d113c776353e79fcf909936.jpg",
+   "coupang_name": "아티산 FX 제로 마우스패드 Artisan ZERO 정밀 브레이킹 일본 게이밍패드, 1개, 아티산FX 제로 L (Soft)오렌지"
+  },
+  {
    "name": "Razer Viper V4 Pro",
    "category": "mouse",
    "count": 38,
@@ -80,17 +91,6 @@
    ],
    "image": "https://thumbnail15.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/353752599797277-21889f72-7d75-4bf0-bd1e-2eadf9a53741.jpg",
    "coupang_name": "레이저 Viper V4 Pro 무선 마우스, RZ01-0563, Black"
-  },
-  {
-   "name": "Artisan Ninja FX Zero Soft",
-   "category": "mousepad",
-   "count": 38,
-   "coupang_url": "https://link.coupang.com/a/f0ASXnK58e",
-   "aliases": [
-    "Artisan Ninja FX Zero Soft"
-   ],
-   "image": "https://thumbnail12.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/e3ee/09e9c38b4753c57d6c945af046a1d0bf51319d113c776353e79fcf909936.jpg",
-   "coupang_name": "아티산 FX 제로 마우스패드 Artisan ZERO 정밀 브레이킹 일본 게이밍패드, 1개, 아티산FX 제로 L (Soft)오렌지"
   },
   {
    "name": "Logitech G Pro X2 Superstrike",
@@ -129,7 +129,7 @@
   {
    "name": "Razer BlackShark V2 Pro",
    "category": "headset",
-   "count": 25,
+   "count": 26,
    "coupang_url": "https://link.coupang.com/a/fXOoMXyvJI",
    "aliases": [
     "Razer BlackShark V2 Pro"
@@ -140,7 +140,7 @@
   {
    "name": "Razer Viper V3 Pro",
    "category": "mouse",
-   "count": 18,
+   "count": 19,
    "coupang_url": "https://link.coupang.com/a/fXOpF5H74C",
    "aliases": [
     "Razer Viper V3 Pro"
@@ -160,6 +160,16 @@
    "coupang_name": "하이퍼엑스(HyperX) HyperX Cloud III 무선 게이밍 헤드셋, 블랙, 단일"
   },
   {
+   "name": "LG UltraGear 25GR75FG",
+   "category": "monitor",
+   "count": 17,
+   "coupang_url": null,
+   "aliases": [
+    "LG 25GR75FG",
+    "LG UltraGear 25GR75FG"
+   ]
+  },
+  {
    "name": "ZOWIE XL2546K",
    "category": "monitor",
    "count": 16,
@@ -171,25 +181,26 @@
    "coupang_name": "벤큐 FHD 조위 게이밍 모니터, 63cm, XL2546K"
   },
   {
-   "name": "LG UltraGear 25GR75FG",
-   "category": "monitor",
-   "count": 15,
-   "coupang_url": null,
-   "aliases": [
-    "LG 25GR75FG",
-    "LG UltraGear 25GR75FG"
-   ]
-  },
-  {
    "name": "Logitech G PRO X 2 Headset",
    "category": "headset",
-   "count": 13,
+   "count": 14,
    "coupang_url": "https://link.coupang.com/a/f0AT6ynxw4",
    "aliases": [
     "Logitech G PRO X 2 Headset"
    ],
    "image": "https://t4c.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/2023/08/07/15/5/cf39d142-6b78-40f6-8ba8-d68abcd817fe.png",
    "coupang_name": "로지텍 G PRO X 2 LIGHTSPEED 게이밍 헤드셋, 블랙"
+  },
+  {
+   "name": "HyperX Cloud III Wireless",
+   "category": "headset",
+   "count": 13,
+   "coupang_url": "https://link.coupang.com/a/f0HODvsVWe",
+   "aliases": [
+    "HyperX Cloud III Wireless"
+   ],
+   "image": "https://thumbnail10.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/f015/00282b00eb8cc4aa3ffb16d79b03f940f9c8bc53370cc4099d779c1a7da7.jpeg",
+   "coupang_name": "하이퍼엑스 클라우드 3 무선 게이밍 헤드셋, 블랙 + 레드"
   },
   {
    "name": "Wooting 80HE",
@@ -203,15 +214,15 @@
    "coupang_name": "우팅 80HE 유선 기계식 키보드, 블랙, 레커 그린 마그네틱축, 제조사축"
   },
   {
-   "name": "HyperX Cloud III Wireless",
-   "category": "headset",
-   "count": 12,
-   "coupang_url": "https://link.coupang.com/a/f0HODvsVWe",
+   "name": "Razer Gigantus V2",
+   "category": "mousepad",
+   "count": 13,
+   "coupang_url": "https://link.coupang.com/a/fXOnHNJrIi",
    "aliases": [
-    "HyperX Cloud III Wireless"
+    "Razer Gigantus V2"
    ],
-   "image": "https://thumbnail10.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/f015/00282b00eb8cc4aa3ffb16d79b03f940f9c8bc53370cc4099d779c1a7da7.jpeg",
-   "coupang_name": "하이퍼엑스 클라우드 3 무선 게이밍 헤드셋, 블랙 + 레드"
+   "image": "https://t2a.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/1756888567425345-9f337d1f-d3d7-4006-a97d-474d132378a1.jpg",
+   "coupang_name": "레이저 Gigantus V2 마우스패드 M, 혼합색상, 1개"
   },
   {
    "name": "ZOWIE XL2586X+",
@@ -239,15 +250,15 @@
    "coupang_name": "로지텍 PRO X TKL LIGHTSPEED 무선 게이밍 택타일 키보드, 블랙, PRO X TKL 블랙 택타일 갈축, 갈축"
   },
   {
-   "name": "Razer Gigantus V2",
-   "category": "mousepad",
+   "name": "Logitech G Pro X Superlight",
+   "category": "mouse",
    "count": 10,
-   "coupang_url": "https://link.coupang.com/a/fXOnHNJrIi",
+   "coupang_url": "https://link.coupang.com/a/fXOsIQpdJs",
    "aliases": [
-    "Razer Gigantus V2"
+    "Logitech G Pro X Superlight"
    ],
-   "image": "https://t2a.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/1756888567425345-9f337d1f-d3d7-4006-a97d-474d132378a1.jpg",
-   "coupang_name": "레이저 Gigantus V2 마우스패드 M, 혼합색상, 1개"
+   "image": "https://t5a.coupangcdn.com/thumbnails/remote/212x212ex/image/1025_amir_coupang_oct_80k/b043/ac3e22cc08a20aa2cab572667af318150fba1e78ef927003c310619bd660.jpg",
+   "coupang_name": "로지텍 PRO X SUPERLIGHT 게이밍 무선 마우스, MR0106, 블랙"
   },
   {
    "name": "Artisan Type-99",
@@ -316,15 +327,15 @@
    "coupang_name": "벤큐 FHD 조위 게이밍 모니터, 61cm, XL2546X+"
   },
   {
-   "name": "Logitech G Pro X Superlight",
+   "name": "Razer DeathAdder V4 Pro",
    "category": "mouse",
    "count": 7,
-   "coupang_url": "https://link.coupang.com/a/fXOsIQpdJs",
+   "coupang_url": "https://link.coupang.com/a/f0yERut9z2",
    "aliases": [
-    "Logitech G Pro X Superlight"
+    "Razer DeathAdder V4 Pro"
    ],
-   "image": "https://t5a.coupangcdn.com/thumbnails/remote/212x212ex/image/1025_amir_coupang_oct_80k/b043/ac3e22cc08a20aa2cab572667af318150fba1e78ef927003c310619bd660.jpg",
-   "coupang_name": "로지텍 PRO X SUPERLIGHT 게이밍 무선 마우스, MR0106, 블랙"
+   "image": "https://thumbnail6.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/2025/07/28/11/2/0a09b44d-5aa9-4e59-982e-6a4cc0535a53.jpg",
+   "coupang_name": "레이저 DeathAdder V4 Pro 무선마우스, RZ01-0533, 블랙"
   },
   {
    "name": "Artisan Ninja FX Zero XSoft",
@@ -360,15 +371,13 @@
    "coupang_name": "레이저 Huntsman V3 Pro TKL 8KHZ KR 텐키리스 키보드, Black, RZ03-0552, 제조사축"
   },
   {
-   "name": "Razer DeathAdder V4 Pro",
+   "name": "Logitech G Pro Wireless",
    "category": "mouse",
    "count": 6,
-   "coupang_url": "https://link.coupang.com/a/f0yERut9z2",
+   "coupang_url": null,
    "aliases": [
-    "Razer DeathAdder V4 Pro"
-   ],
-   "image": "https://thumbnail6.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/2025/07/28/11/2/0a09b44d-5aa9-4e59-982e-6a4cc0535a53.jpg",
-   "coupang_name": "레이저 DeathAdder V4 Pro 무선마우스, RZ01-0533, 블랙"
+    "Logitech G Pro Wireless"
+   ]
   },
   {
    "name": "Artisan Ninja FX Zero Mid",
@@ -389,6 +398,17 @@
    ],
    "image": "https://thumbnail14.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/0729/98af316d3fcdc1fceed9960008a6d09276a18e137fa44d8adb1b5d7ccfff.jpg",
    "coupang_name": "아티산 FX 타입99 마우스패드 Artisan TYPE99 정밀 브레이킹 일본 게이밍패드, 1개, 아티산FX 99식 XL (Soft) 말차"
+  },
+  {
+   "name": "Logitech G840",
+   "category": "mousepad",
+   "count": 6,
+   "coupang_url": "https://link.coupang.com/a/fXOnVIX3zE",
+   "aliases": [
+    "Logitech G840"
+   ],
+   "image": "https://thumbnail3.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/d92c/951a4d853aa8e9e5e61eaeefe7280e4de011b4c7819861c76d60a8ae752f.jpg",
+   "coupang_name": "로지텍 게이밍 마우스 패드 G840, 블랙, 1개"
   },
   {
    "name": "SteelSeries QcK Heavy",
@@ -456,6 +476,15 @@
    ],
    "image": "https://t1c.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/2024/07/09/17/2/e91d79f3-502a-4d32-a55b-ad0b273f2ad9.jpg",
    "coupang_name": "레이저 Huntsman V3 Pro Mini KR 유선 키보드, 블랙, RZ03-0499, 제조사축"
+  },
+  {
+   "name": "Razer Huntsman V3 Pro TKL 8KHz",
+   "category": "keyboard",
+   "count": 5,
+   "coupang_url": null,
+   "aliases": [
+    "Razer Huntsman V3 Pro TKL 8KHz"
+   ]
   },
   {
    "name": "Sony INZONE KBD-H75",
@@ -531,15 +560,15 @@
    "coupang_name": "아티산 마우스패드 NINJA FX 하야테오츠 V2 게이밍패드 블랙 레드 L XL XXL, 01 42x33cm, 05 HAYATE OTSU V2 SOFT, 1개"
   },
   {
-   "name": "Logitech G840",
+   "name": "Logitech G640",
    "category": "mousepad",
    "count": 5,
-   "coupang_url": "https://link.coupang.com/a/fXOnVIX3zE",
+   "coupang_url": "https://link.coupang.com/a/fXOogDQRzg",
    "aliases": [
-    "Logitech G840"
+    "Logitech G640"
    ],
-   "image": "https://thumbnail3.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/d92c/951a4d853aa8e9e5e61eaeefe7280e4de011b4c7819861c76d60a8ae752f.jpg",
-   "coupang_name": "로지텍 게이밍 마우스 패드 G840, 블랙, 1개"
+   "image": "https://thumbnail6.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/b078/8a7b6a2658a0b3323327dae72838f96cad15b393b8714bdb9167e911ea1d.jpg",
+   "coupang_name": "로지텍 마우스 패드 G640, 블랙, 1개"
   },
   {
    "name": "VAXEE PD150",
@@ -615,6 +644,15 @@
    "coupang_name": "에이수스 유선 8K 영문각인 래피드 트리거 게이밍 키보드, 검은색, M605 ROG FALCHION ACE HFX, 마그네틱축(자석축)"
   },
   {
+   "name": "Logitech G Pro X Keyboard",
+   "category": "keyboard",
+   "count": 4,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G Pro X Keyboard"
+   ]
+  },
+  {
    "name": "Logitech G Pro X TKL RAPID",
    "category": "keyboard",
    "count": 4,
@@ -628,13 +666,26 @@
    "coupang_name": "[로지텍코리아 정품] 로지텍G PRO X TKL RAPID 로지텍 유선 게이밍 키보드 (팜레스트 미포함), 화이트, G PRO X TKL RAPID, 마그네틱축(자석축)"
   },
   {
-   "name": "Razer Huntsman V3 Pro TKL 8KHz",
+   "name": "Razer Huntsman V3 Pro",
    "category": "keyboard",
    "count": 4,
-   "coupang_url": null,
+   "coupang_url": "https://link.coupang.com/a/fXOrUl7iA8",
    "aliases": [
-    "Razer Huntsman V3 Pro TKL 8KHz"
-   ]
+    "Razer Huntsman V3 Pro"
+   ],
+   "image": "https://t5a.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/2023/11/22/11/5/27740683-9da5-4fd6-b296-91d8322b9b3d.jpg",
+   "coupang_name": "레이저 Huntsman V3 Pro TENKEYLESS KR 유선 텐키리스 키보드, 블랙, RZ03-0498, 제조사축"
+  },
+  {
+   "name": "Wooting 80HE TenZ Edition",
+   "category": "keyboard",
+   "count": 4,
+   "coupang_url": "https://link.coupang.com/a/f0yMbyveKa",
+   "aliases": [
+    "Wooting 80HE TenZ Edition"
+   ],
+   "image": "https://t2a.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/87ca/a14067f215baeadf2ccdcf01caac532bbec35e999c039286d9bea1055260.png",
+   "coupang_name": "우팅 80HE 키보드 스위치 무료증정, ABS고스트 4~7일 익스프레스, 마그네틱축(자석축)"
   },
   {
    "name": "Wooting 80HE+ Frost",
@@ -688,26 +739,6 @@
    "coupang_name": "람주 게이밍 프리플로우 MAYA X 8K 초경량 유무선 마우스 47g, BLACK"
   },
   {
-   "name": "Logitech G Pro Wireless",
-   "category": "mouse",
-   "count": 4,
-   "coupang_url": null,
-   "aliases": [
-    "Logitech G Pro Wireless"
-   ]
-  },
-  {
-   "name": "Logitech G640",
-   "category": "mousepad",
-   "count": 4,
-   "coupang_url": "https://link.coupang.com/a/fXOogDQRzg",
-   "aliases": [
-    "Logitech G640"
-   ],
-   "image": "https://thumbnail6.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/b078/8a7b6a2658a0b3323327dae72838f96cad15b393b8714bdb9167e911ea1d.jpg",
-   "coupang_name": "로지텍 마우스 패드 G640, 블랙, 1개"
-  },
-  {
    "name": "Pulsar Meiy Glass",
    "category": "mousepad",
    "count": 4,
@@ -723,6 +754,15 @@
    "coupang_url": null,
    "aliases": [
     "X-raypad Aqua Control+ Wave"
+   ]
+  },
+  {
+   "name": "ZOWIE G-SR-SE BLUE II",
+   "category": "mousepad",
+   "count": 4,
+   "coupang_url": null,
+   "aliases": [
+    "ZOWIE G-SR-SE BLUE II"
    ]
   },
   {
@@ -811,34 +851,21 @@
    "coupang_name": "펄사 PCMK 3 HE 60 마그네틱 유선 텐키리스 키보드, 마그네틱축(자석축), PCMK3HE601W, 화이트"
   },
   {
-   "name": "Razer Huntsman V3 Pro",
-   "category": "keyboard",
-   "count": 3,
-   "coupang_url": "https://link.coupang.com/a/fXOrUl7iA8",
-   "aliases": [
-    "Razer Huntsman V3 Pro"
-   ],
-   "image": "https://t5a.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/2023/11/22/11/5/27740683-9da5-4fd6-b296-91d8322b9b3d.jpg",
-   "coupang_name": "레이저 Huntsman V3 Pro TENKEYLESS KR 유선 텐키리스 키보드, 블랙, RZ03-0498, 제조사축"
-  },
-  {
-   "name": "Wooting 80HE TenZ Edition",
-   "category": "keyboard",
-   "count": 3,
-   "coupang_url": "https://link.coupang.com/a/f0yMbyveKa",
-   "aliases": [
-    "Wooting 80HE TenZ Edition"
-   ],
-   "image": "https://t2a.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/87ca/a14067f215baeadf2ccdcf01caac532bbec35e999c039286d9bea1055260.png",
-   "coupang_name": "우팅 80HE 키보드 스위치 무료증정, ABS고스트 4~7일 익스프레스, 마그네틱축(자석축)"
-  },
-  {
    "name": "ASUS TUF VG258QM",
    "category": "monitor",
    "count": 3,
    "coupang_url": null,
    "aliases": [
     "ASUS TUF VG258QM"
+   ]
+  },
+  {
+   "name": "Alienware AW2518H",
+   "category": "monitor",
+   "count": 3,
+   "coupang_url": null,
+   "aliases": [
+    "Alienware AW2518H"
    ]
   },
   {
@@ -942,13 +969,15 @@
    "coupang_name": "조위 벤큐 e스포츠 게이밍 마우스 패드 G-SR III, 블랙, 1개"
   },
   {
-   "name": "ZOWIE G-SR-SE BLUE II",
-   "category": "mousepad",
-   "count": 3,
-   "coupang_url": null,
+   "name": "Corsair Void RGB Elite",
+   "category": "headset",
+   "count": 2,
+   "coupang_url": "https://link.coupang.com/a/f0zeEtGi1A",
    "aliases": [
-    "ZOWIE G-SR-SE BLUE II"
-   ]
+    "Corsair Void RGB Elite"
+   ],
+   "image": "https://t3a.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/1199717450265995-75a6c02b-0545-4878-953e-9843cdbdb42f.jpg",
+   "coupang_name": "커세어 VOID RGB Elite USB 7.1채널 게이밍 헤드셋, RDA0029, 블랙"
   },
   {
    "name": "HyperX Cloud Flight S",
@@ -960,6 +989,24 @@
    ],
    "image": "https://thumbnail11.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/1691/68e25b2ed3f37ab28a630e239d2e72934602211b6a17957a2675787fa95d.jpeg",
    "coupang_name": "하이퍼엑스 HyperX Cloud Flight S 무선 헤드셋, Cloud Flight S+케이스"
+  },
+  {
+   "name": "Logitech G Pro X Wireless Headset",
+   "category": "headset",
+   "count": 2,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G Pro X Wireless Headset"
+   ]
+  },
+  {
+   "name": "Razer Hammerhead Pro V2",
+   "category": "headset",
+   "count": 2,
+   "coupang_url": null,
+   "aliases": [
+    "Razer Hammerhead Pro V2"
+   ]
   },
   {
    "name": "ATK EDGE 60HE",
@@ -982,13 +1029,15 @@
    ]
   },
   {
-   "name": "Logitech G Pro X Keyboard",
+   "name": "Razer Huntsman Elite",
    "category": "keyboard",
    "count": 2,
-   "coupang_url": null,
+   "coupang_url": "https://link.coupang.com/a/fXOrNLfRlI",
    "aliases": [
-    "Logitech G Pro X Keyboard"
-   ]
+    "Razer Huntsman Elite"
+   ],
+   "image": "https://thumbnail5.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/0fb4/a5692ec35bfb9edf0ccce60df55c73bc03505de3ffee5429b386a149fa12.jpg",
+   "coupang_name": "레이저코리아 헌츠맨 엘리트 리니어 영문각인 게이밍 키보드 Razer Huntsman Elite Linear US, Razer Linear Optical Switch"
   },
   {
    "name": "WALLHACK K-001 Natural",
@@ -1009,6 +1058,15 @@
    ],
    "image": "https://thumbnail11.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/2025/09/18/14/8/5542983a-61a3-4a41-be59-fcd937ed16e8.jpg",
    "coupang_name": "에이수스 FHD ROG STRIX ACE 모니터, 61cm, XG248QSG"
+  },
+  {
+   "name": "Alienware AW2521H",
+   "category": "monitor",
+   "count": 2,
+   "coupang_url": null,
+   "aliases": [
+    "Alienware AW2521H"
+   ]
   },
   {
    "name": "Alienware AW2521HF",
@@ -1243,6 +1301,15 @@
    "coupang_name": "조위 e스포츠 게이밍 게이머 전용 마우스 패드 XL H-SR-SE Rouge II, 혼합색상, 1개"
   },
   {
+   "name": "Alienware AW510H",
+   "category": "headset",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Alienware AW510H"
+   ]
+  },
+  {
    "name": "Corsair Void Pro",
    "category": "headset",
    "count": 1,
@@ -1252,17 +1319,6 @@
    ],
    "image": "https://thumbnail7.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/c99f/3e85eaaca3d7c731c0f3c0bb614956155caf66263ca60be26e8197756ba1.jpg",
    "coupang_name": "커세어 VOID PRO RGB WIRELESS PREMIUM 게이밍 헤드셋, Carbon"
-  },
-  {
-   "name": "Corsair Void RGB Elite",
-   "category": "headset",
-   "count": 1,
-   "coupang_url": "https://link.coupang.com/a/f0zeEtGi1A",
-   "aliases": [
-    "Corsair Void RGB Elite"
-   ],
-   "image": "https://t3a.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/1199717450265995-75a6c02b-0545-4878-953e-9843cdbdb42f.jpg",
-   "coupang_name": "커세어 VOID RGB Elite USB 7.1채널 게이밍 헤드셋, RDA0029, 블랙"
   },
   {
    "name": "HyperX Cloud Alpha S",
@@ -1322,15 +1378,6 @@
    "coupang_url": null,
    "aliases": [
     "JBL Quantum One"
-   ]
-  },
-  {
-   "name": "Logitech G Pro X Wireless Headset",
-   "category": "headset",
-   "count": 1,
-   "coupang_url": null,
-   "aliases": [
-    "Logitech G Pro X Wireless Headset"
    ]
   },
   {
@@ -1544,6 +1591,15 @@
    "coupang_name": "CHERRY XTRFY K5 PRO TMR 8K MK 한글각인 65 게이밍 유선 텐키리스 키보드, 블랙, G8E-24200, 마그네틱축(자석축)"
   },
   {
+   "name": "Corsair K65 Rapidfire",
+   "category": "keyboard",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Corsair K65 Rapidfire"
+   ]
+  },
+  {
    "name": "Corsair K70 RGB MK.2",
    "category": "keyboard",
    "count": 1,
@@ -1564,6 +1620,24 @@
    ],
    "image": "https://t3c.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/aece/f00469009223c2c892b930d31468813e1aeaaf3168d5d4397275e9362beb.jpeg",
    "coupang_name": "커세어 K70 RGB MK.2 게이밍 기계식키보드 은축, K70 MK.2 SE (은축 스피드축), 블랙, K70 MK2 SE, SPEED SWITCH"
+  },
+  {
+   "name": "Corsair K95 RGB Platinum",
+   "category": "keyboard",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Corsair K95 RGB Platinum"
+   ]
+  },
+  {
+   "name": "Corsair Vanguard Pro 96",
+   "category": "keyboard",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Corsair Vanguard Pro 96"
+   ]
   },
   {
    "name": "Higround Basecamp 65HE",
@@ -1699,6 +1773,15 @@
    "coupang_name": "ROCCAT Vulcan TKL Pro 게이밍 키보드 텐키리스 화이트 (영문), ROC-12-642"
   },
   {
+   "name": "Razer BlackWidow Chroma V2",
+   "category": "keyboard",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Razer BlackWidow Chroma V2"
+   ]
+  },
+  {
    "name": "Razer BlackWidow Lite",
    "category": "keyboard",
    "count": 1,
@@ -1719,17 +1802,6 @@
    ],
    "image": "https://thumbnail10.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/bfcc/c35e0f20fc06fc8ccbc9dc1b6f8f183a8e3ee0543bb98363ef2e54ec8c44.jpg",
    "coupang_name": "Razer Blackwidow V3 Pro KR Green Switch 무선 게이밍 키보드 기계 그린 축 RZ03-03531300-R3J1, NO, NONE, 상세페이지 참조"
-  },
-  {
-   "name": "Razer Huntsman Elite",
-   "category": "keyboard",
-   "count": 1,
-   "coupang_url": "https://link.coupang.com/a/fXOrNLfRlI",
-   "aliases": [
-    "Razer Huntsman Elite"
-   ],
-   "image": "https://thumbnail5.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/0fb4/a5692ec35bfb9edf0ccce60df55c73bc03505de3ffee5429b386a149fa12.jpg",
-   "coupang_name": "레이저코리아 헌츠맨 엘리트 리니어 영문각인 게이밍 키보드 Razer Huntsman Elite Linear US, Razer Linear Optical Switch"
   },
   {
    "name": "Razer Huntsman Mini",
@@ -1821,6 +1893,15 @@
    ]
   },
   {
+   "name": "AOC AG251FZ2E",
+   "category": "monitor",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "AOC AG251FZ2E"
+   ]
+  },
+  {
    "name": "ASUS PG248QP",
    "category": "monitor",
    "count": 1,
@@ -1899,24 +1980,6 @@
    ],
    "image": "https://t3c.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/b72c/5a8dc79fb61d4a78ebcee111af263efb269ad8d364f56af2bd6e18b7202c.jpg",
    "coupang_name": "에이수스 FHD TUF Gaming 모니터, 68.5cm, VG279QM5A"
-  },
-  {
-   "name": "Alienware AW2518H",
-   "category": "monitor",
-   "count": 1,
-   "coupang_url": null,
-   "aliases": [
-    "Alienware AW2518H"
-   ]
-  },
-  {
-   "name": "Alienware AW2521H",
-   "category": "monitor",
-   "count": 1,
-   "coupang_url": null,
-   "aliases": [
-    "Alienware AW2521H"
-   ]
   },
   {
    "name": "Alienware AW2524H",
@@ -2088,6 +2151,15 @@
    "coupang_name": "로지텍 프로 2 라이트스피드 무선 게이밍 마우스 G PRO 2 LIGHTSPEED, 블랙"
   },
   {
+   "name": "Logitech G Pro Gaming Mouse",
+   "category": "mouse",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G Pro Gaming Mouse"
+   ]
+  },
+  {
    "name": "Logitech G Pro X Superlight 2 (Magenta)",
    "category": "mouse",
    "count": 1,
@@ -2103,6 +2175,15 @@
    "coupang_url": null,
    "aliases": [
     "Logitech G Pro X Superlight 2 DEX (Black)"
+   ]
+  },
+  {
+   "name": "Logitech G Pro X3 SUPERSTRIKE",
+   "category": "mouse",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Logitech G Pro X3 SUPERSTRIKE"
    ]
   },
   {
@@ -2312,6 +2393,15 @@
    ],
    "image": "https://thumbnail8.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/2025/05/15/15/6/c57bed8d-d499-446f-b26c-be4e7b8d8906.jpg",
    "coupang_name": "프리플로우 싸이록스 V8 8K 무선 마우스, 옐로우, Scyrox V8"
+  },
+  {
+   "name": "SteelSeries Rival 310",
+   "category": "mouse",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "SteelSeries Rival 310"
+   ]
   },
   {
    "name": "TEEVOLUTION Terra",
@@ -2526,6 +2616,15 @@
    ]
   },
   {
+   "name": "Corsair MM300",
+   "category": "mousepad",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Corsair MM300"
+   ]
+  },
+  {
    "name": "Corsair MM300 Extended",
    "category": "mousepad",
    "count": 1,
@@ -2689,6 +2788,15 @@
    ],
    "image": "https://thumbnail8.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/2022/01/04/18/5/3439f84f-6980-417d-815c-bf0339fbb45c.jpg",
    "coupang_name": "레이저 Pro Glide 장패드 XXL, 1개"
+  },
+  {
+   "name": "Razer Strider",
+   "category": "mousepad",
+   "count": 1,
+   "coupang_url": null,
+   "aliases": [
+    "Razer Strider"
+   ]
   },
   {
    "name": "SONY INZONE MAT-F",
