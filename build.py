@@ -16,6 +16,10 @@ BASE_URL = "https://dugout26.github.io/prosetup"
 VERIFY_GOOGLE = "reLU6hFD0fFzI4ciTnfyEkadi_fsno6fJLTdosq1qTA"
 VERIFY_NAVER = None
 # 구글 폼(사진·영상 첨부 가능, 구글 로그인 필요). 없으면 사이트 내 폼만 노출.
+# 제보 메일·FormSubmit 엔드포인트. 익명 문자열(https://formsubmit.co/<랜덤>)을 받으면 FORMSUBMIT_ENDPOINT에 넣는다.
+# None이면 로그인 없는 폼을 숨기고 구글 폼 안내만 남긴다(운영 메일이 폼 action에 평문으로 노출되지 않게).
+CONTACT_EMAIL = "dugout26.gm@gmail.com"
+FORMSUBMIT_ENDPOINT = None
 GFORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeGvN8f2idXK5TKF7at_2xBPxCVfEoxOBLXEubcZGwWNqUtXw/viewform"
 
 GEAR_LABELS = [("mouse", "마우스"), ("keyboard", "키보드"), ("monitor", "모니터"),
@@ -567,11 +571,46 @@ def build_submit(g, missing):
                              for n, s, t in missing) +
                      '</div></section>')
     other_game = "발로란트" if g["key"] == "lol" else "리그 오브 레전드"
-    mailto = ("mailto:dugout26.gm@gmail.com?subject=%5B%EC%A0%9C%EB%B3%B4%5D%20%EC%84%A0%EC%88%98%EB%AA%85%20-%20%ED%95%AD%EB%AA%A9"
-              "&amp;body=%EA%B2%8C%EC%9E%84%3A%20" + g["short"] +
-              "%0A%EC%84%A0%EC%88%98%3A%20%0A%ED%95%AD%EB%AA%A9%3A%20%0A%EC%A0%9C%ED%92%88%EB%AA%85%3A%20"
-              "%0A%EA%B7%BC%EA%B1%B0(%EB%A7%81%ED%81%AC%2B%ED%83%80%EC%9E%84%EC%8A%A4%ED%83%AC%ED%94%84)%3A%20"
-              "%0A%ED%99%95%EC%9D%B8%20%EC%8B%9C%EC%A0%90%3A%20")
+    form_html = (f"""<div class="tipbox">
+<b style="font-size:15px">방법 2 — 아래 폼 (로그인 없이)</b><br>
+구글 계정이 없거나 로그인이 번거로우면 이쪽을 쓰세요. 사진은 링크로 남겨주시면 됩니다.
+</div>
+<div class="tipbox" style="padding-bottom:20px">
+<form class="rform" action="{FORMSUBMIT_ENDPOINT}" method="POST">
+<input type="hidden" name="_subject" value="[프로셋업 제보] {g['short']}">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="{gurl(g, 'thanks.html')}">
+<input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off">
+<div class="row">
+<div><label>게임</label>
+<select name="게임"><option>{g['name']}</option><option>{other_game}</option></select></div>
+<div><label>선수 <b>*</b></label>
+<input name="선수" required placeholder="예: 케리아"></div>
+</div>
+<div class="row">
+<div><label>항목 <b>*</b></label>
+<select name="항목" required><option>마우스</option><option>키보드</option><option>모니터</option>
+<option>헤드셋</option><option>마우스패드</option><option>DPI·감도</option></select></div>
+<div><label>제품명 <b>*</b></label>
+<input name="제품명" required placeholder="예: Logitech G840"></div>
+</div>
+<label>근거 <b>*</b> — 영상 링크(타임스탬프 포함)·SNS·기사·셋업 사진 출처</label>
+<textarea name="근거" required placeholder="예: https://youtu.be/xxxx?t=372 (해당 장면에서 로고 확인)"></textarea>
+<div class="row">
+<div><label>확인 시점 (선택)</label>
+<input name="확인시점" placeholder="예: 2026년 8월 방송"></div>
+<div><label>회신받을 메일 (선택)</label>
+<input type="email" name="email" placeholder="반영 여부 회신이 필요할 때만"></div>
+</div>
+<button type="submit">제보 보내기</button>
+</form>
+<p style="margin-top:14px; font-size:12px">
+제보 내용은 폼 전송 서비스(FormSubmit)를 거쳐 운영자 메일로 전달됩니다. 회신용 메일을 적지 않으면
+연락처는 수집되지 않습니다. 반영은 근거 확인이 끝나는 대로 진행하며, 개별 회신은 어려울 수 있습니다.</p>
+</div>
+""" if FORMSUBMIT_ENDPOINT else
+                 '<div class="tipbox"><b style="font-size:15px">방법 2 — 로그인 없는 폼 (준비 중)</b><br>'
+                 '로그인 없이 보내는 폼은 스팸 방지 설정을 마치는 대로 열립니다. 그 전까지는 구글 폼이나 아래 메일을 이용해 주세요.</div>')
     body = f"""<div class="crumb"><a href="{gurl(g, '')}">{esc(g['short'])} 홈</a> › 정보 제보</div>
 <h1>장비 정보 제보하기</h1>
 <p class="sub">틀린 정보를 바로잡거나, 아직 없는 선수의 장비를 알려주실 수 있습니다.
@@ -613,50 +652,13 @@ def build_submit(g, missing):
 셋업 <b>사진·영상을 직접 첨부</b>할 수 있어 확인이 빠릅니다. 구글 로그인이 필요합니다.
 <div><a class="mailbtn" href="{GFORM_URL}" target="_blank" rel="noopener">📋 구글 폼으로 제보하기</a></div>
 </div>
-<div class="tipbox">
-<b style="font-size:15px">방법 2 — 아래 폼 (로그인 없이)</b><br>
-구글 계정이 없거나 로그인이 번거로우면 이쪽을 쓰세요. 사진은 링크로 남겨주시면 됩니다.
-</div>
-<div class="tipbox" style="padding-bottom:20px">
-<form class="rform" action="https://formsubmit.co/dugout26.gm@gmail.com" method="POST">
-<input type="hidden" name="_subject" value="[프로셋업 제보] {g['short']}">
-<input type="hidden" name="_template" value="table">
-<input type="hidden" name="_next" value="{gurl(g, 'thanks.html')}">
-<input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off">
-<div class="row">
-<div><label>게임</label>
-<select name="게임"><option>{g['name']}</option><option>{other_game}</option></select></div>
-<div><label>선수 <b>*</b></label>
-<input name="선수" required placeholder="예: 케리아"></div>
-</div>
-<div class="row">
-<div><label>항목 <b>*</b></label>
-<select name="항목" required><option>마우스</option><option>키보드</option><option>모니터</option>
-<option>헤드셋</option><option>마우스패드</option><option>DPI·감도</option></select></div>
-<div><label>제품명 <b>*</b></label>
-<input name="제품명" required placeholder="예: Logitech G840"></div>
-</div>
-<label>근거 <b>*</b> — 영상 링크(타임스탬프 포함)·SNS·기사·셋업 사진 출처</label>
-<textarea name="근거" required placeholder="예: https://youtu.be/xxxx?t=372 (해당 장면에서 로고 확인)"></textarea>
-<div class="row">
-<div><label>확인 시점 (선택)</label>
-<input name="확인시점" placeholder="예: 2026년 8월 방송"></div>
-<div><label>회신받을 메일 (선택)</label>
-<input type="email" name="email" placeholder="반영 여부 회신이 필요할 때만"></div>
-</div>
-<button type="submit">제보 보내기</button>
-</form>
-<p style="margin-top:14px; font-size:12px">
-제보 내용은 폼 전송 서비스(FormSubmit)를 거쳐 운영자 메일로 전달됩니다. 회신용 메일을 적지 않으면
-연락처는 수집되지 않습니다. 반영은 근거 확인이 끝나는 대로 진행하며, 개별 회신은 어려울 수 있습니다.</p>
-</div>
-</section>
+{form_html}</section>
 
 <section><h2>둘 다 안 될 때</h2>
 <div class="tipbox">
 아래 주소로 메일을 보내주셔도 됩니다.
-<div class="mailrow"><code id="mailaddr">dugout26.gm@gmail.com</code>
-<button class="copybtn" onclick="navigator.clipboard.writeText('dugout26.gm@gmail.com');this.textContent='복사됨';">주소 복사</button></div>
+<div class="mailrow"><code id="mailaddr">{CONTACT_EMAIL}</code>
+<button class="copybtn" onclick="navigator.clipboard.writeText('{CONTACT_EMAIL}');this.textContent='복사됨';">주소 복사</button></div>
 </div>
 </section>"""
     title = f"장비 정보 제보 — 프로셋업 {g['short']}"
@@ -1034,21 +1036,38 @@ def build_transfers(g, teams, tmeta):
     # 이적·영입 오피셜이 나오기 전엔 루머가 더 궁금한 소식이라 위로
     has_move = any(x.get("type") != "재계약" for x in off)
     sections_top = sec_off + sec_rep if has_move else sec_rep + sec_off
-    title = f"{season} {g['league']} 이적시장 — 오피셜·루머·FA 선수 장비 총정리"
+    title = f"{season} {g['league']} 이적시장 — FA 명단 · 스토브리그 · 로스터 총정리 (오피셜·루머·선수 장비)"
+    updated = data.get("checked_at") or data["checked"]
+    fa_at = data["fa_open"] + (" " + data["fa_open_time"] if data.get("fa_open_time") else "")
+    coaches = data.get("coaches") or []
+    coach_rows = "".join(
+        f'<tr><td class="pn"><span><b>{esc(c["nickname"])}</b><small>{esc(c.get("name_kr", ""))} · {esc(c.get("role", ""))}</small></span></td>'
+        f'<td>{esc(tname(c.get("team", "")))}</td><td><small>{esc(c.get("status", ""))}</small>'
+        f'<a class="src" href="{esc(c["source"])}" rel="nofollow">출처</a></td></tr>'
+        for c in coaches if c.get("source"))
+    sec_coach = (f'<section><h2>감독·코치 계약 현황 <small class="h2s">출처 확인분만</small></h2>'
+                 f'<div class="cmp"><table><thead><tr><th>이름</th><th>팀</th><th>계약</th></tr></thead>'
+                 f'<tbody>{coach_rows}</tbody></table></div></section>') if coach_rows else ""
+    ups = sorted(data.get("updates") or [], key=lambda u: u.get("at", ""), reverse=True)[:5]
+    log_html = ('<details class="tipbox"><summary>업데이트 기록 (최근 ' + str(len(ups)) + '건)</summary><ul>' +
+                "".join(f'<li><b>{esc(u["at"])}</b> — {esc(u["text"])}</li>' for u in ups) +
+                '</ul></details>') if ups else ""
     desc = (f"{season} {g['league']} 스토브리그 오피셜(이적·재계약)과 언론·소식통 루머, FA 대상 선수와 각 선수의 "
-            f"마우스·키보드를 한 번에. {data['checked']} 갱신.")
+            f"마우스·키보드를 한 번에. {updated} 갱신.")
     body = f"""<div class="crumb"><a href="{gurl(g, '')}">{esc(g['short'])} 홈</a> › {season} 이적시장</div>
 <h1>{esc(title)}</h1>
-<p class="sub">{data['checked']} 갱신 · FA 시장 {data['fa_open']} 개시. 선수 이름을 누르면 장비·감도 전체를 볼 수 있습니다.</p>
+<p class="sub">최근 갱신 {updated} · FA 시장 {fa_at} 개시. 선수 이름을 누르면 장비·감도 전체를 볼 수 있습니다.</p>
 <div class="legend"><span class="tag off">오피셜</span> 구단·리그 공식 발표
 <span class="tag rumor">소식통·보도</span> 언론 보도 단계(확정 아님) <span class="tag dead">무산</span></div>
+{log_html}
 {sections_top}
 <section><h2>팀별 로스터 현황</h2><nav class="gnav sm">{"".join(f'<a href="{gurl(g, "teams", c.lower() + ".html")}">{esc(tmeta.get(c, {}).get("kr", c))}</a>' for c in (g.get("team_order") or []) if c in teams)}</nav></section>
 <section><h2>FA 대상·거취 미정 ({len(data.get('pending', []))}명)</h2>{table(data.get('pending', []))}</section>
 <section><h2>{season} 계약 확인 ({len(data.get('stay', []))}명)</h2>{table(data.get('stay', []))}</section>
+{sec_coach}
 <p class="note">루머·보도는 매체명이 확인된 기사만 싣고, 커뮤니티 찌라시는 싣지 않습니다. 보도 내용은 해당 매체의 주장이며
 구단 공식 발표 전까지 확정이 아닙니다.</p>"""
-    jsonld = {"@context": "https://schema.org", "@type": "WebPage", "name": title, "dateModified": data["checked"]}
+    jsonld = {"@context": "https://schema.org", "@type": "WebPage", "name": title, "dateModified": data["checked"]}  # ISO 날짜 유지
     out = gdir(g) / slug_page
     out.write_text(page(g, title, desc, body, gurl(g, slug_page), jsonld,
                         crumbs=[(f"{g['short']} 홈", gurl(g, "")), (f"{season} 이적시장", gurl(g, slug_page))]),
