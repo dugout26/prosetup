@@ -2034,7 +2034,8 @@ def build_site_pages():
 <li>제품별 사용 선수 페이지: <a href="{BASE_URL}/gear/">프로 사용 장비</a></li></ul></div></section>
 <section><h2>내려받기</h2><div class="tipbox"><ul>
 <li><a href="{BASE_URL}/data/products.json">/data/products.json</a> — 제품 카탈로그(JSON)</li>
-<li><a href="{BASE_URL}/llms.txt">/llms.txt</a> · <a href="{BASE_URL}/llms-full.txt">/llms-full.txt</a> — 선수·제품 요약(텍스트)</li></ul></div></section>
+<li><a href="{BASE_URL}/llms.txt">/llms.txt</a> · <a href="{BASE_URL}/llms-full.txt">/llms-full.txt</a> — 선수·제품 요약(텍스트)</li>
+<li>라이선스: <a href="https://creativecommons.org/licenses/by-nc/4.0/" rel="license">CC BY-NC 4.0</a> — 출처(프로셋업)와 기준일을 밝히면 비상업적 인용·재사용 가능</li></ul></div></section>
 {method}
 <section><h2>기준일</h2>{date_tbl}</section>
 <section><h2>갱신 이력</h2><div class="cmp"><table><thead><tr><th>날짜</th><th>내용</th></tr></thead><tbody>{log_rows}</tbody></table></div></section>"""
@@ -2045,6 +2046,7 @@ def build_site_pages():
           "creator": {"@id": ORG_ID}, "publisher": {"@id": ORG_ID}, "inLanguage": "ko",
           "temporalCoverage": (f"{min(dates)}/{max(dates)}" if dates else SEASON),
           "keywords": ["LCK", "VCT", "프로게이머 장비", "마우스", "키보드", "감도"],
+          "license": "https://creativecommons.org/licenses/by-nc/4.0/",
           "distribution": [{"@type": "DataDownload", "contentUrl": f"{BASE_URL}/data/products.json",
                             "encodingFormat": "application/json"}]}
     (ROOT / "data.html").write_text(page(g, f"프로 선수 장비 데이터셋 — LCK·VCT {n_players}명·제품 {n_prod}종 | 프로셋업",
