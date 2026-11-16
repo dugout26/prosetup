@@ -57,6 +57,7 @@ SEASON = "2026"   # 제목 연도 = 데이터가 반영한 시즌. 2027 로스�
 # 클릭 분석: GoatCounter 사이트 코드(예: "prosetup"). 채우면 모든 쿠팡 버튼 클릭이
 # coupang/<게임>/<페이지유형>/<선수·카테고리>/<제품> 이벤트로 집계된다. None이면 스크립트 미삽입.
 GOATCOUNTER = None
+# 조회수: 쿠키 없는 비콘 → blog.mound.run/api/hit (날짜·경로·유입 호스트·횟수만, IP·쿠키 저장 안 함). 2026-11-16 사이트 주인 요청.
 GUIDE_CATS = [("keyboard", "키보드"), ("mouse", "마우스"), ("headset", "헤드셋"),
               ("monitor", "모니터"), ("mousepad", "마우스패드")]
 
@@ -423,6 +424,7 @@ def page(g, title, desc, body, canonical, jsonld=None, noindex=False, crumbs=Non
 </footer>
 </div>
 {f'<script data-goatcounter="https://{GOATCOUNTER}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>' if GOATCOUNTER else ''}
+<script>try{{navigator.sendBeacon("https://blog.mound.run/api/hit",new Blob([JSON.stringify({{p:location.pathname,r:document.referrer}})],{{type:"text/plain"}}))}}catch(e){{}}</script>
 </body>
 </html>"""
 
