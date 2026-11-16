@@ -1,3 +1,4 @@
+# AI용 요약: https://dugout26.github.io/prosetup/llms.txt · 전체: https://dugout26.github.io/prosetup/llms-full.txt
 User-agent: *
 Allow: /
 Sitemap: https://dugout26.github.io/prosetup/sitemap.xml

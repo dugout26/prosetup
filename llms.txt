@@ -1,0 +1,398 @@
+# 프로셋업 (Prosetup)
+
+> LCK·VCT 프로 선수 267명(LCK 36·해외 LoL 13·VCT 218)이 실제 사용하는 게이밍 장비·감도를 공개 자료로 교차 확인해 정리한 비공식 팬 사이트. 제품 페이지 91종. 데이터 기준일 2026-11(LCK 장비 2026-08 · VCT 장비 2026-11). 인용 시 사이트명과 기준일을 함께 표기해 주세요. 문의·정정: dugout26.gm@gmail.com
+
+## 선수별 장비·감도
+
+- [김태윤(Taeyoon)](https://dugout26.github.io/prosetup/players/taeyoon.html): BNK 피어엑스 원딜, 마우스 Logitech G Pro Wireless, 키보드 Logitech G915 TKL Carbon
+- [김정현(Willer)](https://dugout26.github.io/prosetup/players/willer.html): 키움 DRX 정글, 마우스 Logitech G Pro X Superlight 2, 키보드 Logitech G413, DPI 950
+- [손우현(Ucal)](https://dugout26.github.io/prosetup/players/ucal.html): 키움 DRX 미드, 마우스 Logitech G Pro X Superlight 2 (Magenta), 키보드 Wooting 60HE+, DPI 800
+- [김하람(Aiming)](https://dugout26.github.io/prosetup/players/aiming.html): 키움 DRX 원딜, 마우스 Logitech G903, 키보드 Logitech G512, DPI 800
+- [문관빈(Andil)](https://dugout26.github.io/prosetup/players/andil.html): 키움 DRX 서포터, 마우스 Logitech G Pro X Superlight 2 (White), 키보드 Logitech G Pro X TKL Rapid, DPI 800
+- [박진성(Teddy)](https://dugout26.github.io/prosetup/players/teddy.html): 한진 브리온 원딜, 키보드 MAXTILL TRON G500K
+- [이주현(Clozer)](https://dugout26.github.io/prosetup/players/clozer.html): DN SOOPers 미드, 마우스 ROCCAT Kone Pure Ultra, 키보드 ROCCAT Vulcan TKL Pro, DPI 800
+- [서대길(deokdam)](https://dugout26.github.io/prosetup/players/deokdam.html): DN SOOPers 원딜, 마우스 Razer Viper V3 Pro (White), 키보드 Logitech G Pro X TKL, DPI 400
+- [정윤수(Peter)](https://dugout26.github.io/prosetup/players/peter.html): DN SOOPers 서포터, 마우스 Logitech G Pro X Superlight 2 DEX (Black), 키보드 Logitech G Pro X (TKL), DPI 800
+- [전시우(Siwoo)](https://dugout26.github.io/prosetup/players/siwoo.html): 디플러스 기아 탑, 마우스 Logitech G Pro X2 Superstrike, 키보드 Logitech G Pro X TKL (Black), DPI 1200
+- [최용혁(Lucid)](https://dugout26.github.io/prosetup/players/lucid.html): 디플러스 기아 정글, 마우스 Logitech G Pro X2 Superstrike, 키보드 Logitech G715, DPI 800
+- [허수(ShowMaker)](https://dugout26.github.io/prosetup/players/showmaker.html): 디플러스 기아 미드, 마우스 Logitech G Pro X2 Superstrike, 키보드 Logitech G715, DPI 2500
+- [신금재(Smash)](https://dugout26.github.io/prosetup/players/smash.html): 디플러스 기아 원딜, 마우스 Logitech G Pro X Superlight 2, 키보드 Logitech G Pro X
+- [황성훈(Kingen)](https://dugout26.github.io/prosetup/players/kingen.html): 농심 레드포스 탑, 마우스 Logitech G703, 키보드 Razer BlackWidow Lite
+- [배영준(Sponge)](https://dugout26.github.io/prosetup/players/sponge.html): 농심 레드포스 정글, 마우스 Logitech G Pro X Superlight 2
+- [이예찬(Scout)](https://dugout26.github.io/prosetup/players/scout.html): 농심 레드포스 미드, 마우스 Razer Viper 8KHz, 키보드 Razer Huntsman Elite
+- [남대근(Diable)](https://dugout26.github.io/prosetup/players/diable.html): 농심 레드포스 원딜, 마우스 Logitech G Pro X Superlight
+- [손시우(Lehends)](https://dugout26.github.io/prosetup/players/lehends.html): 농심 레드포스 서포터, 마우스 Logitech G304, 키보드 Corsair K70 RGB MK.2 SE, DPI 1650
+- [최우제(Zeus)](https://dugout26.github.io/prosetup/players/zeus.html): 한화생명e스포츠 탑, 마우스 Razer Viper V3 Pro, 키보드 Razer Huntsman V3 Pro TKL, DPI 800
+- [서진혁(Kanavi)](https://dugout26.github.io/prosetup/players/kanavi.html): 한화생명e스포츠 정글, 마우스 Logitech G PRO X Superlight 2 White, 키보드 Logitech G PRO X TKL White
+- [김건우(Zeka)](https://dugout26.github.io/prosetup/players/zeka.html): 한화생명e스포츠 미드, 마우스 Logitech G PRO X Superlight 2, 키보드 Razer BlackWidow V3 Pro, DPI 650
+- [이민형(Gumayusi)](https://dugout26.github.io/prosetup/players/gumayusi.html): 한화생명e스포츠 원딜, 마우스 Logitech G PRO X Superlight 2, 키보드 Logitech G PRO X TKL Rapid, DPI 800
+- [유환중(Delight)](https://dugout26.github.io/prosetup/players/delight.html): 한화생명e스포츠 서포터, 마우스 Logitech G Pro Wireless, 키보드 Razer Huntsman V3 Pro TKL, DPI 750
+- [이승민(PerfecT)](https://dugout26.github.io/prosetup/players/perfect.html): kt 롤스터 탑, 마우스 Logitech G PRO X Superlight 2, 키보드 Logitech G PRO X TKL, DPI 1600
+- [문우찬(Cuzz)](https://dugout26.github.io/prosetup/players/cuzz.html): kt 롤스터 정글, 마우스 Logitech G PRO X Superlight 2 White, 키보드 Logitech G PRO X TKL, DPI 800
+- [곽보성(Bdd)](https://dugout26.github.io/prosetup/players/bdd.html): kt 롤스터 미드, 마우스 Logitech G903, 키보드 Logitech G PRO X TKL, DPI 1800
+- [천쩌빈(Bin)](https://dugout26.github.io/prosetup/players/bin.html): 빌리빌리 게이밍 탑, 마우스 SteelSeries Rival 310, DPI 1600
+- [줘딩(Knight)](https://dugout26.github.io/prosetup/players/knight.html): 빌리빌리 게이밍 미드, 마우스 Logitech G Pro X Superlight 2, 키보드 Corsair Vanguard Pro 96, DPI 1600
+- [박도현(Viper)](https://dugout26.github.io/prosetup/players/viper.html): 빌리빌리 게이밍 원딜, 마우스 Logitech G Pro X3 SUPERSTRIKE, 키보드 Wooting 80HE TenZ Edition, DPI 1200
+- [강승록(TheShy)](https://dugout26.github.io/prosetup/players/theshy.html): 인빅터스 게이밍 탑, 마우스 Logitech G Pro Gaming Mouse, 키보드 Razer Huntsman Elite
+- [송의진(Rookie)](https://dugout26.github.io/prosetup/players/rookie.html): 인빅터스 게이밍 미드, 마우스 Razer Viper V3 Pro, 키보드 Razer Huntsman V3 Pro, DPI 16000
+- [이승용(Tarzan)](https://dugout26.github.io/prosetup/players/tarzan.html): 애니원즈 레전드 정글, 마우스 Logitech G Pro Wireless
+- [세르겐 첼리크(BrokenBlade)](https://dugout26.github.io/prosetup/players/brokenblade.html): G2 e스포츠 탑, 키보드 Corsair K65 Rapidfire, DPI 2400
+- [라스무스 빈터(Caps)](https://dugout26.github.io/prosetup/players/caps.html): G2 e스포츠 미드, 마우스 Logitech G Pro X Superlight, 키보드 Logitech G Pro X Keyboard, DPI 3200
+- [스티븐 리브(Hans Sama)](https://dugout26.github.io/prosetup/players/hans-sama.html): G2 e스포츠 원딜, 마우스 Logitech G Pro X Superlight, 키보드 Corsair K95 RGB Platinum, DPI 1400
+- [칼리스트(Caliste)](https://dugout26.github.io/prosetup/players/caliste.html): 카르민 코프 원딜, 마우스 Razer DeathAdder V4 Pro, 키보드 Razer Huntsman V3 Pro TKL 8KHz, DPI 1600
+- [조용인(CoreJJ)](https://dugout26.github.io/prosetup/players/corejj.html): 팀 리퀴드 서포터, 마우스 Logitech G Pro Wireless, 키보드 Razer BlackWidow Chroma V2, DPI 1500
+- [자오자하오(Elk)](https://dugout26.github.io/prosetup/players/elk.html): FA (무소속) 원딜, 마우스 Logitech G Pro X Superlight 2, DPI 1600
+- [카츠퍼 스워마(Inspired)](https://dugout26.github.io/prosetup/players/inspired.html): FA (무소속) 정글, 마우스 Logitech G Pro X Superlight, 키보드 Logitech G Pro X Keyboard, DPI 1600
+- [도란(Doran)](https://dugout26.github.io/prosetup/players/doran.html): T1 탑, 마우스 Razer Viper V3 Pro, 키보드 SteelSeries Apex Pro TKL Gen 3, DPI 800
+- [오너(Oner)](https://dugout26.github.io/prosetup/players/oner.html): T1 정글, 마우스 Logitech G Pro X Superlight 2, 키보드 SteelSeries Apex Pro TKL Gen 3, DPI 800
+- [페이커(Faker)](https://dugout26.github.io/prosetup/players/faker.html): T1 미드, 마우스 Razer Viper V3 Pro Faker Edition, 키보드 Razer Huntsman V3 Pro, DPI 1800
+- [페이즈(Peyz)](https://dugout26.github.io/prosetup/players/peyz.html): T1 원딜, 마우스 Logitech G Pro Wireless, 키보드 Logitech G Pro X
+- [케리아(Keria)](https://dugout26.github.io/prosetup/players/keria.html): T1 서포터, 마우스 Logitech G Pro X2 Superstrike, 키보드 Corsair K70 RGB MK.2, DPI 800
+- [기인(Kiin)](https://dugout26.github.io/prosetup/players/kiin.html): 젠지 탑, 마우스 Logitech G Pro X Superlight 2, 키보드 Logitech G Pro X TKL
+- [캐니언(Canyon)](https://dugout26.github.io/prosetup/players/canyon.html): 젠지 정글, 마우스 Logitech G Pro X Superlight 2, 키보드 Logitech G Pro X TKL
+- [쵸비(Chovy)](https://dugout26.github.io/prosetup/players/chovy.html): 젠지 미드, 마우스 Logitech G Pro X Superlight 2, 키보드 Logitech G715, DPI 1750
+- [룰러(Ruler)](https://dugout26.github.io/prosetup/players/ruler.html): 젠지 원딜, 마우스 Logitech G305, 키보드 Logitech G Pro X TKL, DPI 2100
+- [두로(Duro)](https://dugout26.github.io/prosetup/players/duro.html): 젠지 서포터, 마우스 Logitech G Pro X Superlight 2, 키보드 Logitech G Pro X TKL
+- [김나라(t3xture)](https://dugout26.github.io/prosetup/valorant/players/t3xture.html): Gen.G 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 SteelSeries Apex Pro TKL Gen 3, DPI 800
+- [김명관(MaKo)](https://dugout26.github.io/prosetup/valorant/players/mako.html): Gen.G 선수, 마우스 Razer Viper V3 Pro, 키보드 Razer Huntsman V3 Pro TKL 8KHz, DPI 400
+- [Lakia](https://dugout26.github.io/prosetup/valorant/players/lakia.html): Gen.G 선수, 마우스 Lamzu Maya X, 키보드 SteelSeries Apex Pro TKL Gen 3, DPI 800
+- [김원태(Karon)](https://dugout26.github.io/prosetup/valorant/players/karon.html): Gen.G 선수, 마우스 Logitech G Pro X Superlight, 키보드 Wooting 60HE+, DPI 800
+- [ZynX](https://dugout26.github.io/prosetup/valorant/players/zynx.html): Gen.G 선수, 마우스 Razer Viper V3 Pro, 키보드 Razer Huntsman V3 Pro Mini, DPI 1600
+- [이혁규(Dambi)](https://dugout26.github.io/prosetup/valorant/players/dambi.html): Gen.G 선수, 마우스 Logitech G Pro X Superlight 2, DPI 1600
+- [TenZ](https://dugout26.github.io/prosetup/valorant/players/tenz.html): T1 선수, 마우스 Pulsar TenZ Signature Edition 2.0, 키보드 Wooting 80HE TenZ Edition, DPI 1600
+- [김태오(Meteor)](https://dugout26.github.io/prosetup/valorant/players/meteor.html): T1 선수, 마우스 Razer Viper V4 Pro, 키보드 Wooting 60HE v2, DPI 800
+- [유병철(BuZz)](https://dugout26.github.io/prosetup/valorant/players/buzz.html): T1 선수, 마우스 Pulsar BUZZ-X, DPI 400
+- [xccurate](https://dugout26.github.io/prosetup/valorant/players/xccurate.html): T1 선수, 마우스 Pulsar Susanto-X, 키보드 Wooting 80HE TenZ Edition, DPI 400
+- [김구택(stax)](https://dugout26.github.io/prosetup/valorant/players/stax.html): T1 선수, 마우스 Pulsar STA-X, DPI 800
+- [Carpe](https://dugout26.github.io/prosetup/valorant/players/carpe.html): T1 선수, 마우스 Razer Viper V3 Pro, 키보드 SteelSeries Apex Pro TKL Gen 3, DPI 900
+- [변상범(Munchkin)](https://dugout26.github.io/prosetup/valorant/players/munchkin.html): T1 선수, 마우스 Razer Viper V4 Pro, 키보드 Wooting 80HE Ghost, DPI 1600
+- [iZu](https://dugout26.github.io/prosetup/valorant/players/izu.html): T1 선수, 마우스 Logitech G Pro X3 SUPERSTRIKE Midnight, DPI 800
+- [f0rsakeN](https://dugout26.github.io/prosetup/valorant/players/f0rsaken.html): Paper Rex 선수, 마우스 Pulsar Susanto-X, 키보드 Wooting 60HE v2, DPI 800
+- [something](https://dugout26.github.io/prosetup/valorant/players/something.html): Paper Rex 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Pulsar PCMK 3, DPI 800
+- [cgrs](https://dugout26.github.io/prosetup/valorant/players/cgrs.html): Paper Rex 선수, 마우스 Pulsar X2, 키보드 Wooting 60HE+, DPI 400
+- [PatMen](https://dugout26.github.io/prosetup/valorant/players/patmen.html): Paper Rex 선수, 마우스 Lamzu Maya X, 키보드 Wooting 60HE v2, DPI 1600
+- [Invy](https://dugout26.github.io/prosetup/valorant/players/invy.html): Paper Rex 선수, 마우스 Logitech G Pro X3 SUPERSTRIKE Magenta Eclipse, 키보드 Wooting 60HE v2, DPI 800
+- [Monyet](https://dugout26.github.io/prosetup/valorant/players/monyet.html): Rex Regum Qeon 선수, 마우스 VAXEE NP-01S, 키보드 Wooting 80HE+ Frost, DPI 800
+- [Jemkin](https://dugout26.github.io/prosetup/valorant/players/jemkin.html): Rex Regum Qeon 선수, 마우스 Razer Viper V4 Pro, 키보드 Wooting 80HE, DPI 1600
+- [crazyguy](https://dugout26.github.io/prosetup/valorant/players/crazyguy.html): Rex Regum Qeon 선수, 마우스 Razer Viper V3 Pro, 키보드 Wooting 60HE v2, DPI 1600
+- [Kushy](https://dugout26.github.io/prosetup/valorant/players/kushy.html): Rex Regum Qeon 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Wooting 60HE v2, DPI 1600
+- [xffero](https://dugout26.github.io/prosetup/valorant/players/xffero.html): Rex Regum Qeon 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 Wooting 80HE, DPI 1600
+- [Xan](https://dugout26.github.io/prosetup/valorant/players/xan.html): Rex Regum Qeon 선수, 마우스 Razer Viper V3 Pro, 키보드 Wooting 60HE v2, DPI 800
+- [Xdll](https://dugout26.github.io/prosetup/valorant/players/xdll.html): ZETA DIVISION 선수, 마우스 Razer Viper V4 Pro, 키보드 Razer Huntsman V3 Pro TKL, DPI 800
+- [SugarZ3ro](https://dugout26.github.io/prosetup/valorant/players/sugarz3ro.html): ZETA DIVISION 선수, 마우스 Razer Viper V4 Pro, 키보드 Wooting 60HE v2, DPI 800
+- [Laz](https://dugout26.github.io/prosetup/valorant/players/laz.html): ZETA DIVISION 선수, 마우스 VAXEE NP-01S Ergo, 키보드 ZENAIM Keyboard, DPI 1600
+- [eko](https://dugout26.github.io/prosetup/valorant/players/eko.html): ZETA DIVISION 선수, 마우스 ZOWIE EC2-CW, 키보드 Logitech G Pro X Keyboard, DPI 800
+- [SyouTa](https://dugout26.github.io/prosetup/valorant/players/syouta.html): ZETA DIVISION 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Razer Huntsman V3 Pro TKL, DPI 800.00
+- [JohnOlsen](https://dugout26.github.io/prosetup/valorant/players/johnolsen.html): FULL SENSE 선수, 마우스 HITSCAN Hyperlight, 키보드 Wooting 60HE+, DPI 1600
+- [LAMMYSNAX](https://dugout26.github.io/prosetup/valorant/players/lammysnax.html): FULL SENSE 선수, 마우스 Logitech G Pro X Superlight, 키보드 Wooting 60HE+, DPI 800
+- [JitBoyS](https://dugout26.github.io/prosetup/valorant/players/jitboys.html): FULL SENSE 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Wooting 80HE+ Frost, DPI 800
+- [Primmie](https://dugout26.github.io/prosetup/valorant/players/primmie.html): FULL SENSE 선수, 마우스 Razer Viper V4 Pro, 키보드 Wooting 60HE v2, DPI 800
+- [neth](https://dugout26.github.io/prosetup/valorant/players/neth.html): Crazy Raccoon 선수, 마우스 Razer Viper V3 Pro, 키보드 Wooting 60HE+, DPI 800
+- [Lothar](https://dugout26.github.io/prosetup/valorant/players/lothar.html): DRX 선수, 마우스 Razer Viper V3 Pro, 키보드 Razer Huntsman V3 Pro Mini, DPI 1600
+- [강하빈(BeYN)](https://dugout26.github.io/prosetup/valorant/players/beyn.html): DRX 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Wooting 80HE, DPI 400
+- [노하준(free1ng)](https://dugout26.github.io/prosetup/valorant/players/free1ng.html): DRX 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Wooting 60HE+, DPI 800
+- [Yong](https://dugout26.github.io/prosetup/valorant/players/yong.html): DRX 선수, 마우스 Lamzu Maya, DPI 800
+- [윤태희(Flicker)](https://dugout26.github.io/prosetup/valorant/players/flicker.html): DRX 선수, 마우스 Lamzu Maya X Purple Shadow, 키보드 Wooting 60HE+, DPI 1600
+- [구상민(Rb)](https://dugout26.github.io/prosetup/valorant/players/rb.html): Nongshim RedForce 선수, 마우스 Razer Viper V4 Pro, 키보드 Wooting 80HE+ Frost, DPI 1600
+- [정환(Xross)](https://dugout26.github.io/prosetup/valorant/players/xross.html): Nongshim RedForce 선수, 마우스 Razer Viper V3 Pro, 키보드 Wooting 60HE v2, DPI 800
+- [김무빈(Francis)](https://dugout26.github.io/prosetup/valorant/players/francis.html): Nongshim RedForce 선수, 마우스 Razer Viper V4 Pro, 키보드 IQUNIX EV63 HE, DPI 800
+- [Ivy](https://dugout26.github.io/prosetup/valorant/players/ivy.html): Nongshim RedForce 선수, 마우스 Razer Viper V4 Pro, 키보드 Wooting 60HE v2, DPI 1600
+- [UdoTan](https://dugout26.github.io/prosetup/valorant/players/udotan.html): Nongshim RedForce 선수, 마우스 Razer Viper V4 Pro, 키보드 Wooting 60HE v2, DPI 1600
+- [Sylvan](https://dugout26.github.io/prosetup/valorant/players/sylvan.html): Team Secret 선수, 마우스 Logitech G Pro X Superlight, 키보드 Logitech G Pro X Keyboard, DPI 800
+- [kellyS](https://dugout26.github.io/prosetup/valorant/players/kellys.html): Team Secret 선수, 마우스 Razer Viper V4 Pro, 키보드 Wooting 80HE, DPI 800
+- [BerserX](https://dugout26.github.io/prosetup/valorant/players/berserx.html): Team Secret 선수, 마우스 Logitech G Pro X Superlight, 키보드 SteelSeries Apex 7 TKL, DPI 800
+- [Rimuru](https://dugout26.github.io/prosetup/valorant/players/rimuru.html): Team Secret 선수, 마우스 Razer Viper V4 Pro, 키보드 Wooting 60HE+, DPI 1600
+- [Autumn](https://dugout26.github.io/prosetup/valorant/players/autumn.html): Global Esports 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 Wooting 60HE+, DPI 1600
+- [xavi8k](https://dugout26.github.io/prosetup/valorant/players/xavi8k.html): Global Esports 선수, 마우스 Razer Viper V4 Pro, 키보드 Wooting 60HE v2, DPI 1600
+- [Kr1stal](https://dugout26.github.io/prosetup/valorant/players/kr1stal.html): Global Esports 선수, 마우스 ZOWIE EC2-DW, 키보드 Wooting 60HE v2, DPI 1600
+- [Meiy](https://dugout26.github.io/prosetup/valorant/players/meiy.html): DetonatioN FocusMe 선수, 마우스 Lamzu Thorn V2, 키보드 Pulsar PCMK 3, DPI 1600
+- [d3ffo](https://dugout26.github.io/prosetup/valorant/players/d3ffo.html): BOOM Esports 선수, 마우스 VAXEE ZYGEN NP-01, 키보드 Logitech G Pro Keyboard, DPI 800
+- [johnqt](https://dugout26.github.io/prosetup/valorant/players/johnqt.html): Sentinels 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 Wooting 60HE+, DPI 800
+- [tarik](https://dugout26.github.io/prosetup/valorant/players/tarik.html): Sentinels 선수, 마우스 Finalmouse Ultralight X Large, 키보드 Wooting 80HE, DPI 800
+- [JonahP](https://dugout26.github.io/prosetup/valorant/players/jonahp.html): Sentinels 선수, 마우스 Razer Viper V4 Pro, 키보드 Wooting 60HE v2, DPI 800
+- [OXY](https://dugout26.github.io/prosetup/valorant/players/oxy.html): Sentinels 선수, 마우스 Razer Viper Mini, 키보드 Wooting 80HE, DPI 800
+- [reduxx](https://dugout26.github.io/prosetup/valorant/players/reduxx.html): Sentinels 선수, 마우스 Razer Viper V4 Pro, 키보드 Razer Huntsman V3 Pro TKL 8KHz, DPI 1600
+- [cortezia](https://dugout26.github.io/prosetup/valorant/players/cortezia.html): Sentinels 선수, 마우스 Razer Viper V4 Pro, 키보드 MelGeek MADE68 Ultra, DPI 800
+- [canezerra](https://dugout26.github.io/prosetup/valorant/players/canezerra.html): Sentinels 선수, 마우스 Razer Viper V4 Pro, 키보드 Razer Huntsman V3 Pro Mini 8KHz, DPI 1600
+- [brawk](https://dugout26.github.io/prosetup/valorant/players/brawk.html): Sentinels 선수, 마우스 Razer Viper V4 Pro, 키보드 ASUS ROG Falchion Ace 75 HE, DPI 800
+- [Jerrwin](https://dugout26.github.io/prosetup/valorant/players/jerrwin.html): Sentinels 선수, 마우스 Razer Viper V4 Pro, 키보드 Wooting 60HE v2, DPI 800.00
+- [Ethan](https://dugout26.github.io/prosetup/valorant/players/ethan.html): NRG 선수, 마우스 ZOWIE EC3-DW, 키보드 ASUS ROG Falchion Ace 75 HE, DPI 400
+- [s0m](https://dugout26.github.io/prosetup/valorant/players/s0m.html): NRG 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 Wooting 60HE v2, DPI 400
+- [Keiko](https://dugout26.github.io/prosetup/valorant/players/keiko.html): NRG 선수, 마우스 WLMouse Beast X Max, 키보드 Wooting 80HE+ Frost, DPI 800
+- [mada](https://dugout26.github.io/prosetup/valorant/players/mada.html): NRG 선수, 마우스 Pulsar X2 CrazyLight, 키보드 ASUS ROG Falchion Ace 75 HE, DPI 800
+- [skuba](https://dugout26.github.io/prosetup/valorant/players/skuba.html): NRG 선수, 마우스 Pulsar X2 CrazyLight, 키보드 Razer Huntsman V3 Pro TKL 8KHz, DPI 800
+- [Cryocells](https://dugout26.github.io/prosetup/valorant/players/cryocells.html): 100 Thieves 선수, 마우스 Ninjutso Sora V2, 키보드 WALLHACK K-001 Natural, DPI 1600
+- [Asuna](https://dugout26.github.io/prosetup/valorant/players/asuna.html): 100 Thieves 선수, 마우스 Razer DeathAdder V2, 키보드 Higround Basecamp 65HE, DPI 1400
+- [bang](https://dugout26.github.io/prosetup/valorant/players/bang.html): 100 Thieves 선수, 마우스 Logitech G Pro X Superlight, 키보드 Wooting 60HE+, DPI 800
+- [Nadeshot](https://dugout26.github.io/prosetup/valorant/players/nadeshot.html): 100 Thieves 선수, 마우스 G-Wolves Hati S+ 4K, DPI 800
+- [timotino](https://dugout26.github.io/prosetup/valorant/players/timotino.html): 100 Thieves 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Wooting 60HE v2, DPI 1600
+- [vora](https://dugout26.github.io/prosetup/valorant/players/vora.html): 100 Thieves 선수, 마우스 Ninjutso Sora V3, 키보드 Wooting 80HE, DPI 1600
+- [DaviH](https://dugout26.github.io/prosetup/valorant/players/davih.html): LOUD 선수, 마우스 Logitech G Pro X Superlight 2c, 키보드 Wooting 60HE v2, DPI 800
+- [Tkzin](https://dugout26.github.io/prosetup/valorant/players/tkzin.html): LOUD 선수, 마우스 Razer Viper V4 Pro, 키보드 IQUNIX EV63 HE, DPI 1600
+- [Darker](https://dugout26.github.io/prosetup/valorant/players/darker.html): LOUD 선수, 마우스 Razer Viper V4 Pro, 키보드 IQUNIX EV63 HE, DPI 1600
+- [erde](https://dugout26.github.io/prosetup/valorant/players/erde.html): LOUD 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 IQUNIX EV63 HE, DPI 800
+- [Zekken](https://dugout26.github.io/prosetup/valorant/players/zekken.html): MIBR 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 MelGeek MADE68 Ultra V2, DPI 1600
+- [aspas](https://dugout26.github.io/prosetup/valorant/players/aspas.html): MIBR 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 ATK RS6 Ultra Aspas Edition, DPI 800
+- [nzr](https://dugout26.github.io/prosetup/valorant/players/nzr.html): MIBR 선수, 마우스 Razer Viper V4 Pro, 키보드 Wooting 60HE v2, DPI 800
+- [Mazino](https://dugout26.github.io/prosetup/valorant/players/mazino.html): MIBR 선수, 마우스 Logitech G703, 키보드 IQUNIX EV63 HE, DPI 1600
+- [tex](https://dugout26.github.io/prosetup/valorant/players/tex.html): MIBR 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Wooting 60HE v2, DPI 800
+- [tteuw](https://dugout26.github.io/prosetup/valorant/players/tteuw.html): MIBR 선수, 마우스 Logitech G402, DPI 2000
+- [Verno](https://dugout26.github.io/prosetup/valorant/players/verno.html): MIBR 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Wooting 60HE+, DPI 1600
+- [kiNgg](https://dugout26.github.io/prosetup/valorant/players/kingg.html): Leviatan 선수, 마우스 Razer Viper V3 Pro, 키보드 MelGeek MADE68 Ultra V2, DPI 1600
+- [spikeziN](https://dugout26.github.io/prosetup/valorant/players/spikezin.html): Leviatan 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 ATK EDGE 60HE, DPI 800
+- [Sato](https://dugout26.github.io/prosetup/valorant/players/sato.html): Leviatan 선수, 마우스 Razer Prototype Mouse, 키보드 MelGeek MADE68 Ultra V2, DPI 800
+- [Neon](https://dugout26.github.io/prosetup/valorant/players/neon.html): Leviatan 선수, 마우스 Razer Viper V3 Pro, 키보드 MelGeek MADE68 Ultra V2, DPI 800
+- [Blowz](https://dugout26.github.io/prosetup/valorant/players/blowz.html): Leviatan 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Wooting 60HE v2, DPI 800
+- [Less](https://dugout26.github.io/prosetup/valorant/players/less.html): KRÜ Esports 선수, 마우스 Logitech G Pro 2 LIGHTSPEED, 키보드 ASUS ROG Falcata, DPI 800
+- [mwzera](https://dugout26.github.io/prosetup/valorant/players/mwzera.html): KRÜ Esports 선수, 마우스 Scyrox V8, 키보드 VGN Flash 75HE, DPI 800
+- [adverso](https://dugout26.github.io/prosetup/valorant/players/adverso.html): KRÜ Esports 선수, 마우스 Razer Viper V3 Pro, 키보드 Varmilo VA87M Summit, DPI 400
+- [Saadhak](https://dugout26.github.io/prosetup/valorant/players/saadhak.html): KRÜ Esports 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Wooting 60HE+, DPI 900
+- [heat](https://dugout26.github.io/prosetup/valorant/players/heat.html): KRÜ Esports 선수, 마우스 Razer Viper V4 Pro, 키보드 ATK EDGE 60HE, DPI 800
+- [Dantedeu5](https://dugout26.github.io/prosetup/valorant/players/dantedeu5.html): KRÜ Esports 선수, 마우스 Razer Viper V4 Pro, 키보드 Wooting 60HE+, DPI 800
+- [trent](https://dugout26.github.io/prosetup/valorant/players/trent.html): G2 Esports 선수, 마우스 Logitech G Pro X Superlight 2c, 키보드 Wooting 60HE v2, DPI 1600
+- [babybay](https://dugout26.github.io/prosetup/valorant/players/babybay.html): G2 Esports 선수, 마우스 Logitech G Pro X Superlight 2 Dex, 키보드 Wooting 60HE v2, DPI 1600
+- [leaf](https://dugout26.github.io/prosetup/valorant/players/leaf.html): G2 Esports 선수, 마우스 Logitech G Pro X Superlight 2c, 키보드 Logitech G Pro X2 RAPID, DPI 1600
+- [Shanks](https://dugout26.github.io/prosetup/valorant/players/shanks.html): G2 Esports 선수, 마우스 Logitech G Pro X Superlight 2 Dex, 키보드 Wooting 80HE, DPI 800
+- [valyn](https://dugout26.github.io/prosetup/valorant/players/valyn.html): G2 Esports 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 Wooting 60HE v2, DPI 1600
+- [jawgemo](https://dugout26.github.io/prosetup/valorant/players/jawgemo.html): G2 Esports 선수, 마우스 Razer Prototype Mouse, 키보드 Wooting 60HE+, DPI 1600
+- [Zellsis](https://dugout26.github.io/prosetup/valorant/players/zellsis.html): Cloud9 선수, 마우스 Razer Viper V4 Pro, 키보드 Razer Huntsman V3 Pro Mini, DPI 800
+- [v1c](https://dugout26.github.io/prosetup/valorant/players/v1c.html): Cloud9 선수, 마우스 Pulsar X2N Crazylight Medium, 키보드 ASUS ROG Falchion Ace 75 HE, DPI 800
+- [nightz](https://dugout26.github.io/prosetup/valorant/players/nightz.html): Cloud9 선수, 마우스 Razer Viper V4 Pro, 키보드 Wooting 60HE+, DPI 1600
+- [TcK](https://dugout26.github.io/prosetup/valorant/players/tck.html): Cloud9 선수, 마우스 Razer DeathAdder V4 Pro, 키보드 Wooting 80HE TenZ Edition, DPI 800
+- [Jackk](https://dugout26.github.io/prosetup/valorant/players/jackk.html): Cloud9 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 ASUS ROG Falchion Ace HFX, DPI 3200
+- [Notexxd](https://dugout26.github.io/prosetup/valorant/players/notexxd.html): Cloud9 선수, 마우스 Razer Viper V3 Pro, 키보드 ASUS ROG Falchion Ace 75 HE, DPI 1600
+- [fireballops](https://dugout26.github.io/prosetup/valorant/players/fireballops.html): Cloud9 선수, 마우스 Razer Viper V3 Pro, 키보드 ASUS ROG Falchion Ace 75 HE, DPI 400
+- [dgzin](https://dugout26.github.io/prosetup/valorant/players/dgzin.html): Evil Geniuses 선수, 마우스 ZOWIE EC2-DW Glossy, 키보드 Wooting 60HE v2, DPI 400
+- [supamen](https://dugout26.github.io/prosetup/valorant/players/supamen.html): Evil Geniuses 선수, 마우스 Razer Viper V4 Pro, 키보드 Wooting 60HE v2, DPI 800
+- [bao](https://dugout26.github.io/prosetup/valorant/players/bao.html): Evil Geniuses 선수, 마우스 WLMouse BEAST X, 키보드 Wooting 60HE+, DPI 1600
+- [Paincakes](https://dugout26.github.io/prosetup/valorant/players/paincakes.html): Evil Geniuses 선수, 마우스 Logitech G Pro Wireless, DPI 800
+- [zerona](https://dugout26.github.io/prosetup/valorant/players/zerona.html): Evil Geniuses 선수, 마우스 Razer Viper V4 Pro, 키보드 ASUS ROG Falcata, DPI 1600
+- [C0M](https://dugout26.github.io/prosetup/valorant/players/c0m.html): FURIA 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Wooting 60HE+, DPI 800
+- [Shyy](https://dugout26.github.io/prosetup/valorant/players/shyy.html): FURIA 선수, 마우스 Razer Viper V2 Pro, 키보드 Wooting 60HE v2, DPI 800
+- [koalanoob](https://dugout26.github.io/prosetup/valorant/players/koalanoob.html): FURIA 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 Wooting 60HE v2, DPI 800
+- [artzin](https://dugout26.github.io/prosetup/valorant/players/artzin.html): FURIA 선수, 마우스 Razer Viper V3 Pro, 키보드 MelGeek MADE68 Ultra V2, DPI 1600
+- [basic](https://dugout26.github.io/prosetup/valorant/players/basic.html): FURIA 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Wooting 60HE v2, DPI 800
+- [Alfajer](https://dugout26.github.io/prosetup/valorant/players/alfajer.html): Fnatic 선수, 마우스 Logitech G Pro X3 SUPERSTRIKE Magenta Eclipse, 키보드 Sony INZONE KBD-H75, DPI 1600
+- [crashies](https://dugout26.github.io/prosetup/valorant/players/crashies.html): Fnatic 선수, 마우스 Lamzu Maya X, 키보드 Sony INZONE KBD-H75, DPI 1600
+- [Boaster](https://dugout26.github.io/prosetup/valorant/players/boaster.html): Fnatic 선수, 마우스 Fnatic x Lamzu Thorn, 키보드 Sony INZONE KBD-H75, DPI 800
+- [PROD](https://dugout26.github.io/prosetup/valorant/players/prod.html): Fnatic 선수, 마우스 Logitech G Pro X Superlight, 키보드 Wooting 60HE v2, DPI 800
+- [Cloud](https://dugout26.github.io/prosetup/valorant/players/cloud.html): Fnatic 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Wooting 60HE v2, DPI 800
+- [kaajak](https://dugout26.github.io/prosetup/valorant/players/kaajak.html): Fnatic 선수, 마우스 Fnatic X Lamzu Maya 8K, 키보드 Sony INZONE KBD-H75, DPI 1600
+- [Veqaj](https://dugout26.github.io/prosetup/valorant/players/veqaj.html): Fnatic 선수, 마우스 Razer Viper V4 Pro, 키보드 Pulsar PCMK 3, DPI 1600
+- [benjyfishy](https://dugout26.github.io/prosetup/valorant/players/benjyfishy.html): Team Heretics 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 Logitech G Pro X TKL RAPID, DPI 800
+- [SirMaza](https://dugout26.github.io/prosetup/valorant/players/sirmaza.html): Team Heretics 선수, 마우스 VAXEE XE Wireless, 키보드 Wooting 80HE Ghost, DPI 400
+- [RieNs](https://dugout26.github.io/prosetup/valorant/players/riens.html): Team Heretics 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 Wooting 60HE v2, DPI 800
+- [MiniBoo](https://dugout26.github.io/prosetup/valorant/players/miniboo.html): Team Liquid 선수, 마우스 Razer Deathadder V3 Pro, 키보드 Wooting 80HE Ghost, DPI 800
+- [nAts](https://dugout26.github.io/prosetup/valorant/players/nats.html): Team Liquid 선수, 마우스 ZOWIE U2-DW, 키보드 Wooting 80HE, DPI 800
+- [ShahZaM](https://dugout26.github.io/prosetup/valorant/players/shahzam.html): Team Liquid 선수, 마우스 TEEVOLUTION Terra, 키보드 Wooting 60HE+, DPI 800
+- [frttt](https://dugout26.github.io/prosetup/valorant/players/frttt.html): Team Liquid 선수, 마우스 ZOWIE EC2, 키보드 HyperX Alloy FPS, DPI 1600
+- [Mendo](https://dugout26.github.io/prosetup/valorant/players/mendo.html): Team Liquid 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 Wooting 60HE+, DPI 450
+- [kamo](https://dugout26.github.io/prosetup/valorant/players/kamo.html): Team Liquid 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Wooting 80HE, DPI 1600
+- [Kicks](https://dugout26.github.io/prosetup/valorant/players/kicks.html): Team Liquid 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 Wooting 60HE v2, DPI 800
+- [purp0](https://dugout26.github.io/prosetup/valorant/players/purp0.html): Team Liquid 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 Wooting 60HE v2, DPI 1600
+- [Wayne](https://dugout26.github.io/prosetup/valorant/players/wayne.html): Team Liquid 선수, 마우스 Razer Viper V4 Pro, 키보드 Wooting 60HE v2, DPI 800
+- [Chronicle](https://dugout26.github.io/prosetup/valorant/players/chronicle.html): Team Vitality 선수, 마우스 ATK A9 Chronicle Edition, 키보드 ATK x QK Hex80, DPI 1600
+- [Jamppi](https://dugout26.github.io/prosetup/valorant/players/jamppi.html): Team Vitality 선수, 마우스 VAXEE E1 Wireless Fluorescent, 키보드 ASUS ROG Falchion Ace 75 HE, DPI 800
+- [Sayonara](https://dugout26.github.io/prosetup/valorant/players/sayonara.html): Team Vitality 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 ASUS ROG Falchion Ace HFX, DPI 1600
+- [PROFEK](https://dugout26.github.io/prosetup/valorant/players/profek.html): Team Vitality 선수, 마우스 Razer Prototype Mouse, 키보드 ASUS ROG Falchion Ace 75 HE, DPI 1600
+- [Suygetsu](https://dugout26.github.io/prosetup/valorant/players/suygetsu.html): Karmine Corp 선수, 마우스 Endgame Gear OP1 8k V2, 키보드 WALLHACK K-001 Natural, DPI 800
+- [Sheydos](https://dugout26.github.io/prosetup/valorant/players/sheydos.html): Karmine Corp 선수, 마우스 Razer Viper V4 Pro, 키보드 Wooting 60HE v2, DPI 400
+- [N4RRATE](https://dugout26.github.io/prosetup/valorant/players/n4rrate.html): Karmine Corp 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Wooting 60HE+, DPI 1600
+- [Lewn](https://dugout26.github.io/prosetup/valorant/players/lewn.html): Karmine Corp 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Wooting 60HE v2, DPI 800
+- [dos9](https://dugout26.github.io/prosetup/valorant/players/dos9.html): Karmine Corp 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 Wooting 60HE+, DPI 1600
+- [Avez](https://dugout26.github.io/prosetup/valorant/players/avez.html): Karmine Corp 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 Wooting 60HE+, DPI 1600
+- [Crewen](https://dugout26.github.io/prosetup/valorant/players/crewen.html): BBL Esports 선수, 마우스 ZOWIE EC2-CW, 키보드 Wooting 60HE v2, DPI 800
+- [Lar0k](https://dugout26.github.io/prosetup/valorant/players/lar0k.html): BBL Esports 선수, 마우스 Razer DeathAdder V4 Pro, 키보드 Sony INZONE KBD-H75, DPI 400
+- [Loita](https://dugout26.github.io/prosetup/valorant/players/loita.html): BBL Esports 선수, 마우스 Lamzu Thorn V2, DPI 800
+- [lovers rock](https://dugout26.github.io/prosetup/valorant/players/lovers-rock.html): BBL Esports 선수, 마우스 Razer Viper V4 Pro, 키보드 Wooting 60HE v2, DPI 1600
+- [Rosé](https://dugout26.github.io/prosetup/valorant/players/rosé.html): BBL Esports 선수, 마우스 Razer Viper V4 Pro, 키보드 WLMouse Ying63, DPI 800
+- [MrFalin](https://dugout26.github.io/prosetup/valorant/players/mrfalin.html): FUT Esports 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Wooting 60HE v2, DPI 800
+- [qRaxs](https://dugout26.github.io/prosetup/valorant/players/qraxs.html): FUT Esports 선수, 마우스 ZOWIE EC2-CW, 키보드 Wooting 60HE v2, DPI 800
+- [yetujey](https://dugout26.github.io/prosetup/valorant/players/yetujey.html): FUT Esports 선수, 마우스 Razer Viper V4 Pro, 키보드 Wooting 60HE v2, DPI 800
+- [Wo0t](https://dugout26.github.io/prosetup/valorant/players/wo0t.html): FUT Esports 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Wooting 80HE Ghost, DPI 500
+- [sociablEE](https://dugout26.github.io/prosetup/valorant/players/sociablee.html): FUT Esports 선수, 마우스 ZOWIE EC2-DW, 키보드 Wooting 60HE v2, DPI 800
+- [xeus](https://dugout26.github.io/prosetup/valorant/players/xeus.html): FUT Esports 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 Wooting 60HE v2, DPI 400
+- [marteen](https://dugout26.github.io/prosetup/valorant/players/marteen.html): Gentle Mates 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Wooting 60HE+, DPI 1600
+- [starxo](https://dugout26.github.io/prosetup/valorant/players/starxo.html): Gentle Mates 선수, 마우스 WLMOUSE Beast x Pro Soft, 키보드 Wooting 80HE, DPI 800
+- [H1ber](https://dugout26.github.io/prosetup/valorant/players/h1ber.html): Gentle Mates 선수, 마우스 Lamzu Maya X, 키보드 Razer Huntsman V3 Pro, DPI 400
+- [beyAz](https://dugout26.github.io/prosetup/valorant/players/beyaz.html): Gentle Mates 선수, 마우스 Razer Deathadder V3 Pro, 키보드 Razer Huntsman V3 Pro, DPI 1600
+- [Minny](https://dugout26.github.io/prosetup/valorant/players/minny.html): Gentle Mates 선수, 마우스 Razer DeathAdder V4 Pro, 키보드 IQUNIX EV63 HE, DPI 1600
+- [bipo](https://dugout26.github.io/prosetup/valorant/players/bipo.html): Gentle Mates 선수, 마우스 Razer Viper V4 Pro, 키보드 IQUNIX EV63 HE, DPI 800
+- [wens](https://dugout26.github.io/prosetup/valorant/players/wens.html): Gentle Mates 선수, 마우스 WLMOUSE Beast x Pro Soft, 키보드 Wooting 60HE+, DPI 1600
+- [Shao](https://dugout26.github.io/prosetup/valorant/players/shao.html): Natus Vincere 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 Logitech G Pro X TKL RAPID, DPI 800
+- [ANGE1](https://dugout26.github.io/prosetup/valorant/players/ange1.html): Natus Vincere 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 Logitech G Pro X TKL Keyboard, DPI 800
+- [Crazyface](https://dugout26.github.io/prosetup/valorant/players/crazyface.html): Natus Vincere 선수, 마우스 Logitech G Pro X Superlight 2c, 키보드 Wooting 60HE v2, DPI 800
+- [Filu](https://dugout26.github.io/prosetup/valorant/players/filu.html): Natus Vincere 선수, 마우스 Razer Viper V4 Pro, 키보드 Wooting 60HE v2, DPI 1600
+- [Cyvoph](https://dugout26.github.io/prosetup/valorant/players/cyvoph.html): Natus Vincere 선수, 마우스 Pulsar eS FS-1, 키보드 Wooting 60HE+, DPI 800
+- [hiro](https://dugout26.github.io/prosetup/valorant/players/hiro.html): Natus Vincere 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Wooting 60HE v2, DPI 1600
+- [chloric](https://dugout26.github.io/prosetup/valorant/players/chloric.html): Natus Vincere 선수, 마우스 Logitech G Pro X Superlight 2c, 키보드 Wooting 60HE v2, DPI 1600
+- [ExiT](https://dugout26.github.io/prosetup/valorant/players/exit.html): Natus Vincere 선수, 마우스 Pulsar X2 CrazyLight, 키보드 Wooting 60HE+, DPI 800
+- [GRUBINHO](https://dugout26.github.io/prosetup/valorant/players/grubinho.html): GIANTX 선수, 마우스 Razer Viper V4 Pro, 키보드 Wooting 60HE v2, DPI 1600
+- [westside](https://dugout26.github.io/prosetup/valorant/players/westside.html): GIANTX 선수, 마우스 Pulsar Jinggg-x, 키보드 Wooting 60HE v2, DPI 1600
+- [ara](https://dugout26.github.io/prosetup/valorant/players/ara.html): GIANTX 선수, 마우스 Lamzu Thorn V2, 키보드 Wooting 60HE v2, DPI 800
+- [Flickless](https://dugout26.github.io/prosetup/valorant/players/flickless.html): GIANTX 선수, 마우스 Logitech G Pro X3 SUPERSTRIKE Midnight, 키보드 Wooting 60HE v2, DPI 800
+- [ZmjjKK](https://dugout26.github.io/prosetup/valorant/players/zmjjkk.html): Edward Gaming 선수, 마우스 VAXEE NP-01S V3, 키보드 Wooting 60HE+, DPI 800
+- [Smoggy](https://dugout26.github.io/prosetup/valorant/players/smoggy.html): Edward Gaming 선수, 마우스 Razer Prototype Mouse, 키보드 Wooting 60HE v2, DPI 800
+- [CHICHOO](https://dugout26.github.io/prosetup/valorant/players/chichoo.html): Edward Gaming 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Wooting 60HE+, DPI 800
+- [nobody](https://dugout26.github.io/prosetup/valorant/players/nobody.html): Edward Gaming 선수, 마우스 Razer Prototype Mouse, 키보드 IQUNIX EZ63 HE, DPI 800
+- [Knight](https://dugout26.github.io/prosetup/valorant/players/knight.html): Bilibili Gaming 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Razer Huntsman V3 Pro TKL, DPI 1600
+- [whzy](https://dugout26.github.io/prosetup/valorant/players/whzy.html): Bilibili Gaming 선수, 마우스 VAXEE NP-01 Ergo, 키보드 Razer Huntsman V3 Pro TKL 8KHz, DPI 800
+- [rushia](https://dugout26.github.io/prosetup/valorant/players/rushia.html): Bilibili Gaming 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Wooting 60HE+, DPI 1600
+- [nephh](https://dugout26.github.io/prosetup/valorant/players/nephh.html): Bilibili Gaming 선수, 마우스 VAXEE NP-01S V3, 키보드 Wooting 60HE+, DPI 800
+- [Kai](https://dugout26.github.io/prosetup/valorant/players/kai.html): Trace Esports 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 Wooting 60HE+
+- [LuoK1ng](https://dugout26.github.io/prosetup/valorant/players/luok1ng.html): Trace Esports 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 Razer Huntsman V3 Pro TKL, DPI 400
+- [FengF](https://dugout26.github.io/prosetup/valorant/players/fengf.html): Trace Esports 선수, 마우스 VAXEE XE V2 Lake, 키보드 Wooting 60HE+, DPI 800
+- [Abo](https://dugout26.github.io/prosetup/valorant/players/abo.html): Trace Esports 선수, 마우스 Razer Viper V3 Pro, 키보드 Razer Huntsman V3 Pro Mini, DPI 1600
+- [deLb](https://dugout26.github.io/prosetup/valorant/players/delb.html): Trace Esports 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 Wooting 60HE v2, DPI 800
+- [Viva](https://dugout26.github.io/prosetup/valorant/players/viva.html): Trace Esports 선수, 마우스 VAXEE XE V2, 키보드 ASUS ROG Falcata, DPI 800
+- [SLOWLY](https://dugout26.github.io/prosetup/valorant/players/slowly.html): TyLoo 선수, 마우스 Razer DeathAdder V4 Pro, 키보드 Cherry Xtrfy K5 Pro TMR, DPI 1600
+- [splash](https://dugout26.github.io/prosetup/valorant/players/splash.html): TyLoo 선수, 마우스 VAXEE NP-01S V3 Galapagos, 키보드 Wooting 80HE, DPI 1600
+- [Scales](https://dugout26.github.io/prosetup/valorant/players/scales.html): TyLoo 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 Wooting 60HE v2, DPI 800
+- [SiuFatBB](https://dugout26.github.io/prosetup/valorant/players/siufatbb.html): TyLoo 선수, 마우스 VAXEE NP-01 Ergo, 키보드 Wooting 60HE+, DPI 800
+- [BerLIN](https://dugout26.github.io/prosetup/valorant/players/berlin.html): JD Gaming 선수, 마우스 Razer Viper V4 Pro, 키보드 Wooting 60HE+, DPI 800
+- [Yuicaw](https://dugout26.github.io/prosetup/valorant/players/yuicaw.html): JD Gaming 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 Wooting 60HE v2, DPI 800
+- [K1ra](https://dugout26.github.io/prosetup/valorant/players/k1ra.html): All Gamers 선수, 마우스 VAXEE NP-01S V3, 키보드 Wooting 60HE v2, DPI 800
+- [f4ngeer](https://dugout26.github.io/prosetup/valorant/players/f4ngeer.html): All Gamers 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Wooting 60HE+, DPI 1600
+- [Lysoar](https://dugout26.github.io/prosetup/valorant/players/lysoar.html): XLG Esports 선수, 마우스 Razer DeathAdder V4 Pro, 키보드 Wooting 80HE Ghost, DPI 800
+- [happywei](https://dugout26.github.io/prosetup/valorant/players/happywei.html): XLG Esports 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 Wooting 60HE+, DPI 800
+- [Rarga](https://dugout26.github.io/prosetup/valorant/players/rarga.html): XLG Esports 선수, 마우스 Finalmouse Ultralight X Frostlord Medium, 키보드 Wooting 60HE v2, DPI 1600
+- [CB](https://dugout26.github.io/prosetup/valorant/players/cb.html): NOVA Esports 선수, 마우스 Razer DeathAdder V4 Pro NiKo Edition, 키보드 Wooting 60HE+, DPI 800
+- [Ezeir](https://dugout26.github.io/prosetup/valorant/players/ezeir.html): NOVA Esports 선수, 마우스 Razer Viper V3 Pro Faker Edition, 키보드 Razer Huntsman V3 Pro Mini, DPI 800
+- [Guang](https://dugout26.github.io/prosetup/valorant/players/guang.html): NOVA Esports 선수, 마우스 Razer Viper Mini Signature Edition, 키보드 ASUS ROG Falchion Ace HFX, DPI 800
+- [Swagzor](https://dugout26.github.io/prosetup/valorant/players/swagzor.html): NOVA Esports 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Wooting 60HE+, DPI 1600
+- [qiutiaN](https://dugout26.github.io/prosetup/valorant/players/qiutian.html): NOVA Esports 선수, 마우스 VAXEE ZYGEN NP-01S V2 Wireless, 키보드 Wooting 60HE+, DPI 1600
+- [AAAAY](https://dugout26.github.io/prosetup/valorant/players/aaaay.html): FunPlus Phoenix 선수, 마우스 Razer Viper V3 Pro, 키보드 Wooting 60HE v2, DPI 800
+- [kovaQ](https://dugout26.github.io/prosetup/valorant/players/kovaq.html): FunPlus Phoenix 선수, 마우스 VAXEE NP-01S V3, 키보드 ASUS ROG Falchion Ace HFX, DPI 400
+- [coconut](https://dugout26.github.io/prosetup/valorant/players/coconut.html): FunPlus Phoenix 선수, 마우스 Razer DeathAdder V4 Pro, 키보드 Wooting 80HE, DPI 800
+- [yosemite](https://dugout26.github.io/prosetup/valorant/players/yosemite.html): Wolves Esports 선수, 마우스 G-Wolves Hati S+ 4K, 키보드 Wooting 60HE+, DPI 800
+- [Deryeon](https://dugout26.github.io/prosetup/valorant/players/deryeon.html): Wolves Esports 선수, 마우스 Razer Viper V3 Pro Faker Edition, 키보드 Razer Huntsman Mini, DPI 1600
+- [Spring](https://dugout26.github.io/prosetup/valorant/players/spring.html): Wolves Esports 선수, 마우스 VAXEE NP-01S V3, 키보드 Wooting 60HE+, DPI 1600
+- [Haodong](https://dugout26.github.io/prosetup/valorant/players/haodong.html): Titan Esports Club 선수, 마우스 Logitech G Pro X Superlight 2, 키보드 Wooting 60HE+, DPI 400
+- [vo0kashu](https://dugout26.github.io/prosetup/valorant/players/vo0kashu.html): Dragon Ranger Gaming 선수, 마우스 Logitech G Pro X2 SUPERSTRIKE Lunar Eclipse, 키보드 Wooting 60HE+, DPI 800
+- [Life](https://dugout26.github.io/prosetup/valorant/players/life.html): Dragon Ranger Gaming 선수, 마우스 VAXEE NP-01 Ergo, 키보드 Wooting 60HE v2, DPI 1600
+- [Nicc](https://dugout26.github.io/prosetup/valorant/players/nicc.html): Dragon Ranger Gaming 선수, 마우스 Pulsar X2N Crazylight Medium, 키보드 Wooting 60HE v2, DPI 800
+
+## 제품별 사용 선수
+
+- [조위 XL2566X+(ZOWIE XL2566X+)](https://dugout26.github.io/prosetup/gear/zowie-xl2566x.html): 모니터, LCK 2명·VCT 68명, 24.5인치 · FHD · 400Hz · TN · DyAc 2
+- [우팅 60HE v2(Wooting 60HE v2)](https://dugout26.github.io/prosetup/gear/wooting-60he-v2.html): 키보드, VCT 62명
+- [레이저 BlackShark V3 Pro(Razer BlackShark V3 Pro)](https://dugout26.github.io/prosetup/gear/razer-blackshark-v3-pro.html): 헤드셋, LCK 4명·VCT 54명, 무선 · 착탈식 마이크 · 상위 라인 최신 세대
+- [조위 XL2566K(ZOWIE XL2566K)](https://dugout26.github.io/prosetup/gear/zowie-xl2566k.html): 모니터, VCT 53명, 24.5인치 · FHD · 360Hz · TN · DyAc+
+- [로지텍 G Pro X Superlight 2(Logitech G Pro X Superlight 2)](https://dugout26.github.io/prosetup/gear/logitech-g-pro-x-superlight-2.html): 마우스, LCK 17명·VCT 28명, 60g · 무선(LIGHTSPEED) · HERO 2 센서 · 최대 32,000 DPI
+- [우팅 60HE+(Wooting 60HE+)](https://dugout26.github.io/prosetup/gear/wooting-60he.html): 키보드, LCK 1명·VCT 44명
+- [아티산 Ninja FX Zero Soft(Artisan Ninja FX Zero Soft)](https://dugout26.github.io/prosetup/gear/artisan-ninja-fx-zero-soft.html): 마우스패드, LCK 1명·VCT 38명
+- [레이저 Viper V4 Pro(Razer Viper V4 Pro)](https://dugout26.github.io/prosetup/gear/razer-viper-v4-pro.html): 마우스, VCT 38명
+- [로지텍 G Pro X2 Superstrike(Logitech G Pro X2 Superstrike)](https://dugout26.github.io/prosetup/gear/logitech-g-pro-x2-superstrike.html): 마우스, LCK 4명·VCT 30명, 무선 · 인덕티브 방식 햅틱 트리거(가변 작동점) · 2026 신형
+- [펄사 eS Saturn Pro(Pulsar eS Saturn Pro)](https://dugout26.github.io/prosetup/gear/pulsar-es-saturn-pro.html): 마우스패드, VCT 29명
+- [하이퍼엑스 Cloud II(HyperX Cloud II)](https://dugout26.github.io/prosetup/gear/hyperx-cloud-ii.html): 헤드셋, VCT 28명
+- [레이저 BlackShark V2 Pro(Razer BlackShark V2 Pro)](https://dugout26.github.io/prosetup/gear/razer-blackshark-v2-pro.html): 헤드셋, LCK 3명·VCT 23명, 무선 · 50mm 드라이버 · THX 공간음향 · 착탈식 마이크
+- [레이저 Viper V3 Pro(Razer Viper V3 Pro)](https://dugout26.github.io/prosetup/gear/razer-viper-v3-pro.html): 마우스, LCK 4명·VCT 16명, 약 54g · 무선 · Focus Pro 35K 센서 · 최대 8,000Hz 폴링
+- [LG UltraGear 25GR75FG](https://dugout26.github.io/prosetup/gear/lg-ultragear-25gr75fg.html): 모니터, LCK 12명·VCT 5명, 24.5인치 · FHD · 360Hz · IPS
+- [하이퍼엑스 Cloud III(HyperX Cloud III)](https://dugout26.github.io/prosetup/gear/hyperx-cloud-iii.html): 헤드셋, VCT 17명
+- [조위 XL2546K(ZOWIE XL2546K)](https://dugout26.github.io/prosetup/gear/zowie-xl2546k.html): 모니터, VCT 16명, 24.5인치 · FHD · 240Hz · TN · DyAc+
+- [로지텍 G PRO X 2 Headset(Logitech G PRO X 2 Headset)](https://dugout26.github.io/prosetup/gear/logitech-g-pro-x-2-headset.html): 헤드셋, LCK 1명·VCT 13명
+- [레이저 Gigantus V2(Razer Gigantus V2)](https://dugout26.github.io/prosetup/gear/razer-gigantus-v2.html): 마우스패드, LCK 9명·VCT 4명, 천 재질 · 두께 3mm · 다양한 사이즈
+- [하이퍼엑스 Cloud III Wireless(HyperX Cloud III Wireless)](https://dugout26.github.io/prosetup/gear/hyperx-cloud-iii-wireless.html): 헤드셋, LCK 1명·VCT 12명
+- [우팅 80HE(Wooting 80HE)](https://dugout26.github.io/prosetup/gear/wooting-80he.html): 키보드, VCT 13명
+- [조위 XL2586X+(ZOWIE XL2586X+)](https://dugout26.github.io/prosetup/gear/zowie-xl2586x.html): 모니터, LCK 1명·VCT 10명, 24.1인치 · FHD · 600Hz · TN · DyAc 2
+- [로지텍 G Pro X TKL(Logitech G Pro X TKL)](https://dugout26.github.io/prosetup/gear/logitech-g-pro-x-tkl.html): 키보드, LCK 10명, 텐키리스 · 무선(LIGHTSPEED) · 기계식 · 착탈식 케이블
+- [로지텍 G Pro X Superlight(Logitech G Pro X Superlight)](https://dugout26.github.io/prosetup/gear/logitech-g-pro-x-superlight.html): 마우스, LCK 4명·VCT 6명
+- [아티산 Type-99(Artisan Type-99)](https://dugout26.github.io/prosetup/gear/artisan-type-99.html): 마우스패드, VCT 9명
+- [로지텍 G740(Logitech G740)](https://dugout26.github.io/prosetup/gear/logitech-g740.html): 마우스패드, LCK 6명·VCT 2명, 천 재질 · 두께 5mm · 약 460x400mm
+- [소니 INZONE M10S(SONY INZONE M10S)](https://dugout26.github.io/prosetup/gear/sony-inzone-m10s.html): 모니터, VCT 8명
+- [에이수스 ROG Falchion Ace 75 HE(ASUS ROG Falchion Ace 75 HE)](https://dugout26.github.io/prosetup/gear/asus-rog-falchion-ace-75-he.html): 키보드, VCT 8명
+- [레이저 DeathAdder V4 Pro(Razer DeathAdder V4 Pro)](https://dugout26.github.io/prosetup/gear/razer-deathadder-v4-pro.html): 마우스, LCK 1명·VCT 6명
+- [아티산 Ninja FX Zero XSoft(Artisan Ninja FX Zero XSoft)](https://dugout26.github.io/prosetup/gear/artisan-ninja-fx-zero-xsoft.html): 마우스패드, VCT 7명
+- [조위 XL2546(ZOWIE XL2546)](https://dugout26.github.io/prosetup/gear/zowie-xl2546.html): 모니터, VCT 7명
+- [IQUNIX EV63 HE](https://dugout26.github.io/prosetup/gear/iqunix-ev63-he.html): 키보드, VCT 7명
+- [로지텍 G Pro Wireless(Logitech G Pro Wireless)](https://dugout26.github.io/prosetup/gear/logitech-g-pro-wireless.html): 마우스, LCK 5명·VCT 1명, 80g · 무선(LIGHTSPEED) · HERO 센서 · 좌우 버튼 교체형
+- [로지텍 G840(Logitech G840)](https://dugout26.github.io/prosetup/gear/logitech-g840.html): 마우스패드, LCK 6명, 장패드(약 900x400mm) · 천 재질 · 두께 3mm
+- [레이저 Huntsman V3 Pro TKL(Razer Huntsman V3 Pro TKL)](https://dugout26.github.io/prosetup/gear/razer-huntsman-v3-pro-tkl.html): 키보드, LCK 2명·VCT 4명, 텐키리스 · 유선 · 아날로그 광축 · 작동점 조절 · 래피드 트리거
+- [스틸시리즈 QcK Heavy(SteelSeries QcK Heavy)](https://dugout26.github.io/prosetup/gear/steelseries-qck-heavy.html): 마우스패드, VCT 6명
+- [에이수스 ROG Delta II(ASUS ROG Delta II)](https://dugout26.github.io/prosetup/gear/asus-rog-delta-ii.html): 헤드셋, VCT 6명
+- [아티산 Ninja FX Zero Mid(Artisan Ninja FX Zero Mid)](https://dugout26.github.io/prosetup/gear/artisan-ninja-fx-zero-mid.html): 마우스패드, VCT 6명
+- [아티산 Type-99 Soft(Artisan Type-99 Soft)](https://dugout26.github.io/prosetup/gear/artisan-type-99-soft.html): 마우스패드, VCT 6명
+- [로지텍 G PRO X 2 Lightspeed(Logitech G PRO X 2 Lightspeed)](https://dugout26.github.io/prosetup/gear/logitech-g-pro-x-2-lightspeed.html): 헤드셋, LCK 5명, 무선(LIGHTSPEED/블루투스) · 50mm 그래핀 드라이버 · Blue VO!CE 마이크
+- [로지텍 G733(Logitech G733)](https://dugout26.github.io/prosetup/gear/logitech-g733.html): 헤드셋, LCK 4명·VCT 1명, 무선(LIGHTSPEED) · 약 278g · 서스펜션 헤드밴드 · RGB
+- [로지텍 G640(Logitech G640)](https://dugout26.github.io/prosetup/gear/logitech-g640.html): 마우스패드, LCK 5명, 천 재질 · 두께 3mm · 약 460x400mm
+- [레이저 Huntsman V3 Pro TKL 8KHz(Razer Huntsman V3 Pro TKL 8KHz)](https://dugout26.github.io/prosetup/gear/razer-huntsman-v3-pro-tkl-8khz.html): 키보드, LCK 1명·VCT 4명
+- [스틸시리즈 Apex Pro TKL Gen 3(SteelSeries Apex Pro TKL Gen 3)](https://dugout26.github.io/prosetup/gear/steelseries-apex-pro-tkl-gen-3.html): 키보드, LCK 2명·VCT 3명, 텐키리스 · 자석식(옴니포인트 3) 스위치 · 작동점 조절 · 래피드 트리거
+- [레이저 Huntsman V3 Pro Mini(Razer Huntsman V3 Pro Mini)](https://dugout26.github.io/prosetup/gear/razer-huntsman-v3-pro-mini.html): 키보드, VCT 5명
+- [우팅 80HE Ghost(Wooting 80HE Ghost)](https://dugout26.github.io/prosetup/gear/wooting-80he-ghost.html): 키보드, VCT 5명
+- [아티산 Hayate Otsu V2 Soft(Artisan Hayate Otsu V2 Soft)](https://dugout26.github.io/prosetup/gear/artisan-hayate-otsu-v2-soft.html): 마우스패드, VCT 5명
+- [로지텍 G Pro X Headset(Logitech G Pro X Headset)](https://dugout26.github.io/prosetup/gear/logitech-g-pro-x-headset.html): 헤드셋, VCT 5명
+- [백시 PD150(VAXEE PD150)](https://dugout26.github.io/prosetup/gear/vaxee-pd150.html): 마우스패드, VCT 5명
+- [로지텍 G Pro X Superlight 2c(Logitech G Pro X Superlight 2c)](https://dugout26.github.io/prosetup/gear/logitech-g-pro-x-superlight-2c.html): 마우스, VCT 5명
+- [MelGeek MADE68 Ultra V2](https://dugout26.github.io/prosetup/gear/melgeek-made68-ultra-v2.html): 키보드, VCT 5명
+- [레이저 Prototype Mouse(Razer Prototype Mouse)](https://dugout26.github.io/prosetup/gear/razer-prototype-mouse.html): 마우스, VCT 5명
+- [소니 INZONE KBD-H75(Sony INZONE KBD-H75)](https://dugout26.github.io/prosetup/gear/sony-inzone-kbd-h75.html): 키보드, VCT 5명
+- [백시 NP-01S V3(VAXEE NP-01S V3)](https://dugout26.github.io/prosetup/gear/vaxee-np-01s-v3.html): 마우스, VCT 5명
+- [로지텍 G Pro X TKL RAPID(Logitech G Pro X TKL RAPID)](https://dugout26.github.io/prosetup/gear/logitech-g-pro-x-tkl-rapid.html): 키보드, LCK 2명·VCT 2명, 텐키리스 · 아날로그 스위치 · 작동점 조절 · 래피드 트리거
+- [조위 G-SR-SE BLUE II(ZOWIE G-SR-SE BLUE II)](https://dugout26.github.io/prosetup/gear/zowie-g-sr-se-blue-ii.html): 마우스패드, LCK 1명·VCT 3명
+- [우팅 80HE TenZ Edition(Wooting 80HE TenZ Edition)](https://dugout26.github.io/prosetup/gear/wooting-80he-tenz-edition.html): 키보드, LCK 1명·VCT 3명
+- [레이저 Huntsman V3 Pro(Razer Huntsman V3 Pro)](https://dugout26.github.io/prosetup/gear/razer-huntsman-v3-pro.html): 키보드, LCK 2명·VCT 2명, 풀사이즈 · 유선 · 아날로그 광축 · 작동점 조절 · 래피드 트리거
+- [로지텍 G Pro X Keyboard(Logitech G Pro X Keyboard)](https://dugout26.github.io/prosetup/gear/logitech-g-pro-x-keyboard.html): 키보드, LCK 2명·VCT 2명
+- [레이저 BlackShark V2 HyperSpeed(Razer BlackShark V2 HyperSpeed)](https://dugout26.github.io/prosetup/gear/razer-blackshark-v2-hyperspeed.html): 헤드셋, VCT 4명
+- [커세어 HS80 RGB USB(Corsair HS80 RGB USB)](https://dugout26.github.io/prosetup/gear/corsair-hs80-rgb-usb.html): 헤드셋, VCT 4명
+- [람주 Maya X(Lamzu Maya X)](https://dugout26.github.io/prosetup/gear/lamzu-maya-x.html): 마우스, VCT 4명
+- [엑스레이패드 Aqua Control+ Wave(X-raypad Aqua Control+ Wave)](https://dugout26.github.io/prosetup/gear/x-raypad-aqua-control-wave.html): 마우스패드, VCT 4명
+- [소니 INZONE M10S II(SONY INZONE M10S II)](https://dugout26.github.io/prosetup/gear/sony-inzone-m10s-ii.html): 모니터, VCT 4명
+- [소니 INZONE H9 II(SONY INZONE H9 II)](https://dugout26.github.io/prosetup/gear/sony-inzone-h9-ii.html): 헤드셋, VCT 4명
+- [젠하이저 GAME ZERO(Sennheiser GAME ZERO)](https://dugout26.github.io/prosetup/gear/sennheiser-game-zero.html): 헤드셋, VCT 4명
+- [조위 XL2586X(ZOWIE XL2586X)](https://dugout26.github.io/prosetup/gear/zowie-xl2586x-monitor.html): 모니터, VCT 4명
+- [우팅 80HE+ Frost(Wooting 80HE+ Frost)](https://dugout26.github.io/prosetup/gear/wooting-80he-frost.html): 키보드, VCT 4명
+- [하이퍼엑스 Cloud Alpha(HyperX Cloud Alpha)](https://dugout26.github.io/prosetup/gear/hyperx-cloud-alpha.html): 헤드셋, VCT 4명
+- [펄사 Meiy Glass(Pulsar Meiy Glass)](https://dugout26.github.io/prosetup/gear/pulsar-meiy-glass.html): 마우스패드, VCT 4명
+- [조위 H-SR-SE BLUE II(ZOWIE H-SR-SE BLUE II)](https://dugout26.github.io/prosetup/gear/zowie-h-sr-se-blue-ii.html): 마우스패드, VCT 4명
+- [에일리언웨어 AW2523HF(Alienware AW2523HF)](https://dugout26.github.io/prosetup/gear/alienware-aw2523hf.html): 모니터, VCT 4명
+- [에이수스 ROG Falchion Ace HFX(ASUS ROG Falchion Ace HFX)](https://dugout26.github.io/prosetup/gear/asus-rog-falchion-ace-hfx.html): 키보드, VCT 4명
+- [조위 G-SR-SE ROUGE II(ZOWIE G-SR-SE ROUGE II)](https://dugout26.github.io/prosetup/gear/zowie-g-sr-se-rouge-ii.html): 마우스패드, VCT 4명
+- [로지텍 G715(Logitech G715)](https://dugout26.github.io/prosetup/gear/logitech-g715.html): 키보드, LCK 3명, 텐키리스 · 무선 · 기계식 · 오로라 컬렉션(화이트/파스텔)
+- [조위 G-SR III(ZOWIE G-SR III)](https://dugout26.github.io/prosetup/gear/zowie-g-sr-iii.html): 마우스패드, LCK 1명·VCT 2명
+- [아스트로 A50(ASTRO A50)](https://dugout26.github.io/prosetup/gear/astro-a50.html): 헤드셋, LCK 1명·VCT 2명
+- [에일리언웨어 AW2518H(Alienware AW2518H)](https://dugout26.github.io/prosetup/gear/alienware-aw2518h.html): 모니터, LCK 2명·VCT 1명
+- [레이저 Viper V3 Pro Faker Edition(Razer Viper V3 Pro Faker Edition)](https://dugout26.github.io/prosetup/gear/razer-viper-v3-pro-faker-edition.html): 마우스, LCK 1명·VCT 2명, 약 54g · 무선 · Focus Pro 35K 센서 · 페이커 시그니처 디자인
+- [로지텍 G Pro X3 LIGHTSPEED Headset(Logitech G Pro X3 LIGHTSPEED Headset)](https://dugout26.github.io/prosetup/gear/logitech-g-pro-x3-lightspeed-headset.html): 헤드셋, VCT 3명
+- [엑스레이패드 Aqua Control+ PORON(X-raypad Aqua Control+ PORON)](https://dugout26.github.io/prosetup/gear/x-raypad-aqua-control-poron.html): 마우스패드, VCT 3명
+- [펄사 PCMK 3(Pulsar PCMK 3)](https://dugout26.github.io/prosetup/gear/pulsar-pcmk-3.html): 키보드, VCT 3명
+- [조위 EC2-CW(ZOWIE EC2-CW)](https://dugout26.github.io/prosetup/gear/zowie-ec2-cw.html): 마우스, VCT 3명
+- [펄사 eS PD170(Pulsar eS PD170)](https://dugout26.github.io/prosetup/gear/pulsar-es-pd170.html): 마우스패드, VCT 3명
+- [펄사 x LGG Saturn Pro(Pulsar x LGG Saturn Pro)](https://dugout26.github.io/prosetup/gear/pulsar-x-lgg-saturn-pro.html): 마우스패드, VCT 3명
+- [람주 Thorn V2(Lamzu Thorn V2)](https://dugout26.github.io/prosetup/gear/lamzu-thorn-v2.html): 마우스, VCT 3명
+- [에이수스 ROG Pelta(ASUS ROG Pelta)](https://dugout26.github.io/prosetup/gear/asus-rog-pelta.html): 헤드셋, VCT 3명
+- [펄사 X2 CrazyLight(Pulsar X2 CrazyLight)](https://dugout26.github.io/prosetup/gear/pulsar-x2-crazylight.html): 마우스, VCT 3명
+- [에이수스 TUF VG258QM(ASUS TUF VG258QM)](https://dugout26.github.io/prosetup/gear/asus-tuf-vg258qm.html): 모니터, VCT 3명
+- [에이수스 ROG Falcata(ASUS ROG Falcata)](https://dugout26.github.io/prosetup/gear/asus-rog-falcata.html): 키보드, VCT 3명
+- [펄사 eS Jupiter Pro(Pulsar eS Jupiter Pro)](https://dugout26.github.io/prosetup/gear/pulsar-es-jupiter-pro.html): 마우스패드, VCT 3명
+- [백시 NP-01 Ergo(VAXEE NP-01 Ergo)](https://dugout26.github.io/prosetup/gear/vaxee-np-01-ergo.html): 마우스, VCT 3명
+
+## 도구·가이드
+
+- [감도 변환기](https://dugout26.github.io/prosetup/tools/sens.html): 감도 변환기 — 발로란트·CS2·오버워치 2·에이펙스 cm/360 변환, 게임 계수, VCT 프로 eDPI 분포
+- [윈도우 마우스 가속(포인터 정확도 향상) 끄는 법](https://dugout26.github.io/prosetup/guides/mouse-acceleration.html): 윈도우 마우스 가속(포인터 정확도 향상) 끄는 법 — 윈도우 11·10 단계
+- [LoL 프로 모니터](https://dugout26.github.io/prosetup/guides/lol-monitor.html): LoL 프로 모니터 — LCK 선수 개인 모니터 인치·주사율 집계와 고르는 순서
+- [원딜 마우스](https://dugout26.github.io/prosetup/guides/adc-mouse.html): 원딜 마우스 — LCK 원딜 마우스·DPI 표
+- [LCK 키보드 사용률 순위 TOP10](https://dugout26.github.io/prosetup/guides/keyboard.html): LCK 키보드 사용률 순위 TOP10
+- [LCK 마우스 사용률 순위 TOP10](https://dugout26.github.io/prosetup/guides/mouse.html): LCK 마우스 사용률 순위 TOP10
+- [LCK 헤드셋 사용률 순위 TOP10](https://dugout26.github.io/prosetup/guides/headset.html): LCK 헤드셋 사용률 순위 TOP10
+- [LCK 모니터 사용률 순위 TOP10](https://dugout26.github.io/prosetup/guides/monitor.html): LCK 모니터 사용률 순위 TOP10
+- [LCK 마우스패드 사용률 순위 TOP10](https://dugout26.github.io/prosetup/guides/mousepad.html): LCK 마우스패드 사용률 순위 TOP10
+- [VCT 키보드 사용률 순위 TOP10](https://dugout26.github.io/prosetup/valorant/guides/keyboard.html): VCT 키보드 사용률 순위 TOP10
+- [VCT 마우스 사용률 순위 TOP10](https://dugout26.github.io/prosetup/valorant/guides/mouse.html): VCT 마우스 사용률 순위 TOP10
+- [VCT 헤드셋 사용률 순위 TOP10](https://dugout26.github.io/prosetup/valorant/guides/headset.html): VCT 헤드셋 사용률 순위 TOP10
+- [VCT 모니터 사용률 순위 TOP10](https://dugout26.github.io/prosetup/valorant/guides/monitor.html): VCT 모니터 사용률 순위 TOP10
+- [VCT 마우스패드 사용률 순위 TOP10](https://dugout26.github.io/prosetup/valorant/guides/mousepad.html): VCT 마우스패드 사용률 순위 TOP10
+- [LCK 2027 이적시장](https://dugout26.github.io/prosetup/stove-2027.html): LCK 2027 이적시장 — 오피셜·보도·썰 단계 구분, FA 명단
+
+## 데이터
+
+- [/data/products.json](https://dugout26.github.io/prosetup/data/products.json): 제품 304종 카탈로그(별칭·쿠팡 링크·이미지)
+- [/data.html](https://dugout26.github.io/prosetup/data.html): 수집·교차 확인 방법과 갱신 이력
+- [/about.html](https://dugout26.github.io/prosetup/about.html): 운영 원칙·출처·정정 요청
+
+## 갱신·인용 정책
+
+- 장비·로스터는 제보와 공개 자료 확인 시 수시 갱신하며, 각 페이지에 기준일을 표기합니다.
+- 근거 링크가 확인되지 않은 정보는 싣지 않습니다. 근거 수준은 확실·보통·낮음으로 표시합니다.
+- 선수·팀·리그·제조사와 무관한 비공식 팬 사이트입니다.
+- 쿠팡 파트너스: 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
