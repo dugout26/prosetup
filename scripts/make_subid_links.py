@@ -52,7 +52,15 @@ def deeplinks(urls, sub_id, access, secret):
         data = json.load(r)
     if data.get("rCode") != "0":
         raise RuntimeError(data)
-    return {d["originalUrl"]: d["shortenUrl"] for d in data["data"]}
+    # 판매 중지 등으로 링크를 못 만든 항목은 shortenUrl이 없다 → 건너뛰고 기본 링크를 쓴다
+    out = {}
+    for d in data.get("data") or []:
+        link = d.get("shortenUrl") or d.get("landingUrl")
+        if d.get("originalUrl") and link:
+            out[d["originalUrl"]] = link
+        else:
+            print(f"  링크 생성 실패(건너뜀): {d.get('originalUrl')}", file=sys.stderr)
+    return out
 
 
 def resolve(short):
