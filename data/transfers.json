@@ -3,7 +3,7 @@
  "lol": {
   "season": "2027",
   "checked": "2026-11-17",
-  "checked_at": "2026-11-17 14:25",
+  "checked_at": "2026-11-17 15:05",
   "fa_open": "2026-11-17",
   "fa_open_time": "09:00",
   "stay": [
@@ -764,7 +764,7 @@
     "name_kr": "최우제",
     "from": "HLE",
     "to": "T1",
-    "outlet": "글로벌이코노믹 (esport.vision·bo3.gg 인용) · Strafe · COOL-STYLE 潮流生活網 (대만 매체, 한국 커뮤니티 썰 인용) · 新浪新闻 (直播吧 인용, 한국 커뮤니티발)",
+    "outlet": "글로벌이코노믹 (esport.vision·bo3.gg 인용) · Strafe · COOL-STYLE 潮流生活網 (대만 매체, 한국 커뮤니티 썰 인용) · 新浪新闻 (直播吧 인용, 한국 커뮤니티발) · udn 遊戲角落 希洛 (대만 매체, 한국 커뮤니티 썰 인용)",
     "source": "https://www.g-enews.com/article/ICT/2026/11/20261117074452186038169980b3_1",
     "role": "top",
     "note": "해외 매체발 2+1년(3년차 선수옵션) 계약 합의설 · 익명 제보 기반이라 체결 여부 미확인 · T1 관계자 \"계약이 확정되면 별도로 공지\" · 앞서 아티브뉴스는 'T1 복귀 확정설'은 사실이 아니라고 보도(11/3, 위키트리 인용) · 新浪(11/17): 한화의 2년 재계약안을 거절했고 T1이 3년 계약을 제시했다는 한국 커뮤니티발 이야기 전달",
@@ -794,7 +794,7 @@
     "name_kr": "최현준",
     "from": "T1",
     "to": "KRX",
-    "outlet": "에펨코리아 정리글 (PTT Minguo1016 번역) · Yahoo 대만 게임 (한국 커뮤니티 인용)",
+    "outlet": "에펨코리아 정리글 (PTT Minguo1016 번역) · Yahoo 대만 게임 (한국 커뮤니티 인용) · udn 遊戲角落 希洛 (대만 매체, 한국 커뮤니티 썰 인용) · 맞말 (인벤 LoL 게시판)",
     "source": "https://www.ptt.cc/bbs/LoL/M.1794813043.A.3A4.html",
     "role": "top",
     "note": "도란·카나비 KRX 확정설 · KRX 계획 파토 반박 썰도 있음 · KRX는 11/17 기존 1군 전원 계약 종료 오피셜",
@@ -809,7 +809,7 @@
     "name_kr": "서진혁",
     "from": "HLE",
     "to": "KRX",
-    "outlet": "에펨코리아 정리글 (PTT Minguo1016 번역)",
+    "outlet": "에펨코리아 정리글 (PTT Minguo1016 번역) · udn 遊戲角落 希洛 (대만 매체, 한국 커뮤니티 썰 인용) · 맞말 (인벤 LoL 게시판)",
     "source": "https://www.ptt.cc/bbs/LoL/M.1794813043.A.3A4.html",
     "role": "jungle",
     "note": "도란·카나비 KRX 확정설 · KRX 계획 파토 반박 썰도 있음 · KRX는 11/17 기존 1군 전원 계약 종료 오피셜",
@@ -824,7 +824,7 @@
     "name_kr": "박도현",
     "from": "BLG",
     "to": "KRX",
-    "outlet": "에펨코리아 정리글 (PTT Minguo1016 번역)",
+    "outlet": "에펨코리아 정리글 (PTT Minguo1016 번역) · udn 遊戲角落 希洛 (대만 매체, 한국 커뮤니티 썰 인용) · 맞말 (인벤 LoL 게시판)",
     "source": "https://www.ptt.cc/bbs/LoL/M.1794813043.A.3A4.html",
     "role": "adc",
     "note": "접촉은 있었다는 썰 · 아직 미정이라는 반박도 있음 · KRX는 11/17 기존 1군 전원 계약 종료 오피셜",
@@ -987,7 +987,7 @@
     "name_kr": "이예찬",
     "from": "NS",
     "to": "KRX",
-    "outlet": "모든팁 블로그 (topbo.co.kr, 커뮤니티 썰 정리)",
+    "outlet": "모든팁 블로그 (topbo.co.kr, 커뮤니티 썰 정리) · udn 遊戲角落 希洛 (대만 매체, 한국 커뮤니티 썰 인용) · 맞말 (인벤 LoL 게시판)",
     "grade": "썰",
     "status": "보도",
     "source": "https://topbo.co.kr/2027-lck-%eb%a1%9c%ec%8a%a4%ed%84%b0/",
@@ -1195,7 +1195,7 @@
     "name_kr": "오형석",
     "from": "DK",
     "to": "KRX",
-    "outlet": "COOL-STYLE 潮流生活網 Lison (대만 매체, 한국 커뮤니티 썰 인용)",
+    "outlet": "COOL-STYLE 潮流生活網 Lison (대만 매체, 한국 커뮤니티 썰 인용) · udn 遊戲角落 希洛 (대만 매체, 한국 커뮤니티 썰 인용) · 맞말 (인벤 LoL 게시판)",
     "grade": "썰",
     "status": "보도",
     "source": "https://www.cool-style.com.tw/wd2/archives/1365068",
@@ -1262,10 +1262,44 @@
     "role": "jungle",
     "seen_at": "2026-11-17 14:25",
     "note": "HLE를 떠난다는 이야기가 돈다는 썰 · 출처 불명 · 행선지 언급 없음(KRX 확정설과 같은 방향) · HLE의 계약 종료·재계약 발표는 아직 없음"
+   },
+   {
+    "tier": "community",
+    "date": "2026-11-17",
+    "nickname": "Cloud",
+    "name_kr": "",
+    "from": "T1 아카데미",
+    "to": "KRX",
+    "outlet": "친칠라이츄 (인벤 LoL 게시판)",
+    "grade": "썰",
+    "status": "보도",
+    "source": "https://www.inven.co.kr/board/lol/4625/4287861",
+    "role": "support",
+    "seen_at": "2026-11-17 15:05",
+    "note": "'너구리 복귀를 맞춘 썰쟁이가 KRX 서폿은 커리어가 아니라 클라우드라고 했다'는 전언 · 원 썰쟁이 글은 확인 못 함 · 클라우드 한화행 썰, 커리어 KRX 썰, 'KRX 제안 거절' 썰과 충돌"
+   },
+   {
+    "tier": "community",
+    "date": "2026-11-17",
+    "nickname": "Cloud",
+    "name_kr": "",
+    "from": "T1 아카데미",
+    "to": "미정 (KRX 제안 거절)",
+    "outlet": "민트삽겹살 (인벤 LoL 게시판)",
+    "grade": "썰",
+    "status": "보도",
+    "source": "https://www.inven.co.kr/board/lol/4625/4287833",
+    "role": "support",
+    "seen_at": "2026-11-17 15:05",
+    "note": "'DRX에서 클라우드를 사려고 했지만 선수 쪽에서 거절했다 · 인기 매물이라 갈 곳은 많다'는 썰 · 출처 불명 · 클라우드 KRX행 썰과 충돌"
    }
   ],
   "coaches": [],
   "updates": [
+   {
+    "at": "2026-11-17 15:05",
+    "text": "새 오피셜 없음 · 🟠 썰 2건(클라우드 KRX행, 클라우드 KRX 제안 거절) · 제우스 T1·도란·카나비·스카웃·바이퍼·커리어 KRX 썰 출처 추가"
+   },
    {
     "at": "2026-11-17 14:25",
     "text": "새 오피셜 없음 · 🟠 썰 2건(제우스 HLE 인상 제안, 카나비 HLE 이탈) · 제우스 T1·캐니언 HLE·기인 HLE·샤벨 젠지 썰 출처 추가"
