@@ -1,6 +1,6 @@
 {
   "as_of": "2026-08-05",
-  "roster_check_2027": {"checked": "2026-11-15", "note": "LCK FA 시장(2026-11-17) 개시 전이라 이적 확정 없음 → 2026 로스터 유지. BRO 2027 계약 확인: Casting, GIDEON, Roamer, Teddy, Namgung / 미정: 없음 · DNS 2027 계약 확인: 없음 / 미정: DuDu, Sharvel, Clozer, deokdam, Peter. 루머 미반영. 장비 변경 근거 없음."},
+  "roster_check_2027": {"checked": "2026-11-17", "note": "2026-11-17 FA 개장. DNS: Sharvel·Clozer·Peter 계약 종료 오피셜(Pyosik·Life 포함) → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. BRO 2027 계약 확인: Casting, GIDEON, Roamer, Teddy, Namgung · DNS 2027 계약 확인: DuDu(2028년까지 재계약) / 미정: deokdam / 공석: 정글·미드·서포터. 루머 미반영."},
   "BRO": {
     "team_name": "HANJIN BRION",
     "players": [
@@ -32,20 +32,6 @@
       {"nickname": "DuDu", "name_kr": "이동주", "role": "top", "roster_source": "https://lol.fandom.com/wiki/DuDu_(Lee_Dong-ju)",
        "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
        "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
-      {"nickname": "Sharvel", "name_kr": "김단우", "role": "jungle", "roster_source": "https://www.inven.co.kr/webzine/news/?news=317952&site=lol",
-       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
-       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
-      {"nickname": "Clozer", "name_kr": "이주현", "role": "mid", "roster_source": "https://esportsinsider.com/2025/11/every-confirmed-lck-roster-2026-league-of-legends",
-       "gear": {
-         "mouse": {"value": "ROCCAT Kone Pure Ultra", "source": "https://prosettings.net/players/clozer/", "confidence": "low", "note": "단종 브랜드 — 구 스폰서 시절 정보 가능성"},
-         "keyboard": {"value": "ROCCAT Vulcan TKL Pro", "source": "https://prosettings.net/players/clozer/", "confidence": "low"},
-         "monitor": {"value": "LG UltraGear 25GR75FG", "source": "https://prosettings.net/players/clozer/", "confidence": "medium"},
-         "headset": {"value": "ROCCAT Syn Pro Air", "source": "https://prosettings.net/players/clozer/", "confidence": "low"},
-         "mousepad": {"value": "Logitech G840", "source": "https://prosettings.net/players/clozer/", "confidence": "medium"}},
-       "settings": {
-         "dpi": {"value": 800, "source": "https://prosettings.net/players/clozer/", "confidence": "medium"},
-         "in_game_sens": {"value": "Mouse Speed 65", "source": "https://prosettings.net/players/clozer/", "confidence": "medium"},
-         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/clozer/", "confidence": "medium"}}},
       {"nickname": "deokdam", "name_kr": "서대길", "role": "adc", "roster_source": "https://esportsinsider.com/2025/11/every-confirmed-lck-roster-2026-league-of-legends",
        "gear": {
          "mouse": {"value": "Razer Viper V3 Pro (White)", "source": "https://prosettings.net/players/deokdam/", "confidence": "high", "note": "월즈 2025 장비 사진 정리(dcinside)와 교차 확인"},
@@ -56,18 +42,7 @@
        "settings": {
          "dpi": {"value": 400, "source": "https://prosettings.net/players/deokdam/", "confidence": "medium"},
          "in_game_sens": null,
-         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/deokdam/", "confidence": "medium"}}},
-      {"nickname": "Peter", "name_kr": "정윤수", "role": "support", "roster_source": "https://lol.fandom.com/wiki/Peter_(Jeong_Yoon-su)",
-       "gear": {
-         "mouse": {"value": "Logitech G Pro X Superlight 2 DEX (Black)", "source": "https://prosettings.net/players/peter/", "confidence": "high", "note": "월즈 2025 장비 사진 정리와 교차 확인"},
-         "keyboard": {"value": "Logitech G Pro X (TKL)", "source": "https://prosettings.net/players/peter/", "confidence": "medium"},
-         "monitor": null,
-         "headset": {"value": "Logitech G733", "source": "https://prosettings.net/players/peter/", "confidence": "medium"},
-         "mousepad": {"value": "BOB PAD Balance - Giant", "source": "https://egamersworld.com/lol/player/peter-qXm7xaSQ6au", "confidence": "high"}},
-       "settings": {
-         "dpi": {"value": 800, "source": "https://prosettings.net/players/peter/", "confidence": "medium"},
-         "in_game_sens": null,
-         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/peter/", "confidence": "medium"}}}
+         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/deokdam/", "confidence": "medium"}}}
     ]
   }
 }

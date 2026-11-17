@@ -3,7 +3,7 @@
  "lol": {
   "season": "2027",
   "checked": "2026-11-17",
-  "checked_at": "2026-11-17 13:20",
+  "checked_at": "2026-11-17 13:45",
   "fa_open": "2026-11-17",
   "fa_open_time": "09:00",
   "stay": [
@@ -264,14 +264,14 @@
    {
     "nickname": "Sharvel",
     "team": "DNS",
-    "source": "https://esportstransfer.com/lol/fa/lck",
-    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+    "source": "https://www.etoday.co.kr/news/view/2649057",
+    "status": "계약 종료 오피셜(2026-11-17) · FA"
    },
    {
     "nickname": "Clozer",
     "team": "DNS",
-    "source": "https://esportstransfer.com/lol/fa/lck",
-    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+    "source": "https://www.etoday.co.kr/news/view/2649057",
+    "status": "계약 종료 오피셜(2026-11-17) · FA"
    },
    {
     "nickname": "deokdam",
@@ -282,8 +282,8 @@
    {
     "nickname": "Peter",
     "team": "DNS",
-    "source": "https://esportstransfer.com/lol/fa/lck",
-    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+    "source": "https://www.etoday.co.kr/news/view/2649057",
+    "status": "계약 종료 오피셜(2026-11-17) · FA"
    },
    {
     "nickname": "Clear",
@@ -628,6 +628,56 @@
     "detail": "2027 시즌 동행 · 주장 선임 (계약기간 미공개)",
     "source": "https://www.inven.co.kr/webzine/news/?news=323456",
     "role": "mid"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Pyosik",
+    "type": "방출",
+    "from": "DNS",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.etoday.co.kr/news/view/2649057",
+    "role": "jungle"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Sharvel",
+    "type": "방출",
+    "from": "DNS",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.etoday.co.kr/news/view/2649057",
+    "role": "jungle"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Clozer",
+    "type": "방출",
+    "from": "DNS",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.etoday.co.kr/news/view/2649057",
+    "role": "mid"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Life",
+    "type": "방출",
+    "from": "DNS",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.etoday.co.kr/news/view/2649057",
+    "role": "support"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Peter",
+    "type": "방출",
+    "from": "DNS",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.etoday.co.kr/news/view/2649057",
+    "role": "support"
    }
   ],
   "reports": [
@@ -701,11 +751,11 @@
     "name_kr": "최우제",
     "from": "HLE",
     "to": "미정",
-    "outlet": "인벤",
+    "outlet": "인벤 · 위키트리",
     "grade": "보도",
     "status": "보도",
     "source": "https://clip.dor.gg/en/blog/lck-free-agency-stove-league",
-    "note": "월즈 전 재계약 제안 거절 보도 · 구단은 협상 계속 중이라는 입장",
+    "note": "월즈 전 재계약 제안 거절 보도 · 구단은 협상 계속 중이라는 입장 · 위키트리(11/3): FA 시장에서 평가받길 원하는 것으로 전해짐",
     "role": "top"
    },
    {
@@ -717,7 +767,7 @@
     "outlet": "글로벌이코노믹 (esport.vision·bo3.gg 인용) · Strafe",
     "source": "https://www.g-enews.com/article/ICT/2026/11/20261117074452186038169980b3_1",
     "role": "top",
-    "note": "해외 매체발 2+1년(3년차 선수옵션) 계약 합의설 · 익명 제보 기반이라 체결 여부 미확인 · T1 관계자 \"계약이 확정되면 별도로 공지\"",
+    "note": "해외 매체발 2+1년(3년차 선수옵션) 계약 합의설 · 익명 제보 기반이라 체결 여부 미확인 · T1 관계자 \"계약이 확정되면 별도로 공지\" · 앞서 아티브뉴스는 'T1 복귀 확정설'은 사실이 아니라고 보도(11/3, 위키트리 인용)",
     "grade": "보도",
     "status": "보도",
     "seen_at": "2026-11-17 13:20"
@@ -836,7 +886,7 @@
     "outlet": "Sheep Esports",
     "source": "https://www.sheepesports.com/en/articles/sources-cuzz-set-to-join-dn-soopers-ahead-of-2027-lck-season/en",
     "role": "jungle",
-    "note": "KT를 떠나 DNS에 합류할 예정이라는 보도 · 구단 공식 발표 전",
+    "note": "KT를 떠나 DNS에 합류할 예정이라는 보도 · 구단 공식 발표 전 · DNS는 11/17 표식·샤벨·클로저 등과 계약 종료 발표",
     "grade": "소식통",
     "status": "보도",
     "seen_at": "2026-11-17 13:20"
@@ -851,7 +901,7 @@
     "outlet": "모든팁 블로그 (topbo.co.kr, 커뮤니티 썰 정리)",
     "source": "https://topbo.co.kr/2027-lck-%eb%a1%9c%ec%8a%a4%ed%84%b0/",
     "role": "mid",
-    "note": "커즈·유칼 DN 영입설 · 취재 보도 확인 없음",
+    "note": "커즈·유칼 DN 영입설 · 취재 보도 확인 없음 · DNS는 11/17 표식·샤벨·클로저 등과 계약 종료 발표",
     "grade": "썰",
     "status": "보도",
     "seen_at": "2026-11-16 17:55"
@@ -869,7 +919,7 @@
     "source": "https://www.fmkorea.com/10539974903",
     "role": "jungle",
     "seen_at": "2026-11-17 09:50",
-    "note": "상위권 팀을 노리는 중이라는 썰"
+    "note": "상위권 팀을 노리는 중이라는 썰 · DNS와 계약 종료 오피셜(2026-11-17, 이투데이)"
    },
    {
     "tier": "community",
@@ -878,13 +928,13 @@
     "name_kr": "",
     "from": "DNS",
     "to": "해외(LEC·LCS)",
-    "outlet": "ㅌㄹㅁㄹ (에펨코리아 LoL 게시판, 찌라시 정리글)",
+    "outlet": "ㅌㄹㅁㄹ (에펨코리아 LoL 게시판, 찌라시 정리글) · Rostermania (이적 트래커, 유튜브 생방송 인용)",
     "grade": "썰",
     "status": "보도",
     "source": "https://www.fmkorea.com/10539974903",
     "role": "mid",
     "seen_at": "2026-11-17 09:50",
-    "note": "DNS가 새 미드 영입 예정이라 이탈 유력 · LEC나 LCS 이적 가능성 언급"
+    "note": "DNS가 새 미드 영입 예정이라 이탈 유력 · LEC나 LCS 이적 가능성 언급 · Rostermania는 NAVI(LEC)에 오퍼됐다는 루머로 기재 · DNS와 계약 종료 오피셜(2026-11-17, 이투데이)"
    },
    {
     "date": "2026-11-17",
@@ -899,10 +949,59 @@
     "role": "top",
     "seen_at": "2026-11-17 13:20",
     "note": "4년 만의 현역 복귀 타진 · 2027 시즌을 함께할 팀 물색 중 · 11/16 더플레이와 에이전시 계약"
+   },
+   {
+    "tier": "community",
+    "date": "2026-11-06",
+    "nickname": "Sharvel",
+    "name_kr": "김단우",
+    "from": "DNS",
+    "to": "GEN",
+    "outlet": "루리웹-7093922919 (루리웹 유머 게시판)",
+    "grade": "썰",
+    "status": "보도",
+    "source": "https://bbs.ruliweb.com/community/board/300143/read/77286781",
+    "role": "jungle",
+    "seen_at": "2026-11-17 13:45",
+    "note": "원하는 팀은 많지만 본인은 젠지행을 원해 월즈 종료를 기다린다는 썰 · 11/17 에펨코리아에서도 '샤벨 젠지행' 이야기 다수 · '상위권 팀 노린다'는 ㅌㄹㅁㄹ 썰과 같은 방향"
+   },
+   {
+    "tier": "community",
+    "date": "2026-11-07",
+    "nickname": "Clear",
+    "name_kr": "송현민",
+    "from": "BNK",
+    "to": "NAVI (LEC)",
+    "outlet": "Rostermania (이적 트래커, 유튜브 생방송 인용)",
+    "grade": "썰",
+    "status": "보도",
+    "source": "https://rostermania.lol/lck/transfers",
+    "role": "top",
+    "seen_at": "2026-11-17 13:45",
+    "note": "2027 LEC 시즌을 앞두고 NAVI에 오퍼됐다는 루머로 기재 · 미확인 · BNK와는 11/17 계약 종료 오피셜"
+   },
+   {
+    "tier": "community",
+    "date": "2026-11-17",
+    "nickname": "Scout",
+    "name_kr": "이예찬",
+    "from": "NS",
+    "to": "KRX",
+    "outlet": "모든팁 블로그 (topbo.co.kr, 커뮤니티 썰 정리)",
+    "grade": "썰",
+    "status": "보도",
+    "source": "https://topbo.co.kr/2027-lck-%eb%a1%9c%ec%8a%a4%ed%84%b0/",
+    "role": "mid",
+    "seen_at": "2026-11-17 13:45",
+    "note": "카나비·도란·스카웃 KRX 연결 썰 · 정리글도 '모두 소문 단계'라고 명시 · 농심과는 11/17 계약 종료 오피셜"
    }
   ],
   "coaches": [],
   "updates": [
+   {
+    "at": "2026-11-17 13:45",
+    "text": "DNS 표식·샤벨·클로저·라이프·피터 계약 종료 오피셜 · 썰 3건(샤벨 젠지행, 클리어 NAVI 오퍼, 스카웃 KRX 연결)"
+   },
    {
     "at": "2026-11-17 13:20",
     "text": "오피셜 10건: BNK 빅라 재계약(2027 주장), 농심 스폰지·스카웃·디아블·리헨즈 / KT 에포트·고스트·지우·실비·폴루 계약 종료 · 🟡 보도 3건: 커즈 DNS행(Sheep), 제우스 T1 복귀설(매체 보도로 격상), 너구리 현역 복귀 타진"
