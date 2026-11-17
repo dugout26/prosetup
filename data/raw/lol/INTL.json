@@ -270,6 +270,17 @@
        "note": "집계 사이트 프로필 없음. 공개 정보 확인 불가",
        "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
        "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "Cuzz", "name_kr": "문우찬", "role": "jungle",
+       "gear": {
+         "mouse": {"value": "Logitech G PRO X Superlight 2 White", "source": "https://specs.gg/Cuzz", "confidence": "low"},
+         "keyboard": {"value": "Logitech G PRO X TKL", "source": "https://specs.gg/Cuzz", "confidence": "low"},
+         "monitor": null,
+         "headset": {"value": "Logitech G PRO X 2 Lightspeed", "source": "https://specs.gg/Cuzz", "confidence": "medium"},
+         "mousepad": {"value": "Logitech G740", "source": "https://specs.gg/Cuzz", "confidence": "low", "note": "prosettings.net은 G240으로 상충"}},
+       "settings": {
+         "dpi": {"value": 800, "source": "https://prosettings.net/lists/league-of-legends/", "confidence": "medium"},
+         "in_game_sens": null,
+         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Cuzz", "confidence": "medium"}}},
       {"nickname": "Sharvel", "name_kr": "김단우", "role": "jungle", "roster_source": "https://www.inven.co.kr/webzine/news/?news=317952&site=lol",
        "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
        "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
