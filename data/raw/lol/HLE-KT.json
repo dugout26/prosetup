@@ -1,6 +1,6 @@
 {
   "as_of": "2026-08-05",
-  "roster_check_2027": {"checked": "2026-11-15", "note": "LCK FA 시장(2026-11-17) 개시 전이라 이적 확정 없음 → 2026 로스터 유지. HLE 2027 계약 확인: Zeka, Gumayusi, Delight / 미정: Zeus, Kanavi · KT 2027 계약 확인: PerfecT, Bdd / 미정: Cuzz, FenRir, Effort. 루머 미반영. 장비 변경 근거 없음."},
+  "roster_check_2027": {"checked": "2026-11-17", "note": "2026-11-17 FA 개장. KT: Effort 계약 종료 오피셜(Ghost·Jiwoo·Sylvie·Pollu 포함) → Effort는 FA 블록(INTL.json INTLFA)으로 이동. HLE 2027 계약 확인: Zeka, Gumayusi, Delight / 미정: Zeus, Kanavi · KT 2027 계약 확인: PerfecT, Bdd / 미정: Cuzz, FenRir / 공석: 서포터. 루머 미반영."},
   "HLE": {
     "roster_note": "2026 로스터 확인됨: Zeus(탑)·Kanavi(정글)·Zeka(미드)·Gumayusi(원딜)·Delight(서폿).",
     "roster_source": "https://www.sheepesports.com/en/articles/lol-hanwha-life-esports-completed-2026-lck-roster/en",
@@ -100,10 +100,6 @@
          "resolution": {"value": "1920x1080", "source": "https://specs.gg/Bdd", "confidence": "medium"}}},
       {"nickname": "FenRir", "name_kr": "박강준", "role": "Bot",
        "note": "2026-07-29 콜업 신인. 장비·세팅 공개 정보 없음",
-       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
-       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
-      {"nickname": "Effort", "name_kr": "이상호", "role": "Support",
-       "note": "집계 사이트 프로필 없음. 공개 정보 확인 불가",
        "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
        "settings": {"dpi": null, "in_game_sens": null, "resolution": null}}
     ]

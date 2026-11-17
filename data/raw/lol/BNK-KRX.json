@@ -1,5 +1,5 @@
 {
-  "roster_check_2027": {"checked": "2026-11-17", "note": "2026-11-17 FA 개장. BNK: Clear·Raptor·Taeyoon·Kellin 계약 종료 오피셜, KRX: Frog·Willer·Ucal·Aiming·Andil 계약 종료 오피셜 → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. BNK 미정: VicLa · KRX 2027 선수단 미발표. 루머 미반영."},
+  "roster_check_2027": {"checked": "2026-11-17", "note": "2026-11-17 FA 개장. BNK: Clear·Raptor·Taeyoon·Kellin 계약 종료 오피셜, KRX: Frog·Willer·Ucal·Aiming·Andil 계약 종료 오피셜 → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. BNK 2027 계약 확인: VicLa(재계약·주장, 2026-11-17 오피셜) · KRX 2027 선수단 미발표. 루머 미반영."},
   "as_of": "2026-08-05",
   "BNK": {
     "team_name": "BNK FEARX",

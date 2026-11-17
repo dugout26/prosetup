@@ -1,5 +1,5 @@
 {
-  "roster_check_2027": {"checked": "2026-11-15", "note": "LCK FA 시장(2026-11-17) 개시 전이라 이적 확정 없음 → 2026 로스터 유지. DK 2027 계약 확인: Lucid / 미정: Siwoo, ShowMaker, Smash, Career · NS 2027 계약 확인: 없음 / 미정: Kingen, Sponge, Scout, Diable, Lehends. 루머 미반영. 장비 변경 근거 없음."},
+  "roster_check_2027": {"checked": "2026-11-17", "note": "2026-11-17 FA 개장. NS: Sponge·Scout·Diable·Lehends 계약 종료 오피셜 → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. NS 미정: Kingen(종료 발표 명단 제외, 거취 미발표) · DK 2027 계약 확인: Lucid / 미정: Siwoo, ShowMaker, Smash, Career. 루머 미반영."},
   "meta": {"as_of": "2026-08-05", "note": "NS 원딜은 2026-04-30 Diable-Taeyoon 트레이드 반영"},
   "DK": {
     "team_name": "Dplus KIA",
@@ -62,37 +62,7 @@
          "monitor": {"value": "HP X27i", "source": "https://settingsinfo.com/person/kingen/", "confidence": "medium"},
          "headset": {"value": "HyperX Cloud Flight S", "source": "https://settingsinfo.com/person/kingen/", "confidence": "medium"},
          "mousepad": {"value": "Razer Gigantus V2", "source": "https://settingsinfo.com/person/kingen/", "confidence": "medium"}},
-       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
-      {"nickname": "Sponge", "name_kr": "배영준", "role": "jungle",
-       "gear": {
-         "mouse": {"value": "Logitech G Pro X Superlight 2", "source": "https://settingsinfo.com/person/sponge/", "confidence": "medium"},
-         "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
-       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
-      {"nickname": "Scout", "name_kr": "이예찬", "role": "mid",
-       "gear": {
-         "mouse": {"value": "Razer Viper 8KHz", "source": "https://settingsinfo.com/person/scout/", "confidence": "medium"},
-         "keyboard": {"value": "Razer Huntsman Elite", "source": "https://settingsinfo.com/person/scout/", "confidence": "medium"},
-         "monitor": null,
-         "headset": {"value": "Razer BlackShark V2", "source": "https://settingsinfo.com/person/scout/", "confidence": "medium"},
-         "mousepad": {"value": "Razer Gigantus V2", "source": "https://settingsinfo.com/person/scout/", "confidence": "medium"}},
-       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
-      {"nickname": "Diable", "name_kr": "남대근", "role": "adc",
-       "roster_source": "https://esports.gg/news/league-of-legends/diable-ns-redforce-trade/",
-       "gear": {
-         "mouse": {"value": "Logitech G Pro X Superlight", "source": "https://settingsinfo.com/person/diable/", "confidence": "medium"},
-         "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
-       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
-      {"nickname": "Lehends", "name_kr": "손시우", "role": "support",
-       "gear": {
-         "mouse": {"value": "Logitech G304", "source": "https://settingsinfo.com/person/lehends/", "confidence": "medium"},
-         "keyboard": {"value": "Corsair K70 RGB MK.2 SE", "source": "https://settingsinfo.com/person/lehends/", "confidence": "low"},
-         "monitor": null,
-         "headset": {"value": "Corsair Void Pro", "source": "https://settingsinfo.com/person/lehends/", "confidence": "low"},
-         "mousepad": {"value": "Corsair MM300 Extended", "source": "https://settingsinfo.com/person/lehends/", "confidence": "low"}},
-       "settings": {
-         "dpi": {"value": 1650, "source": "https://settingsinfo.com/person/lehends/", "confidence": "medium"},
-         "in_game_sens": {"value": 50, "source": "https://settingsinfo.com/person/lehends/", "confidence": "medium"},
-         "resolution": null}}
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}}
     ]
   }
 }

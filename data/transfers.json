@@ -3,7 +3,7 @@
  "lol": {
   "season": "2027",
   "checked": "2026-11-17",
-  "checked_at": "2026-11-17 09:50",
+  "checked_at": "2026-11-17 13:20",
   "fa_open": "2026-11-17",
   "fa_open_time": "09:00",
   "stay": [
@@ -120,6 +120,12 @@
     "team": "DNS",
     "source": "https://www.inven.co.kr/webzine/news/?news=323430",
     "status": "2028년까지 재계약"
+   },
+   {
+    "nickname": "VicLa",
+    "team": "BNK",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323456",
+    "status": "2027 시즌 재계약 · 주장"
    }
   ],
   "pending": [
@@ -168,8 +174,8 @@
    {
     "nickname": "Effort",
     "team": "KT",
-    "source": "https://esportstransfer.com/lol/fa/lck",
-    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+    "source": "https://www.inven.co.kr/webzine/news/?news=323460",
+    "status": "계약 종료 오피셜(2026-11-17) · FA"
    },
    {
     "nickname": "Siwoo",
@@ -198,32 +204,32 @@
    {
     "nickname": "Kingen",
     "team": "NS",
-    "source": "https://esportstransfer.com/lol/fa/lck",
-    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+    "source": "https://www.inven.co.kr/webzine/news/?news=323477",
+    "status": "계약 만료 · 농심 계약 종료 발표(2026-11-17) 명단에서 제외 · 구단 \"말씀드릴 내용 없다\""
    },
    {
     "nickname": "Sponge",
     "team": "NS",
-    "source": "https://esportstransfer.com/lol/fa/lck",
-    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+    "source": "https://www.inven.co.kr/webzine/news/?news=323477",
+    "status": "계약 종료 오피셜(2026-11-17) · FA"
    },
    {
     "nickname": "Scout",
     "team": "NS",
-    "source": "https://esportstransfer.com/lol/fa/lck",
-    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+    "source": "https://www.inven.co.kr/webzine/news/?news=323477",
+    "status": "계약 종료 오피셜(2026-11-17) · FA"
    },
    {
     "nickname": "Diable",
     "team": "NS",
-    "source": "https://esportstransfer.com/lol/fa/lck",
-    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+    "source": "https://www.inven.co.kr/webzine/news/?news=323477",
+    "status": "계약 종료 오피셜(2026-11-17) · FA"
    },
    {
     "nickname": "Lehends",
     "team": "NS",
-    "source": "https://esportstransfer.com/lol/fa/lck",
-    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+    "source": "https://www.inven.co.kr/webzine/news/?news=323477",
+    "status": "계약 종료 오피셜(2026-11-17) · FA"
    },
    {
     "nickname": "Frog",
@@ -290,12 +296,6 @@
     "team": "BNK",
     "source": "https://www.inven.co.kr/webzine/news/?news=323446",
     "status": "계약 종료 오피셜(2026-11-17) · FA"
-   },
-   {
-    "nickname": "VicLa",
-    "team": "BNK",
-    "source": "https://esportstransfer.com/lol/fa/lck",
-    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
    },
    {
     "nickname": "Taeyoon",
@@ -524,6 +524,110 @@
     "detail": "2년 재계약 · 2028년까지",
     "source": "https://www.inven.co.kr/webzine/news/?news=323430",
     "role": "top"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Sponge",
+    "type": "방출",
+    "from": "NS",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323477",
+    "role": "jungle"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Scout",
+    "type": "방출",
+    "from": "NS",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323477",
+    "role": "mid"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Diable",
+    "type": "방출",
+    "from": "NS",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323477",
+    "role": "adc"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Lehends",
+    "type": "방출",
+    "from": "NS",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323477",
+    "role": "support"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Effort",
+    "type": "방출",
+    "from": "KT",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323460",
+    "role": "support"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Ghost",
+    "type": "방출",
+    "from": "KT",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323460",
+    "role": "adc",
+    "name_kr": "장용준"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Jiwoo",
+    "type": "방출",
+    "from": "KT",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323460",
+    "role": "adc",
+    "name_kr": "정지우"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Sylvie",
+    "type": "방출",
+    "from": "KT",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323460",
+    "role": "jungle",
+    "name_kr": "이승복"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Pollu",
+    "type": "방출",
+    "from": "KT",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323460",
+    "role": "support",
+    "name_kr": "오동규"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "VicLa",
+    "type": "재계약",
+    "team": "BNK",
+    "to": "BNK",
+    "detail": "2027 시즌 동행 · 주장 선임 (계약기간 미공개)",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323456",
+    "role": "mid"
    }
   ],
   "reports": [
@@ -551,7 +655,7 @@
     "status": "보도",
     "source": "https://www.sheepesports.com/en/articles/sources-raptor-kellin-and-taeyoon-expected-to-join-kt-rolster-for-lck-2027/en",
     "role": "adc",
-    "note": "BNK와 계약 종료 오피셜(2026-11-17, 인벤) · KT 입단은 공식 발표 전"
+    "note": "BNK와 계약 종료 오피셜(2026-11-17, 인벤) · KT는 11/17 고스트·에포트 등과 계약 종료(바텀 공석) · KT 입단은 공식 발표 전"
    },
    {
     "date": "2026-11",
@@ -564,7 +668,7 @@
     "status": "보도",
     "source": "https://www.sheepesports.com/en/articles/sources-raptor-kellin-and-taeyoon-expected-to-join-kt-rolster-for-lck-2027/en",
     "role": "support",
-    "note": "BNK와 계약 종료 오피셜(2026-11-17, 인벤) · KT 입단은 공식 발표 전"
+    "note": "BNK와 계약 종료 오피셜(2026-11-17, 인벤) · KT는 11/17 고스트·에포트 등과 계약 종료(바텀 공석) · KT 입단은 공식 발표 전"
    },
    {
     "date": "2026-10-23",
@@ -605,19 +709,18 @@
     "role": "top"
    },
    {
-    "tier": "community",
-    "date": "2026-11-15",
+    "date": "2026-11-17",
     "nickname": "Zeus",
     "name_kr": "최우제",
     "from": "HLE",
     "to": "T1",
-    "outlet": "웨이보 게시물(게시자 불명) · Strafe 보도",
-    "source": "https://www.strafe.com/news/read/zeus-rumored-to-return-to-t1-in-2027-on-two-year-deal-with-third-year-option/",
+    "outlet": "글로벌이코노믹 (esport.vision·bo3.gg 인용) · Strafe",
+    "source": "https://www.g-enews.com/article/ICT/2026/11/20261117074452186038169980b3_1",
     "role": "top",
-    "note": "2+1년(3년차 선수옵션) 복귀 합의설 · 구단·선수 미확인",
-    "grade": "썰",
+    "note": "해외 매체발 2+1년(3년차 선수옵션) 계약 합의설 · 익명 제보 기반이라 체결 여부 미확인 · T1 관계자 \"계약이 확정되면 별도로 공지\"",
+    "grade": "보도",
     "status": "보도",
-    "seen_at": "2026-11-16 17:55"
+    "seen_at": "2026-11-17 13:20"
    },
    {
     "tier": "community",
@@ -725,19 +828,18 @@
     "seen_at": "2026-11-16 17:55"
    },
    {
-    "tier": "community",
-    "date": "2026-11-15",
+    "date": "2026-11-17",
     "nickname": "Cuzz",
     "name_kr": "문우찬",
     "from": "KT",
     "to": "DNS",
-    "outlet": "모든팁 블로그 (topbo.co.kr, 커뮤니티 썰 정리)",
-    "source": "https://topbo.co.kr/2027-lck-%eb%a1%9c%ec%8a%a4%ed%84%b0/",
+    "outlet": "Sheep Esports",
+    "source": "https://www.sheepesports.com/en/articles/sources-cuzz-set-to-join-dn-soopers-ahead-of-2027-lck-season/en",
     "role": "jungle",
-    "note": "커즈·유칼 DN 영입설 · 취재 보도 확인 없음",
-    "grade": "썰",
+    "note": "KT를 떠나 DNS에 합류할 예정이라는 보도 · 구단 공식 발표 전",
+    "grade": "소식통",
     "status": "보도",
-    "seen_at": "2026-11-16 17:55"
+    "seen_at": "2026-11-17 13:20"
    },
    {
     "tier": "community",
@@ -783,10 +885,28 @@
     "role": "mid",
     "seen_at": "2026-11-17 09:50",
     "note": "DNS가 새 미드 영입 예정이라 이탈 유력 · LEC나 LCS 이적 가능성 언급"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Nuguri",
+    "name_kr": "장하권",
+    "from": "은퇴(前 DK)",
+    "to": "미정",
+    "outlet": "인벤",
+    "grade": "관계자 인용",
+    "status": "보도",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323467",
+    "role": "top",
+    "seen_at": "2026-11-17 13:20",
+    "note": "4년 만의 현역 복귀 타진 · 2027 시즌을 함께할 팀 물색 중 · 11/16 더플레이와 에이전시 계약"
    }
   ],
   "coaches": [],
   "updates": [
+   {
+    "at": "2026-11-17 13:20",
+    "text": "오피셜 10건: BNK 빅라 재계약(2027 주장), 농심 스폰지·스카웃·디아블·리헨즈 / KT 에포트·고스트·지우·실비·폴루 계약 종료 · 🟡 보도 3건: 커즈 DNS행(Sheep), 제우스 T1 복귀설(매체 보도로 격상), 너구리 현역 복귀 타진"
+   },
    {
     "at": "2026-11-17 09:50",
     "text": "FA 개장 — 오피셜 14건: DNS 두두 2028년까지 재계약, 젠지 기인·캐니언 / BNK 클리어·랩터·태윤·켈린 / 키움 DRX 1군 전원 계약 종료 · 🟠 썰 2건"
