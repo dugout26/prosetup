@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://dugout26.github.io/prosetup/</loc><lastmod>2026-11-16</lastmod></url>
+<url><loc>https://dugout26.github.io/prosetup/</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/rankings.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/guides/keyboard.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/guides/mouse.html</loc><lastmod>2026-11-17</lastmod></url>
@@ -17,12 +17,7 @@
 <url><loc>https://dugout26.github.io/prosetup/teams/krx.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/teams/dns.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/teams/bnk.html</loc><lastmod>2026-11-17</lastmod></url>
-<url><loc>https://dugout26.github.io/prosetup/teams/bro.html</loc><lastmod>2026-11-16</lastmod></url>
-<url><loc>https://dugout26.github.io/prosetup/players/taeyoon.html</loc><lastmod>2026-11-17</lastmod></url>
-<url><loc>https://dugout26.github.io/prosetup/players/willer.html</loc><lastmod>2026-11-17</lastmod></url>
-<url><loc>https://dugout26.github.io/prosetup/players/ucal.html</loc><lastmod>2026-11-17</lastmod></url>
-<url><loc>https://dugout26.github.io/prosetup/players/aiming.html</loc><lastmod>2026-11-17</lastmod></url>
-<url><loc>https://dugout26.github.io/prosetup/players/andil.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://dugout26.github.io/prosetup/teams/bro.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/players/teddy.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/players/clozer.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/players/deokdam.html</loc><lastmod>2026-11-17</lastmod></url>
@@ -55,6 +50,13 @@
 <url><loc>https://dugout26.github.io/prosetup/players/hans-sama.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/players/caliste.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/players/corejj.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://dugout26.github.io/prosetup/players/kiin.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://dugout26.github.io/prosetup/players/canyon.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://dugout26.github.io/prosetup/players/taeyoon.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://dugout26.github.io/prosetup/players/willer.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://dugout26.github.io/prosetup/players/ucal.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://dugout26.github.io/prosetup/players/aiming.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://dugout26.github.io/prosetup/players/andil.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/players/elk.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/players/inspired.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/players/doran.html</loc><lastmod>2026-11-17</lastmod></url>
@@ -62,8 +64,6 @@
 <url><loc>https://dugout26.github.io/prosetup/players/faker.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/players/peyz.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/players/keria.html</loc><lastmod>2026-11-17</lastmod></url>
-<url><loc>https://dugout26.github.io/prosetup/players/kiin.html</loc><lastmod>2026-11-17</lastmod></url>
-<url><loc>https://dugout26.github.io/prosetup/players/canyon.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/players/chovy.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/players/ruler.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/players/duro.html</loc><lastmod>2026-11-17</lastmod></url>
@@ -324,16 +324,16 @@
 <url><loc>https://dugout26.github.io/prosetup/gear/artisan-ninja-fx-zero-xsoft.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/gear/zowie-xl2546.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/gear/iqunix-ev63-he.html</loc><lastmod>2026-11-17</lastmod></url>
-<url><loc>https://dugout26.github.io/prosetup/gear/logitech-g-pro-wireless.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/gear/logitech-g840.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/gear/razer-huntsman-v3-pro-tkl.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://dugout26.github.io/prosetup/gear/logitech-g-pro-wireless.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/gear/steelseries-qck-heavy.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/gear/asus-rog-delta-ii.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/gear/artisan-ninja-fx-zero-mid.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/gear/artisan-type-99-soft.html</loc><lastmod>2026-11-17</lastmod></url>
-<url><loc>https://dugout26.github.io/prosetup/gear/logitech-g-pro-x-2-lightspeed.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/gear/logitech-g733.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/gear/logitech-g640.html</loc><lastmod>2026-11-17</lastmod></url>
+<url><loc>https://dugout26.github.io/prosetup/gear/logitech-g-pro-x-2-lightspeed.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/gear/razer-huntsman-v3-pro-tkl-8khz.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/gear/steelseries-apex-pro-tkl-gen-3.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/gear/razer-huntsman-v3-pro-mini.html</loc><lastmod>2026-11-17</lastmod></url>
@@ -385,9 +385,9 @@
 <url><loc>https://dugout26.github.io/prosetup/gear/pulsar-es-jupiter-pro.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/gear/vaxee-np-01-ergo.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/tools/sens.html</loc><lastmod>2026-11-17</lastmod></url>
-<url><loc>https://dugout26.github.io/prosetup/guides/mouse-acceleration.html</loc><lastmod>2026-11-16</lastmod></url>
+<url><loc>https://dugout26.github.io/prosetup/guides/mouse-acceleration.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/guides/lol-monitor.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/guides/adc-mouse.html</loc><lastmod>2026-11-17</lastmod></url>
-<url><loc>https://dugout26.github.io/prosetup/about.html</loc><lastmod>2026-11-16</lastmod></url>
+<url><loc>https://dugout26.github.io/prosetup/about.html</loc><lastmod>2026-11-17</lastmod></url>
 <url><loc>https://dugout26.github.io/prosetup/data.html</loc><lastmod>2026-11-17</lastmod></url>
 </urlset>

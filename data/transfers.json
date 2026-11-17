@@ -2,8 +2,8 @@
  "_note": "이적시장 탭 데이터. official=구단·리그 공식 발표(이적·영입·재계약), reports=언론·소식통 보도(루머 포함, 매체명·링크 필수, 커뮤니티 찌라시 금지). 보도가 오피셜로 확정되면 official로 옮기고 reports의 status를 '오피셜 확정'으로, 무산되면 '무산'으로. pending=거취 미정, stay=2027 계약 확인. reports·official의 role(top/jungle/mid/adc/support)은 팀 페이지 포지션 칸 배치에 쓰인다. coaches=감독·코치 계약 현황(nickname,name_kr,role,team,status,source — 출처 없는 항목은 렌더하지 않음). updates=상단 접이식 업데이트 기록({at:'YYYY-MM-DD HH:MM',text}), checked_at=상단 '최근 갱신' 표기.",
  "lol": {
   "season": "2027",
-  "checked": "2026-11-15",
-  "checked_at": "2026-11-16 17:55",
+  "checked": "2026-11-17",
+  "checked_at": "2026-11-17 09:50",
   "fa_open": "2026-11-17",
   "fa_open_time": "09:00",
   "stay": [
@@ -114,6 +114,12 @@
     "team": "BRO",
     "source": "https://draftcoach.gg/news/story/lol-2027-offseason-roster-changes-deft-skewmond/",
     "status": "2027년까지 재계약"
+   },
+   {
+    "nickname": "DuDu",
+    "team": "DNS",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323430",
+    "status": "2028년까지 재계약"
    }
   ],
   "pending": [
@@ -126,14 +132,14 @@
    {
     "nickname": "Kiin",
     "team": "GEN",
-    "source": "https://esportstransfer.com/lol/fa/lck",
-    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+    "source": "https://www.inven.co.kr/webzine/news/?news=323447",
+    "status": "계약 종료 오피셜(2026-11-17) · FA"
    },
    {
     "nickname": "Canyon",
     "team": "GEN",
-    "source": "https://esportstransfer.com/lol/fa/lck",
-    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+    "source": "https://www.inven.co.kr/webzine/news/?news=323447",
+    "status": "계약 종료 오피셜(2026-11-17) · FA"
    },
    {
     "nickname": "Zeus",
@@ -222,38 +228,32 @@
    {
     "nickname": "Frog",
     "team": "KRX",
-    "source": "https://esportstransfer.com/lol/fa/lck",
-    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+    "source": "https://www.inven.co.kr/webzine/news/?news=323450",
+    "status": "계약 종료 오피셜(2026-11-17) · FA"
    },
    {
     "nickname": "Willer",
     "team": "KRX",
-    "source": "https://esportstransfer.com/lol/fa/lck",
-    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+    "source": "https://www.inven.co.kr/webzine/news/?news=323450",
+    "status": "계약 종료 오피셜(2026-11-17) · FA"
    },
    {
     "nickname": "Ucal",
     "team": "KRX",
-    "source": "https://esportstransfer.com/lol/fa/lck",
-    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+    "source": "https://www.inven.co.kr/webzine/news/?news=323450",
+    "status": "계약 종료 오피셜(2026-11-17) · FA"
    },
    {
     "nickname": "Aiming",
     "team": "KRX",
-    "source": "https://esportstransfer.com/lol/fa/lck",
-    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+    "source": "https://www.inven.co.kr/webzine/news/?news=323450",
+    "status": "계약 종료 오피셜(2026-11-17) · FA"
    },
    {
     "nickname": "Andil",
     "team": "KRX",
-    "source": "https://esportstransfer.com/lol/fa/lck",
-    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
-   },
-   {
-    "nickname": "DuDu",
-    "team": "DNS",
-    "source": "https://esportstransfer.com/lol/fa/lck",
-    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+    "source": "https://www.inven.co.kr/webzine/news/?news=323450",
+    "status": "계약 종료 오피셜(2026-11-17) · FA"
    },
    {
     "nickname": "Sharvel",
@@ -282,14 +282,14 @@
    {
     "nickname": "Clear",
     "team": "BNK",
-    "source": "https://esportstransfer.com/lol/fa/lck",
-    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+    "source": "https://www.inven.co.kr/webzine/news/?news=323446",
+    "status": "계약 종료 오피셜(2026-11-17) · FA"
    },
    {
     "nickname": "Raptor",
     "team": "BNK",
-    "source": "https://www.sheepesports.com/en/articles/sources-raptor-kellin-and-taeyoon-expected-to-join-kt-rolster-for-lck-2027/en",
-    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+    "source": "https://www.inven.co.kr/webzine/news/?news=323446",
+    "status": "계약 종료 오피셜(2026-11-17) · FA"
    },
    {
     "nickname": "VicLa",
@@ -300,14 +300,14 @@
    {
     "nickname": "Taeyoon",
     "team": "BNK",
-    "source": "https://www.sheepesports.com/en/articles/sources-raptor-kellin-and-taeyoon-expected-to-join-kt-rolster-for-lck-2027/en",
-    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+    "source": "https://www.inven.co.kr/webzine/news/?news=323446",
+    "status": "계약 종료 오피셜(2026-11-17) · FA"
    },
    {
     "nickname": "Kellin",
     "team": "BNK",
-    "source": "https://www.sheepesports.com/en/articles/sources-raptor-kellin-and-taeyoon-expected-to-join-kt-rolster-for-lck-2027/en",
-    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
+    "source": "https://www.inven.co.kr/webzine/news/?news=323446",
+    "status": "계약 종료 오피셜(2026-11-17) · FA"
    }
   ],
   "official": [
@@ -382,6 +382,148 @@
     "to": "DK",
     "detail": "2027년까지 연장",
     "source": "https://www.pulse.bot/gaming/news/dplus-kia-extends-lucids-contract-days-after-lck-playoffs-victory-against-t1-7f0914bf-dcc6-4424-9bbb-fcaff83ed886/"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Kiin",
+    "type": "방출",
+    "from": "GEN",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323447",
+    "role": "top"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Canyon",
+    "type": "방출",
+    "from": "GEN",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323447",
+    "role": "jungle"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Clear",
+    "type": "방출",
+    "from": "BNK",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323446",
+    "role": "top"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Raptor",
+    "type": "방출",
+    "from": "BNK",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323446",
+    "role": "jungle"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Taeyoon",
+    "type": "방출",
+    "from": "BNK",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323446",
+    "role": "adc"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Kellin",
+    "type": "방출",
+    "from": "BNK",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323446",
+    "role": "support"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Rich",
+    "type": "방출",
+    "from": "KRX",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323450",
+    "role": "top",
+    "name_kr": "이재원"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Willer",
+    "type": "방출",
+    "from": "KRX",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323450",
+    "role": "jungle"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Vincenzo",
+    "type": "방출",
+    "from": "KRX",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323450",
+    "role": "jungle",
+    "name_kr": "하승민"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Ucal",
+    "type": "방출",
+    "from": "KRX",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323450",
+    "role": "mid"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Aiming",
+    "type": "방출",
+    "from": "KRX",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323450",
+    "role": "adc"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Andil",
+    "type": "방출",
+    "from": "KRX",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323450",
+    "role": "support"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Frog",
+    "type": "방출",
+    "from": "KRX",
+    "to": "FA",
+    "detail": "계약 종료 · FA 전환 (LCK CL)",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323450",
+    "role": "top"
+   },
+   {
+    "date": "2026-11-16",
+    "nickname": "DuDu",
+    "type": "재계약",
+    "team": "DNS",
+    "to": "DNS",
+    "detail": "2년 재계약 · 2028년까지",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323430",
+    "role": "top"
    }
   ],
   "reports": [
@@ -395,7 +537,7 @@
     "grade": "소식통",
     "status": "보도",
     "source": "https://www.sheepesports.com/en/articles/sources-raptor-kellin-and-taeyoon-expected-to-join-kt-rolster-for-lck-2027/en",
-    "note": "BNK 측은 \"타 팀에 접촉을 허락한 적 없다\"는 입장",
+    "note": "BNK와 계약 종료 오피셜(2026-11-17, 인벤) · KT 입단은 공식 발표 전",
     "role": "jungle"
    },
    {
@@ -408,7 +550,8 @@
     "grade": "소식통",
     "status": "보도",
     "source": "https://www.sheepesports.com/en/articles/sources-raptor-kellin-and-taeyoon-expected-to-join-kt-rolster-for-lck-2027/en",
-    "role": "adc"
+    "role": "adc",
+    "note": "BNK와 계약 종료 오피셜(2026-11-17, 인벤) · KT 입단은 공식 발표 전"
    },
    {
     "date": "2026-11",
@@ -420,7 +563,8 @@
     "grade": "소식통",
     "status": "보도",
     "source": "https://www.sheepesports.com/en/articles/sources-raptor-kellin-and-taeyoon-expected-to-join-kt-rolster-for-lck-2027/en",
-    "role": "support"
+    "role": "support",
+    "note": "BNK와 계약 종료 오피셜(2026-11-17, 인벤) · KT 입단은 공식 발표 전"
    },
    {
     "date": "2026-10-23",
@@ -500,7 +644,7 @@
     "outlet": "에펨코리아 정리글 (PTT Minguo1016 번역)",
     "source": "https://www.ptt.cc/bbs/LoL/M.1794813043.A.3A4.html",
     "role": "top",
-    "note": "도란·카나비 KRX 확정설 · KRX 계획 파토 반박 썰도 있음",
+    "note": "도란·카나비 KRX 확정설 · KRX 계획 파토 반박 썰도 있음 · KRX는 11/17 기존 1군 전원 계약 종료 오피셜",
     "grade": "썰",
     "status": "보도",
     "seen_at": "2026-11-16 17:55"
@@ -515,7 +659,7 @@
     "outlet": "에펨코리아 정리글 (PTT Minguo1016 번역)",
     "source": "https://www.ptt.cc/bbs/LoL/M.1794813043.A.3A4.html",
     "role": "jungle",
-    "note": "도란·카나비 KRX 확정설 · KRX 계획 파토 반박 썰도 있음",
+    "note": "도란·카나비 KRX 확정설 · KRX 계획 파토 반박 썰도 있음 · KRX는 11/17 기존 1군 전원 계약 종료 오피셜",
     "grade": "썰",
     "status": "보도",
     "seen_at": "2026-11-16 17:55"
@@ -530,7 +674,7 @@
     "outlet": "에펨코리아 정리글 (PTT Minguo1016 번역)",
     "source": "https://www.ptt.cc/bbs/LoL/M.1794813043.A.3A4.html",
     "role": "adc",
-    "note": "접촉은 있었다는 썰 · 아직 미정이라는 반박도 있음",
+    "note": "접촉은 있었다는 썰 · 아직 미정이라는 반박도 있음 · KRX는 11/17 기존 1군 전원 계약 종료 오피셜",
     "grade": "썰",
     "status": "보도",
     "seen_at": "2026-11-16 17:55"
@@ -545,9 +689,9 @@
     "outlet": "modemate (클리앙 모두의공원)",
     "source": "https://www.clien.net/service/board/park/19292997",
     "role": "top",
-    "note": "기인·캐니언 시장행설 · 둘 다 잔류 썰과 충돌",
+    "note": "기인·캐니언 시장행설 → 젠지 계약 종료 오피셜(2026-11-17), FA 전환",
     "grade": "썰",
-    "status": "보도",
+    "status": "오피셜 확정",
     "seen_at": "2026-11-16 17:55"
    },
    {
@@ -560,9 +704,9 @@
     "outlet": "modemate (클리앙 모두의공원)",
     "source": "https://www.clien.net/service/board/park/19292997",
     "role": "jungle",
-    "note": "기인·캐니언 시장행설 · 둘 다 잔류 썰과 충돌",
+    "note": "기인·캐니언 시장행설 → 젠지 계약 종료 오피셜(2026-11-17), FA 전환",
     "grade": "썰",
-    "status": "보도",
+    "status": "오피셜 확정",
     "seen_at": "2026-11-16 17:55"
    },
    {
@@ -609,10 +753,44 @@
     "grade": "썰",
     "status": "보도",
     "seen_at": "2026-11-16 17:55"
+   },
+   {
+    "tier": "community",
+    "date": "2026-11-10",
+    "nickname": "Sharvel",
+    "name_kr": "",
+    "from": "DNS",
+    "to": "미정",
+    "outlet": "ㅌㄹㅁㄹ (에펨코리아 LoL 게시판, 찌라시 정리글)",
+    "grade": "썰",
+    "status": "보도",
+    "source": "https://www.fmkorea.com/10539974903",
+    "role": "jungle",
+    "seen_at": "2026-11-17 09:50",
+    "note": "상위권 팀을 노리는 중이라는 썰"
+   },
+   {
+    "tier": "community",
+    "date": "2026-11-10",
+    "nickname": "Clozer",
+    "name_kr": "",
+    "from": "DNS",
+    "to": "해외(LEC·LCS)",
+    "outlet": "ㅌㄹㅁㄹ (에펨코리아 LoL 게시판, 찌라시 정리글)",
+    "grade": "썰",
+    "status": "보도",
+    "source": "https://www.fmkorea.com/10539974903",
+    "role": "mid",
+    "seen_at": "2026-11-17 09:50",
+    "note": "DNS가 새 미드 영입 예정이라 이탈 유력 · LEC나 LCS 이적 가능성 언급"
    }
   ],
   "coaches": [],
   "updates": [
+   {
+    "at": "2026-11-17 09:50",
+    "text": "FA 개장 — 오피셜 14건: DNS 두두 2028년까지 재계약, 젠지 기인·캐니언 / BNK 클리어·랩터·태윤·켈린 / 키움 DRX 1군 전원 계약 종료 · 🟠 썰 2건"
+   },
    {
     "at": "2026-11-16 17:55",
     "text": "커뮤니티 썰(🟠) 10건 추가 — 제우스·도란·카나비·바이퍼·기인·캐니언·커즈·유칼"

@@ -1,5 +1,5 @@
 {
-  "roster_check_2027": {"checked": "2026-11-15", "note": "LCK FA 시장(2026-11-17) 개시 전이라 이적 확정 없음 → 2026 로스터 유지. T1 2027 계약 확인: Oner, Faker, Peyz, Keria / 미정: Doran · GEN 2027 계약 확인: Chovy, Ruler, Duro / 미정: Kiin, Canyon. 루머 미반영. 장비 변경 근거 없음."},
+  "roster_check_2027": {"checked": "2026-11-17", "note": "2026-11-17 FA 개장. GEN: Kiin·Canyon 계약 종료 오피셜 → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. T1 2027 계약 확인: Oner, Faker, Peyz, Keria / 미정: Doran · GEN 2027 계약 확인: Chovy, Ruler, Duro / 공석: 탑·정글. 루머 미반영."},
   "as_of": "2026-08-05",
   "notes": {
     "roster": "T1 2026: 도란/오너/페이커/페이즈/케리아 (구마유시 HLE행, Peyz 영입). GEN 2026: 기인/캐니언/쵸비/룰러/두로 (전원 유지).",
@@ -62,22 +62,6 @@
   "GEN": {
     "team_name": "Gen.G",
     "players": [
-      {"nickname": "Kiin", "name_kr": "기인", "role": "top",
-       "gear": {
-         "mouse": {"value": "Logitech G Pro X Superlight 2", "source": "https://specs.gg/Kiin", "confidence": "medium"},
-         "keyboard": {"value": "Logitech G Pro X TKL", "source": "https://specs.gg/Kiin", "confidence": "medium"},
-         "monitor": null, "headset": null,
-         "mousepad": {"value": "Logitech G740", "source": "https://specs.gg/Kiin", "confidence": "medium"}},
-       "settings": {"dpi": null, "in_game_sens": null,
-         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Kiin", "confidence": "medium"}}},
-      {"nickname": "Canyon", "name_kr": "캐니언", "role": "jungle",
-       "gear": {
-         "mouse": {"value": "Logitech G Pro X Superlight 2", "source": "https://specs.gg/Canyon", "confidence": "medium"},
-         "keyboard": {"value": "Logitech G Pro X TKL", "source": "https://specs.gg/Canyon", "confidence": "medium"},
-         "monitor": null, "headset": null,
-         "mousepad": {"value": "Logitech G740", "source": "https://specs.gg/Canyon", "confidence": "medium"}},
-       "settings": {"dpi": null, "in_game_sens": null,
-         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Canyon", "confidence": "medium"}}},
       {"nickname": "Chovy", "name_kr": "쵸비", "role": "mid",
        "gear": {
          "mouse": {"value": "Logitech G Pro X Superlight 2", "source": "https://specs.gg/Chovy", "confidence": "medium"},
