@@ -3,7 +3,7 @@
  "lol": {
   "season": "2027",
   "checked": "2026-11-17",
-  "checked_at": "2026-11-17 18:58",
+  "checked_at": "2026-11-17 19:08",
   "fa_open": "2026-11-17",
   "fa_open_time": "09:00",
   "stay": [
@@ -126,6 +126,12 @@
     "team": "BNK",
     "source": "https://www.inven.co.kr/webzine/news/?news=323456",
     "status": "2027 시즌 재계약 · 주장"
+   },
+   {
+    "nickname": "Cuzz",
+    "team": "DNS",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323503",
+    "status": "영입 오피셜(2026-11-17) · 계약기간 미공개"
    }
   ],
   "pending": [
@@ -158,12 +164,6 @@
     "team": "HLE",
     "source": "https://esportstransfer.com/lol/fa/lck",
     "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
-   },
-   {
-    "nickname": "Cuzz",
-    "team": "KT",
-    "source": "https://www.inven.co.kr/webzine/news/?news=323501",
-    "status": "KT와 결별 오피셜(2026-11-17) · FA"
    },
    {
     "nickname": "FenRir",
@@ -689,6 +689,17 @@
     "source": "https://www.inven.co.kr/webzine/news/?news=323501",
     "role": "jungle",
     "name_kr": "문우찬"
+   },
+   {
+    "date": "2026-11-17",
+    "nickname": "Cuzz",
+    "name_kr": "문우찬",
+    "type": "영입",
+    "from": "KT",
+    "to": "DNS",
+    "detail": "DN 수퍼스 입단 · 구단 공식 채널 발표(OFFICIAL #2) · 계약기간 미공개",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323503",
+    "role": "jungle"
    }
   ],
   "reports": [
@@ -897,9 +908,9 @@
     "outlet": "Sheep Esports",
     "source": "https://www.sheepesports.com/en/articles/sources-cuzz-set-to-join-dn-soopers-ahead-of-2027-lck-season/en",
     "role": "jungle",
-    "note": "KT를 떠나 DNS에 합류할 예정이라는 보도 · KT는 11/17 18시 커즈와 결별을 공식 발표(인벤) · DNS 입단은 공식 발표 전 · DNS는 11/17 표식·샤벨·클로저 등과 계약 종료 발표",
+    "note": "KT를 떠나 DNS에 합류할 예정이라는 보도 · KT는 11/17 18시 커즈와 결별을 공식 발표(인벤) · DNS 입단은 공식 발표 전 · DNS는 11/17 표식·샤벨·클로저 등과 계약 종료 발표 → DNS 영입 오피셜(2026-11-17 19:00, 구단 유튜브·인벤)",
     "grade": "소식통",
-    "status": "보도",
+    "status": "오피셜 확정",
     "seen_at": "2026-11-17 18:35"
    },
    {
@@ -1531,6 +1542,10 @@
   ],
   "coaches": [],
   "updates": [
+   {
+    "at": "2026-11-17 19:08",
+    "text": "오피셜 1건(커즈 DN 수퍼스 영입) · 새 썰 항목 없음"
+   },
    {
     "at": "2026-11-17 18:35",
     "text": "오피셜 1건(커즈 KT 결별 · FA) · 새 썰 항목 없음 · 캐니언 HLE 썰 출처 추가"

@@ -1,6 +1,6 @@
 # 프로셋업 (Prosetup)
 
-> LCK·VCT 프로 선수 267명(LCK 22·해외 LoL 27·VCT 218)이 실제 사용하는 게이밍 장비·감도를 공개 자료로 교차 확인해 정리한 비공식 팬 사이트. 제품 페이지 91종. 데이터 기준일 2026-11(LCK 장비 2026-08 · VCT 장비 2026-11). 인용 시 사이트명과 기준일을 함께 표기해 주세요. 문의·정정: dugout26.gm@gmail.com
+> LCK·VCT 프로 선수 267명(LCK 23·해외 LoL 26·VCT 218)이 실제 사용하는 게이밍 장비·감도를 공개 자료로 교차 확인해 정리한 비공식 팬 사이트. 제품 페이지 91종. 데이터 기준일 2026-11(LCK 장비 2026-08 · VCT 장비 2026-11). 인용 시 사이트명과 기준일을 함께 표기해 주세요. 문의·정정: dugout26.gm@gmail.com
 
 
 ## 선수
@@ -16,6 +16,23 @@ https://dugout26.github.io/prosetup/players/teddy.html
 | 키보드 | MAXTILL TRON G500K | https://www.gamingcfg.com/config/Teddy-lol |
 | 마우스패드 | Razer Goliathus Speed Cosmic Large | https://www.gamingcfg.com/config/Teddy-lol |
 | 해상도 | 1920x1080 | https://www.gamingcfg.com/config/Teddy-lol |
+
+### 문우찬(Cuzz) — DN SOOPers 정글 (LCK)
+
+https://dugout26.github.io/prosetup/players/cuzz.html
+
+- 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
+- 같은 마우스: Smash · Kanavi · Zeka · Gumayusi · PerfecT · Knight 외 10명
+- DPI 800 — LCK 정글 평균 800(3명 기준)과 비슷.
+
+| 항목 | 값 | 근거 |
+|---|---|---|
+| 마우스 | Logitech G PRO X Superlight 2 White | https://specs.gg/Cuzz |
+| 키보드 | Logitech G PRO X TKL | https://specs.gg/Cuzz |
+| 헤드셋 | Logitech G PRO X 2 Lightspeed | https://specs.gg/Cuzz |
+| 마우스패드 | Logitech G740 | https://specs.gg/Cuzz |
+| DPI | 800 | https://prosettings.net/lists/league-of-legends/ |
+| 해상도 | 1920x1080 | https://specs.gg/Cuzz |
 
 ### 서대길(deokdam) — DN SOOPers 원딜 (LCK)
 
@@ -59,7 +76,7 @@ https://dugout26.github.io/prosetup/players/lucid.html
 
 - 마우스는 Logitech G Pro X2 Superstrike — LCK에서 3명, 전체 프로 33명이 같은 모델을 씁니다.
 - 같은 마우스: Siwoo · ShowMaker · Keria
-- DPI 800 — LCK 전체 평균 1209(16명 기준)보다 낮음.
+- DPI 800 — LCK 정글 평균 800(3명 기준)과 비슷.
 
 | 항목 | 값 | 근거 |
 |---|---|---|
@@ -96,7 +113,7 @@ https://dugout26.github.io/prosetup/players/showmaker.html
 https://dugout26.github.io/prosetup/players/smash.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Kanavi · Zeka · Gumayusi · PerfecT · Knight · Kiin 외 10명
+- 같은 마우스: Cuzz · Kanavi · Zeka · Gumayusi · PerfecT · Knight 외 10명
 
 | 항목 | 값 | 근거 |
 |---|---|---|
@@ -142,7 +159,7 @@ https://dugout26.github.io/prosetup/players/zeus.html
 https://dugout26.github.io/prosetup/players/kanavi.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Smash · Zeka · Gumayusi · PerfecT · Knight · Kiin 외 10명
+- 같은 마우스: Cuzz · Smash · Zeka · Gumayusi · PerfecT · Knight 외 10명
 
 | 항목 | 값 | 근거 |
 |---|---|---|
@@ -158,7 +175,7 @@ https://dugout26.github.io/prosetup/players/kanavi.html
 https://dugout26.github.io/prosetup/players/zeka.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Smash · Kanavi · Gumayusi · PerfecT · Knight · Kiin 외 10명
+- 같은 마우스: Cuzz · Smash · Kanavi · Gumayusi · PerfecT · Knight 외 10명
 - DPI 650 — LCK 미드 평균 1700(5명 기준)보다 낮음.
 
 | 항목 | 값 | 근거 |
@@ -177,7 +194,7 @@ https://dugout26.github.io/prosetup/players/zeka.html
 https://dugout26.github.io/prosetup/players/gumayusi.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Smash · Kanavi · Zeka · PerfecT · Knight · Kiin 외 10명
+- 같은 마우스: Cuzz · Smash · Kanavi · Zeka · PerfecT · Knight 외 10명
 - DPI 800 — LCK 원딜 평균 1100(3명 기준)보다 낮음.
 
 | 항목 | 값 | 근거 |
@@ -196,7 +213,7 @@ https://dugout26.github.io/prosetup/players/delight.html
 
 - 마우스는 Logitech G Pro Wireless — LCK에서 4명, 전체 프로 5명이 같은 모델을 씁니다.
 - 같은 마우스: Tarzan · CoreJJ · Taeyoon · Peyz
-- DPI 750 — LCK 전체 평균 1209(16명 기준)보다 낮음.
+- DPI 750 — LCK 전체 평균 1185(17명 기준)보다 낮음.
 
 | 항목 | 값 | 근거 |
 |---|---|---|
@@ -214,7 +231,7 @@ https://dugout26.github.io/prosetup/players/delight.html
 https://dugout26.github.io/prosetup/players/perfect.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Smash · Kanavi · Zeka · Gumayusi · Knight · Kiin 외 10명
+- 같은 마우스: Cuzz · Smash · Kanavi · Zeka · Gumayusi · Knight 외 10명
 - DPI 1600 — LCK 탑 평균 1100(4명 기준)보다 높음.
 
 | 항목 | 값 | 근거 |
@@ -267,7 +284,7 @@ https://dugout26.github.io/prosetup/players/bin.html
 https://dugout26.github.io/prosetup/players/knight.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Smash · Kanavi · Zeka · Gumayusi · PerfecT · Kiin 외 10명
+- 같은 마우스: Cuzz · Smash · Kanavi · Zeka · Gumayusi · PerfecT 외 10명
 - DPI 1600 — LCK 미드 평균 1700(5명 기준)보다 낮음.
 
 | 항목 | 값 | 근거 |
@@ -417,7 +434,7 @@ https://dugout26.github.io/prosetup/players/corejj.html
 
 - 마우스는 Logitech G Pro Wireless — LCK에서 4명, 전체 프로 5명이 같은 모델을 씁니다.
 - 같은 마우스: Delight · Tarzan · Taeyoon · Peyz
-- DPI 1500 — LCK 전체 평균 1209(16명 기준)보다 높음.
+- DPI 1500 — LCK 전체 평균 1185(17명 기준)보다 높음.
 
 | 항목 | 값 | 근거 |
 |---|---|---|
@@ -434,7 +451,7 @@ https://dugout26.github.io/prosetup/players/corejj.html
 https://dugout26.github.io/prosetup/players/kiin.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Smash · Kanavi · Zeka · Gumayusi · PerfecT · Knight 외 10명
+- 같은 마우스: Cuzz · Smash · Kanavi · Zeka · Gumayusi · PerfecT 외 10명
 
 | 항목 | 값 | 근거 |
 |---|---|---|
@@ -448,7 +465,7 @@ https://dugout26.github.io/prosetup/players/kiin.html
 https://dugout26.github.io/prosetup/players/canyon.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Smash · Kanavi · Zeka · Gumayusi · PerfecT · Knight 외 10명
+- 같은 마우스: Cuzz · Smash · Kanavi · Zeka · Gumayusi · PerfecT 외 10명
 
 | 항목 | 값 | 근거 |
 |---|---|---|
@@ -478,8 +495,8 @@ https://dugout26.github.io/prosetup/players/taeyoon.html
 https://dugout26.github.io/prosetup/players/willer.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Smash · Kanavi · Zeka · Gumayusi · PerfecT · Knight 외 10명
-- DPI 950 — LCK 전체 평균 1209(16명 기준)보다 낮음.
+- 같은 마우스: Cuzz · Smash · Kanavi · Zeka · Gumayusi · PerfecT 외 10명
+- DPI 950 — LCK 정글 평균 800(3명 기준)보다 높음.
 
 | 항목 | 값 | 근거 |
 |---|---|---|
@@ -496,7 +513,7 @@ https://dugout26.github.io/prosetup/players/willer.html
 https://dugout26.github.io/prosetup/players/ucal.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Smash · Kanavi · Zeka · Gumayusi · PerfecT · Knight 외 10명
+- 같은 마우스: Cuzz · Smash · Kanavi · Zeka · Gumayusi · PerfecT 외 10명
 - DPI 800 — LCK 미드 평균 1700(5명 기준)보다 낮음.
 
 | 항목 | 값 | 근거 |
@@ -533,8 +550,8 @@ https://dugout26.github.io/prosetup/players/aiming.html
 https://dugout26.github.io/prosetup/players/andil.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Smash · Kanavi · Zeka · Gumayusi · PerfecT · Knight 외 10명
-- DPI 800 — LCK 전체 평균 1209(16명 기준)보다 낮음.
+- 같은 마우스: Cuzz · Smash · Kanavi · Zeka · Gumayusi · PerfecT 외 10명
+- DPI 800 — LCK 전체 평균 1185(17명 기준)보다 낮음.
 
 | 항목 | 값 | 근거 |
 |---|---|---|
@@ -551,7 +568,7 @@ https://dugout26.github.io/prosetup/players/andil.html
 https://dugout26.github.io/prosetup/players/sponge.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Smash · Kanavi · Zeka · Gumayusi · PerfecT · Knight 외 10명
+- 같은 마우스: Cuzz · Smash · Kanavi · Zeka · Gumayusi · PerfecT 외 10명
 
 | 항목 | 값 | 근거 |
 |---|---|---|
@@ -586,7 +603,7 @@ https://dugout26.github.io/prosetup/players/diable.html
 https://dugout26.github.io/prosetup/players/lehends.html
 
 - 마우스는 Logitech G304 — 데이터가 있는 프로 중 이 모델을 쓰는 건 이 선수뿐입니다.
-- DPI 1650 — LCK 전체 평균 1209(16명 기준)보다 높음.
+- DPI 1650 — LCK 전체 평균 1185(17명 기준)보다 높음.
 
 | 항목 | 값 | 근거 |
 |---|---|---|
@@ -596,23 +613,6 @@ https://dugout26.github.io/prosetup/players/lehends.html
 | 마우스패드 | Corsair MM300 Extended | https://settingsinfo.com/person/lehends/ |
 | DPI | 1650 | https://settingsinfo.com/person/lehends/ |
 | 인게임 감도 | 50 | https://settingsinfo.com/person/lehends/ |
-
-### 문우찬(Cuzz) — FA (무소속) 정글 (LCK)
-
-https://dugout26.github.io/prosetup/players/cuzz.html
-
-- 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Smash · Kanavi · Zeka · Gumayusi · PerfecT · Knight 외 10명
-- DPI 800 — LCK 전체 평균 1209(16명 기준)보다 낮음.
-
-| 항목 | 값 | 근거 |
-|---|---|---|
-| 마우스 | Logitech G PRO X Superlight 2 White | https://specs.gg/Cuzz |
-| 키보드 | Logitech G PRO X TKL | https://specs.gg/Cuzz |
-| 헤드셋 | Logitech G PRO X 2 Lightspeed | https://specs.gg/Cuzz |
-| 마우스패드 | Logitech G740 | https://specs.gg/Cuzz |
-| DPI | 800 | https://prosettings.net/lists/league-of-legends/ |
-| 해상도 | 1920x1080 | https://specs.gg/Cuzz |
 
 ### 이주현(Clozer) — FA (무소속) 미드 (LCK)
 
@@ -637,7 +637,7 @@ https://dugout26.github.io/prosetup/players/clozer.html
 https://dugout26.github.io/prosetup/players/peter.html
 
 - 마우스는 Logitech G Pro X Superlight 2 DEX — 데이터가 있는 프로 중 이 모델을 쓰는 건 이 선수뿐입니다.
-- DPI 800 — LCK 전체 평균 1209(16명 기준)보다 낮음.
+- DPI 800 — LCK 전체 평균 1185(17명 기준)보다 낮음.
 
 | 항목 | 값 | 근거 |
 |---|---|---|
@@ -653,7 +653,7 @@ https://dugout26.github.io/prosetup/players/peter.html
 https://dugout26.github.io/prosetup/players/elk.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Smash · Kanavi · Zeka · Gumayusi · PerfecT · Knight 외 10명
+- 같은 마우스: Cuzz · Smash · Kanavi · Zeka · Gumayusi · PerfecT 외 10명
 - DPI 1600 — LCK 원딜 평균 1100(3명 기준)보다 높음.
 
 | 항목 | 값 | 근거 |
@@ -670,7 +670,7 @@ https://dugout26.github.io/prosetup/players/inspired.html
 
 - 마우스는 Logitech G Pro X Superlight — LCK에서 3명, 전체 프로 9명이 같은 모델을 씁니다.
 - 같은 마우스: Caps · Hans Sama · Diable
-- DPI 1600 — LCK 전체 평균 1209(16명 기준)보다 높음.
+- DPI 1600 — LCK 정글 평균 800(3명 기준)보다 높음.
 
 | 항목 | 값 | 근거 |
 |---|---|---|
@@ -704,8 +704,8 @@ https://dugout26.github.io/prosetup/players/doran.html
 https://dugout26.github.io/prosetup/players/oner.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Smash · Kanavi · Zeka · Gumayusi · PerfecT · Knight 외 10명
-- DPI 800 — LCK 전체 평균 1209(16명 기준)보다 낮음.
+- 같은 마우스: Cuzz · Smash · Kanavi · Zeka · Gumayusi · PerfecT 외 10명
+- DPI 800 — LCK 정글 평균 800(3명 기준)과 비슷.
 
 | 항목 | 값 | 근거 |
 |---|---|---|
@@ -753,7 +753,7 @@ https://dugout26.github.io/prosetup/players/keria.html
 
 - 마우스는 Logitech G Pro X2 Superstrike — LCK에서 3명, 전체 프로 33명이 같은 모델을 씁니다.
 - 같은 마우스: Siwoo · Lucid · ShowMaker
-- DPI 800 — LCK 전체 평균 1209(16명 기준)보다 낮음.
+- DPI 800 — LCK 전체 평균 1185(17명 기준)보다 낮음.
 
 | 항목 | 값 | 근거 |
 |---|---|---|
@@ -769,7 +769,7 @@ https://dugout26.github.io/prosetup/players/keria.html
 https://dugout26.github.io/prosetup/players/chovy.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Smash · Kanavi · Zeka · Gumayusi · PerfecT · Knight 외 10명
+- 같은 마우스: Cuzz · Smash · Kanavi · Zeka · Gumayusi · PerfecT 외 10명
 - DPI 1750 — LCK 미드 평균 1700(5명 기준)과 비슷.
 
 | 항목 | 값 | 근거 |
@@ -802,7 +802,7 @@ https://dugout26.github.io/prosetup/players/ruler.html
 https://dugout26.github.io/prosetup/players/duro.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Smash · Kanavi · Zeka · Gumayusi · PerfecT · Knight 외 10명
+- 같은 마우스: Cuzz · Smash · Kanavi · Zeka · Gumayusi · PerfecT 외 10명
 
 | 항목 | 값 | 근거 |
 |---|---|---|
@@ -5336,6 +5336,16 @@ https://dugout26.github.io/prosetup/gear/artisan-ninja-fx-zero-mid.html
 https://dugout26.github.io/prosetup/gear/artisan-type-99-soft.html
 
 
+### Logitech G PRO X 2 Lightspeed (헤드셋, 프로 5명)
+
+https://dugout26.github.io/prosetup/gear/logitech-g-pro-x-2-lightspeed.html
+
+- 스펙: 무선(LIGHTSPEED/블루투스) · 50mm 그래핀 드라이버 · Blue VO!CE 마이크
+- 장점: 마이크 품질이 좋아 방송·통화 겸용에 유리
+- 장점: 무선/유선/블루투스 3-모드
+- 단점: 가격이 높음
+- 단점: 측압이 있는 편
+
 ### Logitech G733 (헤드셋, 프로 5명)
 
 https://dugout26.github.io/prosetup/gear/logitech-g733.html
@@ -5355,16 +5365,6 @@ https://dugout26.github.io/prosetup/gear/logitech-g640.html
 - 장점: 얇아서 책상 높이 영향이 적음
 - 단점: 쿠션감은 G740보다 덜함
 - 단점: 오래 쓰면 표면이 닳아 미끄러워짐
-
-### Logitech G PRO X 2 Lightspeed (헤드셋, 프로 5명)
-
-https://dugout26.github.io/prosetup/gear/logitech-g-pro-x-2-lightspeed.html
-
-- 스펙: 무선(LIGHTSPEED/블루투스) · 50mm 그래핀 드라이버 · Blue VO!CE 마이크
-- 장점: 마이크 품질이 좋아 방송·통화 겸용에 유리
-- 장점: 무선/유선/블루투스 3-모드
-- 단점: 가격이 높음
-- 단점: 측압이 있는 편
 
 ### Razer Huntsman V3 Pro TKL 8KHz (키보드, 프로 5명)
 
@@ -5737,7 +5737,7 @@ https://dugout26.github.io/prosetup/guides/mouse-acceleration.html
 빠르게 여는 법: Win + R → main.cpl 입력 → 엔터.
 같이 확인할 것
 포인터 속도는 기본값(가운데, 11칸 중 6번째)이 1:1입니다. 감도는 마우스 DPI와 게임 안에서 조절하는 편이 계산하기 쉽습니다.
-LoL은 윈도우 커서를 그대로 쓰는 게임이라 윈도우 가속·포인터 속도가 체감에 바로 영향을 줍니다. LCK 선수 중 DPI가 확인된 16명의 중앙값은 800이고, 많이 쓰는 값은 800(6명), 1800(2명), 400(1명), 650(1명)입니다.
+LoL은 윈도우 커서를 그대로 쓰는 게임이라 윈도우 가속·포인터 속도가 체감에 바로 영향을 줍니다. LCK 선수 중 DPI가 확인된 17명의 중앙값은 800이고, 많이 쓰는 값은 800(7명), 1800(2명), 400(1명), 650(1명)입니다.
 마우스 제조사 소프트웨어(G HUB, Synapse 등)에 가속·각도 보정 옵션이 따로 있으면 그것도 끕니다.
 설정을 바꾼 뒤에는 감도 변환기로 cm/360을 확인해 두면 장비를 바꿔도 같은 감도를 맞출 수 있습니다.
 자주 묻는 질문
@@ -5748,7 +5748,7 @@ LoL은 윈도우 커서를 그대로 쓰는 게임이라 윈도우 가속·포�
 게임 안에서 원시 입력(Raw Input)을 켜면 윈도우 설정은 상관없나요?
 원시 입력을 쓰는 게임은 윈도우 가속 영향을 받지 않습니다. LoL처럼 윈도우 커서를 그대로 쓰는 게임은 윈도우 설정이 그대로 적용됩니다.
 LCK 프로들은 DPI를 얼마로 쓰나요?
-LCK 선수 중 DPI가 확인된 16명의 중앙값은 800이고, 많이 쓰는 값은 800(6명), 1800(2명), 400(1명), 650(1명)입니다.
+LCK 선수 중 DPI가 확인된 17명의 중앙값은 800이고, 많이 쓰는 값은 800(7명), 1800(2명), 400(1명), 650(1명)입니다.
 
 
 ### LoL 프로 모니터
@@ -6679,16 +6679,16 @@ https://dugout26.github.io/prosetup/stove-2027.html
 
 LoL 홈 › 2027 이적시장
 2027 LCK 이적시장 — FA 명단 · 스토브리그 · 로스터 총정리 (오피셜·루머·선수 장비)
-최근 갱신 2026-11-17 18:58 · FA 시장 2026-11-17 09:00 개시. 선수 이름을 누르면 장비·감도 전체를 볼 수 있습니다.
+최근 갱신 2026-11-17 19:08 · FA 시장 2026-11-17 09:00 개시. 선수 이름을 누르면 장비·감도 전체를 볼 수 있습니다.
 오피셜 구단·리그 공식 발표
 소식통·보도 언론 보도 단계(확정 아님)
 썰·미확인 썰쟁이·커뮤니티 글(사실 확인 안 됨) 무산
 업데이트 기록 (최근 5건)
+2026-11-17 19:08 — 오피셜 1건(커즈 DN 수퍼스 영입) · 새 썰 항목 없음
 2026-11-17 18:35 — 오피셜 1건(커즈 KT 결별 · FA) · 새 썰 항목 없음 · 캐니언 HLE 썰 출처 추가
 2026-11-17 18:20 — 새 오피셜 없음 · 새 썰 항목 없음 · 루시드 젠지행('젠시드') 썰·제우스 T1 썰 출처 추가(뉴스워커 등)
 2026-11-17 17:46 — 새 오피셜 없음 · 🟠 썰 1건(시우 한화행 초성 썰) · 캐니언 HLE·제우스 T1·기인 젠지 잔류 썰 출처 추가
 2026-11-17 17:06 — 새 오피셜 없음 · 🟠 썰 3건(쇼메이커·스매쉬 DK 잔류, 한화 서포터 교체설) · 캐니언 HLE 썰 출처 추가(캠프원 목격담)
-2026-11-17 17:05 — 새 오피셜 없음 · 🟠 썰 4건(기인·캐니언 젠지 잔류 추측, 디아블 JDG, 호야 WBG) · 캐니언 HLE 썰 출처 추가
 🔴 오피셜
 2026-11-17Kiin기인마우스: Logitech G Pro X Superlight 2방출젠지 → FA · 계약 종료 · FA 전환출처
 2026-11-17Canyon캐니언마우스: Logitech G Pro X Superlight 2방출젠지 → FA · 계약 종료 · FA 전환출처
@@ -6719,6 +6719,7 @@ LoL 홈 › 2027 이적시장
 2026-11-17Life방출DN SOOPers → FA · 계약 종료 · FA 전환출처
 2026-11-17Peter정윤수마우스: Logitech G Pro X Superlight 2 DEX (Black)방출DN SOOPers → FA · 계약 종료 · FA 전환출처
 2026-11-17Cuzz문우찬마우스: Logitech G PRO X Superlight 2 White방출kt 롤스터 → FA · kt 롤스터와 결별 · 구단 공식 SNS 발표출처
+2026-11-17Cuzz문우찬마우스: Logitech G PRO X Superlight 2 White영입kt 롤스터 → DN SOOPers · DN 수퍼스 입단 · 구단 공식 채널 발표(OFFICIAL #2) · 계약기간 미공개출처
 2026-11-16DuDu이동주재계약DN SOOPers · 2년 재계약 · 2028년까지출처
 2026-10-24Casting신민제재계약한진 브리온 · 2027년까지출처
 2026-10-24GIDEON김민성재계약한진 브리온 · 2027년까지출처
@@ -6729,7 +6730,7 @@ LoL 홈 › 2027 이적시장
 2026PerfecT이승민마우스: Logitech G PRO X Superlight 2재계약kt 롤스터 · 2028년까지 연장출처
 2026Bdd곽보성마우스: Logitech G903재계약kt 롤스터 · 2028년까지 연장출처
 🟡 매체 보도 기자·매체 기사 · 오피셜이 뜨면 옮깁니다
-2026-11-17Cuzz문우찬마우스: Logitech G PRO X Superlight 2 White소식통kt 롤스터 → DN SOOPersKT를 떠나 DNS에 합류할 예정이라는 보도 · KT는 11/17 18시 커즈와 결별을 공식 발표(인벤) · DNS 입단은 공식 발표 전 · DNS는 11/17 표식·샤벨·클로저 등과 계약 종료 발표Sheep Esports 확인 2026-11-17 18:35
+2026-11-17Cuzz문우찬마우스: Logitech G PRO X Superlight 2 White오피셜 확정kt 롤스터 → DN SOOPersKT를 떠나 DNS에 합류할 예정이라는 보도 · KT는 11/17 18시 커즈와 결별을 공식 발표(인벤) · DNS 입단은 공식 발표 전 · DNS는 11/17 표식·샤벨·클로저 등과 계약 종료 발표 → DNS 영입 오피셜(2026-11-17 19:00, 구단 유튜브·인벤)Sheep Esports 확인 2026-11-17 18:35
 2026-11-17Zeus최우제마우스: Razer Viper V3 Pro보도한화생명e스포츠 → T1해외 매체발 2+1년(3년차 선수옵션) 계약 합의설 · 익명 제보 기반이라 체결 여부 미확인 · T1 관계자 "계약이 확정되면 별도로 공지" · 앞서 아티브뉴스는 'T1 복귀 확정설'은 사실이 아니라고 보도(11/3, 위키트리 인용) · 新浪(11/17): 한화의 2년 재계약안을 거절했고 T1이 3년 계약을 제시했다는 한국 커뮤니티발 이야기 전달 · 에펨코리아 소영(11/17 14:50): 썰쟁이 '27.35'가 제우스 2년 계약 복귀를 말했다고 정리(원 글은 대부분 삭제돼 캡처만 남았다고 함) · X 수노밍쿠(11/17): 제우스의 SOOP 방송국 채널 엠블럼이 T1으로 바뀌었다고 전함 — 작성자도 "해킹이 아니라면"이라고 단서, T1 공식 발표는 아직 없음 · 에펨코리아 Mnmmnmmm(11/17 16:21): 초성으로 "ㅈㅇㅅ-ㅌㅇ"라고만 적음(제우스-티원으로 읽히지만 해석은 추정) — 신규 계정 글, 비추천 다수 · 뉴스워커(11/17): 인벤·롤갤에서 제우스 복귀설이 번졌지만 '정작 티원은 침묵 중'이라고 보도 · 인벤 멘탈붕괴z(11/17 17:24): "soop 숲에 제우스 프로필 티원인데?"라며 캡처 게시 — 구단 발표는 아님글로벌이코노믹 (esport.vision·bo3.gg 인용) · Strafe · COOL-STYLE 潮流生活網 (대만 매체, 한국 커뮤니티 썰 인용) · 新浪新闻 (直播吧 인용, 한국 커뮤니티발) · udn 遊戲角落 希洛 (대만 매체, 한국 커뮤니티 썰 인용) · Bongdaplus (베트남 매체, Strafe·웨이보 인용) · 소영 (에펨코리아 LoL 게시판, '27.35' 썰쟁이 글 정리) · 수노밍쿠 (X, 11/17) · Mnmmnmmm (에펨코리아 LoL 게시판, 썰/루머, 초성 글, 11/17) · 뉴스워커 (11/17) · 멘탈붕괴z (인벤 LoL 게시판, SOOP 프로필 목격 글, 11/17) 확인 2026-11-17 18:20
 2026-11-16Hoya윤용호관계자 인용NIP (LPL) → LPL 잔류'LPL 잔류 유력' · 에이전시 쉐도우 코퍼레이션 "실제로 어떤 논의도 없었는데 특정 팀과 엮여 비난받는 것은 안타깝다 · LPL 도전 방향으로 긍정적인 논의 중" · 호야 T1 접촉 썰과 충돌인벤 (단독) · Inven Global 확인 2026-11-17 15:10
 2026-11-10Doran최현준마우스: Razer Viper V3 Pro보도T1 → 미정계약 만료 · '사실상 동행을 마무리할 가능성이 크다는 전망이 지배적' · T1의 계약 종료·재계약 공식 발표는 아직 없음아티브뉴스 확인 2026-11-17 13:50
@@ -6789,14 +6790,13 @@ LoL 홈 › 2027 이적시장
 2026-11-15Ucal손우현마우스: Logitech G Pro X Superlight 2 (Magenta)썰·미확인키움 DRX → DN SOOPers커즈·유칼 DN 영입설 · 취재 보도 확인 없음 · DNS는 11/17 표식·샤벨·클로저 등과 계약 종료 발표모든팁 블로그 (topbo.co.kr, 커뮤니티 썰 정리) 확인 2026-11-16 17:55
 팀별 로스터 현황
 T1젠지한화생명e스포츠kt 롤스터디플러스 기아농심 레드포스키움 DRXDN SOOPersBNK 피어엑스한진 브리온
-FA 대상·거취 미정 (30명)
+FA 대상·거취 미정 (29명)
 선수마우스키보드
 Doran도란 · T1계약 만료(2026-11-16) · 2027 거취 미발표 근거Razer Viper V3 Pro최저가 →SteelSeries Apex Pro TKL Gen 3최저가 →
 Kiin기인 · 젠지계약 종료 오피셜(2026-11-17) · FA 근거Logitech G Pro X Superlight 2최저가 →Logitech G Pro X TKL최저가 →
 Canyon캐니언 · 젠지계약 종료 오피셜(2026-11-17) · FA 근거Logitech G Pro X Superlight 2최저가 →Logitech G Pro X TKL최저가 →
 Zeus최우제 · 한화생명e스포츠재계약 제안 거절 보도 · 구단은 협상 중 (계약 만료 2026-11-16) 근거Razer Viper V3 Pro최저가 →Razer Huntsman V3 Pro TKL최저가 →
 Kanavi서진혁 · 한화생명e스포츠계약 만료(2026-11-16) · 2027 거취 미발표 근거Logitech G PRO X Superlight 2 White최저가 →Logitech G PRO X TKL White최저가 →
-Cuzz문우찬 · kt 롤스터KT와 결별 오피셜(2026-11-17) · FA 근거Logitech G PRO X Superlight 2 White최저가 →Logitech G PRO X TKL최저가 →
 FenRir박강준 · kt 롤스터만료 명단에 없음 · 2027 계약 공식 확인 전 근거확인 중확인 중
 Effort이상호 · kt 롤스터계약 종료 오피셜(2026-11-17) · FA 근거확인 중확인 중
 Siwoo전시우 · 디플러스 기아만료 명단에 없음 · 2027 계약 공식 확인 전 근거Logitech G Pro X2 Superstrike최저가 →Logitech G Pro X TKL (Black)최저가 →
@@ -6821,7 +6821,7 @@ Clear송현민 · BNK 피어엑스계약 종료 오피셜(2026-11-17) · FA 근�
 Raptor전어진 · BNK 피어엑스계약 종료 오피셜(2026-11-17) · FA 근거확인 중확인 중
 Taeyoon김태윤 · BNK 피어엑스계약 종료 오피셜(2026-11-17) · FA 근거Logitech G Pro WirelessLogitech G915 TKL Carbon최저가 →
 Kellin김형규 · BNK 피어엑스계약 종료 오피셜(2026-11-17) · FA 근거확인 중확인 중
-2027 계약 확인 (20명)
+2027 계약 확인 (21명)
 선수마우스키보드
 Oner오너 · T12028년까지 계약 근거Logitech G Pro X Superlight 2최저가 →SteelSeries Apex Pro TKL Gen 3최저가 →
 Faker페이커 · T12029년까지 계약 근거Razer Viper V3 Pro Faker Edition최저가 →Razer Huntsman V3 Pro최저가 →
@@ -6843,6 +6843,7 @@ Teddy박진성 · 한진 브리온2027년까지 재계약 근거확인 중MAXTIL
 Namgung남궁성훈 · 한진 브리온2027년까지 재계약 근거확인 중확인 중
 DuDu이동주 · DN SOOPers2028년까지 재계약 근거확인 중확인 중
 VicLa이대광 · BNK 피어엑스2027 시즌 재계약 · 주장 근거확인 중확인 중
+Cuzz문우찬 · DN SOOPers영입 오피셜(2026-11-17) · 계약기간 미공개 근거Logitech G PRO X Superlight 2 White최저가 →Logitech G PRO X TKL최저가 →
 🟡 보도는 매체명이 확인된 기사, 🟠 썰은 작성자·원문 링크가 있는 커뮤니티·방송 발언만 싣습니다.
 둘 다 해당 출처의 주장이며 구단 공식 발표 전까지 확정이 아닙니다. 사생활·비방성 글은 싣지 않습니다. 삭제 요청은 제보하기로 보내주세요.
 
