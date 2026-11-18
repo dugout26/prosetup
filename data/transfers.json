@@ -2072,10 +2072,59 @@
     "role": "support",
     "seen_at": "2026-11-18 16:55",
     "note": "OSEN 단독 — 복수 관계자 인용 '3년 몸담은 한화생명 떠나 DN 수퍼스 합류' · DN 측은 '확인해 줄 수 없다' · 공식 발표는 19일 전후 예상"
+   },
+   {
+    "tier": "community",
+    "date": "2026-11-18",
+    "nickname": "Siwoo",
+    "name_kr": "시우",
+    "from": "DK",
+    "to": "HLE",
+    "outlet": "zpfpk (에펨코리아 LoL 게시판, 썰/루머, 11/18)",
+    "grade": "썰",
+    "status": "보도",
+    "source": "https://www.fmkorea.com/index.php?mid=lol&document_srl=10571341075",
+    "role": "top",
+    "seen_at": "2026-11-18 23:50",
+    "note": "'썰쟁이들 말 들어보면 한화 시우가 탑 스토브의 핵심' 제목 글 — 시우 HLE행 썰 재확산"
+   },
+   {
+    "tier": "community",
+    "date": "2026-11-18",
+    "nickname": "Zeus",
+    "name_kr": "제우스",
+    "from": "HLE",
+    "to": "미정 (HLE 이탈설)",
+    "outlet": "유이설 (에펨코리아 LoL 게시판, 썰/루머, 11/18)",
+    "grade": "썰",
+    "status": "보도",
+    "source": "https://www.fmkorea.com/index.php?mid=lol&document_srl=10571333720",
+    "role": "top",
+    "seen_at": "2026-11-18 23:50",
+    "note": "'썰대로면 한화는 제우스가 나갈 것' — 시우 영입 썰을 전제로 한 추측 글"
+   },
+   {
+    "tier": "community",
+    "date": "2026-11-18",
+    "nickname": "Rooster",
+    "name_kr": "루스터",
+    "from": "DK",
+    "to": "미정 (HLE 아님 썰)",
+    "outlet": "폭스인수기원 (에펨코리아 LoL 게시판, 썰/루머, 11/18)",
+    "grade": "썰",
+    "status": "보도",
+    "source": "https://www.fmkorea.com/index.php?mid=lol&document_srl=10571330454",
+    "role": "top",
+    "seen_at": "2026-11-18 23:50",
+    "note": "'한화가 루스터 아니라는 썰' 언급 — 루스터 HLE 탑 영입설과 충돌"
    }
   ],
   "coaches": [],
   "updates": [
+   {
+    "at": "2026-11-18 23:55",
+    "text": "새 오피셜 없음 · 🟠 썰 3건(시우 HLE·제우스 이탈·루스터 HLE 아님 — 에펨코리아 썰 글)"
+   },
    {
     "at": "2026-11-18 19:00",
     "text": "오피셜 1건(킹겐 농심 2028년까지 재계약 — 인벤 보도, 구단 발표 인용) · 새 썰 없음"
