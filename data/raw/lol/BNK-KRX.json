@@ -1,11 +1,14 @@
 {
-  "roster_check_2027": {"checked": "2026-11-17", "note": "2026-11-17 FA 개장. BNK: Clear·Raptor·Taeyoon·Kellin 계약 종료 오피셜, KRX: Frog·Willer·Ucal·Aiming·Andil 계약 종료 오피셜 → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. BNK 2027 계약 확인: VicLa(재계약·주장, 2026-11-17 오피셜) · KRX 2027 선수단 미발표. 루머 미반영."},
+  "roster_check_2027": {"checked": "2026-11-18", "note": "2026-11-18 BNK: Vincenzo 영입 오피셜(구단 X, 2028년까지, 포지션 미명시·정글 추정) → 신규 추가. 2026-11-17 FA 개장. BNK: Clear·Raptor·Taeyoon·Kellin 계약 종료 오피셜, KRX: Frog·Willer·Ucal·Aiming·Andil 계약 종료 오피셜 → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. BNK 2027 계약 확인: VicLa(재계약·주장, 2026-11-17 오피셜) · KRX 2027 선수단 미발표. 루머 미반영."},
   "as_of": "2026-08-05",
   "BNK": {
     "team_name": "BNK FEARX",
     "roster_note": "2026-04-30 Diable(NS행)-Taeyoon 트레이드로 주전 원딜은 Taeyoon",
     "players": [
       {"nickname": "VicLa", "name_kr": "이대광", "role": "mid",
+       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "Vincenzo", "name_kr": "하승민", "role": "jungle", "roster_source": "https://x.com/BNKFEARXLoL/status/2122963019109945538",
        "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
        "settings": {"dpi": null, "in_game_sens": null, "resolution": null}}
     ]

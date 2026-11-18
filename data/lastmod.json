@@ -1,7 +1,7 @@
 {
 "https://dugout26.github.io/prosetup/": {
 "date": "2026-11-18",
-"hash": "e42fde4fabbfdc75"
+"hash": "829e53706278ddc2"
 },
 "https://dugout26.github.io/prosetup/404.html": {
 "date": "2026-11-16",
@@ -435,6 +435,10 @@
 "date": "2026-11-17",
 "hash": "7e4ff7ccad740a8a"
 },
+"https://dugout26.github.io/prosetup/players/calix.html": {
+"date": "2026-11-18",
+"hash": "06caab0a1ba81578"
+},
 "https://dugout26.github.io/prosetup/players/canyon.html": {
 "date": "2026-11-17",
 "hash": "51c77c20b54b6e9d"
@@ -651,6 +655,10 @@
 "date": "2026-11-17",
 "hash": "8e04ec41c26a6335"
 },
+"https://dugout26.github.io/prosetup/players/vincenzo.html": {
+"date": "2026-11-18",
+"hash": "ae9f63028b0db6c3"
+},
 "https://dugout26.github.io/prosetup/players/viper.html": {
 "date": "2026-11-17",
 "hash": "dd99b547463e4052"
@@ -669,19 +677,19 @@
 },
 "https://dugout26.github.io/prosetup/rankings.html": {
 "date": "2026-11-18",
-"hash": "14b6593c3ef309ac"
+"hash": "428c4669d2a767ab"
 },
 "https://dugout26.github.io/prosetup/stove-2027.html": {
 "date": "2026-11-18",
-"hash": "670b9e57d5803c2d"
+"hash": "a28ed76faf652eba"
 },
 "https://dugout26.github.io/prosetup/submit.html": {
 "date": "2026-11-18",
-"hash": "27d6602556ab29a2"
+"hash": "2b4fc3dd38b7be87"
 },
 "https://dugout26.github.io/prosetup/teams/bnk.html": {
 "date": "2026-11-18",
-"hash": "fdceb5af22383851"
+"hash": "4a58d5a85052bea9"
 },
 "https://dugout26.github.io/prosetup/teams/bro.html": {
 "date": "2026-11-18",
@@ -705,7 +713,7 @@
 },
 "https://dugout26.github.io/prosetup/teams/krx.html": {
 "date": "2026-11-18",
-"hash": "cb1dd5c892343d8d"
+"hash": "b838eba3b9d175ba"
 },
 "https://dugout26.github.io/prosetup/teams/kt.html": {
 "date": "2026-11-18",
@@ -713,7 +721,7 @@
 },
 "https://dugout26.github.io/prosetup/teams/ns.html": {
 "date": "2026-11-18",
-"hash": "996a42ec01b37016"
+"hash": "eac659ccedff85b7"
 },
 "https://dugout26.github.io/prosetup/teams/t1.html": {
 "date": "2026-11-18",

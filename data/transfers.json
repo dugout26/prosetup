@@ -3,7 +3,7 @@
  "lol": {
   "season": "2027",
   "checked": "2026-11-18",
-  "checked_at": "2026-11-18 16:55",
+  "checked_at": "2026-11-18 17:10",
   "fa_open": "2026-11-17",
   "fa_open_time": "09:00",
   "stay": [
@@ -132,6 +132,18 @@
     "team": "DNS",
     "source": "https://www.inven.co.kr/webzine/news/?news=323503",
     "status": "영입 오피셜(2026-11-17) · 계약기간 미공개"
+   },
+   {
+    "nickname": "Calix",
+    "team": "NS",
+    "source": "https://x.com/NS_RedForce/status/2122963016899580079",
+    "status": "2028년까지 재계약"
+   },
+   {
+    "nickname": "Vincenzo",
+    "team": "BNK",
+    "source": "https://x.com/BNKFEARXLoL/status/2122963019109945538",
+    "status": "영입 오피셜(2026-11-18) · 2028년까지"
    }
   ],
   "pending": [
@@ -744,6 +756,28 @@
     "detail": "LCK CL 팀 미드라이너로 합류 · 구단 공식 X 발표 · 계약기간 미공개 · 직전 소속은 선수 DB 기준 젠지 글로벌 아카데미",
     "source": "https://x.com/NS_RedForce/status/2122890034931990918",
     "role": "mid"
+   },
+   {
+    "date": "2026-11-18",
+    "nickname": "Calix",
+    "name_kr": "선현빈",
+    "type": "재계약",
+    "from": "NS",
+    "to": "NS",
+    "detail": "2028년까지 계약 연장 · 농심 레드포스 공식 X 발표(Re-Signed, Calix)",
+    "source": "https://x.com/NS_RedForce/status/2122963016899580079",
+    "role": "mid"
+   },
+   {
+    "date": "2026-11-18",
+    "nickname": "Vincenzo",
+    "name_kr": "하승민",
+    "type": "영입",
+    "from": "FA",
+    "to": "BNK",
+    "detail": "2028년까지 · BNK 피어엑스 공식 X 발표(Welcome back, Vincenzo) · 포지션은 발표문에 명시 없음(정글로 추정)",
+    "source": "https://x.com/BNKFEARXLoL/status/2122963019109945538",
+    "role": "jungle"
    }
   ],
   "reports": [
@@ -1982,7 +2016,7 @@
     "to": "BNK",
     "outlet": "momo1 (에펨코리아 LoL 게시판, 찌라시 10개 팀 로스터 정리글, 11/18 14:43)",
     "grade": "썰",
-    "status": "보도",
+    "status": "오피셜 확정",
     "source": "https://www.fmkorea.com/10569470864",
     "role": "jungle",
     "seen_at": "2026-11-18 14:55",
@@ -1997,7 +2031,7 @@
     "to": "NS",
     "outlet": "마리마리모 (에펨코리아 LoL 게시판, 찌라시 통합 팀 현황 정리글, 11/18 15:33)",
     "grade": "썰",
-    "status": "보도",
+    "status": "오피셜 확정",
     "source": "https://www.fmkorea.com/index.php?mid=lol&document_srl=10569612568",
     "role": "mid",
     "seen_at": "2026-11-18 15:50",

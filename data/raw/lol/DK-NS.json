@@ -1,5 +1,5 @@
 {
-  "roster_check_2027": {"checked": "2026-11-17", "note": "2026-11-17 FA 개장. NS: Sponge·Scout·Diable·Lehends 계약 종료 오피셜 → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. NS 미정: Kingen(종료 발표 명단 제외, 거취 미발표) · DK 2027 계약 확인: Lucid / 미정: Siwoo, ShowMaker, Smash, Career. 루머 미반영."},
+  "roster_check_2027": {"checked": "2026-11-18", "note": "2026-11-18 NS: Calix 재계약 오피셜(구단 X, 2028년까지) → 신규 추가. 2026-11-17 FA 개장. NS: Sponge·Scout·Diable·Lehends 계약 종료 오피셜 → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. NS 미정: Kingen(종료 발표 명단 제외, 거취 미발표) · DK 2027 계약 확인: Lucid / 미정: Siwoo, ShowMaker, Smash, Career. 루머 미반영."},
   "meta": {"as_of": "2026-08-05", "note": "NS 원딜은 2026-04-30 Diable-Taeyoon 트레이드 반영"},
   "DK": {
     "team_name": "Dplus KIA",
@@ -62,6 +62,9 @@
          "monitor": {"value": "HP X27i", "source": "https://settingsinfo.com/person/kingen/", "confidence": "medium"},
          "headset": {"value": "HyperX Cloud Flight S", "source": "https://settingsinfo.com/person/kingen/", "confidence": "medium"},
          "mousepad": {"value": "Razer Gigantus V2", "source": "https://settingsinfo.com/person/kingen/", "confidence": "medium"}},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "Calix", "name_kr": "선현빈", "role": "mid", "roster_source": "https://x.com/NS_RedForce/status/2122963016899580079",
+       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
        "settings": {"dpi": null, "in_game_sens": null, "resolution": null}}
     ]
   }
