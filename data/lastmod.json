@@ -1,7 +1,7 @@
 {
 "https://dugout26.github.io/prosetup/": {
-"date": "2026-11-17",
-"hash": "d45a9c3283692334"
+"date": "2026-11-18",
+"hash": "e42fde4fabbfdc75"
 },
 "https://dugout26.github.io/prosetup/404.html": {
 "date": "2026-11-16",
@@ -603,6 +603,10 @@
 "date": "2026-11-17",
 "hash": "8a4558caf1223f76"
 },
+"https://dugout26.github.io/prosetup/players/setab.html": {
+"date": "2026-11-18",
+"hash": "2a51936395c8117f"
+},
 "https://dugout26.github.io/prosetup/players/sharvel.html": {
 "date": "2026-11-17",
 "hash": "6010a1c0ad805545"
@@ -664,16 +668,16 @@
 "hash": "764c71873c76a923"
 },
 "https://dugout26.github.io/prosetup/rankings.html": {
-"date": "2026-11-17",
-"hash": "7faa91045632975d"
+"date": "2026-11-18",
+"hash": "14b6593c3ef309ac"
 },
 "https://dugout26.github.io/prosetup/stove-2027.html": {
 "date": "2026-11-18",
-"hash": "f1fb99a1ba03f235"
+"hash": "e3d1f09ee6b00f48"
 },
 "https://dugout26.github.io/prosetup/submit.html": {
-"date": "2026-11-17",
-"hash": "e62815b8001c8e6a"
+"date": "2026-11-18",
+"hash": "27d6602556ab29a2"
 },
 "https://dugout26.github.io/prosetup/teams/bnk.html": {
 "date": "2026-11-18",
@@ -681,11 +685,11 @@
 },
 "https://dugout26.github.io/prosetup/teams/bro.html": {
 "date": "2026-11-18",
-"hash": "6faf5719290b15e9"
+"hash": "e4b5a2f299125c3e"
 },
 "https://dugout26.github.io/prosetup/teams/dk.html": {
 "date": "2026-11-18",
-"hash": "b47419a8bde24c9b"
+"hash": "0a4a5f14ce839fdd"
 },
 "https://dugout26.github.io/prosetup/teams/dns.html": {
 "date": "2026-11-18",
@@ -693,11 +697,11 @@
 },
 "https://dugout26.github.io/prosetup/teams/gen.html": {
 "date": "2026-11-18",
-"hash": "ce4e9bd263678a4b"
+"hash": "0458895cf26f38a7"
 },
 "https://dugout26.github.io/prosetup/teams/hle.html": {
 "date": "2026-11-18",
-"hash": "532de552f6681db5"
+"hash": "4e74002190893b3d"
 },
 "https://dugout26.github.io/prosetup/teams/krx.html": {
 "date": "2026-11-18",
@@ -713,7 +717,7 @@
 },
 "https://dugout26.github.io/prosetup/teams/t1.html": {
 "date": "2026-11-18",
-"hash": "faa82a7cfa946435"
+"hash": "66281990f3eb7ec2"
 },
 "https://dugout26.github.io/prosetup/thanks.html": {
 "date": "2026-11-16",
