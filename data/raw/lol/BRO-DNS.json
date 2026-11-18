@@ -1,6 +1,6 @@
 {
   "as_of": "2026-08-05",
-  "roster_check_2027": {"checked": "2026-11-18", "note": "2026-11-18 BRO: SeTab(미드) 영입 오피셜(구단 X, 1군·CL 구분 미명시) → 신규 추가. 2026-11-17 FA 개장. DNS: Sharvel·Clozer·Peter 계약 종료 오피셜(Pyosik·Life 포함) → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. BRO 2027 계약 확인: Casting, GIDEON, Roamer, Teddy, Namgung · DNS 2027 계약 확인: DuDu(2028년까지 재계약), Cuzz(2026-11-17 영입 오피셜 — FA 블록에서 DNS로 이동, 장비 값 유지) / 미정: deokdam / 공석: 미드·서포터. 루머 미반영."},
+  "roster_check_2027": {"checked": "2026-11-18", "note": "2026-11-18 DNS: Ucal(미드) 영입 오피셜(구단 SNS, 인벤) → KRX FA 블록에서 DNS로 이동, 장비 값 유지. 2026-11-18 BRO: SeTab(미드) 영입 오피셜(구단 X, 1군·CL 구분 미명시) → 신규 추가. 2026-11-17 FA 개장. DNS: Sharvel·Clozer·Peter 계약 종료 오피셜(Pyosik·Life 포함) → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. BRO 2027 계약 확인: Casting, GIDEON, Roamer, Teddy, Namgung · DNS 2027 계약 확인: DuDu(2028년까지 재계약), Cuzz(2026-11-17 영입 오피셜 — FA 블록에서 DNS로 이동, 장비 값 유지) / 미정: deokdam / 공석: 미드·서포터. 루머 미반영."},
   "BRO": {
     "team_name": "HANJIN BRION",
     "players": [
@@ -35,6 +35,17 @@
       {"nickname": "DuDu", "name_kr": "이동주", "role": "top", "roster_source": "https://lol.fandom.com/wiki/DuDu_(Lee_Dong-ju)",
        "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
        "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "Ucal", "name_kr": "손우현", "role": "mid", "roster_source": "https://www.inven.co.kr/webzine/news/?news=323558",
+       "gear": {
+         "mouse": {"value": "Logitech G Pro X Superlight 2 (Magenta)", "source": "https://prosettings.net/players/ucal/", "confidence": "medium"},
+         "keyboard": {"value": "Wooting 60HE+", "source": "https://prosettings.net/players/ucal/", "confidence": "medium"},
+         "monitor": {"value": "LG 25GR75FG", "source": "https://prosettings.net/players/ucal/", "confidence": "medium"},
+         "headset": {"value": "Razer BlackShark V2 Pro", "source": "https://prosettings.net/players/ucal/", "confidence": "medium"},
+         "mousepad": null},
+       "settings": {
+         "dpi": {"value": 800, "source": "https://prosettings.net/players/ucal/", "confidence": "medium"},
+         "in_game_sens": {"value": 50, "source": "https://prosettings.net/players/ucal/", "confidence": "medium"},
+         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/ucal/", "confidence": "medium"}}},
       {"nickname": "Cuzz", "name_kr": "문우찬", "role": "jungle", "roster_source": "https://www.inven.co.kr/webzine/news/?news=323503",
        "gear": {
          "mouse": {"value": "Logitech G PRO X Superlight 2 White", "source": "https://specs.gg/Cuzz", "confidence": "low"},

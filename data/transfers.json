@@ -150,6 +150,12 @@
     "team": "NS",
     "source": "https://www.inven.co.kr/webzine/news/?news=323553&site=lol",
     "status": "2028년까지 재계약"
+   },
+   {
+    "nickname": "Ucal",
+    "team": "DNS",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323558&site=lol",
+    "status": "영입 오피셜(2026-11-18) · 계약기간 미공개"
    }
   ],
   "pending": [
@@ -251,12 +257,6 @@
    },
    {
     "nickname": "Willer",
-    "team": "KRX",
-    "source": "https://www.inven.co.kr/webzine/news/?news=323450",
-    "status": "계약 종료 오피셜(2026-11-17) · FA"
-   },
-   {
-    "nickname": "Ucal",
     "team": "KRX",
     "source": "https://www.inven.co.kr/webzine/news/?news=323450",
     "status": "계약 종료 오피셜(2026-11-17) · FA"
@@ -789,6 +789,17 @@
     "detail": "2028년까지 계약 연장 · 농심 레드포스 발표를 인벤이 보도",
     "source": "https://www.inven.co.kr/webzine/news/?news=323553&site=lol",
     "role": "top"
+   },
+   {
+    "date": "2026-11-18",
+    "nickname": "Ucal",
+    "name_kr": "손우현",
+    "type": "영입",
+    "from": "KRX",
+    "to": "DNS",
+    "detail": "DN 수퍼스 합류 · 구단 공식 SNS 발표를 인벤이 보도 · 계약기간 미공개",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323558&site=lol",
+    "role": "mid"
    }
   ],
   "reports": [
@@ -1015,7 +1026,7 @@
     "role": "mid",
     "note": "커즈·유칼 DN 영입설 · 취재 보도 확인 없음 · DNS는 11/17 표식·샤벨·클로저 등과 계약 종료 발표 · 에펨코리아 ㅌㄹㅁㄹ 정리(11/18 07:00, https://www.fmkorea.com/10568288697): '유칼 든숲행 썰'(든마갤 썰쟁이)",
     "grade": "썰",
-    "status": "보도",
+    "status": "오피셜 확정",
     "seen_at": "2026-11-18 08:50"
    },
    {

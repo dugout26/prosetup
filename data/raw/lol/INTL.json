@@ -203,17 +203,6 @@
          "dpi": {"value": 950, "source": "https://prosettings.net/players/willer/", "confidence": "medium"},
          "in_game_sens": {"value": 40, "source": "https://prosettings.net/players/willer/", "confidence": "medium"},
          "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/willer/", "confidence": "medium"}}},
-      {"nickname": "Ucal", "name_kr": "손우현", "role": "mid",
-       "gear": {
-         "mouse": {"value": "Logitech G Pro X Superlight 2 (Magenta)", "source": "https://prosettings.net/players/ucal/", "confidence": "medium"},
-         "keyboard": {"value": "Wooting 60HE+", "source": "https://prosettings.net/players/ucal/", "confidence": "medium"},
-         "monitor": {"value": "LG 25GR75FG", "source": "https://prosettings.net/players/ucal/", "confidence": "medium"},
-         "headset": {"value": "Razer BlackShark V2 Pro", "source": "https://prosettings.net/players/ucal/", "confidence": "medium"},
-         "mousepad": null},
-       "settings": {
-         "dpi": {"value": 800, "source": "https://prosettings.net/players/ucal/", "confidence": "medium"},
-         "in_game_sens": {"value": 50, "source": "https://prosettings.net/players/ucal/", "confidence": "medium"},
-         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/ucal/", "confidence": "medium"}}},
       {"nickname": "Aiming", "name_kr": "김하람", "role": "adc",
        "gear": {
          "mouse": {"value": "Logitech G903", "source": "https://prosettings.net/players/aiming/", "confidence": "medium"},
