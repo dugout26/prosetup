@@ -2,8 +2,8 @@
  "_note": "이적시장 탭 데이터. official=구단·리그 공식 발표(이적·영입·재계약), reports=언론·소식통 보도(루머 포함, 매체명·링크 필수, 커뮤니티 찌라시 금지). 보도가 오피셜로 확정되면 official로 옮기고 reports의 status를 '오피셜 확정'으로, 무산되면 '무산'으로. pending=거취 미정, stay=2027 계약 확인. reports·official의 role(top/jungle/mid/adc/support)은 팀 페이지 포지션 칸 배치에 쓰인다. coaches=감독·코치 계약 현황(nickname,name_kr,role,team,status,source — 출처 없는 항목은 렌더하지 않음). updates=상단 접이식 업데이트 기록({at:'YYYY-MM-DD HH:MM',text}), checked_at=상단 '최근 갱신' 표기.",
  "lol": {
   "season": "2027",
-  "checked": "2026-11-18",
-  "checked_at": "2026-11-18 22:30",
+  "checked": "2026-11-19",
+  "checked_at": "2026-11-19 09:10",
   "fa_open": "2026-11-17",
   "fa_open_time": "09:00",
   "stay": [
@@ -1273,7 +1273,7 @@
     "name_kr": "",
     "from": "T1 아카데미",
     "to": "HLE",
-    "outlet": "ㅌㄹㅁㄹ (에펨코리아 LoL 게시판, 찌라시 정리글) · 찬희·머리깨고한화응원 (에펨코리아 LoL 게시판, '폭마갤' 썰쟁이 발언 전달, 11/17) · masaki (에펨코리아 LoL 게시판, 썰/루머, '한생갤' 유동 썰 정리, 11/17) · sorrowdown (인벤 LoL 게시판, 유력 라인업 정리, 11/17) · Foxy9 (에펨코리아 LoL 게시판, 썰/루머, '라이프·제우스 맞춘 썰쟁이' 글 캡처 전달, 11/18 12:46) · 민트삽겹살 (인벤 LoL 게시판, 같은 캡처 전달, 11/18 12:54)",
+    "outlet": "ㅌㄹㅁㄹ (에펨코리아 LoL 게시판, 찌라시 정리글) · 찬희·머리깨고한화응원 (에펨코리아 LoL 게시판, '폭마갤' 썰쟁이 발언 전달, 11/17) · masaki (에펨코리아 LoL 게시판, 썰/루머, '한생갤' 유동 썰 정리, 11/17) · sorrowdown (인벤 LoL 게시판, 유력 라인업 정리, 11/17) · Foxy9 (에펨코리아 LoL 게시판, 썰/루머, '라이프·제우스 맞춘 썰쟁이' 글 캡처 전달, 11/18 12:46) · 민트삽겹살 (인벤 LoL 게시판, 같은 캡처 전달, 11/18 12:54) · 바나나초코파이 (에펨코리아 LoL 게시판, 11/19 08:22 글에서 전한 썰쟁이 발언)",
     "grade": "썰",
     "status": "보도",
     "source": "https://www.fmkorea.com/10539974903",
@@ -2117,6 +2117,36 @@
     "role": "top",
     "seen_at": "2026-11-18 23:50",
     "note": "'한화가 루스터 아니라는 썰' 언급 — 루스터 HLE 탑 영입설과 충돌"
+   },
+   {
+    "nickname": "Viper",
+    "name_kr": "박도현",
+    "from": "BLG",
+    "to": "KRX (BLG와 영입 경쟁설)",
+    "outlet": "체스터fc (에펨코리아 LoL 게시판, 11/19 08:43)",
+    "source": "https://www.fmkorea.com/index.php?mid=lol&document_srl=10572334807",
+    "role": "adc",
+    "note": "'KRX는 원딜 빼고 확정이라는 썰만 들린다', 바이퍼를 두고 여러 팀이 다툰다는 전언 · 댓글에서 BLG와 경쟁 추측 · 출처 불명 전언",
+    "tier": "community",
+    "grade": "썰",
+    "status": "보도",
+    "seen_at": "2026-11-19 09:00",
+    "date": "2026-11-19"
+   },
+   {
+    "nickname": "Kiin",
+    "name_kr": "김기인",
+    "from": "GEN",
+    "to": "GEN·HLE 경쟁설",
+    "outlet": "요들군주 (에펨코리아 LoL 게시판, 11/19 07:13) · 댓글 인용 폭마노",
+    "source": "https://www.fmkorea.com/index.php?mid=lol&document_srl=10572134836",
+    "role": "top",
+    "note": "댓글에서 폭마노가 '기인을 두고 젠지와 한화가 탑 자리를 경쟁'이라 했다고 전함 · 젠지 유력설과는 온도차 · 미확인",
+    "tier": "community",
+    "grade": "썰",
+    "status": "보도",
+    "seen_at": "2026-11-19 09:00",
+    "date": "2026-11-19"
    }
   ],
   "coaches": [],
