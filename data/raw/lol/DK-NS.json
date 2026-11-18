@@ -1,5 +1,5 @@
 {
-  "roster_check_2027": {"checked": "2026-11-18", "note": "2026-11-18 NS: Calix 재계약 오피셜(구단 X, 2028년까지) → 신규 추가. 2026-11-17 FA 개장. NS: Sponge·Scout·Diable·Lehends 계약 종료 오피셜 → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. NS 미정: Kingen(종료 발표 명단 제외, 거취 미발표) · DK 2027 계약 확인: Lucid / 미정: Siwoo, ShowMaker, Smash, Career. 루머 미반영."},
+  "roster_check_2027": {"checked": "2026-11-18", "note": "2026-11-18 NS: Kingen 재계약 오피셜(2028년까지) · Calix 재계약 오피셜(구단 X, 2028년까지) → 신규 추가. 2026-11-17 FA 개장. NS: Sponge·Scout·Diable·Lehends 계약 종료 오피셜 → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. DK 2027 계약 확인: Lucid / 미정: Siwoo, ShowMaker, Smash, Career. 루머 미반영."},
   "meta": {"as_of": "2026-08-05", "note": "NS 원딜은 2026-04-30 Diable-Taeyoon 트레이드 반영"},
   "DK": {
     "team_name": "Dplus KIA",

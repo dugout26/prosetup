@@ -3,7 +3,7 @@
  "lol": {
   "season": "2027",
   "checked": "2026-11-18",
-  "checked_at": "2026-11-18 17:10",
+  "checked_at": "2026-11-18 19:00",
   "fa_open": "2026-11-17",
   "fa_open_time": "09:00",
   "stay": [
@@ -144,6 +144,12 @@
     "team": "BNK",
     "source": "https://x.com/BNKFEARXLoL/status/2122963019109945538",
     "status": "영입 오피셜(2026-11-18) · 2028년까지"
+   },
+   {
+    "nickname": "Kingen",
+    "team": "NS",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323553&site=lol",
+    "status": "2028년까지 재계약"
    }
   ],
   "pending": [
@@ -212,12 +218,6 @@
     "team": "DK",
     "source": "https://esportstransfer.com/lol/fa/lck",
     "status": "만료 명단에 없음 · 2027 계약 공식 확인 전"
-   },
-   {
-    "nickname": "Kingen",
-    "team": "NS",
-    "source": "https://www.inven.co.kr/webzine/news/?news=323477",
-    "status": "계약 만료 · 농심 계약 종료 발표(2026-11-17) 명단에서 제외 · 구단 \"말씀드릴 내용 없다\""
    },
    {
     "nickname": "Sponge",
@@ -778,6 +778,17 @@
     "detail": "2028년까지 · BNK 피어엑스 공식 X 발표(Welcome back, Vincenzo) · 포지션은 발표문에 명시 없음(정글로 추정)",
     "source": "https://x.com/BNKFEARXLoL/status/2122963019109945538",
     "role": "jungle"
+   },
+   {
+    "date": "2026-11-18",
+    "nickname": "Kingen",
+    "name_kr": "황성훈",
+    "type": "재계약",
+    "from": "NS",
+    "to": "NS",
+    "detail": "2028년까지 계약 연장 · 농심 레드포스 발표를 인벤이 보도",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323553&site=lol",
+    "role": "top"
    }
   ],
   "reports": [
@@ -2054,6 +2065,10 @@
   ],
   "coaches": [],
   "updates": [
+   {
+    "at": "2026-11-18 19:00",
+    "text": "오피셜 1건(킹겐 농심 2028년까지 재계약 — 인벤 보도, 구단 발표 인용) · 새 썰 없음"
+   },
    {
     "at": "2026-11-18 14:55",
     "text": "새 오피셜 없음 · 🟠 썰 1건(빈센조 BNK — 에펨코리아 찌라시 로스터 정리글) · 제우스 T1 공식 발표는 아직 없음"
