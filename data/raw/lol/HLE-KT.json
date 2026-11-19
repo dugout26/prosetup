@@ -69,6 +69,9 @@
       {"nickname": "FenRir", "name_kr": "박강준", "role": "Bot",
        "note": "2026-07-29 콜업 신인. 장비·세팅 공개 정보 없음",
        "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "Raptor", "name_kr": "전어진", "role": "jungle", "roster_source": "https://www.inven.co.kr/webzine/news/?news=323615&site=lol",
+       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
        "settings": {"dpi": null, "in_game_sens": null, "resolution": null}}
     ]
   }

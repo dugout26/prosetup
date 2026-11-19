@@ -67,7 +67,10 @@
        "settings": {
          "dpi": {"value": 400, "source": "https://prosettings.net/players/deokdam/", "confidence": "medium"},
          "in_game_sens": null,
-         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/deokdam/", "confidence": "medium"}}}
+         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/deokdam/", "confidence": "medium"}}},
+      {"nickname": "Bluffing", "name_kr": "박규용", "role": "support", "roster_source": "https://www.inven.co.kr/webzine/news/?news=323614&site=lol",
+       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}}
     ]
   }
 }

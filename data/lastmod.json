@@ -1,7 +1,7 @@
 {
 "https://dugout26.github.io/prosetup/": {
 "date": "2026-11-19",
-"hash": "e115047d0fe03c35"
+"hash": "ede9790a673bff33"
 },
 "https://dugout26.github.io/prosetup/404.html": {
 "date": "2026-11-19",
@@ -381,7 +381,7 @@
 },
 "https://dugout26.github.io/prosetup/guides/adc-mouse.html": {
 "date": "2026-11-19",
-"hash": "c2d70590bb8d9494"
+"hash": "0254f5a2824e619d"
 },
 "https://dugout26.github.io/prosetup/guides/headset.html": {
 "date": "2026-11-19",
@@ -426,6 +426,10 @@
 "https://dugout26.github.io/prosetup/players/bin.html": {
 "date": "2026-11-19",
 "hash": "405a13836f46cdc4"
+},
+"https://dugout26.github.io/prosetup/players/bluffing.html": {
+"date": "2026-11-19",
+"hash": "e37be187b2afb7ed"
 },
 "https://dugout26.github.io/prosetup/players/brokenblade.html": {
 "date": "2026-11-19",
@@ -474,6 +478,10 @@
 "https://dugout26.github.io/prosetup/players/cuzz.html": {
 "date": "2026-11-19",
 "hash": "cd9cf850e239b3cd"
+},
+"https://dugout26.github.io/prosetup/players/deft.html": {
+"date": "2026-11-19",
+"hash": "82a48c3b8d0869dc"
 },
 "https://dugout26.github.io/prosetup/players/delight.html": {
 "date": "2026-11-19",
@@ -589,7 +597,7 @@
 },
 "https://dugout26.github.io/prosetup/players/raptor.html": {
 "date": "2026-11-19",
-"hash": "3c8f8d3cb4fd9858"
+"hash": "12ee877f9800bfd3"
 },
 "https://dugout26.github.io/prosetup/players/roamer.html": {
 "date": "2026-11-19",
@@ -677,19 +685,19 @@
 },
 "https://dugout26.github.io/prosetup/rankings.html": {
 "date": "2026-11-19",
-"hash": "92e9813ddccdabd6"
+"hash": "ef664bcf10c2b9c9"
 },
 "https://dugout26.github.io/prosetup/stove-2027.html": {
 "date": "2026-11-19",
-"hash": "0a1061a1653104a4"
+"hash": "542ad2742403f2c2"
 },
 "https://dugout26.github.io/prosetup/submit.html": {
 "date": "2026-11-19",
-"hash": "33b07a5d5c514054"
+"hash": "febdd896dc01ea0a"
 },
 "https://dugout26.github.io/prosetup/teams/bnk.html": {
 "date": "2026-11-19",
-"hash": "ce1ef9133884f16d"
+"hash": "750553cc31e944b3"
 },
 "https://dugout26.github.io/prosetup/teams/bro.html": {
 "date": "2026-11-19",
@@ -697,19 +705,19 @@
 },
 "https://dugout26.github.io/prosetup/teams/dk.html": {
 "date": "2026-11-19",
-"hash": "36d4fbbd65e929f8"
+"hash": "8b7b5ada80f5b1f0"
 },
 "https://dugout26.github.io/prosetup/teams/dns.html": {
 "date": "2026-11-19",
-"hash": "9cc58e9fd3e630aa"
+"hash": "ceab6b6adc1ee3c2"
 },
 "https://dugout26.github.io/prosetup/teams/gen.html": {
 "date": "2026-11-19",
-"hash": "b0de56b6b6acc462"
+"hash": "3127b5916e8479f1"
 },
 "https://dugout26.github.io/prosetup/teams/hle.html": {
 "date": "2026-11-19",
-"hash": "c5e8107ee929d313"
+"hash": "13bd23ab1480d686"
 },
 "https://dugout26.github.io/prosetup/teams/krx.html": {
 "date": "2026-11-19",
@@ -717,11 +725,11 @@
 },
 "https://dugout26.github.io/prosetup/teams/kt.html": {
 "date": "2026-11-19",
-"hash": "130878991d2e4d84"
+"hash": "9034757fd11b4def"
 },
 "https://dugout26.github.io/prosetup/teams/ns.html": {
 "date": "2026-11-19",
-"hash": "090f3a147fa5e731"
+"hash": "7aee31249951a52f"
 },
 "https://dugout26.github.io/prosetup/teams/t1.html": {
 "date": "2026-11-19",

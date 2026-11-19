@@ -65,6 +65,9 @@
        "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
       {"nickname": "Calix", "name_kr": "선현빈", "role": "mid", "roster_source": "https://x.com/NS_RedForce/status/2122963016899580079",
        "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "Deft", "name_kr": "김혁규", "role": "adc", "roster_source": "https://www.inven.co.kr/webzine/news/?news=323613&site=lol",
+       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
        "settings": {"dpi": null, "in_game_sens": null, "resolution": null}}
     ]
   }

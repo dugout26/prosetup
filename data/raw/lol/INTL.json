@@ -174,9 +174,6 @@
       {"nickname": "Clear", "name_kr": "송현민", "role": "top",
        "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
        "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
-      {"nickname": "Raptor", "name_kr": "전어진", "role": "jungle",
-       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
-       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
       {"nickname": "Taeyoon", "name_kr": "김태윤", "role": "adc",
        "gear": {
          "mouse": {"value": "Logitech G Pro Wireless", "source": "https://prosettings.net/lists/league-of-legends/", "confidence": "low"},
