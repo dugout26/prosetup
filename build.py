@@ -16,7 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 BASE_URL = "https://dugout26.github.io/prosetup"
 VERIFY_GOOGLE = "reLU6hFD0fFzI4ciTnfyEkadi_fsno6fJLTdosq1qTA"
-VERIFY_NAVER = None
+VERIFY_NAVER = "1ab45d31cde3f73947c4a0e13af5513ec0dc4179"
 # 구글 폼(사진·영상 첨부 가능, 구글 로그인 필요). 없으면 사이트 내 폼만 노출.
 # 제보 메일·FormSubmit 엔드포인트. 익명 문자열(https://formsubmit.co/<랜덤>)을 받으면 FORMSUBMIT_ENDPOINT에 넣는다.
 # None이면 로그인 없는 폼을 숨기고 구글 폼 안내만 남긴다(운영 메일이 폼 action에 평문으로 노출되지 않게).
