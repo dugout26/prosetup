@@ -326,7 +326,17 @@
        "settings": {
          "dpi": {"value": 1600, "source": "https://prosettings.net/players/inspired/", "confidence": "medium"},
          "in_game_sens": {"value": "마우스 속도 50 / 카메라 50", "source": "https://prosettings.net/players/inspired/", "confidence": "medium"},
-         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/inspired/", "confidence": "medium"}}}
+         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/inspired/", "confidence": "medium"}}},
+      {"nickname": "Doran", "name_kr": "도란", "role": "top",
+       "gear": {
+         "mouse": {"value": "Razer Viper V3 Pro", "source": "https://specs.gg/Doran", "confidence": "medium"},
+         "keyboard": {"value": "SteelSeries Apex Pro TKL Gen 3", "source": "https://specs.gg/Doran", "confidence": "medium"},
+         "monitor": null, "headset": null,
+         "mousepad": {"value": "SteelSeries QcK Performance Speed", "source": "https://specs.gg/Doran", "confidence": "medium"}},
+       "settings": {
+         "dpi": {"value": 800, "source": "https://specs.gg/Doran", "confidence": "medium"},
+         "in_game_sens": null,
+         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Doran", "confidence": "medium"}}}
     ]
   }
 }

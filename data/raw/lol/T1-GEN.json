@@ -1,5 +1,5 @@
 {
-  "roster_check_2027": {"checked": "2026-11-17", "note": "2026-11-17 FA 개장. GEN: Kiin·Canyon 계약 종료 오피셜 → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. T1 2027 계약 확인: Oner, Faker, Peyz, Keria / 미정: Doran · GEN 2027 계약 확인: Chovy, Ruler, Duro / 공석: 탑·정글. 루머 미반영."},
+  "roster_check_2027": {"checked": "2026-11-19", "note": "2026-11-19 T1 Doran 결별 오피셜 → INTLFA로 이동. 2026-11-17 FA 개장. GEN: Kiin·Canyon 계약 종료 오피셜 → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. T1 2027 계약 확인: Oner, Faker, Peyz, Keria / 탑 공석(Doran 결별) · GEN 2027 계약 확인: Chovy, Ruler, Duro / 공석: 탑·정글. 루머 미반영."},
   "as_of": "2026-08-05",
   "notes": {
     "roster": "T1 2026: 도란/오너/페이커/페이즈/케리아 (구마유시 HLE행, Peyz 영입). GEN 2026: 기인/캐니언/쵸비/룰러/두로 (전원 유지).",
@@ -8,16 +8,6 @@
   "T1": {
     "team_name": "T1",
     "players": [
-      {"nickname": "Doran", "name_kr": "도란", "role": "top",
-       "gear": {
-         "mouse": {"value": "Razer Viper V3 Pro", "source": "https://specs.gg/Doran", "confidence": "medium"},
-         "keyboard": {"value": "SteelSeries Apex Pro TKL Gen 3", "source": "https://specs.gg/Doran", "confidence": "medium"},
-         "monitor": null, "headset": null,
-         "mousepad": {"value": "SteelSeries QcK Performance Speed", "source": "https://specs.gg/Doran", "confidence": "medium"}},
-       "settings": {
-         "dpi": {"value": 800, "source": "https://specs.gg/Doran", "confidence": "medium"},
-         "in_game_sens": null,
-         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Doran", "confidence": "medium"}}},
       {"nickname": "Oner", "name_kr": "오너", "role": "jungle",
        "gear": {
          "mouse": {"value": "Logitech G Pro X Superlight 2", "source": "https://specs.gg/Oner", "confidence": "medium"},

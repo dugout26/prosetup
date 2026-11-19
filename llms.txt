@@ -1,6 +1,6 @@
 # 프로셋업 (Prosetup)
 
-> LCK·VCT 프로 선수 267명(LCK 22·해외 LoL 27·VCT 218)이 실제 사용하는 게이밍 장비·감도를 공개 자료로 교차 확인해 정리한 비공식 팬 사이트. 제품 페이지 91종. 데이터 기준일 2026-11(LCK 장비 2026-08 · VCT 장비 2026-11). 인용 시 사이트명과 기준일을 함께 표기해 주세요. 문의·정정: dugout26.gm@gmail.com
+> LCK·VCT 프로 선수 267명(LCK 21·해외 LoL 28·VCT 218)이 실제 사용하는 게이밍 장비·감도를 공개 자료로 교차 확인해 정리한 비공식 팬 사이트. 제품 페이지 91종. 데이터 기준일 2026-11(LCK 장비 2026-08 · VCT 장비 2026-11). 인용 시 사이트명과 기준일을 함께 표기해 주세요. 문의·정정: dugout26.gm@gmail.com
 
 ## 선수별 장비·감도
 
@@ -45,7 +45,7 @@
 - [정윤수(Peter)](https://dugout26.github.io/prosetup/players/peter.html): FA (무소속) 서포터, 마우스 Logitech G Pro X Superlight 2 DEX (Black), 키보드 Logitech G Pro X (TKL), DPI 800
 - [자오자하오(Elk)](https://dugout26.github.io/prosetup/players/elk.html): FA (무소속) 원딜, 마우스 Logitech G Pro X Superlight 2, DPI 1600
 - [카츠퍼 스워마(Inspired)](https://dugout26.github.io/prosetup/players/inspired.html): FA (무소속) 정글, 마우스 Logitech G Pro X Superlight, 키보드 Logitech G Pro X Keyboard, DPI 1600
-- [도란(Doran)](https://dugout26.github.io/prosetup/players/doran.html): T1 탑, 마우스 Razer Viper V3 Pro, 키보드 SteelSeries Apex Pro TKL Gen 3, DPI 800
+- [도란(Doran)](https://dugout26.github.io/prosetup/players/doran.html): FA (무소속) 탑, 마우스 Razer Viper V3 Pro, 키보드 SteelSeries Apex Pro TKL Gen 3, DPI 800
 - [오너(Oner)](https://dugout26.github.io/prosetup/players/oner.html): T1 정글, 마우스 Logitech G Pro X Superlight 2, 키보드 SteelSeries Apex Pro TKL Gen 3, DPI 800
 - [페이커(Faker)](https://dugout26.github.io/prosetup/players/faker.html): T1 미드, 마우스 Razer Viper V3 Pro Faker Edition, 키보드 Razer Huntsman V3 Pro, DPI 1800
 - [페이즈(Peyz)](https://dugout26.github.io/prosetup/players/peyz.html): T1 원딜, 마우스 Logitech G Pro Wireless, 키보드 Logitech G Pro X
