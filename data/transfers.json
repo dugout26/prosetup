@@ -1203,13 +1203,13 @@
     "name_kr": "신금재",
     "from": "DK",
     "to": "KT",
-    "outlet": "에펨코리아 유출 글 (Yahoo 대만 게임 Anjohn 정리 기사 인용)",
+    "outlet": "에펨코리아 유출 글 (Yahoo 대만 게임 Anjohn 정리 기사 인용) · 티원월즈포핏 (인벤 LoL 게시판, \"Kt 갑자기 태윤버리고 스매쉬 노리는중\", 11/19 15:31)",
     "grade": "썰",
     "status": "보도",
     "source": "https://tw.news.yahoo.com/2027%E3%80%8A%E8%8B%B1%E9%9B%84%E8%81%AF%E7%9B%9F%E3%80%8Blck%E8%BD%89%E6%9C%83%E6%9C%9F%E6%87%B6%E4%BA%BA%E5%8C%85%EF%BC%9A10%E6%94%AF%E6%88%B0%E9%9A%8A%E6%9C%80%E6%96%B0%E9%99%A3%E5%AE%B9%E3%80%81%E9%81%B8%E6%89%8B%E5%8E%BB%E5%90%91%E3%80%81fa%E5%90%8D%E5%96%AE%E4%B8%80%E6%AC%A1%E7%9C%8B-015609140.html",
     "role": "adc",
-    "seen_at": "2026-11-17 13:50",
-    "note": "KT가 접촉했다는 썰 · 미확인 · Sheep의 태윤 KT행 보도와 충돌"
+    "seen_at": "2026-11-19 15:45",
+    "note": "KT가 접촉했다는 썰 · 미확인 · Sheep의 태윤 KT행 보도와 충돌 · 인벤 티원월즈포핏(11/19 15:31, https://www.inven.co.kr/board/lol/4625/4289681): 제목만 같은 취지, 본문은 \"딮기 터지나본데 어떻게 되는거냐\" 한 줄 — 근거 없음"
    },
    {
     "tier": "community",
@@ -2269,6 +2269,21 @@
     "role": "top",
     "seen_at": "2026-11-19 14:40",
     "note": "제목 '듀로 한화 가능성도 있는듯', 본문 \"도피딜에 이어 기캐듀 ㄷㄷ\" 한 줄 · 근거 없음 · 도란 KRX 썰·T1 결별 시사 글과 충돌 · 미확인"
+   },
+   {
+    "tier": "community",
+    "date": "2026-11-19",
+    "nickname": "Taeyoon",
+    "name_kr": "김태윤",
+    "from": "BNK",
+    "to": "LPL (팀 미정)",
+    "outlet": "Kkkkllll (인벤 LoL 게시판, 11/19 15:14) · 적월 (에펨코리아 LoL 게시판, 11/19 15:20)",
+    "grade": "썰",
+    "status": "보도",
+    "source": "https://www.inven.co.kr/board/lol/4625/4289666",
+    "role": "adc",
+    "seen_at": "2026-11-19 15:45",
+    "note": "제목 '태윤은 갑자기 lpl 썰 있네', 본문 \"스매쉬 노릴겅가..\" 한 줄 · 에펨코리아 글(https://www.fmkorea.com/index.php?mid=lol&document_srl=10573873322)도 제목만 같은 취지, 댓글은 \"KT가 고른 원딜이 있어서 LPL행이 정해질 듯\"이라는 추측 · 근거 없음 · Sheep의 태윤 KT행 보도와 충돌 · 미확인"
    }
   ],
   "coaches": [],
