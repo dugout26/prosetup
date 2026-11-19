@@ -1,20 +1,10 @@
 {
   "as_of": "2026-08-05",
-  "roster_check_2027": {"checked": "2026-11-19", "note": "2026-11-19 HLE: Zeus 계약 종료 오피셜 → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. 2026-11-17 FA 개장. KT: Effort 계약 종료 오피셜(Ghost·Jiwoo·Sylvie·Pollu 포함) → Effort는 FA 블록(INTL.json INTLFA)으로 이동. Cuzz도 KT 결별 오피셜(2026-11-17 18:00, 구단 SNS) → FA 블록으로 이동. HLE 2027 계약 확인: Zeka, Gumayusi, Delight / 미정: Zeus, Kanavi · KT 2027 계약 확인: PerfecT, Bdd / 미정: FenRir / 공석: 정글·서포터. 루머 미반영."},
+  "roster_check_2027": {"checked": "2026-11-19", "note": "2026-11-19 HLE: Zeus 계약 종료 오피셜 → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. 2026-11-17 FA 개장. KT: Effort 계약 종료 오피셜(Ghost·Jiwoo·Sylvie·Pollu 포함) → Effort는 FA 블록(INTL.json INTLFA)으로 이동. Cuzz도 KT 결별 오피셜(2026-11-17 18:00, 구단 SNS) → FA 블록으로 이동. HLE 2027 계약 확인: Zeka, Gumayusi, Delight / 미정: Zeus · 2026-11-19 Kanavi 계약 종료 오피셜 → FA 블록 이동 · KT 2027 계약 확인: PerfecT, Bdd / 미정: FenRir / 공석: 정글·서포터. 루머 미반영."},
   "HLE": {
     "roster_note": "2026 로스터 확인됨: Zeus(탑)·Kanavi(정글)·Zeka(미드)·Gumayusi(원딜)·Delight(서폿).",
     "roster_source": "https://www.sheepesports.com/en/articles/lol-hanwha-life-esports-completed-2026-lck-roster/en",
     "players": [
-      {"nickname": "Kanavi", "name_kr": "서진혁", "role": "Jungle",
-       "gear": {
-         "mouse": {"value": "Logitech G PRO X Superlight 2 White", "source": "https://specs.gg/Kanavi", "confidence": "low", "note": "prosettings.net은 DeathAdder V4 Pro White로 상충"},
-         "keyboard": {"value": "Logitech G PRO X TKL White", "source": "https://specs.gg/Kanavi", "confidence": "low", "note": "prosettings.net은 Huntsman V3 Pro TKL로 상충"},
-         "monitor": {"value": "ZOWIE XL2586X+", "source": "https://specs.gg/Kanavi", "confidence": "low", "note": "prosettings.net은 LG 25GR75FG로 상충"},
-         "headset": {"value": "Sennheiser HMD 300 Pro", "source": "https://specs.gg/Kanavi", "confidence": "low", "note": "방송용 공용 헤드셋 가능성"},
-         "mousepad": {"value": "ZOWIE G-SR III", "source": "https://specs.gg/Kanavi", "confidence": "low", "note": "prosettings.net은 Artisan Ninja FX Zero로 상충"}},
-       "settings": {
-         "dpi": null, "in_game_sens": null,
-         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Kanavi", "confidence": "medium"}}},
       {"nickname": "Zeka", "name_kr": "김건우", "role": "Mid",
        "gear": {
          "mouse": {"value": "Logitech G PRO X Superlight 2", "source": "https://specs.gg/Zeka", "confidence": "low", "note": "prosettings.net은 Viper V3 Pro Green으로 상충"},

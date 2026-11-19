@@ -1,6 +1,6 @@
 # 프로셋업 (Prosetup)
 
-> LCK·VCT 프로 선수 267명(LCK 23·해외 LoL 26·VCT 218)이 실제 사용하는 게이밍 장비·감도를 공개 자료로 교차 확인해 정리한 비공식 팬 사이트. 제품 페이지 91종. 데이터 기준일 2026-11(LCK 장비 2026-08 · VCT 장비 2026-11). 인용 시 사이트명과 기준일을 함께 표기해 주세요. 문의·정정: dugout26.gm@gmail.com
+> LCK·VCT 프로 선수 267명(LCK 22·해외 LoL 27·VCT 218)이 실제 사용하는 게이밍 장비·감도를 공개 자료로 교차 확인해 정리한 비공식 팬 사이트. 제품 페이지 91종. 데이터 기준일 2026-11(LCK 장비 2026-08 · VCT 장비 2026-11). 인용 시 사이트명과 기준일을 함께 표기해 주세요. 문의·정정: dugout26.gm@gmail.com
 
 
 ## 선수
@@ -22,7 +22,7 @@ https://dugout26.github.io/prosetup/players/teddy.html
 https://dugout26.github.io/prosetup/players/ucal.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Cuzz · Smash · Kanavi · Zeka · Gumayusi · PerfecT 외 10명
+- 같은 마우스: Cuzz · Smash · Zeka · Gumayusi · PerfecT · Knight 외 10명
 - DPI 800 — LCK 미드 평균 1550(6명 기준)보다 낮음.
 
 | 항목 | 값 | 근거 |
@@ -40,7 +40,7 @@ https://dugout26.github.io/prosetup/players/ucal.html
 https://dugout26.github.io/prosetup/players/cuzz.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Ucal · Smash · Kanavi · Zeka · Gumayusi · PerfecT 외 10명
+- 같은 마우스: Ucal · Smash · Zeka · Gumayusi · PerfecT · Knight 외 10명
 - DPI 800 — LCK 정글 평균 800(3명 기준)과 비슷.
 
 | 항목 | 값 | 근거 |
@@ -131,7 +131,7 @@ https://dugout26.github.io/prosetup/players/showmaker.html
 https://dugout26.github.io/prosetup/players/smash.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Ucal · Cuzz · Kanavi · Zeka · Gumayusi · PerfecT 외 10명
+- 같은 마우스: Ucal · Cuzz · Zeka · Gumayusi · PerfecT · Knight 외 10명
 
 | 항목 | 값 | 근거 |
 |---|---|---|
@@ -153,28 +153,12 @@ https://dugout26.github.io/prosetup/players/kingen.html
 | 헤드셋 | HyperX Cloud Flight S | https://settingsinfo.com/person/kingen/ |
 | 마우스패드 | Razer Gigantus V2 | https://settingsinfo.com/person/kingen/ |
 
-### 서진혁(Kanavi) — 한화생명e스포츠 정글 (LCK)
-
-https://dugout26.github.io/prosetup/players/kanavi.html
-
-- 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Ucal · Cuzz · Smash · Zeka · Gumayusi · PerfecT 외 10명
-
-| 항목 | 값 | 근거 |
-|---|---|---|
-| 마우스 | Logitech G PRO X Superlight 2 White | https://specs.gg/Kanavi |
-| 키보드 | Logitech G PRO X TKL White | https://specs.gg/Kanavi |
-| 모니터 | ZOWIE XL2586X+ | https://specs.gg/Kanavi |
-| 헤드셋 | Sennheiser HMD 300 Pro | https://specs.gg/Kanavi |
-| 마우스패드 | ZOWIE G-SR III | https://specs.gg/Kanavi |
-| 해상도 | 1920x1080 | https://specs.gg/Kanavi |
-
 ### 김건우(Zeka) — 한화생명e스포츠 미드 (LCK)
 
 https://dugout26.github.io/prosetup/players/zeka.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Ucal · Cuzz · Smash · Kanavi · Gumayusi · PerfecT 외 10명
+- 같은 마우스: Ucal · Cuzz · Smash · Gumayusi · PerfecT · Knight 외 10명
 - DPI 650 — LCK 미드 평균 1550(6명 기준)보다 낮음.
 
 | 항목 | 값 | 근거 |
@@ -193,7 +177,7 @@ https://dugout26.github.io/prosetup/players/zeka.html
 https://dugout26.github.io/prosetup/players/gumayusi.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Ucal · Cuzz · Smash · Kanavi · Zeka · PerfecT 외 10명
+- 같은 마우스: Ucal · Cuzz · Smash · Zeka · PerfecT · Knight 외 10명
 - DPI 800 — LCK 원딜 평균 1100(3명 기준)보다 낮음.
 
 | 항목 | 값 | 근거 |
@@ -230,7 +214,7 @@ https://dugout26.github.io/prosetup/players/delight.html
 https://dugout26.github.io/prosetup/players/perfect.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Ucal · Cuzz · Smash · Kanavi · Zeka · Gumayusi 외 10명
+- 같은 마우스: Ucal · Cuzz · Smash · Zeka · Gumayusi · Knight 외 10명
 - DPI 1600 — LCK 탑 평균 1200(3명 기준)보다 높음.
 
 | 항목 | 값 | 근거 |
@@ -283,7 +267,7 @@ https://dugout26.github.io/prosetup/players/bin.html
 https://dugout26.github.io/prosetup/players/knight.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Ucal · Cuzz · Smash · Kanavi · Zeka · Gumayusi 외 10명
+- 같은 마우스: Ucal · Cuzz · Smash · Zeka · Gumayusi · PerfecT 외 10명
 - DPI 1600 — LCK 미드 평균 1550(6명 기준)과 비슷.
 
 | 항목 | 값 | 근거 |
@@ -450,7 +434,7 @@ https://dugout26.github.io/prosetup/players/corejj.html
 https://dugout26.github.io/prosetup/players/kiin.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Ucal · Cuzz · Smash · Kanavi · Zeka · Gumayusi 외 10명
+- 같은 마우스: Ucal · Cuzz · Smash · Zeka · Gumayusi · PerfecT 외 10명
 
 | 항목 | 값 | 근거 |
 |---|---|---|
@@ -464,7 +448,7 @@ https://dugout26.github.io/prosetup/players/kiin.html
 https://dugout26.github.io/prosetup/players/canyon.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Ucal · Cuzz · Smash · Kanavi · Zeka · Gumayusi 외 10명
+- 같은 마우스: Ucal · Cuzz · Smash · Zeka · Gumayusi · PerfecT 외 10명
 
 | 항목 | 값 | 근거 |
 |---|---|---|
@@ -494,7 +478,7 @@ https://dugout26.github.io/prosetup/players/taeyoon.html
 https://dugout26.github.io/prosetup/players/willer.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Ucal · Cuzz · Smash · Kanavi · Zeka · Gumayusi 외 10명
+- 같은 마우스: Ucal · Cuzz · Smash · Zeka · Gumayusi · PerfecT 외 10명
 - DPI 950 — LCK 정글 평균 800(3명 기준)보다 높음.
 
 | 항목 | 값 | 근거 |
@@ -531,7 +515,7 @@ https://dugout26.github.io/prosetup/players/aiming.html
 https://dugout26.github.io/prosetup/players/andil.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Ucal · Cuzz · Smash · Kanavi · Zeka · Gumayusi 외 10명
+- 같은 마우스: Ucal · Cuzz · Smash · Zeka · Gumayusi · PerfecT 외 10명
 - DPI 800 — LCK 전체 평균 1185(17명 기준)보다 낮음.
 
 | 항목 | 값 | 근거 |
@@ -549,7 +533,7 @@ https://dugout26.github.io/prosetup/players/andil.html
 https://dugout26.github.io/prosetup/players/sponge.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Ucal · Cuzz · Smash · Kanavi · Zeka · Gumayusi 외 10명
+- 같은 마우스: Ucal · Cuzz · Smash · Zeka · Gumayusi · PerfecT 외 10명
 
 | 항목 | 값 | 근거 |
 |---|---|---|
@@ -614,6 +598,22 @@ https://dugout26.github.io/prosetup/players/zeus.html
 | 인게임 감도 | 55 | https://specs.gg/Zeus |
 | 해상도 | 1920x1080 | https://specs.gg/Zeus |
 
+### 서진혁(Kanavi) — FA (무소속) 정글 (LCK)
+
+https://dugout26.github.io/prosetup/players/kanavi.html
+
+- 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
+- 같은 마우스: Ucal · Cuzz · Smash · Zeka · Gumayusi · PerfecT 외 10명
+
+| 항목 | 값 | 근거 |
+|---|---|---|
+| 마우스 | Logitech G PRO X Superlight 2 White | https://specs.gg/Kanavi |
+| 키보드 | Logitech G PRO X TKL White | https://specs.gg/Kanavi |
+| 모니터 | ZOWIE XL2586X+ | https://specs.gg/Kanavi |
+| 헤드셋 | Sennheiser HMD 300 Pro | https://specs.gg/Kanavi |
+| 마우스패드 | ZOWIE G-SR III | https://specs.gg/Kanavi |
+| 해상도 | 1920x1080 | https://specs.gg/Kanavi |
+
 ### 이주현(Clozer) — FA (무소속) 미드 (LCK)
 
 https://dugout26.github.io/prosetup/players/clozer.html
@@ -653,7 +653,7 @@ https://dugout26.github.io/prosetup/players/peter.html
 https://dugout26.github.io/prosetup/players/elk.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Ucal · Cuzz · Smash · Kanavi · Zeka · Gumayusi 외 10명
+- 같은 마우스: Ucal · Cuzz · Smash · Zeka · Gumayusi · PerfecT 외 10명
 - DPI 1600 — LCK 원딜 평균 1100(3명 기준)보다 높음.
 
 | 항목 | 값 | 근거 |
@@ -704,7 +704,7 @@ https://dugout26.github.io/prosetup/players/doran.html
 https://dugout26.github.io/prosetup/players/oner.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Ucal · Cuzz · Smash · Kanavi · Zeka · Gumayusi 외 10명
+- 같은 마우스: Ucal · Cuzz · Smash · Zeka · Gumayusi · PerfecT 외 10명
 - DPI 800 — LCK 정글 평균 800(3명 기준)과 비슷.
 
 | 항목 | 값 | 근거 |
@@ -769,7 +769,7 @@ https://dugout26.github.io/prosetup/players/keria.html
 https://dugout26.github.io/prosetup/players/chovy.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Ucal · Cuzz · Smash · Kanavi · Zeka · Gumayusi 외 10명
+- 같은 마우스: Ucal · Cuzz · Smash · Zeka · Gumayusi · PerfecT 외 10명
 - DPI 1750 — LCK 미드 평균 1550(6명 기준)보다 높음.
 
 | 항목 | 값 | 근거 |
@@ -802,7 +802,7 @@ https://dugout26.github.io/prosetup/players/ruler.html
 https://dugout26.github.io/prosetup/players/duro.html
 
 - 마우스는 Logitech G Pro X Superlight 2 — LCK에서 16명, 전체 프로 44명이 같은 모델을 씁니다.
-- 같은 마우스: Ucal · Cuzz · Smash · Kanavi · Zeka · Gumayusi 외 10명
+- 같은 마우스: Ucal · Cuzz · Smash · Zeka · Gumayusi · PerfecT 외 10명
 
 | 항목 | 값 | 근거 |
 |---|---|---|
@@ -5551,11 +5551,6 @@ https://dugout26.github.io/prosetup/gear/logitech-g715.html
 - 단점: 감성 라인이라 성능 대비 가격은 아쉬운 편
 - 단점: 색상 특성상 오염이 눈에 띔
 
-### ZOWIE G-SR III (마우스패드, 프로 3명)
-
-https://dugout26.github.io/prosetup/gear/zowie-g-sr-iii.html
-
-
 ### ASTRO A50 (헤드셋, 프로 3명)
 
 https://dugout26.github.io/prosetup/gear/astro-a50.html
@@ -5564,6 +5559,11 @@ https://dugout26.github.io/prosetup/gear/astro-a50.html
 ### Alienware AW2518H (모니터, 프로 3명)
 
 https://dugout26.github.io/prosetup/gear/alienware-aw2518h.html
+
+
+### ZOWIE G-SR III (마우스패드, 프로 3명)
+
+https://dugout26.github.io/prosetup/gear/zowie-g-sr-iii.html
 
 
 ### Razer Viper V3 Pro Faker Edition (마우스, 프로 3명)
@@ -5757,8 +5757,8 @@ https://dugout26.github.io/prosetup/guides/lol-monitor.html
 
 홈 › LoL 모니터 가이드
 LoL 프로게이머 모니터 — 인치·주사율(Hz)·거리 가이드
-LCK 선수 중 개인 모니터가 확인된 10명의 모델을 집계했습니다.
-크기: 24.5인치 7명 · 24.1인치 1명 · 27인치 1명. 주사율: 360Hz 5명 · 280Hz 2명 · 600Hz 1명 · 240Hz 1명 (스펙이 표기된 모델만).
+LCK 선수 중 개인 모니터가 확인된 9명의 모델을 집계했습니다.
+크기: 24.5인치 7명 · 27인치 1명. 주사율: 360Hz 5명 · 280Hz 2명 · 240Hz 1명 (스펙이 표기된 모델만).
 제품별 사용 선수감도 변환기마우스 가속 끄기LoL 모니터 가이드원딜 마우스
 한 줄 결론 — LCK 프로 개인 모니터는 24~25인치급 고주사율이 대부분입니다. 가장 많이 쓰는 모델은 LG UltraGear 25GR75FG(5명).
 LCK 선수 개인 모니터
@@ -5766,7 +5766,6 @@ LCK 선수 개인 모니터
 LG UltraGear 25GR75FG24.5인치 · FHD · 360Hz · IPSUcal, Siwoo, Lucid, Zeka, Delight5명
 ASUS TUF Gaming VG259QM24.5인치 · FHD · 280Hz · Fast IPSShowMaker1명최저가 →
 HP X27i스펙 미표기Kingen1명
-ZOWIE XL2586X+24.1인치 · FHD · 600Hz · TN · DyAc 2Kanavi1명최저가 →
 ASUS ROG Swift PG258Q24.5인치 · FHD · 240Hz · TN · G-SYNCBdd1명
 ASUS TUF Gaming VG279QM27인치 · FHD · 280Hz · Fast IPS · G-SYNC 호환Faker1명최저가 →
 LCK 경기장에서는 HP OMEN 25가 지급됩니다. 위 표는 선수 개인(연습·방송) 모니터 기준입니다.
@@ -5786,7 +5785,7 @@ LoL 클라이언트 설정의 프레임 제한을 모니터 주사율 이상으�
 더 보기: LCK 모니터 사용률 순위 · 제품별 사용 선수
 자주 묻는 질문
 LCK 프로들이 가장 많이 쓰는 모니터는?
-LG UltraGear 25GR75FG입니다. 개인 모니터가 확인된 10명 중 5명이 씁니다.
+LG UltraGear 25GR75FG입니다. 개인 모니터가 확인된 9명 중 5명이 씁니다.
 LoL에 240Hz가 꼭 필요한가요?
 필수는 아닙니다. 다만 커서·스킬샷 움직임이 부드러워지고, 프로 다수가 고주사율을 씁니다. 그래픽카드가 그 프레임을 내는지 먼저 확인하세요.
 경기장 모니터와 개인 모니터가 다른가요?
