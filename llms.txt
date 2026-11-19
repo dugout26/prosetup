@@ -1,6 +1,6 @@
 # 프로셋업 (Prosetup)
 
-> LCK·VCT 프로 선수 267명(LCK 24·해외 LoL 25·VCT 218)이 실제 사용하는 게이밍 장비·감도를 공개 자료로 교차 확인해 정리한 비공식 팬 사이트. 제품 페이지 91종. 데이터 기준일 2026-11(LCK 장비 2026-08 · VCT 장비 2026-11). 인용 시 사이트명과 기준일을 함께 표기해 주세요. 문의·정정: dugout26.gm@gmail.com
+> LCK·VCT 프로 선수 267명(LCK 23·해외 LoL 26·VCT 218)이 실제 사용하는 게이밍 장비·감도를 공개 자료로 교차 확인해 정리한 비공식 팬 사이트. 제품 페이지 91종. 데이터 기준일 2026-11(LCK 장비 2026-08 · VCT 장비 2026-11). 인용 시 사이트명과 기준일을 함께 표기해 주세요. 문의·정정: dugout26.gm@gmail.com
 
 ## 선수별 장비·감도
 
@@ -13,7 +13,6 @@
 - [허수(ShowMaker)](https://dugout26.github.io/prosetup/players/showmaker.html): 디플러스 기아 미드, 마우스 Logitech G Pro X2 Superstrike, 키보드 Logitech G715, DPI 2500
 - [신금재(Smash)](https://dugout26.github.io/prosetup/players/smash.html): 디플러스 기아 원딜, 마우스 Logitech G Pro X Superlight 2, 키보드 Logitech G Pro X
 - [황성훈(Kingen)](https://dugout26.github.io/prosetup/players/kingen.html): 농심 레드포스 탑, 마우스 Logitech G703, 키보드 Razer BlackWidow Lite
-- [최우제(Zeus)](https://dugout26.github.io/prosetup/players/zeus.html): 한화생명e스포츠 탑, 마우스 Razer Viper V3 Pro, 키보드 Razer Huntsman V3 Pro TKL, DPI 800
 - [서진혁(Kanavi)](https://dugout26.github.io/prosetup/players/kanavi.html): 한화생명e스포츠 정글, 마우스 Logitech G PRO X Superlight 2 White, 키보드 Logitech G PRO X TKL White
 - [김건우(Zeka)](https://dugout26.github.io/prosetup/players/zeka.html): 한화생명e스포츠 미드, 마우스 Logitech G PRO X Superlight 2, 키보드 Razer BlackWidow V3 Pro, DPI 650
 - [이민형(Gumayusi)](https://dugout26.github.io/prosetup/players/gumayusi.html): 한화생명e스포츠 원딜, 마우스 Logitech G PRO X Superlight 2, 키보드 Logitech G PRO X TKL Rapid, DPI 800
@@ -41,6 +40,7 @@
 - [이예찬(Scout)](https://dugout26.github.io/prosetup/players/scout.html): FA (무소속) 미드, 마우스 Razer Viper 8KHz, 키보드 Razer Huntsman Elite
 - [남대근(Diable)](https://dugout26.github.io/prosetup/players/diable.html): FA (무소속) 원딜, 마우스 Logitech G Pro X Superlight
 - [손시우(Lehends)](https://dugout26.github.io/prosetup/players/lehends.html): FA (무소속) 서포터, 마우스 Logitech G304, 키보드 Corsair K70 RGB MK.2 SE, DPI 1650
+- [최우제(Zeus)](https://dugout26.github.io/prosetup/players/zeus.html): FA (무소속) 탑, 마우스 Razer Viper V3 Pro, 키보드 Razer Huntsman V3 Pro TKL, DPI 800
 - [이주현(Clozer)](https://dugout26.github.io/prosetup/players/clozer.html): FA (무소속) 미드, 마우스 ROCCAT Kone Pure Ultra, 키보드 ROCCAT Vulcan TKL Pro, DPI 800
 - [정윤수(Peter)](https://dugout26.github.io/prosetup/players/peter.html): FA (무소속) 서포터, 마우스 Logitech G Pro X Superlight 2 DEX (Black), 키보드 Logitech G Pro X (TKL), DPI 800
 - [자오자하오(Elk)](https://dugout26.github.io/prosetup/players/elk.html): FA (무소속) 원딜, 마우스 Logitech G Pro X Superlight 2, DPI 1600
@@ -306,8 +306,8 @@
 - [조위 XL2546(ZOWIE XL2546)](https://dugout26.github.io/prosetup/gear/zowie-xl2546.html): 모니터, VCT 7명
 - [IQUNIX EV63 HE](https://dugout26.github.io/prosetup/gear/iqunix-ev63-he.html): 키보드, VCT 7명
 - [로지텍 G840(Logitech G840)](https://dugout26.github.io/prosetup/gear/logitech-g840.html): 마우스패드, LCK 6명, 장패드(약 900x400mm) · 천 재질 · 두께 3mm
-- [레이저 Huntsman V3 Pro TKL(Razer Huntsman V3 Pro TKL)](https://dugout26.github.io/prosetup/gear/razer-huntsman-v3-pro-tkl.html): 키보드, LCK 2명·VCT 4명, 텐키리스 · 유선 · 아날로그 광축 · 작동점 조절 · 래피드 트리거
 - [로지텍 G Pro Wireless(Logitech G Pro Wireless)](https://dugout26.github.io/prosetup/gear/logitech-g-pro-wireless.html): 마우스, LCK 5명·VCT 1명, 80g · 무선(LIGHTSPEED) · HERO 센서 · 좌우 버튼 교체형
+- [레이저 Huntsman V3 Pro TKL(Razer Huntsman V3 Pro TKL)](https://dugout26.github.io/prosetup/gear/razer-huntsman-v3-pro-tkl.html): 키보드, LCK 2명·VCT 4명, 텐키리스 · 유선 · 아날로그 광축 · 작동점 조절 · 래피드 트리거
 - [스틸시리즈 QcK Heavy(SteelSeries QcK Heavy)](https://dugout26.github.io/prosetup/gear/steelseries-qck-heavy.html): 마우스패드, VCT 6명
 - [에이수스 ROG Delta II(ASUS ROG Delta II)](https://dugout26.github.io/prosetup/gear/asus-rog-delta-ii.html): 헤드셋, VCT 6명
 - [아티산 Ninja FX Zero Mid(Artisan Ninja FX Zero Mid)](https://dugout26.github.io/prosetup/gear/artisan-ninja-fx-zero-mid.html): 마우스패드, VCT 6명

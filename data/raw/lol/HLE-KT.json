@@ -1,21 +1,10 @@
 {
   "as_of": "2026-08-05",
-  "roster_check_2027": {"checked": "2026-11-17", "note": "2026-11-17 FA 개장. KT: Effort 계약 종료 오피셜(Ghost·Jiwoo·Sylvie·Pollu 포함) → Effort는 FA 블록(INTL.json INTLFA)으로 이동. Cuzz도 KT 결별 오피셜(2026-11-17 18:00, 구단 SNS) → FA 블록으로 이동. HLE 2027 계약 확인: Zeka, Gumayusi, Delight / 미정: Zeus, Kanavi · KT 2027 계약 확인: PerfecT, Bdd / 미정: FenRir / 공석: 정글·서포터. 루머 미반영."},
+  "roster_check_2027": {"checked": "2026-11-19", "note": "2026-11-19 HLE: Zeus 계약 종료 오피셜 → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. 2026-11-17 FA 개장. KT: Effort 계약 종료 오피셜(Ghost·Jiwoo·Sylvie·Pollu 포함) → Effort는 FA 블록(INTL.json INTLFA)으로 이동. Cuzz도 KT 결별 오피셜(2026-11-17 18:00, 구단 SNS) → FA 블록으로 이동. HLE 2027 계약 확인: Zeka, Gumayusi, Delight / 미정: Zeus, Kanavi · KT 2027 계약 확인: PerfecT, Bdd / 미정: FenRir / 공석: 정글·서포터. 루머 미반영."},
   "HLE": {
     "roster_note": "2026 로스터 확인됨: Zeus(탑)·Kanavi(정글)·Zeka(미드)·Gumayusi(원딜)·Delight(서폿).",
     "roster_source": "https://www.sheepesports.com/en/articles/lol-hanwha-life-esports-completed-2026-lck-roster/en",
     "players": [
-      {"nickname": "Zeus", "name_kr": "최우제", "role": "Top",
-       "gear": {
-         "mouse": {"value": "Razer Viper V3 Pro", "source": "https://specs.gg/Zeus", "confidence": "low", "note": "prosettings.net은 DeathAdder V2 Pro(T1 시절 추정)로 상충"},
-         "keyboard": {"value": "Razer Huntsman V3 Pro TKL", "source": "https://specs.gg/Zeus", "confidence": "low", "note": "prosettings.net은 Corsair K70 TKL로 상충"},
-         "monitor": {"value": "LG UltraGear 25GR75FG", "source": "https://prosettings.net/lists/league-of-legends/", "confidence": "medium"},
-         "headset": {"value": "Razer BlackShark V3 Pro", "source": "https://specs.gg/Zeus", "confidence": "medium"},
-         "mousepad": {"value": "Razer Gigantus V2", "source": "https://specs.gg/Zeus", "confidence": "medium"}},
-       "settings": {
-         "dpi": {"value": 800, "source": "https://specs.gg/Zeus", "confidence": "medium"},
-         "in_game_sens": {"value": 55, "source": "https://specs.gg/Zeus", "confidence": "medium"},
-         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Zeus", "confidence": "medium"}}},
       {"nickname": "Kanavi", "name_kr": "서진혁", "role": "Jungle",
        "gear": {
          "mouse": {"value": "Logitech G PRO X Superlight 2 White", "source": "https://specs.gg/Kanavi", "confidence": "low", "note": "prosettings.net은 DeathAdder V4 Pro White로 상충"},
