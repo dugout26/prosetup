@@ -473,6 +473,7 @@ def page(g, title, desc, body, canonical, jsonld=None, noindex=False, crumbs=Non
 {f'<meta name="google-site-verification" content="{VERIFY_GOOGLE}">' if VERIFY_GOOGLE else ''}
 {f'<meta name="naver-site-verification" content="{VERIFY_NAVER}">' if VERIFY_NAVER else ''}
 {f'<script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>' if jsonld else ''}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6728704748176389" crossorigin="anonymous"></script>
 <style>{CSS}</style>
 </head>
 <body>
