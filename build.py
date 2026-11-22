@@ -349,6 +349,9 @@ tr.dead { opacity: .55; }
 .slot .sh { display: flex; justify-content: space-between; font-weight: 900; font-size: 13px; margin-bottom: 6px; }
 .st { font-size: 10.5px; padding: 1px 8px; border-radius: 999px; }
 .st.ok { background: #51CF66; color: #0E1117; }
+.slot.geo { border-color: rgba(116,192,252,.45); }
+.st.geo { background: #74C0FC; color: #0E1117; }
+.sp.geo b::before { content: "🔵 "; }
 .st.tbd { color: #FFE066; border: 1px solid rgba(255,224,102,.5); }
 .st.empty { color: #868E96; border: 1px dashed #495057; }
 .sp { padding: 5px 0; border-top: 1px dashed var(--line); font-size: 13.5px; }
@@ -930,6 +933,14 @@ def build_guides(g, teams, usage, known):
 
 POS = [("top", "탑"), ("jungle", "정글"), ("mid", "미드"), ("adc", "원딜"), ("support", "서포터")]
 
+def is_geo(x):
+    """거피셜 = 아직 '보도' 단계인 영입 중 구단 발표만 남았다고 볼 만한 것.
+    기본: 매체 보도(커뮤니티 썰 제외). transfers.json 항목에 "geo": true/false 를 두면 그 값이 우선."""
+    if "geo" in x:
+        return bool(x["geo"])
+    return x.get("status") == "보도" and x.get("tier") != "community"
+
+
 def build_teams(g, teams, tmeta, usage):
     """팀 페이지: 다음 시즌 포지션별 칸(확정·거취 미정·루머·공석) + 현 로스터 장비."""
     data = (load_json("data/transfers.json") or {}).get(g["key"])
@@ -958,16 +969,24 @@ def build_teams(g, teams, tmeta, usage):
     off = data.get("official", [])
     leaving = {x["nickname"].casefold() for x in off
                if x.get("from") and x.get("to") != x.get("from") and x.get("type") in ("이적", "방출", "은퇴")}
+    # 거피셜로 다른 팀행이 굳어진 선수는 원소속팀에서 '확정'으로 세지 않는다
+    geo_out = {}
+    for x in data.get("reports", []):
+        if is_geo(x) and x.get("from") and x.get("to") and x.get("to") != x.get("from"):
+            k = (x["nickname"].casefold(), x["from"])
+            geo_out[k] = max(geo_out.get(k, ""), str(x.get("date", "")))
     urls = []
     order = [c for c in (g.get("team_order") or []) if c in teams]
     for code in order:
         tinfo = tmeta.get(code, {"kr": code, "color": "#888"})
-        slots = {r: {"ok": [], "pending": [], "rumor": [], "comm": [], "out": []} for r, _ in POS}
+        slots = {r: {"ok": [], "geo": [], "pending": [], "rumor": [], "comm": [], "out": []} for r, _ in POS}
         for x in data.get("stay", []):
-            if x["team"] == code and x["nickname"].casefold() not in leaving and role_of(x) in slots:
+            if (x["team"] == code and x["nickname"].casefold() not in leaving and role_of(x) in slots
+                    and (x["nickname"].casefold(), code) not in geo_out):
                 slots[role_of(x)]["ok"].append((x["nickname"], x.get("status", "계약 확인"), x.get("source")))
         for x in off:
-            if x.get("to") == code and x.get("type") in ("이적", "영입", "재계약") and role_of(x) in slots:
+            if (x.get("to") == code and x.get("type") in ("이적", "영입", "재계약") and role_of(x) in slots
+                    and not (x["type"] == "재계약" and str(x.get("date", "")) < geo_out.get((x["nickname"].casefold(), code), ""))):
                 lab = "재계약" if x["type"] == "재계약" else f'{x["type"]} 오피셜'
                 if not any(n.casefold() == x["nickname"].casefold() for n, _, _ in slots[role_of(x)]["ok"]):
                     slots[role_of(x)]["ok"].append((x["nickname"], lab, x.get("source")))
@@ -981,26 +1000,33 @@ def build_teams(g, teams, tmeta, usage):
             if cm and not (x.get("source") and x.get("outlet")):
                 continue
             if x.get("to") == code:
-                slots[role_of(x)]["comm" if cm else "rumor"].append(
+                kind = "geo" if is_geo(x) else ("comm" if cm else "rumor")
+                if kind == "geo" and any(n.casefold() == x["nickname"].casefold() for n, _, _ in slots[role_of(x)]["ok"]):
+                    continue
+                slots[role_of(x)][kind].append(
                     (x["nickname"], f'{tk(x.get("from", ""))}에서 · {x.get("outlet", "")}', x.get("source")))
             elif x.get("from") == code:
-                slots[role_of(x)]["out"].append((x["nickname"], f'{tk(x.get("to", ""))}행 {"썰" if cm else "보도"} · {x.get("outlet", "")}', x.get("source")))
+                slots[role_of(x)]["out"].append((x["nickname"], f'{tk(x.get("to", ""))}행 {"썰" if cm else ("거피셜" if is_geo(x) else "보도")} · {x.get("outlet", "")}', x.get("source")))
 
         def chip(n, sub, src, cls):
             s_ = f' <a class="src" href="{esc(src)}">근거</a>' if src else ""
             return f'<div class="sp {cls}"><b>{pl_link(n)}</b><small>{esc(sub)}{s_}</small></div>'
 
-        cards, n_ok = "", 0
+        cards, n_ok, n_geo = "", 0, 0
         for r, rk in POS:
             sl = slots[r]
             if sl["ok"]:
                 n_ok += 1
                 state, scls = "확정", "ok"
+            elif sl["geo"]:
+                n_geo += 1
+                state, scls = "거피셜", "geo"
             elif sl["pending"] or sl["rumor"] or sl["comm"]:
                 state, scls = "미정", "tbd"
             else:
                 state, scls = "공석", "empty"
             inner = "".join(chip(n, sub, src, "ok") for n, sub, src in sl["ok"])
+            inner += "".join(chip(n, "거피셜 — " + sub, src, "geo") for n, sub, src in sl["geo"])
             inner += "".join(chip(n, sub, src, "pend") for n, sub, src in sl["pending"])
             inner += "".join(chip(n, "이적설 — " + sub, src, "out") for n, sub, src in sl["out"])
             inner += "".join(chip(n, "보도 — " + sub, src, "rum") for n, sub, src in sl["rumor"])
@@ -1028,14 +1054,15 @@ def build_teams(g, teams, tmeta, usage):
                     f'<th>헤드셋</th></tr></thead><tbody>{rows}</tbody></table></div>')
         name = tinfo["kr"]
         title = f"{name} {season} 로스터·선수 장비 — 확정·루머·공석 포지션별 정리"
-        desc = (f"{name} {season} 시즌 로스터 현황(확정 {n_ok}/5)과 이적 루머, 선수별 마우스·키보드·모니터·헤드셋을 "
+        geo_txt = f" · 거피셜 포함 {n_ok + n_geo}/5" if n_geo else ""
+        desc = (f"{name} {season} 시즌 로스터 현황(확정 {n_ok}/5{geo_txt})과 이적 루머, 선수별 마우스·키보드·모니터·헤드셋을 "
                 f"포지션별로 정리했습니다. {data['checked']} 갱신.")
         body = f"""<div class="crumb"><a href="{gurl(g, '')}">{esc(g['short'])} 홈</a> › <a href="{gurl(g, 'stove-' + season + '.html')}">이적시장</a> › {esc(name)}</div>
-<div class="phead"><h1>{esc(name)} {season} 로스터·선수 장비</h1><span class="rolechip" style="color:{tinfo['color']}">{season} 로스터 확정 {n_ok}/5</span></div>
-<p class="sub">{data['checked']} 기준. <b>확정</b>=계약 확인·오피셜, <b>미정</b>=기존 선수 거취 미정 또는 보도·썰만 있음, <b>공석</b>=발표된 선수 없음.</p>
+<div class="phead"><h1>{esc(name)} {season} 로스터·선수 장비</h1><span class="rolechip" style="color:{tinfo['color']}">{season} 로스터 확정 {n_ok}/5{geo_txt}</span></div>
+<p class="sub">{data['checked']} 기준. <b>확정</b>=계약 확인·오피셜, <b>거피셜</b>=구단 발표 전이지만 언론·소식통 보도로 사실상 굳어진 영입, <b>미정</b>=기존 선수 거취 미정 또는 보도·썰만 있음, <b>공석</b>=발표된 선수 없음.</p>
 <section><h2>{season} 포지션별 로스터</h2><div class="slots">{cards}</div></section>
 <section><h2>현 로스터 장비</h2>{gear_tbl}</section>
-<p class="note">🟡 보도는 매체 기사, 🟠 썰은 커뮤니티·방송 발언(미확인)이며 구단 공식 발표 전까지 확정이 아닙니다.
+<p class="note">🔵 거피셜은 매체 보도 기준이라 공식 발표 때 바뀔 수 있습니다. 🟡 보도는 매체 기사, 🟠 썰은 커뮤니티·방송 발언(미확인)이며 구단 공식 발표 전까지 확정이 아닙니다.
 다른 팀: {" · ".join(f'<a href="{gurl(g, "teams", c.lower() + ".html")}">{esc(tmeta.get(c, {}).get("kr", c))}</a>' for c in order if c != code)}</p>"""
         jsonld = {"@context": "https://schema.org", "@type": "WebPage", "name": title, "dateModified": data["checked"],
                   "about": {"@type": "SportsTeam", "name": name}}
