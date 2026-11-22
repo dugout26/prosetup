@@ -2,8 +2,8 @@
  "_note": "이적시장 탭 데이터. official=구단·리그 공식 발표(이적·영입·재계약), reports=언론·소식통 보도(루머 포함, 매체명·링크 필수, 커뮤니티 찌라시 금지). 보도가 오피셜로 확정되면 official로 옮기고 reports의 status를 '오피셜 확정'으로, 무산되면 '무산'으로. pending=거취 미정, stay=2027 계약 확인. reports·official의 role(top/jungle/mid/adc/support)은 팀 페이지 포지션 칸 배치에 쓰인다. coaches=감독·코치 계약 현황(nickname,name_kr,role,team,status,source — 출처 없는 항목은 렌더하지 않음). updates=상단 접이식 업데이트 기록({at:'YYYY-MM-DD HH:MM',text}), checked_at=상단 '최근 갱신' 표기.",
  "lol": {
   "season": "2027",
-  "checked": "2026-11-19",
-  "checked_at": "2026-11-19 22:30",
+  "checked": "2026-11-22",
+  "checked_at": "2026-11-22 20:35",
   "fa_open": "2026-11-17",
   "fa_open_time": "09:00",
   "stay": [
@@ -174,15 +174,45 @@
     "team": "DNS",
     "source": "https://www.inven.co.kr/webzine/news/?news=323614&site=lol",
     "status": "영입 오피셜(2026-11-19) · 2028년까지"
+   },
+   {
+    "nickname": "ShowMaker",
+    "team": "DK",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323623&site=lol",
+    "status": "재계약 오피셜(2026-11-19)"
+   },
+   {
+    "nickname": "Smash",
+    "team": "DK",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323623&site=lol",
+    "status": "재계약 오피셜(2026-11-19)"
+   },
+   {
+    "nickname": "Pyosik",
+    "team": "NS",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323617&site=lol",
+    "status": "영입 오피셜(2026-11-19)"
+   },
+   {
+    "nickname": "Andil",
+    "team": "NS",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323617&site=lol",
+    "status": "영입 오피셜(2026-11-19)"
+   },
+   {
+    "nickname": "Doran",
+    "team": "DK",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323666&site=lol",
+    "status": "영입 오피셜(2026-11-20)"
+   },
+   {
+    "nickname": "Kanavi",
+    "team": "DK",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323666&site=lol",
+    "status": "영입 오피셜(2026-11-20)"
    }
   ],
   "pending": [
-   {
-    "nickname": "Doran",
-    "team": "T1",
-    "source": "https://x.com/T1LoL/status/2123340508978454951",
-    "status": "T1 결별 오피셜(2026-11-19, T1 공식 X) · FA · 행선지 미발표"
-   },
    {
     "nickname": "Kiin",
     "team": "GEN",
@@ -202,12 +232,6 @@
     "status": "HLE 계약 종료 오피셜(2026-11-19) · FA · T1 복귀 유력 보도, T1 공식 발표 전"
    },
    {
-    "nickname": "Kanavi",
-    "team": "HLE",
-    "source": "https://www.inven.co.kr/webzine/news/?news=323583&site=lol",
-    "status": "HLE 계약 종료 오피셜(2026-11-19) · FA · 행선지 미발표"
-   },
-   {
     "nickname": "FenRir",
     "team": "KT",
     "source": "https://esportstransfer.com/lol/fa/lck",
@@ -224,18 +248,6 @@
     "team": "DK",
     "source": "https://esportstransfer.com/lol/fa/lck",
     "status": "만료 명단에 없음 · 젠지 합류 소식통 보도(Sheep Esports, 11/19), 양 구단 공식 발표 전"
-   },
-   {
-    "nickname": "ShowMaker",
-    "team": "DK",
-    "source": "https://esportstransfer.com/lol/fa/lck",
-    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
-   },
-   {
-    "nickname": "Smash",
-    "team": "DK",
-    "source": "https://esportstransfer.com/lol/fa/lck",
-    "status": "계약 만료(2026-11-16) · 2027 거취 미발표"
    },
    {
     "nickname": "Career",
@@ -281,12 +293,6 @@
    },
    {
     "nickname": "Aiming",
-    "team": "KRX",
-    "source": "https://www.inven.co.kr/webzine/news/?news=323450",
-    "status": "계약 종료 오피셜(2026-11-17) · FA"
-   },
-   {
-    "nickname": "Andil",
     "team": "KRX",
     "source": "https://www.inven.co.kr/webzine/news/?news=323450",
     "status": "계약 종료 오피셜(2026-11-17) · FA"
@@ -876,6 +882,72 @@
     "detail": "DN 수퍼스 합류 · 2028년까지 · 구단 공식 SNS 발표를 인벤이 보도",
     "source": "https://www.inven.co.kr/webzine/news/?news=323614&site=lol",
     "role": "support"
+   },
+   {
+    "date": "2026-11-19",
+    "nickname": "ShowMaker",
+    "name_kr": "허수",
+    "type": "재계약",
+    "from": "DK",
+    "to": "DK",
+    "detail": "디플러스 기아 공식 SNS 발표(11/19)를 인벤이 보도 · 계약기간 미공개",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323623&site=lol",
+    "role": "mid"
+   },
+   {
+    "date": "2026-11-19",
+    "nickname": "Smash",
+    "name_kr": "신금재",
+    "type": "재계약",
+    "from": "DK",
+    "to": "DK",
+    "detail": "디플러스 기아 공식 SNS 발표(11/19)를 인벤이 보도 · 계약기간 미공개",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323623&site=lol",
+    "role": "adc"
+   },
+   {
+    "date": "2026-11-19",
+    "nickname": "Pyosik",
+    "name_kr": "홍창현",
+    "type": "영입",
+    "from": "FA",
+    "to": "NS",
+    "detail": "농심 레드포스 공식 SNS 발표(11/19)를 인벤이 보도 · 계약기간 미공개",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323617&site=lol",
+    "role": "jungle"
+   },
+   {
+    "date": "2026-11-19",
+    "nickname": "Andil",
+    "name_kr": "문관빈",
+    "type": "영입",
+    "from": "FA",
+    "to": "NS",
+    "detail": "농심 레드포스 공식 SNS 발표(11/19)를 인벤이 보도 · 계약기간 미공개",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323617&site=lol",
+    "role": "support"
+   },
+   {
+    "date": "2026-11-20",
+    "nickname": "Doran",
+    "name_kr": "최현준",
+    "type": "영입",
+    "from": "FA",
+    "to": "DK",
+    "detail": "디플러스 기아 공식 SNS 발표(11/20)를 인벤이 보도 · 계약기간 미공개",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323666&site=lol",
+    "role": "top"
+   },
+   {
+    "date": "2026-11-20",
+    "nickname": "Kanavi",
+    "name_kr": "서진혁",
+    "type": "영입",
+    "from": "FA",
+    "to": "DK",
+    "detail": "디플러스 기아 공식 SNS 발표(11/20)를 인벤이 보도 · 계약기간 미공개",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323666&site=lol",
+    "role": "jungle"
    }
   ],
   "reports": [
@@ -964,7 +1036,7 @@
     "name_kr": "최우제",
     "from": "HLE",
     "to": "T1",
-    "outlet": "글로벌이코노믹 (esport.vision·bo3.gg 인용) · Strafe · COOL-STYLE 潮流生活網 (대만 매체, 한국 커뮤니티 썰 인용) · 新浪新闻 (直播吧 인용, 한국 커뮤니티발) · udn 遊戲角落 希洛 (대만 매체, 한국 커뮤니티 썰 인용) · Bongdaplus (베트남 매체, Strafe·웨이보 인용) · 소영 (에펨코리아 LoL 게시판, '27.35' 썰쟁이 글 정리) · 수노밍쿠 (X, 11/17) · Mnmmnmmm (에펨코리아 LoL 게시판, 썰/루머, 초성 글, 11/17) · 뉴스워커 (11/17) · 멘탈붕괴z (인벤 LoL 게시판, SOOP 프로필 목격 글, 11/17) · 롯데우승하는날 (에펨코리아 LoL 게시판, 썰/루머, 타 갤러리 썰쟁이 글 캡처 전달, 11/17) · 듀마노 (썰쟁이, SBS정우영이 에펨코리아 LoL 게시판 썰/루머에 전달, 11/17) · 친칠라이츄 (인벤 LoL 게시판, 11/17) · 롤갤러(49.163) (디시 리그 오브 레전드 갤러리, 11/17) · 롤마노 (썰쟁이, 속기아저씨·Foxy9가 에펨코리아 LoL 게시판에 방송 클립 전달, 11/17) · sorrowdown (인벤 LoL 게시판, 유력 라인업 정리, 11/17) · ㅌㄹㅁㄹ (에펨코리아 LoL 게시판, 찌라시 정리글, 11/18 07:00) · 칰붕이(221.158) (디시 한화생명e스포츠 마이너 갤러리, NXGN·닉추천좀이 에펨코리아 LoL 게시판에 전달, 11/18) · 엑스포츠뉴스 (단독, 유희은 기자, 11/18) · 진일보 (정성현 기자, 11/18) · 초거대상혁 (에펨코리아 LoL 게시판, 썰/루머, 제보 캡처 게시, 11/18) · Mnmmnmmm (에펨코리아 LoL 게시판, 썰/루머, 초성 글, 11/18) · 동그랑동그랑 (에펨코리아 LoL 게시판, 땅꼬맹이가 글 캡처 모음으로 전달, 11/18 12:50) · 감자vs고구마 (에펨코리아 LoL 게시판, 썰/루머, 인스타그램 게시물 전달, 11/18 13:02) · 마리마리모 (에펨코리아 LoL 게시판, 찌라시 통합 팀 현황 정리글, 11/18 15:33) · 위키트리(전남일보·뉴스워커 인용, \"T1 복귀설이 유력하게 거론\", 11/18) · NOWnews (대만 매체, 엑스포츠뉴스 인용 \"T1 복귀 가능성 가장 높다\", 11/18 13:29) · 인벤 (11/19 09:50, \"T1 리턴하나\", 한화생명 계약 종료 발표 인용) · 스윗하트피즈 (인벤 유저 정보 게시판, \"[쉽피셜] T1, Zeus와 3년 계약\", 11/19 04:08) · Sheep Esports (소식통, \"Zeus reaches three-year agreement with T1\", 11/19) · 루리웹 (11/19, \"T1 2029년까지 3년 계약 합의\" 보도 전재) · 인사이트 (11/17~18) · 달님달님 (인벤 LoL 게시판, 11/19 11:19)",
+    "outlet": "글로벌이코노믹 (esport.vision·bo3.gg 인용) · Strafe · COOL-STYLE 潮流生活網 (대만 매체, 한국 커뮤니티 썰 인용) · 新浪新闻 (直播吧 인용, 한국 커뮤니티발) · udn 遊戲角落 希洛 (대만 매체, 한국 커뮤니티 썰 인용) · Bongdaplus (베트남 매체, Strafe·웨이보 인용) · 소영 (에펨코리아 LoL 게시판, '27.35' 썰쟁이 글 정리) · 수노밍쿠 (X, 11/17) · Mnmmnmmm (에펨코리아 LoL 게시판, 썰/루머, 초성 글, 11/17) · 뉴스워커 (11/17) · 멘탈붕괴z (인벤 LoL 게시판, SOOP 프로필 목격 글, 11/17) · 롯데우승하는날 (에펨코리아 LoL 게시판, 썰/루머, 타 갤러리 썰쟁이 글 캡처 전달, 11/17) · 듀마노 (썰쟁이, SBS정우영이 에펨코리아 LoL 게시판 썰/루머에 전달, 11/17) · 친칠라이츄 (인벤 LoL 게시판, 11/17) · 롤갤러(49.163) (디시 리그 오브 레전드 갤러리, 11/17) · 롤마노 (썰쟁이, 속기아저씨·Foxy9가 에펨코리아 LoL 게시판에 방송 클립 전달, 11/17) · sorrowdown (인벤 LoL 게시판, 유력 라인업 정리, 11/17) · ㅌㄹㅁㄹ (에펨코리아 LoL 게시판, 찌라시 정리글, 11/18 07:00) · 칰붕이(221.158) (디시 한화생명e스포츠 마이너 갤러리, NXGN·닉추천좀이 에펨코리아 LoL 게시판에 전달, 11/18) · 엑스포츠뉴스 (단독, 유희은 기자, 11/18) · 진일보 (정성현 기자, 11/18) · 초거대상혁 (에펨코리아 LoL 게시판, 썰/루머, 제보 캡처 게시, 11/18) · Mnmmnmmm (에펨코리아 LoL 게시판, 썰/루머, 초성 글, 11/18) · 동그랑동그랑 (에펨코리아 LoL 게시판, 땅꼬맹이가 글 캡처 모음으로 전달, 11/18 12:50) · 감자vs고구마 (에펨코리아 LoL 게시판, 썰/루머, 인스타그램 게시물 전달, 11/18 13:02) · 마리마리모 (에펨코리아 LoL 게시판, 찌라시 통합 팀 현황 정리글, 11/18 15:33) · 위키트리(전남일보·뉴스워커 인용, \"T1 복귀설이 유력하게 거론\", 11/18) · NOWnews (대만 매체, 엑스포츠뉴스 인용 \"T1 복귀 가능성 가장 높다\", 11/18 13:29) · 인벤 (11/19 09:50, \"T1 리턴하나\", 한화생명 계약 종료 발표 인용) · 스윗하트피즈 (인벤 유저 정보 게시판, \"[쉽피셜] T1, Zeus와 3년 계약\", 11/19 04:08) · Sheep Esports (소식통, \"Zeus reaches three-year agreement with T1\", 11/19) · 루리웹 (11/19, \"T1 2029년까지 3년 계약 합의\" 보도 전재) · 인사이트 (11/17~18) · 달님달님 (인벤 LoL 게시판, 11/19 11:19) · 인벤 (11/19, 복수 e스포츠 관계자 \"T1 리턴행 매우 유력\")",
     "source": "https://www.g-enews.com/article/ICT/2026/11/20261117074452186038169980b3_1",
     "role": "top",
     "note": "해외 매체발 2+1년(3년차 선수옵션) 계약 합의설 · 익명 제보 기반이라 체결 여부 미확인 · T1 관계자 \"계약이 확정되면 별도로 공지\" · 앞서 아티브뉴스는 'T1 복귀 확정설'은 사실이 아니라고 보도(11/3, 위키트리 인용) · 新浪(11/17): 한화의 2년 재계약안을 거절했고 T1이 3년 계약을 제시했다는 한국 커뮤니티발 이야기 전달 · 에펨코리아 소영(11/17 14:50): 썰쟁이 '27.35'가 제우스 2년 계약 복귀를 말했다고 정리(원 글은 대부분 삭제돼 캡처만 남았다고 함) · X 수노밍쿠(11/17): 제우스의 SOOP 방송국 채널 엠블럼이 T1으로 바뀌었다고 전함 — 작성자도 \"해킹이 아니라면\"이라고 단서, T1 공식 발표는 아직 없음 · 에펨코리아 Mnmmnmmm(11/17 16:21): 초성으로 \"ㅈㅇㅅ-ㅌㅇ\"라고만 적음(제우스-티원으로 읽히지만 해석은 추정) — 신규 계정 글, 비추천 다수 · 뉴스워커(11/17): 인벤·롤갤에서 제우스 복귀설이 번졌지만 '정작 티원은 침묵 중'이라고 보도 · 인벤 멘탈붕괴z(11/17 17:24): \"soop 숲에 제우스 프로필 티원인데?\"라며 캡처 게시 — 구단 발표는 아님 · 에펨코리아 롯데우승하는날(11/17 19:57, https://www.fmkorea.com/10566744105): 타 갤러리 썰쟁이 글 캡처를 전달하며 \"제우스 확정이냐는 말은 제우스 티원 확정이냐는 말\"이라고 적음 — 전달자도 \"말 그대로 믿거나 말거나\", 틀린 내용도 많다고 단서 · 같은 시각 도는 '제우스-캐니언 한화' 썰과 충돌 · 에펨코리아 SBS정우영(11/17 21:12, https://www.fmkorea.com/10567084180): \"그래서 티원 탑 누구냐\"는 질문에 대한 썰쟁이 듀마노 답변 캡처 게시(본문은 이미지뿐) — 댓글은 답변을 '백(back)=리턴', 즉 제우스 복귀로 해석하지만 해석은 추정, T1 발표는 없음 · 인벤 친칠라이츄(11/17 22:08, https://www.inven.co.kr/board/lol/4625/4288428): \"티원팬들아 제우스 리턴 확정이다\" — 본문은 \"돌아가는 판이 그렇네\" 한 줄뿐, 근거 제시 없음 · 디시 롤갤러(49.163)(11/17 22:09, https://gall.dcinside.com/board/view/?id=leagueoflegends6&no=16741031): \"[거피셜] 제우스 T1 확정인듯\" — 한화가 제우스를 못 잡았다는 썰쟁이 글을 근거로 한 추측, T1 발표는 없음 · 에펨코리아 속기아저씨(11/17 22:23, https://www.fmkorea.com/10567359220)·Foxy9(https://www.fmkorea.com/10567360776): 썰쟁이 롤마노가 방송에서 \"누가 T1 제우스 아니라고 그랬어, 아무 말도 안 했는데\"라고 말한 클립 전달 — 확정 발언은 아니고 댓글도 \"확대 해석\"이라는 반응, Foxy9도 \"해석에 맡김\" · 인벤 sorrowdown(11/17 22:48, https://www.inven.co.kr/board/lol/4625/4288441): \"일단 유력\"이라며 \"기샤쵸룰듀 / 제오페페케 / 시캐제구클\" 세 줄을 적음 — 젠지(기인·샤벨·쵸비·룰러·듀로)·T1(제우스·오너·페이커·페이즈·케리아)·한화(시우·캐니언·제카·구마유시·클라우드)로 읽히지만 글쓴이는 풀이·출처를 적지 않음, 해석은 추정 · 같은 날 디시 지인발 \"T1 재계약 확정\" 초성 글(https://gall.dcinside.com/board/view/?id=leagueoflegends6&no=16740625)과 충돌 · 에펨코리아 ㅌㄹㅁㄹ 정리(11/18 07:00, https://www.fmkorea.com/10568288697): '제우스 T1 리턴 유력'(펨코 '끝났어' 썰쟁이·14년차 썰쟁이·동글라밍) · 11/18 08:30 기준 T1 공식 발표는 없음 — 디시에 올라온 '[T1 오피셜] Welcome Home, Zeus' 글은 구단 발표가 아닌 이용자 게시물 · 디시 한화생명e스포츠 마이너 갤러리 칰붕이(221.158)(11/18 09:45, https://gall.dcinside.com/mgallery/board/view/?id=hle&no=1139050): \"암튼 뭐 아쉬워도 그냥 그런갑다 해라\"라며 하루이틀 안에 발표가 날 것이라는 취지로 적음 — 선수 이름은 쓰지 않음 · 에펨코리아 NXGN(11/18 09:55, https://www.fmkorea.com/10568562764)이 \"한마갤 썰쟁이 ) 탑은 어제밤부터 정리됐다\"는 제목으로 캡처 전달, 닉추천좀(https://www.fmkorea.com/10568582079)이 옮긴 댓글 문답은 \"진짜 리턴각임?\" \"각이 아니라 이제 끝\" · \"회사들 사이에서 이건 그냥 재계약이네 했던 게 주말\" — 제우스의 T1 복귀로 읽히지만 익명 글이고 근거 제시 없음, 전달자도 \"믿거나 말거나\" · 10:10 기준 T1·한화 공식 발표는 없음 · 엑스포츠뉴스 단독(11/18 10:41, https://www.xportsnews.com/article/2220591): 업계 관계자에 따르면 제우스가 17일 FA가 된 뒤 여러 팀의 제안을 받았고 18일 오전 최종 결정을 내린 것으로 알려졌으며 \"T1 합류가 유력한 것으로 전해졌다\" — 계약 조건은 기사에 없음, T1·한화 공식 발표는 아직 없음 · 진일보(11/18 11:07, https://www.jnilbo.com/news/articleView.html?idxno=90000083953): \"e스포츠 업계 등에 따르면\" 복수 구단의 제안을 받은 뒤 \"T1 복귀 쪽으로 가닥을 잡은 것으로 전해졌다\" · 구단 공식 발표는 아직 없다고 명시 · 에펨코리아 초거대상혁(11/18 11:18, https://www.fmkorea.com/10568822320): \"나도 받은 거 시원하게 까자면\"이라며 제보 캡처 1장 게시, \"1년 가까이 묵언수행한 거 이제 허락받고 올림\" — 댓글은 제우스 리턴 이야기가 일찍부터 돌았다는 뜻으로 해석, 캡처 내용은 직접 확인하지 못함 · Mnmmnmmm(11/18 12:00, https://www.fmkorea.com/10568991950): 초성으로 \"ㅌㅇ ㅈㅇㅅ 마지막에 위험했음\", \"ㅎㅎ에서 마지막에 역대 최고 대우 제시했어\"라고 적음(T1 제우스·한화로 읽히지만 해석은 추정) — 신규 계정 글, 비추천 다수 · 12:10 기준 T1·한화 공식 발표는 없음 · 에펨코리아 땅꼬맹이(11/18 12:50, https://www.fmkorea.com/10569137072) 캡처 모음: 썰쟁이 11/17 20:00 글(https://www.fmkorea.com/10566759448) \"낼 오전중에 도란 제우스 오피셜뜰듯 · 제우스 3년 · 2+1, 3년 줄다리기하다가 3년확정\" — 비추천이 더 많았던 글, 11/18 13:40 현재 T1 공식 발표 없음 · 2+1년 합의설과 계약기간이 다름 · 에펨코리아 감자vs고구마(11/18 13:02, https://www.fmkorea.com/10569193551): \"ZEUS최우제, T1 복귀유력\"이라며 인스타그램 게시물 링크 전달 — 댓글에 따르면 엑스포츠뉴스 기사를 인용한 게시물, 새 내용은 없음 · 14:20 기준 T1·한화 공식 발표는 없음 · 인벤(11/19): 한화생명 계약 종료 공식 발표, T1 복귀 매우 유력하나 T1 공식 발표 없음 · 인벤 정보 게시판 쉽피셜: 3년 계약설 · Sheep Esports가 소식통 인용으로 3년 계약 합의 보도(기존 2+1년 보도와 차이) · T1·HLE 공식 계약 발표 전 · 인벤 달님달님(11/19 11:19, https://www.inven.co.kr/board/lol/4625/4289407): \"우제 티원 3년 계약이라는데?\" — 출처 링크 없음, 미확인",
@@ -984,7 +1056,7 @@
     "role": "top",
     "note": "T1과 상호 계약해지설 · 에펨코리아 땅꼬맹이(11/18 12:50, https://www.fmkorea.com/10569137072) 캡처 모음: 썰쟁이 11/17 11:42 글(https://www.fmkorea.com/10565010761) \"도란은 어짜피 재계약안함\" — T1 탑 확률을 '제우스 60 · 기인 30 · 시우 10'으로 적은 글, 근거 제시 없음 · 도란 T1 재계약 추측 글과 충돌",
     "grade": "썰",
-    "status": "보도",
+    "status": "오피셜 확정",
     "seen_at": "2026-11-18 13:40"
    },
    {
@@ -998,7 +1070,7 @@
     "role": "top",
     "note": "도란·카나비 KRX 확정설 · KRX 계획 파토 반박 썰도 있음 · KRX는 11/17 기존 1군 전원 계약 종료 오피셜 · 에펨코리아 조준(11/18 06:50, https://www.fmkorea.com/10568268827): 도란 팝 글 직후 썰쟁이가 \"상체 돈까스면(도카스) 직관 거의 못가겠네??\"라고 적었다고 전달 — 팀명은 직접 언급하지 않음 · 에펨코리아 ㅌㄹㅁㄹ 정리(11/18 07:00, https://www.fmkorea.com/10568288697): '도란 thank you 글은 KRX 이적 확정 뒤에 뜰 듯'(동그랑동그랑 썰 인용) · 위키트리(11/18 15:31) \"키움 DRX행 가능성이 제기되고 있다\"(뉴스워커) 보도로 🟡 상향 · 인벤 귤맛(11/19 11:15, https://www.inven.co.kr/board/lol/4625/4289397): \"도란 KRX 거의 확정이면\" — 근거 없는 커뮤니티 글, 미확인",
     "grade": "보도",
-    "status": "보도",
+    "status": "무산",
     "seen_at": "2026-11-19 18:40"
    },
    {
@@ -1013,7 +1085,7 @@
     "role": "jungle",
     "note": "도란·카나비 KRX 확정설 · KRX 계획 파토 반박 썰도 있음 · KRX는 11/17 기존 1군 전원 계약 종료 오피셜 · 에펨코리아 조준(11/18 06:50, https://www.fmkorea.com/10568268827): 도란 팝 글 직후 썰쟁이가 \"상체 돈까스면(도카스) 직관 거의 못가겠네??\"라고 적었다고 전달 — 팀명은 직접 언급하지 않음 · 징동(JDG) 영입 시도 썰과 충돌",
     "grade": "썰",
-    "status": "보도",
+    "status": "무산",
     "seen_at": "2026-11-18 08:50"
    },
    {
@@ -1202,7 +1274,7 @@
     "to": "미정",
     "outlet": "아티브뉴스",
     "grade": "보도",
-    "status": "보도",
+    "status": "오피셜 확정",
     "source": "https://www.artivenews.co.kr/news/articleView.html?idxno=3951",
     "role": "top",
     "seen_at": "2026-11-17 13:50",
@@ -1261,7 +1333,7 @@
     "to": "KT",
     "outlet": "에펨코리아 유출 글 (Yahoo 대만 게임 Anjohn 정리 기사 인용) · 티원월즈포핏 (인벤 LoL 게시판, \"Kt 갑자기 태윤버리고 스매쉬 노리는중\", 11/19 15:31) · 메이드인어비스 (에펨코리아 LoL 게시판 썰/루머, \"쪽지로 받은 KT·쉽 관련 내용\", 원글 삭제됨, 11/19 15:39)",
     "grade": "썰",
-    "status": "보도",
+    "status": "무산",
     "source": "https://tw.news.yahoo.com/2027%E3%80%8A%E8%8B%B1%E9%9B%84%E8%81%AF%E7%9B%9F%E3%80%8Blck%E8%BD%89%E6%9C%83%E6%9C%9F%E6%87%B6%E4%BA%BA%E5%8C%85%EF%BC%9A10%E6%94%AF%E6%88%B0%E9%9A%8A%E6%9C%80%E6%96%B0%E9%99%A3%E5%AE%B9%E3%80%81%E9%81%B8%E6%89%8B%E5%8E%BB%E5%90%91%E3%80%81fa%E5%90%8D%E5%96%AE%E4%B8%80%E6%AC%A1%E7%9C%8B-015609140.html",
     "role": "adc",
     "seen_at": "2026-11-19 16:10",
@@ -1425,7 +1497,7 @@
     "to": "NS",
     "outlet": "COOL-STYLE 潮流生活網 Lison (대만 매체, 한국 커뮤니티 썰 인용) · 백지헌, (에펨코리아 LoL 게시판, 11/17) · 마리마리모 (에펨코리아 LoL 게시판, 찌라시 통합 팀 현황 정리글, 11/18 15:33)",
     "grade": "썰",
-    "status": "보도",
+    "status": "오피셜 확정",
     "source": "https://www.cool-style.com.tw/wd2/archives/1365068",
     "role": "jungle",
     "seen_at": "2026-11-17 23:05",
@@ -1440,7 +1512,7 @@
     "to": "NS",
     "outlet": "COOL-STYLE 潮流生活網 Lison (대만 매체, 한국 커뮤니티 썰 인용) · 마리마리모 (에펨코리아 LoL 게시판, 찌라시 통합 팀 현황 정리글, 11/18 15:33)",
     "grade": "썰",
-    "status": "보도",
+    "status": "오피셜 확정",
     "source": "https://www.cool-style.com.tw/wd2/archives/1365068",
     "role": "support",
     "seen_at": "2026-11-17 14:25",
@@ -1470,7 +1542,7 @@
     "to": "미정",
     "outlet": "囧王者 (网易号, 한국 커뮤니티 썰 정리) · 쿠도유키코 (에펨코리아 LoL 게시판, 포토 프레임 목격 글, 11/18)",
     "grade": "썰",
-    "status": "보도",
+    "status": "오피셜 확정",
     "source": "https://www.163.com/dy/article/LBDAIN3R0526T21K.html",
     "role": "jungle",
     "seen_at": "2026-11-18 09:40",
@@ -1544,7 +1616,7 @@
     "to": "미정",
     "outlet": "에펨코리아 유출 글 (Yahoo 대만 게임 Anjohn 정리 기사 인용) · 엑스포츠뉴스 (단독, 11/17) · PS 이스포츠 (단독, 박상진 기자, 11/18)",
     "grade": "썰",
-    "status": "보도",
+    "status": "오피셜 확정",
     "source": "https://tw.news.yahoo.com/2027%E3%80%8A%E8%8B%B1%E9%9B%84%E8%81%AF%E7%9B%9F%E3%80%8Blck%E8%BD%89%E6%9C%83%E6%9C%9F%E6%87%B6%E4%BA%BA%E5%8C%85%EF%BC%9A10%E6%94%AF%E6%88%B0%E9%9A%8A%E6%9C%80%E6%96%B0%E9%99%A3%E5%AE%B9%E3%80%81%E9%81%B8%E6%89%8B%E5%8E%BB%E5%90%91%E3%80%81fa%E5%90%8D%E5%96%AE%E4%B8%80%E6%AC%A1%E7%9C%8B-015609140.html",
     "role": "mid",
     "seen_at": "2026-11-18 12:00",
@@ -1679,7 +1751,7 @@
     "to": "DK (잔류)",
     "outlet": "kkkwiwk (에펨코리아 LoL 게시판, '슬픈딮' 썰 인용) · ㅌㄹㅁㄹ (에펨코리아 LoL 게시판, 찌라시 정리글, 11/18 07:00) · 듀마노 (썰쟁이, TV·.ZOFPK.가 에펨코리아 LoL 게시판에 전달, 11/18 12:24) · 마리마리모 (에펨코리아 LoL 게시판, 찌라시 통합 팀 현황 정리글, 11/18 15:33)",
     "grade": "썰",
-    "status": "보도",
+    "status": "오피셜 확정",
     "source": "https://www.fmkorea.com/index.php?mid=lol&document_srl=10566040409",
     "role": "mid",
     "seen_at": "2026-11-18 12:49",
@@ -1694,7 +1766,7 @@
     "to": "DK (잔류)",
     "outlet": "kkkwiwk (에펨코리아 LoL 게시판, '슬픈딮' 썰 인용) · KingZon (에펨코리아 LoL 게시판, 썰/루머, 11/18) · 마리마리모 (에펨코리아 LoL 게시판, 찌라시 통합 팀 현황 정리글, 11/18 15:33)",
     "grade": "썰",
-    "status": "보도",
+    "status": "오피셜 확정",
     "source": "https://www.fmkorea.com/index.php?mid=lol&document_srl=10566040409",
     "role": "adc",
     "seen_at": "2026-11-18 12:10",
@@ -1783,7 +1855,7 @@
     "to": "미정 (T1 결별 시사)",
     "outlet": "NXGN (에펨코리아 LoL 게시판, 도란 본인 팬 플랫폼 '팝' 메시지 요약, 11/18 05:26)",
     "grade": "썰",
-    "status": "보도",
+    "status": "오피셜 확정",
     "source": "https://www.fmkorea.com/10568227425",
     "role": "top",
     "seen_at": "2026-11-18 08:50",
@@ -1813,7 +1885,7 @@
     "to": "JDG (LPL)",
     "outlet": "ㅌㄹㅁㄹ (에펨코리아 LoL 게시판, 찌라시 정리글, 11/18 07:00) · 정녕정령 (에펨코리아 LoL 게시판, 11/19 18:20)",
     "grade": "썰",
-    "status": "보도",
+    "status": "무산",
     "source": "https://www.fmkorea.com/10568288697",
     "role": "jungle",
     "seen_at": "2026-11-19 18:40",
@@ -1858,7 +1930,7 @@
     "to": "미정 (클라우드와 동행설)",
     "outlet": "ㅌㄹㅁㄹ (에펨코리아 LoL 게시판, 찌라시 정리글, 11/18 07:00)",
     "grade": "썰",
-    "status": "보도",
+    "status": "오피셜 확정",
     "source": "https://www.fmkorea.com/10568288697",
     "role": "adc",
     "seen_at": "2026-11-18 08:50",
@@ -2098,7 +2170,7 @@
     "to": "KRX",
     "outlet": "동그랑동그랑 (에펨코리아 LoL 게시판, 땅꼬맹이가 글 캡처 모음으로 전달, 11/18 12:50)",
     "grade": "썰",
-    "status": "보도",
+    "status": "무산",
     "source": "https://www.fmkorea.com/10569137072",
     "role": "adc",
     "seen_at": "2026-11-18 13:40",
@@ -2275,7 +2347,7 @@
     "to": "GEN",
     "outlet": "사람사라 (인벤 LoL 게시판, 11/19 11:23) · 에펨코리아 LoL 게시판 (11/19 11:34) · a426 (에펨코리아 LoL 게시판, \"젠지 1타 썰쟁이는 젠나비 올리고 갔네\", 11/19 14:36) · 예나요 (에펨코리아 LoL 게시판, 젠지 시우·카나비 영입 비용 추측글, 11/19 15:41)",
     "grade": "썰",
-    "status": "보도",
+    "status": "무산",
     "source": "https://www.inven.co.kr/board/lol/4625/4289416",
     "role": "jungle",
     "seen_at": "2026-11-19 16:10",
@@ -2290,7 +2362,7 @@
     "to": "미정",
     "outlet": "친칠라이츄 (인벤 LoL 게시판, 11/19 11:23)",
     "grade": "썰",
-    "status": "보도",
+    "status": "오피셜 확정",
     "source": "https://www.inven.co.kr/board/lol/4625/4289411",
     "role": "adc",
     "seen_at": "2026-11-19 12:40",
@@ -2320,7 +2392,7 @@
     "to": "HLE",
     "outlet": "해패 (인벤 LoL 게시판, 11/19 14:26)",
     "grade": "썰",
-    "status": "보도",
+    "status": "무산",
     "source": "https://www.inven.co.kr/board/lol/4625/4289613",
     "role": "top",
     "seen_at": "2026-11-19 14:40",
@@ -2455,7 +2527,7 @@
     "to": "KT",
     "outlet": "레넥톤멋쉬룸 (에펨코리아 LoL 게시판, \"타율높은 썰쟁이 피셜로 보면 kt는\", 11/19 22:04)",
     "grade": "썰",
-    "status": "보도",
+    "status": "무산",
     "source": "https://www.fmkorea.com/10575375802",
     "role": "adc",
     "seen_at": "2026-11-19 22:30",
@@ -2470,7 +2542,7 @@
     "to": "NS",
     "outlet": "Only88848 (인벤 LoL·e스포츠 이야기, \"오피셜) 농심 킹표칼뎊안 ㅇㅇ\", 11/19 20:24)",
     "grade": "썰",
-    "status": "보도",
+    "status": "오피셜 확정",
     "source": "https://www.inven.co.kr/board/lol/4625/4289939",
     "role": "jungle",
     "seen_at": "2026-11-19 22:30",
@@ -2485,15 +2557,151 @@
     "to": "NS",
     "outlet": "Only88848 (인벤 LoL·e스포츠 이야기, \"오피셜) 농심 킹표칼뎊안 ㅇㅇ\", 11/19 20:24)",
     "grade": "썰",
-    "status": "보도",
+    "status": "오피셜 확정",
     "source": "https://www.inven.co.kr/board/lol/4625/4289939",
     "role": "support",
     "seen_at": "2026-11-19 22:30",
     "note": "제목은 \"오피셜\"이나 본문은 킹켄·표식·칼릭스·데프트·안딜 명단뿐이고 공식 발표 링크 없음 · 농심 공식 발표는 확인 못 함"
+   },
+   {
+    "date": "2026-11-20",
+    "nickname": "Delight",
+    "name_kr": "유환중",
+    "from": "HLE",
+    "to": "DK",
+    "outlet": "인벤 (단독)",
+    "grade": "보도",
+    "status": "보도",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323659&site=lol",
+    "role": "support",
+    "seen_at": "2026-11-21 10:30",
+    "note": "'딜라이트' 유환중이 한화생명e스포츠를 떠나 디플러스 기아에 새 둥지를 틀 것으로 보인다 · 양측 큰 틀 조율 마치고 계약 최종 단계(알려졌다) · 공식 발표 전"
+   },
+   {
+    "date": "2026-11-20",
+    "nickname": "Lucid",
+    "name_kr": "최용혁",
+    "from": "DK",
+    "to": "KRX",
+    "outlet": "인벤 (단독) · Sheep Esports (소식통)",
+    "grade": "소식통",
+    "status": "보도",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323654&site=lol",
+    "role": "jungle",
+    "seen_at": "2026-11-21 10:30",
+    "note": "2027 시즌 키움 DRX 유니폼을 입을 전망 · DK와 결별 수순 · 공식 발표 전 (※ DK와 2027년까지 재계약 기록과 충돌)"
+   },
+   {
+    "date": "2026-11-20",
+    "nickname": "Duro",
+    "name_kr": "주민규",
+    "from": "GEN",
+    "to": "KRX",
+    "outlet": "OSEN (단독) · 인벤 인용",
+    "grade": "보도",
+    "status": "보도",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323654&site=lol",
+    "role": "support",
+    "seen_at": "2026-11-21 10:30",
+    "note": "OSEN '듀로 주민규 DRX 전격 이적' 단독 · 인벤은 '영입했다는 보도가 나오기도 했다'로 전함 · 공식 발표 전"
+   },
+   {
+    "tier": "community",
+    "date": "2026-11-20",
+    "nickname": "Cloud",
+    "name_kr": "문현호",
+    "from": "T1 아카데미",
+    "to": "DK",
+    "outlet": "해피니스트 (인벤 LoL 게시판)",
+    "grade": "썰",
+    "status": "보도",
+    "source": "https://www.inven.co.kr/board/lol/4625/4290061",
+    "role": "support",
+    "seen_at": "2026-11-21 10:30",
+    "note": "'DK 재혁 콜업, 서폿은 클라우드 접촉중이라는 썰' · 스매시가 클라우드 영입 중이고 많은 팀이 원한다는 내용 · 미확인 · 딜라이트 DK행 보도와 충돌"
+   },
+   {
+    "tier": "community",
+    "date": "2026-11-20",
+    "nickname": "Cloud",
+    "name_kr": "문현호",
+    "from": "T1 아카데미",
+    "to": "GEN",
+    "outlet": "신상혁 (인벤 LoL 게시판)",
+    "grade": "썰",
+    "status": "보도",
+    "source": "https://www.inven.co.kr/board/lol/4625/4290097",
+    "role": "mid",
+    "seen_at": "2026-11-21 10:30",
+    "note": "'클라우드가 … 젠지 입단 썰이 있는데 진짜임??' 질문 글 · 미확인"
+   },
+   {
+    "tier": "community",
+    "date": "2026-11-22",
+    "nickname": "Siwoo",
+    "name_kr": "전시우",
+    "from": "DK",
+    "to": "GEN",
+    "outlet": "성요한 (에펨코리아 LoL 게시판, 11/22 17:49)",
+    "grade": "썰",
+    "status": "보도",
+    "source": "https://www.fmkorea.com/10584879782",
+    "role": "top",
+    "seen_at": "2026-11-22 20:30",
+    "note": "'시우가 루시드랑 하고싶어서 한화 안 간 썰 맞을 것 같다' 작성자 추측 · 미확인"
+   },
+   {
+    "tier": "community",
+    "date": "2026-11-22",
+    "nickname": "Lucid",
+    "name_kr": "최용혁",
+    "from": "DK",
+    "to": "GEN",
+    "outlet": "a426 (에펨코리아 LoL 게시판, '루시드 샤벨 젠지 테스트썰' 후속, 11/22 18:06)",
+    "grade": "썰",
+    "status": "보도",
+    "source": "https://www.fmkorea.com/10584935410",
+    "role": "jungle",
+    "seen_at": "2026-11-22 20:30",
+    "note": "젠지 테스트 스크림 관련 썰을 푼 작성자 후속 글 · 본인도 구라일 수 있다고 언급 · 인벤 단독(키움행)과 충돌 · 미확인"
+   },
+   {
+    "tier": "community",
+    "date": "2026-11-22",
+    "nickname": "Siwoo",
+    "name_kr": "전시우",
+    "from": "DK",
+    "to": "KRX",
+    "outlet": "빵셔틀드랍 (인벤 LoL·e스포츠 이야기, 11/22 17:45)",
+    "grade": "썰",
+    "status": "보도",
+    "source": "https://www.inven.co.kr/board/lol/4625/4290990",
+    "role": "top",
+    "seen_at": "2026-11-22 20:30",
+    "note": "'KRX에 시우갈거 같은 느낌' 개인 추측 · 젠지 썰과 충돌 · 미확인"
+   },
+   {
+    "tier": "community",
+    "date": "2026-11-22",
+    "nickname": "Siwoo",
+    "name_kr": "전시우",
+    "from": "DK",
+    "to": "미정 (이적료 매각설)",
+    "outlet": "Leakyfaucet (인벤 LoL·e스포츠 이야기, 11/22 19:19)",
+    "grade": "썰",
+    "status": "보도",
+    "source": "https://www.inven.co.kr/board/lol/4625/4290996",
+    "role": "top",
+    "seen_at": "2026-11-22 20:30",
+    "note": "'카더라는 딮이 이적료 받고 시우 루시드 팔았다' · 출처 없음 · 미확인"
    }
   ],
   "coaches": [],
   "updates": [
+   {
+    "at": "2026-11-22 20:35",
+    "text": "새 오피셜 없음 · 🟠 썰 4건(시우 젠지·KRX·이적료 매각설, 루시드 젠지 — 에펨코리아·인벤) · 제우스 T1·기인/캐니언 한화 공식 발표 아직 없음 · 막힘: arca.live·PTT(403), 디시 갤러리 구버전"
+   },
    {
     "at": "2026-11-18 23:55",
     "text": "새 오피셜 없음 · 🟠 썰 3건(시우 HLE·제우스 이탈·루스터 HLE 아님 — 에펨코리아 썰 글)"
@@ -2697,6 +2905,10 @@
    {
     "at": "2026-11-19 18:40",
     "text": "도란 T1 결별 오피셜(T1 공식 X, 커뮤니티 전언), 커리어 한화행·루시드 KRX행 썰 추가, 루시드 젠지·카나비 징동 썰 출처 보강. 한화생명 2027 로스터 오피셜 이미지 글은 내용 확인 불가"
+   },
+   {
+    "at": "2026-11-21 10:40",
+    "text": "DK 도란·카나비 영입 오피셜(11/20), 쇼메이커·스매쉬 재계약 오피셜(11/19), NS 표식·안딜 영입 오피셜(11/19) 반영. 딜라이트 DK·루시드 DRX·듀로 DRX 보도, 클라우드 썰 2건 추가"
    }
   ]
  }

@@ -211,17 +211,6 @@
          "dpi": {"value": 800, "source": "https://prosettings.net/players/aiming/", "confidence": "medium"},
          "in_game_sens": {"value": 50, "source": "https://prosettings.net/players/aiming/", "confidence": "medium"},
          "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/aiming/", "confidence": "medium"}}},
-      {"nickname": "Andil", "name_kr": "문관빈", "role": "support",
-       "gear": {
-         "mouse": {"value": "Logitech G Pro X Superlight 2 (White)", "source": "https://prosettings.net/players/andil/", "confidence": "medium"},
-         "keyboard": {"value": "Logitech G Pro X TKL Rapid", "source": "https://prosettings.net/players/andil/", "confidence": "medium"},
-         "monitor": {"value": "LG 25GR75FG", "source": "https://prosettings.net/players/andil/", "confidence": "medium"},
-         "headset": {"value": "Logitech G PRO X 2", "source": "https://prosettings.net/players/andil/", "confidence": "medium"},
-         "mousepad": null},
-       "settings": {
-         "dpi": {"value": 800, "source": "https://prosettings.net/players/andil/", "confidence": "medium"},
-         "in_game_sens": {"value": 55, "source": "https://prosettings.net/players/andil/", "confidence": "medium"},
-         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/andil/", "confidence": "medium"}}},
       {"nickname": "Sponge", "name_kr": "배영준", "role": "jungle",
        "gear": {
          "mouse": {"value": "Logitech G Pro X Superlight 2", "source": "https://settingsinfo.com/person/sponge/", "confidence": "medium"},
@@ -263,16 +252,6 @@
          "dpi": {"value": 800, "source": "https://specs.gg/Zeus", "confidence": "medium"},
          "in_game_sens": {"value": 55, "source": "https://specs.gg/Zeus", "confidence": "medium"},
          "resolution": {"value": "1920x1080", "source": "https://specs.gg/Zeus", "confidence": "medium"}}},
-      {"nickname": "Kanavi", "name_kr": "서진혁", "role": "Jungle",
-       "gear": {
-         "mouse": {"value": "Logitech G PRO X Superlight 2 White", "source": "https://specs.gg/Kanavi", "confidence": "low", "note": "prosettings.net은 DeathAdder V4 Pro White로 상충"},
-         "keyboard": {"value": "Logitech G PRO X TKL White", "source": "https://specs.gg/Kanavi", "confidence": "low", "note": "prosettings.net은 Huntsman V3 Pro TKL로 상충"},
-         "monitor": {"value": "ZOWIE XL2586X+", "source": "https://specs.gg/Kanavi", "confidence": "low", "note": "prosettings.net은 LG 25GR75FG로 상충"},
-         "headset": {"value": "Sennheiser HMD 300 Pro", "source": "https://specs.gg/Kanavi", "confidence": "low", "note": "방송용 공용 헤드셋 가능성"},
-         "mousepad": {"value": "ZOWIE G-SR III", "source": "https://specs.gg/Kanavi", "confidence": "low", "note": "prosettings.net은 Artisan Ninja FX Zero로 상충"}},
-       "settings": {
-         "dpi": null, "in_game_sens": null,
-         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Kanavi", "confidence": "medium"}}},
       {"nickname": "Effort", "name_kr": "이상호", "role": "support",
        "note": "집계 사이트 프로필 없음. 공개 정보 확인 불가",
        "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
@@ -323,17 +302,7 @@
        "settings": {
          "dpi": {"value": 1600, "source": "https://prosettings.net/players/inspired/", "confidence": "medium"},
          "in_game_sens": {"value": "마우스 속도 50 / 카메라 50", "source": "https://prosettings.net/players/inspired/", "confidence": "medium"},
-         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/inspired/", "confidence": "medium"}}},
-      {"nickname": "Doran", "name_kr": "도란", "role": "top",
-       "gear": {
-         "mouse": {"value": "Razer Viper V3 Pro", "source": "https://specs.gg/Doran", "confidence": "medium"},
-         "keyboard": {"value": "SteelSeries Apex Pro TKL Gen 3", "source": "https://specs.gg/Doran", "confidence": "medium"},
-         "monitor": null, "headset": null,
-         "mousepad": {"value": "SteelSeries QcK Performance Speed", "source": "https://specs.gg/Doran", "confidence": "medium"}},
-       "settings": {
-         "dpi": {"value": 800, "source": "https://specs.gg/Doran", "confidence": "medium"},
-         "in_game_sens": null,
-         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Doran", "confidence": "medium"}}}
+         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/inspired/", "confidence": "medium"}}}
     ]
   }
 }

@@ -1,5 +1,5 @@
 {
-  "roster_check_2027": {"checked": "2026-11-18", "note": "2026-11-18 NS: Kingen 재계약 오피셜(2028년까지) · Calix 재계약 오피셜(구단 X, 2028년까지) → 신규 추가. 2026-11-17 FA 개장. NS: Sponge·Scout·Diable·Lehends 계약 종료 오피셜 → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. DK 2027 계약 확인: Lucid / 미정: Siwoo, ShowMaker, Smash, Career. 루머 미반영."},
+  "roster_check_2027": {"checked": "2026-11-21", "note": "2026-11-20 DK: Doran·Kanavi 영입 오피셜(INTLFA→DK, 장비 유지), 11/19 ShowMaker·Smash 재계약 오피셜. 2026-11-19 NS: Pyosik 신규·Andil(INTLFA→NS) 영입 오피셜. 2026-11-18 NS: Kingen 재계약 오피셜(2028년까지) · Calix 재계약 오피셜(구단 X, 2028년까지) → 신규 추가. 2026-11-17 FA 개장. NS: Sponge·Scout·Diable·Lehends 계약 종료 오피셜 → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. DK 2027 계약 확인: Lucid / 미정: Siwoo, ShowMaker, Smash, Career. 루머 미반영."},
   "meta": {"as_of": "2026-08-05", "note": "NS 원딜은 2026-04-30 Diable-Taeyoon 트레이드 반영"},
   "DK": {
     "team_name": "Dplus KIA",
@@ -48,7 +48,27 @@
        "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
       {"nickname": "Career", "name_kr": "오형석", "role": "support",
        "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
-       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}}
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "Doran", "name_kr": "도란", "role": "top",
+       "gear": {
+         "mouse": {"value": "Razer Viper V3 Pro", "source": "https://specs.gg/Doran", "confidence": "medium"},
+         "keyboard": {"value": "SteelSeries Apex Pro TKL Gen 3", "source": "https://specs.gg/Doran", "confidence": "medium"},
+         "monitor": null, "headset": null,
+         "mousepad": {"value": "SteelSeries QcK Performance Speed", "source": "https://specs.gg/Doran", "confidence": "medium"}},
+       "settings": {
+         "dpi": {"value": 800, "source": "https://specs.gg/Doran", "confidence": "medium"},
+         "in_game_sens": null,
+         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Doran", "confidence": "medium"}}},
+      {"nickname": "Kanavi", "name_kr": "서진혁", "role": "jungle",
+       "gear": {
+         "mouse": {"value": "Logitech G PRO X Superlight 2 White", "source": "https://specs.gg/Kanavi", "confidence": "low", "note": "prosettings.net은 DeathAdder V4 Pro White로 상충"},
+         "keyboard": {"value": "Logitech G PRO X TKL White", "source": "https://specs.gg/Kanavi", "confidence": "low", "note": "prosettings.net은 Huntsman V3 Pro TKL로 상충"},
+         "monitor": {"value": "ZOWIE XL2586X+", "source": "https://specs.gg/Kanavi", "confidence": "low", "note": "prosettings.net은 LG 25GR75FG로 상충"},
+         "headset": {"value": "Sennheiser HMD 300 Pro", "source": "https://specs.gg/Kanavi", "confidence": "low", "note": "방송용 공용 헤드셋 가능성"},
+         "mousepad": {"value": "ZOWIE G-SR III", "source": "https://specs.gg/Kanavi", "confidence": "low", "note": "prosettings.net은 Artisan Ninja FX Zero로 상충"}},
+       "settings": {
+         "dpi": null, "in_game_sens": null,
+         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Kanavi", "confidence": "medium"}}}
     ]
   },
   "NS": {
@@ -68,7 +88,21 @@
        "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
       {"nickname": "Deft", "name_kr": "김혁규", "role": "adc", "roster_source": "https://www.inven.co.kr/webzine/news/?news=323613&site=lol",
        "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
-       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}}
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "Pyosik", "name_kr": "홍창현", "role": "jungle", "roster_source": "https://www.inven.co.kr/webzine/news/?news=323617&site=lol",
+       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "Andil", "name_kr": "문관빈", "role": "support",
+       "gear": {
+         "mouse": {"value": "Logitech G Pro X Superlight 2 (White)", "source": "https://prosettings.net/players/andil/", "confidence": "medium"},
+         "keyboard": {"value": "Logitech G Pro X TKL Rapid", "source": "https://prosettings.net/players/andil/", "confidence": "medium"},
+         "monitor": {"value": "LG 25GR75FG", "source": "https://prosettings.net/players/andil/", "confidence": "medium"},
+         "headset": {"value": "Logitech G PRO X 2", "source": "https://prosettings.net/players/andil/", "confidence": "medium"},
+         "mousepad": null},
+       "settings": {
+         "dpi": {"value": 800, "source": "https://prosettings.net/players/andil/", "confidence": "medium"},
+         "in_game_sens": {"value": 55, "source": "https://prosettings.net/players/andil/", "confidence": "medium"},
+         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/andil/", "confidence": "medium"}}}
     ]
   }
 }
