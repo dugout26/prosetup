@@ -207,6 +207,19 @@ tr.dead { opacity: .55; }
 .slot { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
 .slot.ok { border-color: rgba(81,207,102,.45); }
 .slot.tbd { border-color: rgba(255,224,102,.35); }
+.slot.gp { border-color: rgba(116,192,252,.7); border-style: dashed; border-width: 2px; }
+.st.gp { color: #74C0FC; border: 1px solid rgba(116,192,252,.6); }
+.sp.gp b::before { content: "🔵 "; }
+.lgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 8px; }
+.lteam { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
+.lteam h3 { font-size: 14px; margin-bottom: 6px; display: flex; justify-content: space-between; }
+.lteam h3 small { font-size: 11px; color: var(--mut); font-weight: 600; }
+.lrow { display: flex; gap: 8px; font-size: 13px; padding: 3px 6px; border-radius: 6px; margin-top: 3px; border: 1px solid transparent; }
+.lrow .lr { color: var(--mut); min-width: 40px; font-size: 12px; }
+.lrow.ok { border-color: rgba(81,207,102,.45); }
+.lrow.gp { border: 1px dashed rgba(116,192,252,.8); }
+.lrow.tbd { border-color: rgba(255,224,102,.3); color: var(--mut); }
+.lrow.empty { border: 1px dashed #495057; color: #566070; }
 .slot.empty { border-style: dashed; }
 .slot .sh { display: flex; justify-content: space-between; font-weight: 900; font-size: 13px; margin-bottom: 6px; }
 .st { font-size: 10.5px; padding: 1px 8px; border-radius: 999px; }
