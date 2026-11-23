@@ -1,5 +1,5 @@
 {
-  "roster_check_2027": {"checked": "2026-11-21", "note": "2026-11-20 DK: Doran·Kanavi 영입 오피셜(INTLFA→DK, 장비 유지), 11/19 ShowMaker·Smash 재계약 오피셜. 2026-11-19 NS: Pyosik 신규·Andil(INTLFA→NS) 영입 오피셜. 2026-11-18 NS: Kingen 재계약 오피셜(2028년까지) · Calix 재계약 오피셜(구단 X, 2028년까지) → 신규 추가. 2026-11-17 FA 개장. NS: Sponge·Scout·Diable·Lehends 계약 종료 오피셜 → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. DK 2027 계약 확인: Lucid / 미정: Siwoo, ShowMaker, Smash, Career. 루머 미반영."},
+  "roster_check_2027": {"checked": "2026-11-24", "note": "2026-11-23 DK: Delight 영입 오피셜(HLE→DK, 장비 유지), 5인 완성. 2026-11-20 DK: Doran·Kanavi 영입 오피셜(INTLFA→DK, 장비 유지), 11/19 ShowMaker·Smash 재계약 오피셜. 2026-11-19 NS: Pyosik 신규·Andil(INTLFA→NS) 영입 오피셜. 2026-11-18 NS: Kingen 재계약 오피셜(2028년까지) · Calix 재계약 오피셜(구단 X, 2028년까지) → 신규 추가. 2026-11-17 FA 개장. NS: Sponge·Scout·Diable·Lehends 계약 종료 오피셜 → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. DK 2027 계약 확인: Lucid / 미정: Siwoo, ShowMaker, Smash, Career. 루머 미반영."},
   "meta": {"as_of": "2026-08-05", "note": "NS 원딜은 2026-04-30 Diable-Taeyoon 트레이드 반영"},
   "DK": {
     "team_name": "Dplus KIA",
@@ -68,7 +68,18 @@
          "mousepad": {"value": "ZOWIE G-SR III", "source": "https://specs.gg/Kanavi", "confidence": "low", "note": "prosettings.net은 Artisan Ninja FX Zero로 상충"}},
        "settings": {
          "dpi": null, "in_game_sens": null,
-         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Kanavi", "confidence": "medium"}}}
+         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Kanavi", "confidence": "medium"}}},
+      {"nickname": "Delight", "name_kr": "유환중", "role": "Support",
+       "gear": {
+         "mouse": {"value": "Logitech G Pro Wireless", "source": "https://specs.gg/Delight", "confidence": "medium"},
+         "keyboard": {"value": "Razer Huntsman V3 Pro TKL", "source": "https://specs.gg/Delight", "confidence": "low", "note": "prosettings.net은 G Pro X TKL Black으로 상충"},
+         "monitor": {"value": "LG UltraGear 25GR75FG", "source": "https://prosettings.net/lists/league-of-legends/", "confidence": "medium"},
+         "headset": {"value": "Razer BlackShark V3 Pro", "source": "https://specs.gg/Delight", "confidence": "medium"},
+         "mousepad": {"value": "Razer Gigantus V2", "source": "https://specs.gg/Delight", "confidence": "low", "note": "prosettings.net은 G640으로 상충"}},
+       "settings": {
+         "dpi": {"value": 750, "source": "https://specs.gg/Delight", "confidence": "medium"},
+         "in_game_sens": {"value": 50, "source": "https://specs.gg/Delight", "confidence": "medium"},
+         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Delight", "confidence": "medium"}}}
     ]
   },
   "NS": {

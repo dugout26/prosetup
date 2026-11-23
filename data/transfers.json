@@ -2,7 +2,7 @@
  "_note": "이적시장 탭 데이터. official=구단·리그 공식 발표(이적·영입·재계약), reports=언론·소식통 보도(루머 포함, 매체명·링크 필수, 커뮤니티 찌라시 금지). 보도가 오피셜로 확정되면 official로 옮기고 reports의 status를 '오피셜 확정'으로, 무산되면 '무산'으로. pending=거취 미정, stay=2027 계약 확인. reports·official의 role(top/jungle/mid/adc/support)은 팀 페이지 포지션 칸 배치에 쓰인다. coaches=감독·코치 계약 현황(nickname,name_kr,role,team,status,source — 출처 없는 항목은 렌더하지 않음). updates=상단 접이식 업데이트 기록({at:'YYYY-MM-DD HH:MM',text}), checked_at=상단 '최근 갱신' 표기.",
  "lol": {
   "season": "2027",
-  "checked": "2026-11-23",
+  "checked": "2026-11-24",
   "checked_at": "2026-11-22 20:35",
   "fa_open": "2026-11-17",
   "fa_open_time": "09:00",
@@ -948,6 +948,17 @@
     "detail": "디플러스 기아 공식 SNS 발표(11/20)를 인벤이 보도 · 계약기간 미공개",
     "source": "https://www.inven.co.kr/webzine/news/?news=323666&site=lol",
     "role": "jungle"
+   },
+   {
+    "date": "2026-11-23",
+    "nickname": "Delight",
+    "name_kr": "유환중",
+    "type": "이적",
+    "from": "HLE",
+    "to": "DK",
+    "detail": "디플러스 기아 2027 합류 · 5인 로스터 완성 · 인벤 오피셜 보도 · 계약기간 미공개",
+    "source": "https://www.inven.co.kr/webzine/news/?news=323733&site=lol",
+    "role": "support"
    }
   ],
   "reports": [
@@ -2571,7 +2582,7 @@
     "to": "DK",
     "outlet": "인벤 (단독)",
     "grade": "보도",
-    "status": "보도",
+    "status": "오피셜 확정",
     "source": "https://www.inven.co.kr/webzine/news/?news=323659&site=lol",
     "role": "support",
     "seen_at": "2026-11-21 10:30",

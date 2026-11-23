@@ -14,11 +14,11 @@
 - [신금재(Smash)](https://dugout26.github.io/prosetup/players/smash.html): 디플러스 기아 원딜, 마우스 Logitech G Pro X Superlight 2, 키보드 Logitech G Pro X
 - [도란(Doran)](https://dugout26.github.io/prosetup/players/doran.html): 디플러스 기아 탑, 마우스 Razer Viper V3 Pro, 키보드 SteelSeries Apex Pro TKL Gen 3, DPI 800
 - [서진혁(Kanavi)](https://dugout26.github.io/prosetup/players/kanavi.html): 디플러스 기아 정글, 마우스 Logitech G PRO X Superlight 2 White, 키보드 Logitech G PRO X TKL White
+- [유환중(Delight)](https://dugout26.github.io/prosetup/players/delight.html): 디플러스 기아 서포터, 마우스 Logitech G Pro Wireless, 키보드 Razer Huntsman V3 Pro TKL, DPI 750
 - [황성훈(Kingen)](https://dugout26.github.io/prosetup/players/kingen.html): 농심 레드포스 탑, 마우스 Logitech G703, 키보드 Razer BlackWidow Lite
 - [문관빈(Andil)](https://dugout26.github.io/prosetup/players/andil.html): 농심 레드포스 서포터, 마우스 Logitech G Pro X Superlight 2 (White), 키보드 Logitech G Pro X TKL Rapid, DPI 800
 - [김건우(Zeka)](https://dugout26.github.io/prosetup/players/zeka.html): 한화생명e스포츠 미드, 마우스 Logitech G PRO X Superlight 2, 키보드 Razer BlackWidow V3 Pro, DPI 650
 - [이민형(Gumayusi)](https://dugout26.github.io/prosetup/players/gumayusi.html): 한화생명e스포츠 원딜, 마우스 Logitech G PRO X Superlight 2, 키보드 Logitech G PRO X TKL Rapid, DPI 800
-- [유환중(Delight)](https://dugout26.github.io/prosetup/players/delight.html): 한화생명e스포츠 서포터, 마우스 Logitech G Pro Wireless, 키보드 Razer Huntsman V3 Pro TKL, DPI 750
 - [이승민(PerfecT)](https://dugout26.github.io/prosetup/players/perfect.html): kt 롤스터 탑, 마우스 Logitech G PRO X Superlight 2, 키보드 Logitech G PRO X TKL, DPI 1600
 - [곽보성(Bdd)](https://dugout26.github.io/prosetup/players/bdd.html): kt 롤스터 미드, 마우스 Logitech G903, 키보드 Logitech G PRO X TKL, DPI 1800
 - [천쩌빈(Bin)](https://dugout26.github.io/prosetup/players/bin.html): 빌리빌리 게이밍 탑, 마우스 SteelSeries Rival 310, DPI 1600
