@@ -2,7 +2,7 @@
  "_note": "이적시장 탭 데이터. official=구단·리그 공식 발표(이적·영입·재계약), reports=언론·소식통 보도(루머 포함, 매체명·링크 필수, 커뮤니티 찌라시 금지). 보도가 오피셜로 확정되면 official로 옮기고 reports의 status를 '오피셜 확정'으로, 무산되면 '무산'으로. pending=거취 미정, stay=2027 계약 확인. reports·official의 role(top/jungle/mid/adc/support)은 팀 페이지 포지션 칸 배치에 쓰인다. coaches=감독·코치 계약 현황(nickname,name_kr,role,team,status,source — 출처 없는 항목은 렌더하지 않음). updates=상단 접이식 업데이트 기록({at:'YYYY-MM-DD HH:MM',text}), checked_at=상단 '최근 갱신' 표기.",
  "lol": {
   "season": "2027",
-  "checked": "2026-11-22",
+  "checked": "2026-11-23",
   "checked_at": "2026-11-22 20:35",
   "fa_open": "2026-11-17",
   "fa_open_time": "09:00",
@@ -2694,6 +2694,21 @@
     "role": "top",
     "seen_at": "2026-11-22 20:30",
     "note": "'카더라는 딮이 이적료 받고 시우 루시드 팔았다' · 출처 없음 · 미확인"
+   },
+   {
+    "tier": "community",
+    "date": "2026-11-23",
+    "nickname": "Haetae",
+    "name_kr": "심수현",
+    "from": "T1 (2군)",
+    "to": "KRX",
+    "outlet": "인벤 LoL 쉽피셜 글 (inven.co.kr, \"[쉽피셜] Haetae 심수현 키움 DRX 합류예정\") · Sheep Esports 기사 제목 \"Sources: Haetae set to join Kiwoom DRX in the LCK\" (본문 미확인) · 乳摸 (PTT LoL, Sheep Esports X 게시물 인용, 11/22 23:04)",
+    "grade": "썰",
+    "status": "보도",
+    "source": "https://www.inven.co.kr/board/lol/2778/83696",
+    "role": "top",
+    "seen_at": "2026-11-23 10:40",
+    "note": "해태 키움 DRX 합류 예정이라는 제목의 글 · 인벤 본문·Sheep 본문 직접 확인 못함(403) · 구단 발표 전"
    }
   ],
   "coaches": [],
