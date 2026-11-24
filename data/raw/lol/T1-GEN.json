@@ -1,5 +1,5 @@
 {
-  "roster_check_2027": {"checked": "2026-11-19", "note": "2026-11-19 T1 Doran 결별 오피셜 → INTLFA로 이동. 2026-11-17 FA 개장. GEN: Kiin·Canyon 계약 종료 오피셜 → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. T1 2027 계약 확인: Oner, Faker, Peyz, Keria / 탑 공석(Doran 결별) · GEN 2027 계약 확인: Chovy, Ruler, Duro / 공석: 탑·정글. 루머 미반영."},
+  "roster_check_2027": {"checked": "2026-11-25", "note": "2026-11-24 GEN: Siwoo(DK→GEN)·Sharvel(INTLFA→GEN) 영입 오피셜, Cloud 신규 추가(서포터) → 시우·샤벨·클라우드 합류로 쵸비·룰러와 5인(Duro는 오피셜 없음, 기존 블록 유지). 2026-11-19 T1 Doran 결별 오피셜 → INTLFA로 이동. 2026-11-17 FA 개장. GEN: Kiin·Canyon 계약 종료 오피셜 → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. T1 2027 계약 확인: Oner, Faker, Peyz, Keria / 탑 공석(Doran 결별) · GEN 2027 계약 확인: Chovy, Ruler, Duro / 공석: 탑·정글. 루머 미반영."},
   "as_of": "2026-08-05",
   "notes": {
     "roster": "T1 2026: 도란/오너/페이커/페이즈/케리아 (구마유시 HLE행, Peyz 영입). GEN 2026: 기인/캐니언/쵸비/룰러/두로 (전원 유지).",
@@ -79,7 +79,24 @@
          "monitor": null, "headset": null,
          "mousepad": {"value": "Logitech G740", "source": "https://specs.gg/Duro", "confidence": "medium"}},
        "settings": {"dpi": null, "in_game_sens": null,
-         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Duro", "confidence": "medium"}}}
+         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Duro", "confidence": "medium"}}},
+      {"nickname": "Siwoo", "name_kr": "전시우", "role": "top",
+       "gear": {
+         "mouse": {"value": "Logitech G Pro X2 Superstrike", "source": "https://prosettings.net/players/siwoo/", "confidence": "medium"},
+         "keyboard": {"value": "Logitech G Pro X TKL (Black)", "source": "https://prosettings.net/players/siwoo/", "confidence": "medium"},
+         "monitor": {"value": "LG UltraGear 25GR75FG", "source": "https://prosettings.net/players/siwoo/", "confidence": "medium"},
+         "headset": {"value": "Logitech G Pro X 2", "source": "https://prosettings.net/players/siwoo/", "confidence": "medium"},
+         "mousepad": {"value": "Logitech G840", "source": "https://prosettings.net/players/siwoo/", "confidence": "medium"}},
+       "settings": {
+         "dpi": {"value": 1200, "source": "https://prosettings.net/players/siwoo/", "confidence": "medium"},
+         "in_game_sens": {"value": 50, "source": "https://prosettings.net/players/siwoo/", "confidence": "medium"},
+         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/siwoo/", "confidence": "medium"}}},
+      {"nickname": "Sharvel", "name_kr": "김단우", "role": "jungle", "roster_source": "https://www.inven.co.kr/webzine/news/?news=317952&site=lol",
+       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}},
+      {"nickname": "Cloud", "name_kr": "문현호", "role": "support",
+       "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
+       "settings": {"dpi": null, "in_game_sens": null, "resolution": null}}
     ]
   }
 }

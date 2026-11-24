@@ -1,19 +1,19 @@
 {
 "https://dugout26.github.io/prosetup/": {
-"date": "2026-11-24",
-"hash": "3d9c8ea91262f8a1"
+"date": "2026-11-25",
+"hash": "4d69a277d91a952a"
 },
 "https://dugout26.github.io/prosetup/404.html": {
 "date": "2026-11-22",
 "hash": "4f29739478a8a1f8"
 },
 "https://dugout26.github.io/prosetup/about.html": {
-"date": "2026-11-22",
-"hash": "8493b16cd674e867"
+"date": "2026-11-25",
+"hash": "fd132bb49bcc1eb2"
 },
 "https://dugout26.github.io/prosetup/data.html": {
-"date": "2026-11-22",
-"hash": "0c14f1ab6d04ca8a"
+"date": "2026-11-25",
+"hash": "6ec26d160ffed247"
 },
 "https://dugout26.github.io/prosetup/gear/alienware-aw2518h.html": {
 "date": "2026-11-22",
@@ -108,8 +108,8 @@
 "hash": "8bbd9705e65c49e8"
 },
 "https://dugout26.github.io/prosetup/gear/lg-ultragear-25gr75fg.html": {
-"date": "2026-11-24",
-"hash": "4f8f043e77d09595"
+"date": "2026-11-25",
+"hash": "e1abdb236b7cdd0e"
 },
 "https://dugout26.github.io/prosetup/gear/logitech-g-pro-wireless.html": {
 "date": "2026-11-24",
@@ -120,8 +120,8 @@
 "hash": "a7bb8d8133dc331f"
 },
 "https://dugout26.github.io/prosetup/gear/logitech-g-pro-x-2-lightspeed.html": {
-"date": "2026-11-22",
-"hash": "193fb8ac9820cdcb"
+"date": "2026-11-25",
+"hash": "90c50103950c48ae"
 },
 "https://dugout26.github.io/prosetup/gear/logitech-g-pro-x-headset.html": {
 "date": "2026-11-22",
@@ -132,8 +132,8 @@
 "hash": "8ae4b15ac5f2303c"
 },
 "https://dugout26.github.io/prosetup/gear/logitech-g-pro-x-superlight-2.html": {
-"date": "2026-11-22",
-"hash": "d53d6645db651b00"
+"date": "2026-11-25",
+"hash": "89c2fd12633b850d"
 },
 "https://dugout26.github.io/prosetup/gear/logitech-g-pro-x-superlight-2c.html": {
 "date": "2026-11-22",
@@ -148,12 +148,12 @@
 "hash": "5c3e700e3e804175"
 },
 "https://dugout26.github.io/prosetup/gear/logitech-g-pro-x-tkl.html": {
-"date": "2026-11-22",
-"hash": "656b214eb2d3e881"
+"date": "2026-11-25",
+"hash": "1bb0a40a6caacc85"
 },
 "https://dugout26.github.io/prosetup/gear/logitech-g-pro-x2-superstrike.html": {
-"date": "2026-11-22",
-"hash": "4d003757fc608ffe"
+"date": "2026-11-25",
+"hash": "11286df840fd9cad"
 },
 "https://dugout26.github.io/prosetup/gear/logitech-g-pro-x3-lightspeed-headset.html": {
 "date": "2026-11-22",
@@ -172,12 +172,12 @@
 "hash": "b0fdcf1a0127b96c"
 },
 "https://dugout26.github.io/prosetup/gear/logitech-g740.html": {
-"date": "2026-11-22",
-"hash": "d692d9830d523bc9"
+"date": "2026-11-25",
+"hash": "560b670008a8c71f"
 },
 "https://dugout26.github.io/prosetup/gear/logitech-g840.html": {
-"date": "2026-11-22",
-"hash": "be7ed4ba9aa3ac78"
+"date": "2026-11-25",
+"hash": "0d426ee956b30ec5"
 },
 "https://dugout26.github.io/prosetup/gear/melgeek-made68-ultra-v2.html": {
 "date": "2026-11-22",
@@ -392,8 +392,8 @@
 "hash": "2e9b031bf0a4fd92"
 },
 "https://dugout26.github.io/prosetup/guides/lol-monitor.html": {
-"date": "2026-11-24",
-"hash": "1f3e46df2d4c4a52"
+"date": "2026-11-25",
+"hash": "14357f26c4a9148e"
 },
 "https://dugout26.github.io/prosetup/guides/monitor.html": {
 "date": "2026-11-22",
@@ -444,8 +444,8 @@
 "hash": "5065c781217552e7"
 },
 "https://dugout26.github.io/prosetup/players/canyon.html": {
-"date": "2026-11-22",
-"hash": "4ca105a61c47fa95"
+"date": "2026-11-25",
+"hash": "4a8a5bb872f28252"
 },
 "https://dugout26.github.io/prosetup/players/caps.html": {
 "date": "2026-11-22",
@@ -466,6 +466,10 @@
 "https://dugout26.github.io/prosetup/players/clear.html": {
 "date": "2026-11-22",
 "hash": "1f815d0e18e1eb00"
+},
+"https://dugout26.github.io/prosetup/players/cloud.html": {
+"date": "2026-11-25",
+"hash": "10f8ab511b6d06e0"
 },
 "https://dugout26.github.io/prosetup/players/clozer.html": {
 "date": "2026-11-22",
@@ -552,8 +556,8 @@
 "hash": "3fb43ea78eb3f34a"
 },
 "https://dugout26.github.io/prosetup/players/keria.html": {
-"date": "2026-11-22",
-"hash": "c3ba995ff45a2e67"
+"date": "2026-11-25",
+"hash": "29fb6289d2735cc6"
 },
 "https://dugout26.github.io/prosetup/players/kiin.html": {
 "date": "2026-11-22",
@@ -572,8 +576,8 @@
 "hash": "6998429f8c711e92"
 },
 "https://dugout26.github.io/prosetup/players/lucid.html": {
-"date": "2026-11-22",
-"hash": "1bdf13fdb105b763"
+"date": "2026-11-25",
+"hash": "b17c554127222358"
 },
 "https://dugout26.github.io/prosetup/players/namgung.html": {
 "date": "2026-11-22",
@@ -624,16 +628,16 @@
 "hash": "6d6e64086a6804dd"
 },
 "https://dugout26.github.io/prosetup/players/sharvel.html": {
-"date": "2026-11-22",
-"hash": "3ba9852b089a0c47"
+"date": "2026-11-25",
+"hash": "ac9ab0204d756158"
 },
 "https://dugout26.github.io/prosetup/players/showmaker.html": {
-"date": "2026-11-22",
-"hash": "7c981a27b72cbe84"
+"date": "2026-11-25",
+"hash": "38bbcca84b64733e"
 },
 "https://dugout26.github.io/prosetup/players/siwoo.html": {
-"date": "2026-11-22",
-"hash": "c4be75bad87eb7cb"
+"date": "2026-11-25",
+"hash": "0e8792c4e8645ebd"
 },
 "https://dugout26.github.io/prosetup/players/smash.html": {
 "date": "2026-11-22",
@@ -688,56 +692,56 @@
 "hash": "4f32143b6a0abb6d"
 },
 "https://dugout26.github.io/prosetup/rankings.html": {
-"date": "2026-11-22",
-"hash": "4e2134bec41e9354"
+"date": "2026-11-25",
+"hash": "a739512030244844"
 },
 "https://dugout26.github.io/prosetup/stove-2027.html": {
-"date": "2026-11-24",
-"hash": "0fa92098804a17f4"
+"date": "2026-11-25",
+"hash": "57fceb7760fd0e98"
 },
 "https://dugout26.github.io/prosetup/submit.html": {
-"date": "2026-11-22",
-"hash": "1cc9fedf00c33121"
+"date": "2026-11-25",
+"hash": "0790ed0336a85714"
 },
 "https://dugout26.github.io/prosetup/teams/bnk.html": {
-"date": "2026-11-24",
-"hash": "5394dd8ab3bfbfc4"
+"date": "2026-11-25",
+"hash": "694e20c9f03bc230"
 },
 "https://dugout26.github.io/prosetup/teams/bro.html": {
-"date": "2026-11-24",
-"hash": "812f3c3ad77a23b9"
+"date": "2026-11-25",
+"hash": "53d4c3fe8d98b399"
 },
 "https://dugout26.github.io/prosetup/teams/dk.html": {
-"date": "2026-11-24",
-"hash": "61c88a5fda62859c"
+"date": "2026-11-25",
+"hash": "5a7b457a2d6f5a76"
 },
 "https://dugout26.github.io/prosetup/teams/dns.html": {
-"date": "2026-11-24",
-"hash": "3324d943fe96765b"
+"date": "2026-11-25",
+"hash": "70d92dba19f85592"
 },
 "https://dugout26.github.io/prosetup/teams/gen.html": {
-"date": "2026-11-24",
-"hash": "d667bac8a90df3e1"
+"date": "2026-11-25",
+"hash": "6015aa36cc3bd72c"
 },
 "https://dugout26.github.io/prosetup/teams/hle.html": {
-"date": "2026-11-24",
-"hash": "e7b85b3b67c427af"
+"date": "2026-11-25",
+"hash": "cf3bbf09a469a60f"
 },
 "https://dugout26.github.io/prosetup/teams/krx.html": {
-"date": "2026-11-24",
-"hash": "83ca480a71a6e8bf"
+"date": "2026-11-25",
+"hash": "0d3d847192b60552"
 },
 "https://dugout26.github.io/prosetup/teams/kt.html": {
-"date": "2026-11-24",
-"hash": "f91123804843e57d"
+"date": "2026-11-25",
+"hash": "5b81d113f7d5b9c8"
 },
 "https://dugout26.github.io/prosetup/teams/ns.html": {
-"date": "2026-11-24",
-"hash": "446b112850f411fe"
+"date": "2026-11-25",
+"hash": "c603f72dc41a6dc2"
 },
 "https://dugout26.github.io/prosetup/teams/t1.html": {
-"date": "2026-11-24",
-"hash": "3c7318772092483b"
+"date": "2026-11-25",
+"hash": "183c5e2c40dbe019"
 },
 "https://dugout26.github.io/prosetup/thanks.html": {
 "date": "2026-11-22",
