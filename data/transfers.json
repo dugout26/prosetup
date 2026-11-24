@@ -963,6 +963,21 @@
   ],
   "reports": [
    {
+     "tier": "community",
+     "date": "2026-11-24",
+     "nickname": "Zeus",
+     "name_kr": "최우제",
+     "from": "HLE",
+     "to": "JDG (LPL 이적설)",
+     "outlet": "Haihai (에펨코리아 LoL 게시판, 썰/루머, 11/24 02:22)",
+     "grade": "썰",
+     "status": "보도",
+     "source": "https://www.fmkorea.com/index.php?mid=lol&document_srl=10589822446",
+     "role": "top",
+     "seen_at": "2026-11-24 10:30",
+     "note": "\"제우스 징동 가는 거 맞다\"며 본인이 썰쟁이라고 주장 — 근거 제시 없음, T1 복귀 보도와 충돌 · 같은 시각 '왜 제우스 징동썰만 밀음'(함우주, https://www.fmkorea.com/index.php?mid=lol&document_srl=10589830646)도 JDG행 썰 언급 · 11/24 10시 기준 T1·HLE·JDG 공식 발표 없음(인벤 '제우스 오피셜' 글 4291245도 출처 없는 추측)"
+  },
+   {
     "date": "2026-11",
     "nickname": "Raptor",
     "name_kr": "전어진",
