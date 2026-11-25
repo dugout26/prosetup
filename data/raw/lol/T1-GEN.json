@@ -1,5 +1,5 @@
 {
-  "roster_check_2027": {"checked": "2026-11-25", "note": "2026-11-24 GEN: Siwoo(DK→GEN)·Sharvel(INTLFA→GEN) 영입 오피셜, Cloud 신규 추가(서포터) → 시우·샤벨·클라우드 합류로 쵸비·룰러와 5인(Duro는 오피셜 없음, 기존 블록 유지). 2026-11-19 T1 Doran 결별 오피셜 → INTLFA로 이동. 2026-11-17 FA 개장. GEN: Kiin·Canyon 계약 종료 오피셜 → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. T1 2027 계약 확인: Oner, Faker, Peyz, Keria / 탑 공석(Doran 결별) · GEN 2027 계약 확인: Chovy, Ruler, Duro / 공석: 탑·정글. 루머 미반영."},
+  "roster_check_2027": {"checked": "2026-11-26", "note": "2026-11-25 T1: Zeus(FA→T1, 3년) 영입 오피셜(2027 T1 Announcement) → INTLFA에서 T1 탑으로 이동, 장비 값 유지 → 오너·페이커·페이즈·케리아와 5인 완성. 2026-11-24 GEN: Siwoo(DK→GEN)·Sharvel(INTLFA→GEN) 영입 오피셜, Cloud 신규 추가(서포터) → 시우·샤벨·클라우드 합류로 쵸비·룰러와 5인(Duro는 오피셜 없음, 기존 블록 유지). 2026-11-19 T1 Doran 결별 오피셜 → INTLFA로 이동. 2026-11-17 FA 개장. GEN: Kiin·Canyon 계약 종료 오피셜 → FA 블록(INTL.json INTLFA)으로 이동, 장비 값 유지. T1 2027 계약 확인: Oner, Faker, Peyz, Keria / 탑 공석(Doran 결별) · GEN 2027 계약 확인: Chovy, Ruler, Duro / 공석: 탑·정글. 루머 미반영."},
   "as_of": "2026-08-05",
   "notes": {
     "roster": "T1 2026: 도란/오너/페이커/페이즈/케리아 (구마유시 HLE행, Peyz 영입). GEN 2026: 기인/캐니언/쵸비/룰러/두로 (전원 유지).",
@@ -46,7 +46,18 @@
        "settings": {
          "dpi": {"value": 800, "source": "https://prosettings.net/players/keria/", "confidence": "medium"},
          "in_game_sens": {"value": "마우스 속도 40 / 카메라 40", "source": "https://prosettings.net/players/keria/", "confidence": "medium"},
-         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/keria/", "confidence": "medium"}}}
+         "resolution": {"value": "1920x1080", "source": "https://prosettings.net/players/keria/", "confidence": "medium"}}},
+      {"nickname": "Zeus", "name_kr": "최우제", "role": "top",
+       "gear": {
+         "mouse": {"value": "Razer Viper V3 Pro", "source": "https://specs.gg/Zeus", "confidence": "low", "note": "prosettings.net은 DeathAdder V2 Pro(T1 시절 추정)로 상충"},
+         "keyboard": {"value": "Razer Huntsman V3 Pro TKL", "source": "https://specs.gg/Zeus", "confidence": "low", "note": "prosettings.net은 Corsair K70 TKL로 상충"},
+         "monitor": {"value": "LG UltraGear 25GR75FG", "source": "https://prosettings.net/lists/league-of-legends/", "confidence": "medium"},
+         "headset": {"value": "Razer BlackShark V3 Pro", "source": "https://specs.gg/Zeus", "confidence": "medium"},
+         "mousepad": {"value": "Razer Gigantus V2", "source": "https://specs.gg/Zeus", "confidence": "medium"}},
+       "settings": {
+         "dpi": {"value": 800, "source": "https://specs.gg/Zeus", "confidence": "medium"},
+         "in_game_sens": {"value": 55, "source": "https://specs.gg/Zeus", "confidence": "medium"},
+         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Zeus", "confidence": "medium"}}}
     ]
   },
   "GEN": {

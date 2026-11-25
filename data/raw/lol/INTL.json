@@ -233,17 +233,6 @@
          "dpi": {"value": 1650, "source": "https://settingsinfo.com/person/lehends/", "confidence": "medium"},
          "in_game_sens": {"value": 50, "source": "https://settingsinfo.com/person/lehends/", "confidence": "medium"},
          "resolution": null}},
-      {"nickname": "Zeus", "name_kr": "최우제", "role": "Top",
-       "gear": {
-         "mouse": {"value": "Razer Viper V3 Pro", "source": "https://specs.gg/Zeus", "confidence": "low", "note": "prosettings.net은 DeathAdder V2 Pro(T1 시절 추정)로 상충"},
-         "keyboard": {"value": "Razer Huntsman V3 Pro TKL", "source": "https://specs.gg/Zeus", "confidence": "low", "note": "prosettings.net은 Corsair K70 TKL로 상충"},
-         "monitor": {"value": "LG UltraGear 25GR75FG", "source": "https://prosettings.net/lists/league-of-legends/", "confidence": "medium"},
-         "headset": {"value": "Razer BlackShark V3 Pro", "source": "https://specs.gg/Zeus", "confidence": "medium"},
-         "mousepad": {"value": "Razer Gigantus V2", "source": "https://specs.gg/Zeus", "confidence": "medium"}},
-       "settings": {
-         "dpi": {"value": 800, "source": "https://specs.gg/Zeus", "confidence": "medium"},
-         "in_game_sens": {"value": 55, "source": "https://specs.gg/Zeus", "confidence": "medium"},
-         "resolution": {"value": "1920x1080", "source": "https://specs.gg/Zeus", "confidence": "medium"}}},
       {"nickname": "Effort", "name_kr": "이상호", "role": "support",
        "note": "집계 사이트 프로필 없음. 공개 정보 확인 불가",
        "gear": {"mouse": null, "keyboard": null, "monitor": null, "headset": null, "mousepad": null},
